@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript 函数调用</title>
+</head>
+<body>
+<!--作为一个函数调用-->
+<p>全局函数（myFunction)返回参数参数相乘的结果：</p>
+<p id="demo"></p>
+<script>
+    function myFunction(a,b) {
+        return a*b;
+    }
+    document.getElementById("demo").innerHTML = myFunction(10,2);
+</script>
+
+
+<p>全局函数 myFunction() 会自动成为 window 对象的方法。</p>
+<p>myFunction() 类似于 window.myFunction()。</p>
+<p id="demo1"></p>
+<script>
+    function myFunction1(a,b) {
+        return a*b;
+    }
+    document.getElementById("demo1").innerHTML = window.myFunction1(10,2);
+</script>
+
+
+<p>在 HTML 中 <b>this</b> 的值, 在全局函数是一个 window 对象。</p>
+<p id="demo3"></p>
+<script>
+    function myFunction() {
+        return this;
+    }
+    document.getElementById("demo3").innerHTML = myFunction();
+</script>
+
+
+
+<!--函数作为方法调用-->
+<p>myObject.fullName() 返回 John Doe:</p>
+<p id="demo4"></p>
+<script>
+    var myObject = {
+        firstName:"John",
+        lastName: "Doe",
+        fullName: function() {
+            return this.firstName + "" +this.lastName;
+        }
+    };
+    document.getElementById("demo4").innerHTML = myObject.fullName();
+</script>
+
+
+<!--使用构造函数调用函数-->
+<p>该实例中， myFunction 是函数构造函数:</p>
+<p id="demo5"></p>
+<script>
+    function myFunction5(arg1,arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+    }
+    var x = new myFunction5("John","Doe");
+    document.getElementById("demo5").innerHTML = x.firstName;
+</script>
+
+<!--作为函数方法调用函数-->
+<p id="demo6"></p>
+<script>
+    var myObject;
+    function myFunction(a,b) {
+        return a*b;
+    }
+    myObject = myFunction.call(myObject,10,2);   //返回20
+    document.getElementById("demo6").innerHTML = myObject;
+</script>
+
+<p id="demo7"></p>
+<script>
+    var myObject, myArray;
+    function myFunction(a,b) {
+        return a*b;
+    }
+    myArray = [20,2];
+    myObject = myFunction.apply(myObject,myArray);      //返回20
+    document.getElementById("demo7").innerHTML = myObject;
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

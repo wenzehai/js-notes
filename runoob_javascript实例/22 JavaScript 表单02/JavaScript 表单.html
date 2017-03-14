@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript 表单02</title>
+    <script>
+
+    </script>
+</head>
+<body>
+<h1>javascript验证输入</h1>
+<p>请输入1到10之间的数字：</p>
+<input id="numb"/>
+<button type="button" onclick="myFunction()">提交</button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var x, text;
+        x = document.getElementById("numb").value;
+        if (isNaN(x) || x<1 || x>10) {
+            text = "输入有误";
+        } else {
+            text = "输入正确";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+<!--html表单自动验证-->
+<form action="demo_form.php" method="post">
+    <input type="text" name="fname" required/> <!--通过required来验证-->
+    <input type="submit" value="提交"/>
+</form>
+<p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p>
+
+
+
+
+
+
+
+</body>
+</html>

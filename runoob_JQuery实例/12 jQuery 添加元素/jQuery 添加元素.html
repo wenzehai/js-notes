@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery 添加元素</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="demo.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<!--jquery有四中添加内容 的方法，append,prepend,after,before-->
+<p>这是一个段落</p>
+<p>这是另外一个段落</p>
+<ol>
+    <li>项目一</li>
+    <li>项目一</li>
+    <li>项目一</li>
+</ol>
+<button id="btn1">添加文本</button>
+<button id="btn2">添加列表项</button>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<p id="test">这是一个多元素特殊段落</p>
+<button onclick="appendText()">追加文本</button>
+
+<!--通过after（）before（）两种方法添加元素-->
+<p id="test1">这是一个多元素特殊段落</p>
+<button id="btn_before">之前插入</button>
+<button id="btn_after">之后插入</button>
+
+
+
+<!--用after和before添加若干新元素-->
+<p id="test2">这是一个多元素特殊段落</p>
+    <br>
+<button id="btn_some" onclick="afterText()">添加多元素ilove jquery</button>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

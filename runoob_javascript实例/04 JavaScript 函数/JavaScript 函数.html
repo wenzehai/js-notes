@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript 函数</title>
+    <script src="demo.js"></script>
+    <script>
+        function myNameFunction() {
+            alert("hello wenzehai!")
+        }
+        function myFunction(name,job) {
+            alert("Welcome" + name + ", the" + job);
+        }
+
+    </script>
+
+</head>
+<body>
+<button onclick="myNameFunction()">点击弹出hello wenzehai弹窗</button>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction('Harry Potter', 'Wizard')">点击弹出带参数的弹窗</button>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p>
+    本例调用的函数会执行一个计算，然后返回结果：
+</p>
+<p id="demo1"></p>
+
+
+<script>
+    function myReturnFunction(a,b) {
+        return a*b;
+    }
+    document.getElementById("demo1").innerHTML = myReturnFunction(4,2);
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript 比较 和 逻辑运算符</title>
+
+
+</head>
+<body>
+<p>点击按钮检测年龄。</p>
+年龄：<input id="age" value = "18"/>
+<p>是否达到投票年龄？</p>
+<p id="demo"></p>
+<button onclick="myFunction()">检测年龄</button>
+<script>
+   function myFunction() {
+       var age, voteable;
+       age = document.getElementById("age").value;
+       voteable=(age<18)?"年龄太小":"年龄已达到";
+       document.getElementById("demo").innerHTML=voteable;
+   }
+
+
+
+
+</script>
+</body>
+</html>

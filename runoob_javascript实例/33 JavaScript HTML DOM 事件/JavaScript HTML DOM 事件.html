@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript HTML DOM 事件</title>
+</head>
+<body>
+
+<h1 onclick="this.innerHTML='opoops!'">点击文本！</h1>
+
+<!--从事件处理器调用一个函数：-->
+<script>
+    function changetext(id) {
+        id.innerHTML="ooooops";
+    }
+</script>
+<h1 onclick="changetext(this)">点击文本</h1>
+
+<!--向 button 元素分配 onclick 事件-->
+<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button onclick="displayDate()">点这里</button>
+<p id="demo"></p>
+<script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML=Date();
+    }
+</script>
+
+
+<!--onload事件-->
+<div id="div1" onload="checkCookies()"></div>
+<script>
+    function checkCookies() {
+        if (navigator.cookieEnabled == true) {
+            var txt1 = "Cookies 可用";
+            document.getElementById("div1").innerHTML= txt1;
+        }
+        else {
+            var txt2 = "Cookies 不可用";
+            document.getElementById("div1").innerHTML= txt2;
+        }
+    }
+
+
+</script>
+
+<!--onmouseover-onmouseout事件-->
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background: lightblue; width: 120px; height: 120px; padding: 40px;">mouse over me</div>
+<script>
+    function mOver(obj) {
+        obj.innerHTML="Thank You"
+    }
+    function mOut(obj) {
+        obj.innerHTML="mouse over me"
+    }
+</script>
+
+
+<script>
+    function lighton() {
+        document.getElementById('myimage').src="bulbon.gif";
+    }
+    function lightoff() {
+        document.getElementById('myimage').src="bulbon.gif";
+    }
+</script>
+
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="bulboff.gif" width="100" height="180" />
+<p>点击不释放鼠标灯将一直亮着!</p>
+
+<script>
+    function myFunction(x) {
+        x.style.background = "yellow";
+    }
+</script>
+输入你的名字: <input type="text" onfocus="myFunction(this)">
+<p>当输入框获取焦点时，修改背景色（background-color属性） 将被触发。</p>
+
+
+
+
+</body>
+</html>
