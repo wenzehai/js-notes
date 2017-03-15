@@ -1,0 +1,15 @@
+.content {
+    width: 750px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid lightgray;
+    background: lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 50px;
+}
+select {
+    width: 100px;
+    padding-left: 10px;
+}
