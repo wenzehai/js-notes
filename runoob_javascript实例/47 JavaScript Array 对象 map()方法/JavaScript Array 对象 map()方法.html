@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Array 对象 map()方法</title>
+</head>
+<body>
+<p>点击按钮获取数组元素的平方根。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    var numbers = [4,16,36,49];
+    function myFunction() {
+        x = document.getElementById("demo");
+        x.innerHTML = numbers.map(Math.sqrt);
+    }
+</script>
+<p>
+    map()方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。
+    map()方法按照原始数组元素顺序依次处理元素
+</p>
+
+<p>点击按钮将数组中的每个元素乘于输入框指定的值，并返回新数组</p>
+<p>最小年龄：<input type="number" id="multiplyWith" value="10"></p>
+<button onclick="myFunction1()">点我</button>
+<p id="demo1"></p>
+<script>
+    var number = [40,25,36,245];
+
+    function xx(num) {
+        var a = document.getElementById("multiplyWith").value;
+        alert(typeof a);
+        return num*a;
+    }
+    function myFunction1() {
+        var x = document.getElementById("demo1");
+        x.innerHTML = number.map(xx);
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
