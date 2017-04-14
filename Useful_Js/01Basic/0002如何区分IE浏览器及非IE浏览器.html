@@ -1,0 +1,19 @@
+<!-- 如何区分IE浏览器及非IE浏览器 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如何区分IE浏览器及非IE浏览器</title>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+<script type="text/javascript">
+if (!+[1,]) {		//IE 11 不支持
+	alert("这是IE浏览器");
+} else {
+	alert("这不是IE浏览器");
+}
+
+</script>
+</body>
+</html>

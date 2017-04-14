@@ -1,0 +1,98 @@
+
+<!-- 这段代码有错误，但是还不知道错误出在哪里 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>如何实时显示还可以输入多少字符（区分中英文）</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.remaningCharacters {
+			color: green;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<h2>实时显示还可以输入多少字符（区分中英文）</h2>
+<input type="text" id="remainingCharacters" data-length="5" data-remaningCharacters="charActers1, charActers2" data-model="Ch" name="remainingCharacters"><br/>
+<p>测试1：还可以输入<span class='remainingCharacters' id="charActers1">5</span>字符</p>
+<p>测试2：还可以输入<span class='remainingCharacters' id="charActers2">5</span>字符</p>
+<script type="text/javascript">
+	window.onload = function() {
+		var 
+			forElementArr = function(_elementArr, callBack) {
+				var arr = _elementArr,
+						self = this;
+				if (!(_elementArr instanceof Array)) {
+					//如果不是数组，变成数组对象方便处理
+					arr = [_elementArr];
+				}
+
+				for (var i=0, arrLen = arr.length; i<arrLen; i++) {
+
+					var arrI = arr[i];
+					if (typeof arrI == "string") {
+						arrI = document.getElementById(arrI);
+					}
+					callBack && callBack(i, arrI);
+				}
+			},
+			showRemaningCharacters = function(_nums, _remaningCharacters) {
+				if(_remaningCharacters.search(",") != -1) {
+					_remaningCharacters = _remaningCharacters.split(",");
+				}
+				forElementArr(_remaningCharacters, function(_index, _this) {
+					_this.innerHTML = (_nums && _nums.toString()) || "0";
+				});
+			},
+
+			strLen = (function() {
+				var trim = function(chars) {
+					return (chars || "").replace(/^(\s|\u00A0) + |(\s|u00A0) + $/g, "");
+				}
+
+				return function(_str, _model) {
+					var _str = trim(_str),
+					 _model = _model || "Ch"
+					var _strLen = _str.length;
+					if(_strLen == 0)  {
+						return 0;
+					} else {
+						var chinese = _str.match(/[\u4e00-\u9fa5]/g);
+						return _strLen + (chinese && _model == "Ch" ? chinese.length : 0);
+					}
+				};
+			})(),
+			//获取限制对象
+			remainingCharacters = document.getElementById("remainingCharacters"),
+			clearNonumber = function(tThis) {
+				var _v = tThis.value,
+					_vLen = _v.length,
+					dataLength = tThis.getAttribute("data-length"),
+					remainingCharacters = tThis.getAttribute("data-remaningCharacters");    //如果有实时显示的属性，则在指定元素上显示
+
+					var dataModel = tThis.getAttribute("data-model"); 		//区分中英文后
+					var subLen = dataLength;
+					if(dataModel == "Ch") {					//如果为中文模式
+						_vLen =strLen(_v, dataModel);		//获取长度
+					}
+					if (_vLen > dataLength) tThis.value = _v.substr(0,subLen);
+					if (remainingCharacters) {
+						showRemaningCharacters(!_vLen ? dataLength : (_vLen > dataLength ? 0 :dataLength - _vLen), remainingCharacters);
+					}
+			};
+
+			remainingCharacters.onfocus = function() {		//获取焦点
+				clearNonumber(this);
+			}
+			remainingCharacters.onkeyup = function() {		//键盘事件
+				clearNonumber(this);
+			}
+			remainingCharacters.onblur = function() {		//失去焦点
+				clearNonumber(this);
+			}
+	};
+
+</script>
+</body>
+</html>
