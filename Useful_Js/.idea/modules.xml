@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:/My Github/js-notes/Useful_Js/.idea/Useful_Js.iml" filepath="D:/My Github/js-notes/Useful_Js/.idea/Useful_Js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/runjs实例.iml" filepath="$PROJECT_DIR$/.idea/runjs实例.iml" />
     </modules>
   </component>
 </project>
