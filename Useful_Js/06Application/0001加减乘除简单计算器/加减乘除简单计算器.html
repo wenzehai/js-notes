@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加减乘除简单计算器</title>
+    <style>
+        .clearfix {
+            clear: both;
+        }
+        .container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 150px;
+            background: lightblue;
+            border: 1px solid #c3c3c3;
+            border-radius: 5px;
+        }
+        .container h2 {
+            padding: 15px;
+            text-align: center;
+            line-height: 30px;
+        }
+        form {
+            position: relative;
+            padding: 15px;
+        }
+        input.number1 {
+            float: left;
+            width: 150px;
+            height: 30px;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 3px 3px 0 #c3c3c3;
+            padding: 5px;
+        }
+        input.number2 {
+            float: right;
+            width: 150px;
+            height: 30px;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 3px 3px 0 #c3c3c3;
+            padding: 5px;
+        }
+        input.btn {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            border-style: none;
+            box-shadow: 3px 3px 0 #c3c3c3;
+            font-size: 30px;
+            color: #333333;
+            font-weight: 400;
+            margin: 14px;
+            outline: none;
+        }
+        input.result {
+            float: left;
+            width: 150px;
+            height: 30px;
+            border-style: none;
+            border-radius: 5px;
+            box-shadow: 3px 3px 0 #c3c3c3;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>请输入数字</h2>
+    <form action="http://www.baidu.com" method="get">
+        <input class="number1" id="number1" type="text" name="number1" placeholder="数字1"/>
+        <input class="number2" id="number2" type="text" name="number2" placeholder="数字2"/>
+        <div class="clearfix"></div>
+        <input class="btn" id="btn_plus" type="button" value="+" onclick="add();"/>
+        <input class="btn" id="btn_minus" type="button" value="-"/>
+        <input class="btn" id="btn_ride" type="button" value="*"/>
+        <input class="btn" id="btn_except" type="button" value="/"/>
+        <input class="result" id="result" type="text" name="result" placeholder="结果"/>
+    </form>
+</div>
+<script type="text/javascript" src="scripts/calculate.js"></script>
+</body>
+</html>
