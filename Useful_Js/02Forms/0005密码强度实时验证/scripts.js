@@ -46,7 +46,7 @@ window.onload = function() {
             }
             if(_vL <6) {
                 //计算模式
-                showStrength.innerText =msgs[0];
+                showStrength.innerText = msgs[0];
                 setCss(showStrength,{"color":_color[0]})
 
             }else {
