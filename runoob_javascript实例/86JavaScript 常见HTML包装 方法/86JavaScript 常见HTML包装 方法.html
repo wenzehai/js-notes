@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>86JavaScript 常见HTML包装 方法
+    </title>
+</head>
+<body>
+
+<script>
+ var str = "Hello world!";
+    document.write(str.big() + "     big"+"<br/>");
+    document.write(str.blink() + "     blink "+"<br/>");        //只有Firefox和opera支持
+    document.write(str.bold() + "     bold"+"<br/>");
+    document.write(str.fixed() + "     fixed"+"<br/>");
+    document.write(str.fontcolor("rgba(0,255,0,1)") + "     fontcolor"+"<br/>");  //为字符串规定 font-color。该值必须是颜色名(red)、RGB 值(rgba(255,0,0,1))或者十六进制数(#FF0000)
+    document.write(str.fontsize() + "     fontsize"+"<br/>");       //size 参数必须是从 1 至 7 的数字
+    document.write(str.italics() + "     italics"+"<br/>");
+    document.write(str.link("http://www.baidu.com") + "     link"+"<br/>");         //参数值会显示到href中
+    document.write(str.small() + "     small"+"<br/>");
+    document.write(str.strike() + "     strike"+"<br/>");
+    document.write(str.sub() + "     sub"+"<br/>");
+    document.write(str.sup() + "     sup"+"<br/>");
+</script>
+
+
+</body>
+</html>

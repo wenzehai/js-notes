@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>00012验证是否输入</title>
+</head>
+<body>
+<h2>00012验证是否输入</h2>
+<input type="text" id="strs" value="       需要过滤空格"/>
+<input type="button" id="btn" value="check"/>
+
+
+<script>
+window.onload = function() {
+    var btn = document.getElementById("btn");
+    strs = document.getElementById("strs");
+    btn.onclick = function() {
+        if(!strs.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, "")) {
+            alert("输入为空");
+        }else {
+            alert("输入不为空");
+        }
+    }
+}
+
+
+</script>
+</body>
+</html>
