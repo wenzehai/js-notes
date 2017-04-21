@@ -1,0 +1,58 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00022获取复选框所有选中内容</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+            background: lightblue;
+            width: 500px;
+            height: 300px;
+            padding: 50px;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<h2>00022获取复选框所有选中内容</h2>
+<ul>
+    <li><input type="checkbox" name="select"/><div class="checkbox">我是内容，我将要被选择</div></li>
+    <li><input type="checkbox" name="select"/><div class="checkbox">dsfsdfsdf将要被选择</div></li>
+    <li><input type="checkbox" name="select"/><div class="checkbox">ghggdsfffrfvf，我将要被选择</div></li>
+</ul>
+<p id="demo">被选择的内容：选择内容为空</p>
+<script>
+window.onload = function() {
+    var selectContents = "";
+    var select = document.getElementsByName("select");
+    var i =0;
+    var sL = select.length;
+    for(i; i<sL; i++) {                                     //直接遍历数组
+        select[i].onclick = function () {
+            var t = this.nextSibling.innerText;             //通过nextsibling来获得div中内容；
+            if(this.checked) {                              //这里的this为select[i];
+                selectContents += "<br/>" + t;              //为选中的内容赋值；
+            }else {
+                selectContents = selectContents.replace("<br/>" + t,"")         //没有选中的话，用空白字符将原来的t替换
+            }
+            document.getElementById("demo").innerHTML = "被选中的内容：" + selectContents;     //传递内容；
+        }
+    }
+};
+</script>
+
+
+
+
+
+
+</body>
+</html>

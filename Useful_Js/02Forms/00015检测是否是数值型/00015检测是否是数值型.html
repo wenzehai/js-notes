@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>00015检测是否是数值型</title>
+</head>
+<body>
+<h2>00015检测是否是数值型</h2>
+<div id="isNumber">
+
+</div>
+<script>
+window.onload = function () {
+    var _isNumber = function(num) {
+        return typeof num == "number";
+            };
+    var _number1 = "1";
+    var _number2 = "true";
+    var _number3 = 1.22;
+    var _number4 = null;
+    var _html = "";
+_html += _isNumber(_number1) ? "_number1是数值型<br/>" : "_number1不是数值型<br/>";
+_html += _isNumber(_number2) ? "_number2是数值型<br/>" : "_number2不是数值型<br/>";
+_html += _isNumber(_number3) ? "_number3是数值型<br/>" : "_number3不是数值型<br/>";
+_html += _isNumber(_number4) ? "_number4是数值型<br/>" : "_number4不是数值型<br/>";
+    document.getElementById("isNumber").innerHTML = _html;
+}
+</script>
+</body>
+</html>

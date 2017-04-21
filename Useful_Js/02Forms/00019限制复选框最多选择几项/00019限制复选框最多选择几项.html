@@ -1,0 +1,56 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00019限制复选框最多选择几项</title>
+</head>
+<body>
+<h2>00019限制复选框最多选择几项</h2>
+<input type="checkbox" name="select"/>1<br/>
+<input type="checkbox" name="select"/>2<br/>
+<input type="checkbox" name="select"/>3<br/>
+<input type="checkbox" name="select"/>4<br/>
+<p>最多选择3项</p>
+
+<script>
+window.onload = function(){
+    var _select = document.getElementsByName("select");     //返回一个数组
+    //限制复选框最多选择2项
+    var banNums = 2;
+    for(i in _select) {
+        _select[i].onclick = function(){            //选中任意一个数组单击执行函数
+            var selectNum = 0;                      //定一个“选中数量”变量，在后面通过比较选中的数量与设定的上限来判断是否能够勾选上
+            for(var i in _select){                  //遍历数组，如果选中了，则“选中数量”+1
+                if(_select[i].checked){
+                    selectNum ++;
+                };
+            };
+            //如果选中的复选项，超过限制最大数，将当前的选中项设置为没选中false
+            if(selectNum > banNums) {
+                this.checked = false;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

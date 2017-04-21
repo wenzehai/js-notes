@@ -1,0 +1,51 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00024动态添加下拉选项</title>
+
+</head>
+<body>
+<h2>00024动态添加下拉选项</h2>
+<p>未完成，还有很多错误</p>
+<input type="button" value="添加" id="addOptions" data-target="addOptions"/>
+<select name="option" id="addOption">
+    <option value="">请选择</option>
+    <option value="1">原有选项</option>
+</select>
+<script>
+window.onload = function(){
+    var addOptions = document.getElementById("addOptions");
+    var option = document.getElementById("option");
+    add = function(target,options) {
+        var _options = null;
+        var ol = options.length;
+        var i = 0;
+        var v = "";
+        var t = "";
+        for(; i<ol; i++) {
+            v = options[i].value;
+            t = options[i].text;
+            _options = document.createElement("OPTION");
+            _options.value = v;
+            _options.text = t;
+            target.options.add(options);
+        }
+    };
+    addOptions.onclick = function () {
+        add(option,[{
+            "value":"新添加的元素",
+            "text":"新添加的元素"
+        }])
+    }
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

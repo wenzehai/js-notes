@@ -1,0 +1,56 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00020Checkbox全选、取消全选、反选</title>
+</head>
+<body>
+<h2>00020Checkbox全选、取消全选、反选</h2>
+<p><input id="allSelect" type="button" value="全选"/><input id="cancleSelect" type="button" value="取消全选"/><input id="reverseSelect" type="button" value="反选"/></p>
+<input type="checkbox" name="action"/>1<br/>
+<input type="checkbox" name="action"/>2<br/>
+<input type="checkbox" name="action"/>3<br/>
+<input type="checkbox" name="action"/>4<br/>
+
+<script>
+window.onload = function(){
+    var allSelect = document.getElementById("allSelect");
+    var cancleSelect = document.getElementById("cancleSelect");
+    var reverseSelect = document.getElementById("reverseSelect");
+    var i = 0;
+    var targets = document.getElementsByName("action");
+    var Len = targets.length;
+    allSelect.onclick = function(){
+        for(var i=0;i<Len;i++) {
+            targets[i].checked = true;      //遍历数组中每一个元素，使其checked为true;
+        }
+    };
+    cancleSelect.onclick = function() {
+        for(i=0;i<Len;i++) {                //遍历数组中的每一个元素，使其checked为false;
+            targets[i].checked = false;
+        }
+    };
+    reverseSelect.onclick = function () {
+        for(i=0;i<Len;i++) {
+            targets[i].checked = !targets[i].checked;       //遍历数组中的每一个元素，使其checked非checked；
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

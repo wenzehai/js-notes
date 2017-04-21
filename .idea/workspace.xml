@@ -2,38 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12bfcb90-cfce-42e3-bc87-e4e109b3c6ab" name="!changes.default.changelist.name!" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00012验证是否输入/00012验证是否输入.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/81JavaScript split() 方法/81JavaScript split() 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/82JavaScript substr() 方法/82JavaScript substr() 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/83JavaScript substring() 方法/83JavaScript substring() 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/84JavaScript toLowerCase() 方法/84JavaScript toLowerCase() 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/85JavaScript valueOf() 方法/85JavaScript valueOf() 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/86JavaScript 常见HTML包装 方法/86JavaScript 常见HTML包装 方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/87JavaScript Number 对象constructor 属性/87JavaScript Number 对象constructor 属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/88JavaScript Number 对象 MAX_VALUE 属性/88JavaScript Number 对象 MAX_VALUE 属.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/89JavaScript Number 对象 isNaN方法/89JavaScript Number 对象 isNaN方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/90JavaScript Number 对象 prototype 属性/90JavaScript Number 对象 prototype 属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/91JavaScript Number 对象 toExponential(x)方法/91JavaScript Number 对象 toExponential(x)方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/92JavaScript Number 对象 toFixed() )方法/92JavaScript Number 对象 toFixed() )方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/93JavaScript Number 对象 toPrecesion()方法/93JavaScript Number 对象 toPrecesion()方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/94JavaScript Number 对象 toString()方法/94JavaScript Number 对象 toString()方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/95JavaScript Math 对象 各种属性/95JavaScript Math 对象 各种属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runoob_javascript实例/96JavaScript Math 对象 abs()方法/96JavaScript Math 对象 abs()方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00012验证是否输入/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00015检测是否是数值型/00015检测是否是数值型.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00016TextArea自适应文字行数多少/00016TextArea自适应文字行数多少.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00017判断单选框是否选中/00017判断单选框是否选中.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00018判断复选框至少选中一项/00018判断复选框至少选中一项.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00019限制复选框最多选择几项/00019限制复选框最多选择几项.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00020Checkbox全选、取消全选、反选/00020Checkbox全选、取消全选、反选.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00021根据指定内容选中复选框/00021根据指定内容选中复选框.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00022获取复选框所有选中内容/00022获取复选框所有选中内容.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00023禁止输入/00023禁止输入.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00024动态添加下拉选项/00024动态添加下拉选项.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\68JavaScript String对象constructor 属性\68JavaScript String对象constructor 属性.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/68JavaScript String对象constructor 属性/68JavaScript String对象constructor 属性.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\69JavaScript String对象length属性\69JavaScript String对象length属性.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/69JavaScript String对象length属性/69JavaScript String对象length属性.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\70JavaScript String对象prototype属性\70JavaScript String对象prototype属性.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/70JavaScript String对象prototype属性/70JavaScript String对象prototype属性.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\71JavaScript String对象charAt() 方法\71JavaScript String对象charAt() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/71JavaScript String对象charAt() 方法/71JavaScript String对象charAt() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\72JavaScript String对象 charCodeAt() 方法\72JavaScript String对象 charCodeAt() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/72JavaScript String对象 charCodeAt() 方法/72JavaScript String对象 charCodeAt() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\73JavaScript String对象 concat() 方法\73JavaScript String对象 concat() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/73JavaScript String对象 concat() 方法/73JavaScript String对象 concat() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\74JavaScript String对象 fromCharCode()  方法\74JavaScript String对象 fromCharCode()  方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/74JavaScript String对象 fromCharCode()  方法/74JavaScript String对象 fromCharCode()  方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\75JavaScript String对象 indexOf()  方法\75JavaScript String对象 indexOf()  方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/75JavaScript String对象 indexOf()  方法/75JavaScript String对象 indexOf()  方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\76JavaScript String对象 lastIndexOf()  方法\76JavaScript String对象 lastIndexOf()  方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/76JavaScript String对象 lastIndexOf()  方法/76JavaScript String对象 lastIndexOf()  方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\77JavaScript String对象match() 方法\77JavaScript String对象match() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/77JavaScript String对象match() 方法/77JavaScript String对象match() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\78JavaScript String对象 replace() 方法\78JavaScript String对象 replace() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/78JavaScript String对象 replace() 方法/78JavaScript String对象 replace() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\79JavaScript String对象 search() 方法\79JavaScript String对象 search() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/79JavaScript String对象 search() 方法/79JavaScript String对象 search() 方法.html" />
-      <change type="MOVED" beforePath="D:\My Github\js-notes\new javascript\80JavaScript String对象 slice() 方法\80JavaScript String对象 slice() 方法.html" afterPath="$PROJECT_DIR$/runoob_javascript实例/80JavaScript String对象 slice() 方法/80JavaScript String对象 slice() 方法.html" />
     </list>
     <ignored path="js-notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,12 +88,22 @@
         <option value="$PROJECT_DIR$/new javascript/96JavaScript Math 对象 abs()方法/96JavaScript Math 对象 abs()方法.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00012验证是否输入/test.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00012验证是否输入/00012验证是否输入.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00015检测是否是数值型/00015检测是否是数值型.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00016TextArea自适应文字行数多少/00016TextArea自适应文字行数多少.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00017判断单选框是否选中/00017判断单选框是否选中.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00018判断复选框至少选中一项/00018判断复选框至少选中一项.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00019限制复选框最多选择几项/00019限制复选框最多选择几项.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00020Checkbox全选、取消全选、反选/00020Checkbox全选、取消全选、反选.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00021根据指定内容选中复选框/00021根据指定内容选中复选框.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00022获取复选框所有选中内容/00022获取复选框所有选中内容.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00023禁止输入/00023禁止输入.html" />
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/00024动态添加下拉选项/00024动态添加下拉选项.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="811" />
+    <option name="width" value="1116" />
     <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -218,7 +207,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="00012验证是否输入" />
+              <option name="myItemId" value="00024动态添加下拉选项" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Useful_Js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="00023禁止输入" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,6 +254,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -253,12 +272,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -266,16 +287,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="!browsers.chrome!" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -299,14 +310,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1176" extended-state="0" />
+    <frame x="811" y="0" width="1116" height="1176" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28914404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -314,11 +325,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -341,19 +352,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/0004全选与全不选函数/全选与全不选函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/0004全选与全不选函数/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="837">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,7 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="729">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5462428" vertical-offset="0" max-vertical-offset="1038">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1620">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -505,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38220423" vertical-offset="0" max-vertical-offset="989">
           <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -513,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21556886" vertical-offset="0" max-vertical-offset="1002">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19110212" vertical-offset="0" max-vertical-offset="989">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -529,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.25" vertical-offset="0" max-vertical-offset="675">
           <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -537,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.25" vertical-offset="0" max-vertical-offset="675">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -545,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="729">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.5" vertical-offset="0" max-vertical-offset="891">
           <caret line="18" column="98" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -569,7 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.75" vertical-offset="0" max-vertical-offset="702">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="621">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="837">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.25" vertical-offset="0" max-vertical-offset="729">
           <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43680486" vertical-offset="0" max-vertical-offset="989">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.5" vertical-offset="0" max-vertical-offset="729">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="729">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.109201215" vertical-offset="162" max-vertical-offset="1161">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5460061" vertical-offset="0" max-vertical-offset="989">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38220423" vertical-offset="0" max-vertical-offset="989">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27300304" vertical-offset="0" max-vertical-offset="989">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,6 +636,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5187058" vertical-offset="0" max-vertical-offset="989">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00016TextArea自适应文字行数多少/00016TextArea自适应文字行数多少.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1002">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00015检测是否是数值型/00015检测是否是数值型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.75" vertical-offset="0" max-vertical-offset="945">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00017判断单选框是否选中/00017判断单选框是否选中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4311377" vertical-offset="0" max-vertical-offset="1002">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00018判断复选框至少选中一项/00018判断复选框至少选中一项.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18862276" vertical-offset="0" max-vertical-offset="1002">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00019限制复选框最多选择几项/00019限制复选框最多选择几项.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7098079" vertical-offset="0" max-vertical-offset="1647">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00021根据指定内容选中复选框/00021根据指定内容选中复选框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16380182" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00020Checkbox全选、取消全选、反选/00020Checkbox全选、取消全选、反选.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6006067" vertical-offset="324" max-vertical-offset="1647">
+          <caret line="34" column="92" selection-start-line="34" selection-start-column="92" selection-end-line="34" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00022获取复选框所有选中内容/00022获取复选框所有选中内容.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32760364" vertical-offset="594" max-vertical-offset="1701">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00024动态添加下拉选项/00024动态添加下拉选项.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24251497" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00023禁止输入/00023禁止输入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16380182" vertical-offset="0" max-vertical-offset="1404">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding />
         </state>
       </provider>

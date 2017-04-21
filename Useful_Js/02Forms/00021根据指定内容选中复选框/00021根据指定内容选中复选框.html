@@ -1,0 +1,51 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00021根据指定内容选中复选框</title>
+</head>
+<body>
+<h2>根据指定内容选中复选框</h2>
+<p>如果内容中含有关键词：“JavaScript”、“席新亮”、“游戏”，则相应的关键词复选框会被选中</p>
+<textarea name="txt" id="contentCheckbox" cols="30" rows="10" data-target="autoKeywordsSelect"></textarea>
+<br/>
+<input type="checkbox" name="autoKeywordsSelect" data-k="JavaScript"/>JavaScript<br/>
+<input type="checkbox" name="autoKeywordsSelect" data-k="席新亮"/>席新亮<br/>
+<input type="checkbox" name="autoKeywordsSelect" data-k="游戏"/>游戏<br/>
+<script>
+window.onload = function(){
+    var contentCheckbox = document.getElementById("contentCheckbox");
+    var target = document.getElementsByName(contentCheckbox.getAttribute("data-target"));
+    var len = target.length;
+    var i = 0;
+    contentCheckbox.onkeyup = function(){           //当textarea输入完毕时执行函数，遍历数组target；
+        for(i= 0; i<len; i++) {             //遍历数组
+            var t = target[i];
+            var v = this.value;             //textarea的内容
+            if(v.search(t.getAttribute("data-k")) != -1) {      //如果能够找到相同个的内容，则对应的数组元素勾选上
+                t.checked = true;
+            } else {
+                t.checked = false;                          //找不到相同的内容，则对应的数组元素保持无勾
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00023禁止输入</title>
+
+</head>
+<body>
+<h2>00023禁止输入</h2>
+<div>JavaScript控制<input type="text" id="inhibitingInput" value="禁止输入"></div>
+<div>表单元素特殊属性一<input type="text" value="没禁止输入"/> </div>
+<div>表单元素特殊属性二<input type="text" value="没禁止输入"/> </div>
+<div>表单元素特殊属性三<input type="text" value="没禁止输入" readonly="readonly"/> </div>
+<div>表单元素特殊属性三<input type="text" value="禁止输入" disabled/> </div>     <!--通过disabled来控制是否能够输入-->
+<div>表单元素特殊属性三<input type="text" value="禁止输入" disabled="disabled"/> </div>      <!--同上-->
+<div>表单元素特殊属性三<input type="text" value="禁止输入" readonly="readonly"/> </div>      <!--通过readonly来控制是否能够输入，可以用tab调到该元素上-->
+
+<script>
+window.onload = function(){
+    var inhibitingInput = document.getElementById("inhibitingInput");
+    //第一种写法，控制失去焦点
+    inhibitingInput.onfocus = function(){           //让获取焦点等于失焦
+        inhibitingInput.blur();
+    };
+    //第二种写法，通过keyup与blur组合使用
+//    var noText = function(){
+//        inhibitingInput.value = "";
+//    };
+//    inhibitingInput.onkeyup = inhibitingInput.onblur = noText;
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

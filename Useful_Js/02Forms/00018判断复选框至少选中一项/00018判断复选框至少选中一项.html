@@ -1,0 +1,32 @@
+
+<html>
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00018判断复选框至少选中一项</title>
+</head>
+<body>
+<h2>00018判断复选框至少选中一项</h2>
+<input type="checkbox" name="checkSelects" />1<br/>
+<input type="checkbox" name="checkSelects" checked="checked"/>2<br/>
+<input type="checkbox" name="checkSelects" />3<br/>
+<input type="checkbox" name="checkSelects" />4<br/>
+<script>
+    window.onload = function(){
+        var _checkSelects = document.getElementsByName("checkSelects");
+        for(var i in _checkSelects) {
+            if(_checkSelects[i].checked) {
+                console.log("至少选中了一项");
+                return;
+            };
+        }
+        console.log("没有选中");
+    };
+</script>
+
+
+
+
+
+
+</body>
+</html>
