@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>00014从字符串中剔除所有HTML代码</title>
+</head>
+<body>
+<h2>00014从字符串中剔除所有HTML代码</h2>
+<!--<input type="text" id="delHtmlTags" value="剔除<p>所有</p>HTML代码"/>-->
+<textarea name="" id="delHtmlTags" cols="30" rows="10">
+    剔除<p>所有</p>HTML代码
+</textarea>
+<p>失去焦点执行过滤,实质上市对特殊的数组内容进行替换</p>
+
+<script>
+window.onload = function() {
+    var _delHtmlTags = document.getElementById("delHtmlTags");
+    _delHtmlTags.onblur = function() {
+        this.value = this.value.replace(/<[\/\!]*[^<>]*>/ig,"");
+    }
+};
+
+</script>
+</body>
+</html>
