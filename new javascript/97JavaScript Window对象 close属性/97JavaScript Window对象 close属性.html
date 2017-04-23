@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>97JavaScript Window对象 close属性
+    </title>
+    <script>
+        var myWindow;
+        function openWin() {
+            myWindow = window.open("","","width = 400,height = 200");
+        }
+        function closeWin() {
+            if(myWindow) {
+                myWindow.close();
+            }
+        }
+        function checkWin() {
+            if(!myWindow) {
+                document.getElementById("msg").innerHTML = "我的窗口没有被打开！";
+            }
+            else {
+                if(myWindow.closed) {
+                    document.getElementById("msg").innerHTML = "我的窗口被关闭！";
+                }else {
+                    document.getElementById("msg").innerHTML = "我的窗口没有被关闭！";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="打开我的窗口" onclick="openWin()"/>
+<input type="button" value="关闭我的窗口" onclick="closeWin()"/>
+<br/>
+<br/>
+<input type="button" value="我的窗口被打开了吗？" onclick="checkWin()"/>
+<br/>
+<br/>
+<p id="msg"></p>
+
+
+
+</body>
+</html>
