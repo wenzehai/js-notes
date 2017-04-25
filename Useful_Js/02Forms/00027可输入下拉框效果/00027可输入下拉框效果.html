@@ -1,0 +1,63 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head lang="en">
+    <meta  charset="utf-8">
+    <title>00027可输入下拉框效果</title>
+
+</head>
+<body>
+<h2>00027可输入下拉框效果</h2>
+<select name="" id="inOption" style="position: absolute; width:118px; left:12px;">
+    <option value="可输入1">可输入1</option>
+    <option value="可输入2">可输入2</option>
+</select>
+<input type="text" id="inInput" style="position: absolute; left: 11px; width: 100px; border-right: 0;"/><br/>
+
+
+<script>
+window.onload = function() {
+    var _inOption = document.getElementById("inOption"),
+            _inInput = document.getElementById("inInput"),
+            addOptions = function(target,optons){
+                var _option = null;
+                var ol = optons.length;
+                var i = 0;
+                var _v = "";
+                var _t = "";
+                for(i; i<ol; i++) {
+                    _v = optons[i].value;
+                    _t = opons[i].text;
+                    _option = document.createElement("OPTION");
+                    _option.value = _v;
+                    _option.text = _t;
+                    target.options.add(_option);
+                }
+            };
+    _inInput.onkeyup = function(){
+        var key = event.keyCode,
+                _v = _inInput.value;
+        if(key = 13){
+            addOptions(_inOption,[{
+                "value": _v,
+                "text":_v
+            }])
+        }
+    };
+    _inOption.onchange = function(){
+        _inInput.value = this.value;
+    }
+};
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
