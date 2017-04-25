@@ -7,40 +7,42 @@
 </head>
 <body>
 <h2>00024动态添加下拉选项</h2>
-<p>未完成，还有很多错误</p>
 <input type="button" value="添加" id="addOptions" data-target="addOptions"/>
-<select name="option" id="addOption">
-    <option value="">请选择</option>
-    <option value="1">原有选项</option>
+<select name="" id="addOption">
+    <option value="">请选择下拉选项</option>
+    <option value="1">原有的选项</option>
 </select>
 <script>
-window.onload = function(){
-    var addOptions = document.getElementById("addOptions");
-    var option = document.getElementById("option");
-    add = function(target,options) {
-        var _options = null;
-        var ol = options.length;
-        var i = 0;
-        var v = "";
-        var t = "";
-        for(; i<ol; i++) {
-            v = options[i].value;
-            t = options[i].text;
-            _options = document.createElement("OPTION");
-            _options.value = v;
-            _options.text = t;
-            target.options.add(options);
+    window.onload = function(){
+        var _addOptions = document.getElementById("addOptions");
+        var  _addOption = document.getElementById("addOption");
+        var addOptions = function(target,optons) {      //添加optons数组，数组内放置一个对象
+           var _option = null;
+                var ol = optons.length;
+                var  i = 0;
+                var _v = "";
+                var _t = "";
+           for(i; i<ol; i++) {
+               _v = optons[i].value;
+               _t = optons[i].text;
+               _option = document.createElement("option");      //创建空option引用
+               _option.value = _v;      //添加值
+               _option.value = _t;      //添加文本
+               target.options.add(_option);     //增加option？？？
+           }
+        };
+        _addOptions.onclick = function() {
+            addOptions(_addOption,[{
+                "value":"新添加的元素",
+                "text":"新添加的元素"
+            }])
         }
     };
-    addOptions.onclick = function () {
-        add(option,[{
-            "value":"新添加的元素",
-            "text":"新添加的元素"
-        }])
-    }
-}
+
+
 
 </script>
+
 
 
 
