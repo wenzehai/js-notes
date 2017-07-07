@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 数据类型
+			 *一、基本数据类型
+			 *		1、字符串	String
+			 * 			放在成对引号中
+			 * 		2、数字		Number
+			 * 			1、由0-9之间的任意数组组合而成，可以是整数，也可以是小数。数字的范围在正无穷
+			 * 			(+Infinity)与负无穷（-Infinity)之间
+			 * 			数字最大值：Number.MAX_VALUE
+			 * 			数字最大值：Number.MIN_VALUE
+			 * 			2、NaN
+			 * 				Not a Number
+			 * 				当运算失败时出现
+			 * 				自身与自身不相等
+			 * 		3、布尔值	Boolean
+			 * 			true
+			 * 			false
+			 * 		4、未定义	Undefined
+			 * 			有且只有一个值undefined			有，但是没有给值
+			 * 		4、空		Null
+			 * 			有且只有一个值null				压根就没有，不存在，也没有值
+			 * 
+			 *二、复合数据类型
+			 *		对象		Object
+			 * 		格式	：由简单数据类型与复合数据类型任意组合而成的。她的数据是放在一对大括号中，每个数据是由
+			 * 一个键值对组合而成的，数据可以是0个，也可以是多个，每个数据之间用逗号隔开，最后一个数据不能加逗号
+			 * （如果加了逗号，就会报错；数组在最后一个位置加逗号，不会报错）
+			 * 			键值对： key:value
+			 * 				key 数据名称，它可以加引号，也可以不加引号，当这个名字不符合变量命名规则的时候，要加上引号，
+			 * 					引号是成对出现的。
+			 * 				value  数据对应的值，这个值可以是简单数据类型，也可以是复杂数据类型
+			 * 
+			 * 		操作对象用的方法就是属性的方法
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			var n1 = 12;
+			var n2 = 23.56;
+			
+			console.log(n1);
+			console.log(n2);
+			
+			var person = {
+				name: 'wenzehai',
+				age: 25,
+				sex: 'male',
+				height: '180cm',
+				weight: '90kg',
+				drive: true,
+				'girl-friend':null,
+				language: ['汉语','日语','英语']
+			}
+			console.dir(person);			//返回整个对象
+			console.log(person.name);		//操作属性
+			console.log(person['girl-friend']);
+			person.age = 27;
+			console.log(person.age);
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

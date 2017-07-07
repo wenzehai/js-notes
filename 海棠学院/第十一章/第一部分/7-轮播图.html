@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>轮播图</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<style type="text/css">
+			#slider {
+				width: 1180px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+		注意：
+		1、写一个父级，放一个id和一个carousel的class   
+		slide用来给图片添加运动效果；
+		data-interval="500" 一张图走到另一张图，的间隔时间，不要低于400，要不软容易出现问题
+		data-ride="carousel" 页面一加载后就开始播放
+		2、小圆点的内容要放在一个class为carousel-indicators的层里
+		3、图片内容区域要放在class为carousel-inner的层里,
+		每一项内容都需要放到一个叫item的层里，需要激活第一块的话，给class增加active类
+		这里面也可以放文字，那需要来一个父级，父级的class为carousel-caption
+		4、左右箭头的
+	-->
+		<div class="container">
+			<div class="carousel slide" id="slider" data-interval="2000" >
+					<!--小圆点-->
+					<ol class="carousel-indicators">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+					<!--轮播图的图片-->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/1.jpg" alt="img" />
+						</div>
+						<div class="item">
+							<div class="carousel-caption">
+								<h3>这里是标题</h3>
+								<p>这里是内容，非常多非常多这里是内容，非常多非常多这里是内容，非常多非常多这里是内容，非常多非常多这里是内容，非常多非常多这里是内容，非常多非常多这里是内容，非常多非常多</p>
+							</div>
+							<img src="img/2.jpg" alt="img" />
+							<!--给轮播里面加文字-->
+						</div>
+						<div class="item"><img src="img/3.jpg" alt="img" /></div>
+						<div class="item"><img src="img/4.jpg" alt="img" /></div>
+						<div class="item"><img src="img/5.jpg" alt="img" /></div>
+					</div>
+					<!--左右按钮-->
+					<!--给链接加一个id，对应的为轮播容器的id-->
+					<a href="#slider" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+					<a href="#slider" class="carousel-control right" data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+		</script>
+	</body>
+
+</html>

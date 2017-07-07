@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid gray;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+		<script src="js/move.js"></script>
+		<script>
+			/*
+			 * 运动的原理
+			 * 		时间版的运动，根据时间去控制速度，已知时间与距离，用它俩算出来速度
+			 * 
+			 * 匀速运动
+			 * 		特点：在任何一个点的速度都是一样的
+			 * 		
+			 * 
+			 * 某个点的位置
+			 * 
+			 * t 已过的时间
+			 * b 开始的位置
+			 * c 总距离
+			 * d 总时间
+			 * 
+			 * var value=c/d*t+b	//某个点的距离
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			window.onload=function(){
+				var btn=document.getElementById('btn');
+				var box=document.getElementById('box');
+				btn.onclick=function(){
+					move(box,{left:300,top:400},1000,'linear',function(){
+						move(box,{top:300},1000,'linear');
+					});
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="begin" id="btn" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

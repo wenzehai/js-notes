@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>折叠菜单</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<style type="text/css">
+			.row {
+				padding-top: 100px;
+			}
+			
+			#subNav {
+				position: fixed;
+				top: 100px;
+			}
+			
+			.nav a {
+				color: #767676;
+				padding: 0 15px;
+			}
+			
+			.nav ul {
+				display: none;
+			}
+			
+			.nav .active ul {
+				display: block;
+				padding-left: 20px;
+			}
+			
+			.nav .active>a {
+				color: #FF0000;
+				border-left: 3px solid #FF0000;
+				font-size: 20px;
+			}
+			
+			.nav .active .bold {
+				font-weight: bold;
+				border-left: 3px solid #f00;
+				font-size: 20px;
+			}
+			
+			.nav>ul>li {
+				padding: 5px 15px;
+			}
+		</style>
+	</head>
+
+	<body data-spy="scroll" data-target="#subNav">
+		<!--
+		注意：
+		1、弹出层必须放在body里面
+		2、弹出层里面不能再嵌套别的层
+		3、弹出层出来以后，页面的滚动条会被覆盖。
+	-->
+		<!--
+		注意：
+		1、给要点击的那个元素加一个data-toggle="collapse" ,并且加一个data-target="id or class" 
+		ID or class需要与折叠的内容相对应
+		2、给要折叠的内容加id or class，与上面对应
+		
+		注意：
+		1、内容区域不能有padding值，如果要有，放到里面的div，用里面的内容撑开来。
+	-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="carousel slide" id="slider">
+						<ol class="carousel-indicators">
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active"><img src="img/1.jpg" alt="img" /></div>
+							<div class="item">
+								<div class="carousel-caption">
+									<h4>内容标题</h4>
+									<p>内容内容</p>
+								</div>
+								<img src="img/1.jpg" alt="img" />
+							</div>
+							<div class="item"><img src="img/1.jpg" alt="img" /></div>
+							<div class="item"><img src="img/1.jpg" alt="img" /></div>
+						</div>
+						<a href="#slider" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+						<a href="#slider" class="carousel-control right" data-slide="next">&rsaquo;</a>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="panel-group" id="pgroup1">
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<span class="glyphicon glyphicon-triangle-bottom" data-toggle="collapse" data-parent="#pgroup1" data-target="#con"></span>
+								<h3 class="panel-title">模块标题</h3>
+							</div>
+							<div id="con" class="collapse">
+								<div class="panel-body">
+									<!--注意，panel-body与panel-heading不在同一个层级-->
+									<p>this is content我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<span class="glyphicon glyphicon-triangle-bottom" data-toggle="collapse" data-parent="#pgroup1" data-target="#con2"></span>
+								<h3 class="panel-title">模块标题</h3>
+							</div>
+							<div id="con2" class="collapse">
+								<div class="panel-body">
+									<!--注意，panel-body与panel-heading不在同一个层级-->
+									<p>this is content我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<span class="glyphicon glyphicon-triangle-bottom" data-toggle="collapse" data-parent="#pgroup1" data-target="#con3"></span>
+								<h3 class="panel-title">模块标题</h3>
+							</div>
+							<div id="con3" class="collapse">
+								<div class="panel-body">
+									<!--注意，panel-body与panel-heading不在同一个层级-->
+									<p>this is content我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-12">
+					<div class="content col-md-8" style="padding-bottom: 500px;">
+						<section id="section1">
+							<h3 id="section1-header">section header</h3>
+							<h4 id="subHeader1">section subheader1</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的
+								<a class="tool" data-toggle="tooltip" title="application program interface" data-placement="top">API</a> 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的
+								<a class="popover1" data-target="popover" data-placement="top" title="this is a popover" data-content="这是弹框的内容"><span class="glyphicon glyphicon-record"></span></a> option对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader2">section subheader2</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader3">section subheader3</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+						</section>
+						<section id="section2">
+							<h3 id="section2-header">section header</h3>
+							<h4 id="subHeader4">section subheader1</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader5">section subheader2</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader6">section subheader3</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+						</section>
+						<section id="section3">
+							<h3 id="section3-header">section header</h3>
+							<h4 id="subHeader7">section subheader1</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader8">section subheader2</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+							<h4 id="subHeader9">section subheader3</h4>
+							<p>content1</p>
+							<p>我们为所有 Bootstrap 插件提供了纯 JavaScript 方式的 API。所有公开的 API 都是支持单独或链式调用方式，并且返回其所操作的元素集合（注：和jQuery的调用形式一致）。</p>
+							<p>$('.btn.danger').button('toggle').addClass('fat')</p>
+							<p>所有方法都可以接受一个可选的 option 对象作为参数，或者一个代表特定方法的字符串，或者什么也不提供（在这种情况下，插件将会以默认值初始化）：</p>
+						</section>
+					</div>
+					<div class="aside col-md-4">
+						<div id="subNav" class="navbar-collapse">
+							<ul class="nav">
+								<li>
+									<a href="#section1-header">
+										section header
+									</a>
+									<ul class="nav">
+										<li>
+											<a href="#subHeader1">subHeader1</a>
+										</li>
+										<li>
+											<a href="#subHeader2">subHeader2</a>
+										</li>
+										<li>
+											<a href="#subHeader3">subHeader3</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#section2-header">
+										section header
+									</a>
+									<ul class="nav">
+										<li>
+											<a href="#subHeader4">subHeader4</a>
+										</li>
+										<li>
+											<a href="#subHeader5">subHeader5</a>
+										</li>
+										<li>
+											<a href="#subHeader6">subHeader6</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#section3-header">
+										section header
+									</a>
+									<ul class="nav">
+										<li>
+											<a href="#subHeader7">subHeader7</a>
+										</li>
+										<li>
+											<a href="#subHeader8">subHeader8</a>
+										</li>
+										<li>
+											<a href="#subHeader9">subHeader9</a>
+										</li>
+									</ul>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modal1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">&times;</button>
+						<h3>弹窗标题</h3>
+					</div>
+					<div class="modal-body">
+						<h4>内容标题一</h4>
+						<p>内容很多....</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">cancle</button>
+						<button class="btn btn-primary" data-dismiss="modal">submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+			$('.tool').tooltip();
+			$('.popover1').popover();
+		</script>
+	</body>
+
+</html>

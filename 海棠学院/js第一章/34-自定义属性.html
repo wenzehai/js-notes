@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="button" style="width: 50px; height: 50px; background: red;" />
+		
+	<script>
+		/*
+		 *属性
+		 * 		元素身上所具有的一些特征
+		 *
+		 *1、系统自带属性
+		 * 		type、id、style、value、src
+		 *2、自己添加的属性
+		 *		自定义属性，系统当中是没有的，我们自己加的。
+		 * 		系统自带的属性，满足不了我们的要求，给一个自己添加的属性
+		 *
+		 *
+		 *
+		 *
+		 */
+		var btn = document.getElementById('btn');
+		console.log(btn.type);		//botton
+		console.log(btn.id);		//btn
+		
+		btn.wenzehai = '文泽海';		//先找到要添加自定义属性的对象，然后输名字，然后赋值,这就是自定义属性的方法
+		console.log(btn.wenzehai);		//调用属性
+		console.log(btn['wenzehai']);	//调用属性
+		
+		
+	</script>
+	</body>
+</html>

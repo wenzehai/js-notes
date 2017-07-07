@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*#color>li:first-child {
+				background: red;
+			}
+			#color>li:nth-child(4) {
+				background: yellow;
+			}*/
+		</style>
+		
+	</head>
+	<body>
+		<ul id="color">
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>
+				<ul>
+					<li>pink</li>
+					<li>white</li>
+					<li>black</li>
+					<li>gold</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ul class="color2">
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+		
+		
+		
+	<script type="text/javascript">
+		/*
+		 *querySelectorAll(css选择器)
+		 * 		
+		 * 	
+		 * 主语
+		 * 		document		从整个页面中去获取
+		 * 		父级				从父级下去获取元素
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 
+		 * */
+		window.onload = function() {
+			//var lis = document.querySelectorAll('li');
+			//console.dir(lis);						//获取的结果也是一个类数组
+			
+			var color=document.getElementById('color')
+			var lis = color.querySelectorAll('li');
+			console.dir(lis);
+			
+			var lis3 = document.querySelectorAll('#color ul li')
+			console.dir(lis3);
+			lis3[lis3.length-1].style.backgroundColor="gold";
+			
+			var uls = document.querySelectorAll('ul');
+			console.dir(uls);
+			uls[2].style.background='blue';
+		}	
+		
+	</script>	
+	</body>
+</html>

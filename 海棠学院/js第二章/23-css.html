@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid gray;
+			}
+			
+		</style>
+		<script>
+			/*
+			 *css（）函数
+			 * 
+			 * css(box,'width')两个参数代表获取属性的值
+			 * css(box,'width','300px')三个参数代表设置属性的值
+			 * 
+			 * 
+			 * getComputedStyle		获取计算后的样式，DOM标准浏览器自带的，IE中不带
+			 * 
+			 * 
+			 * */
+			window.onload=function(){
+				var box = document.getElementById('box');
+				//console.dir(getComputedStyle(box));					//获取到计算后样式的集合
+				//console.dir(getComputedStyle(box).width);			//100px;
+				
+				//getComputedStyle(box).width
+				//box.style.width='200px';
+				function css(){
+					if(arguments.length==2){
+						//说明现在传了两个参数，获取元素的属性值
+						//arguments[0]			box
+						//width 				arguments[1]
+						return getComputedStyle(arguments[0])[arguments[1]];		//点后面要加真实的属性名,不能加参数形式的属性名，所以这里用大括号
+					};
+					if(arguments.length==3){
+						//说明现在传了三个参数，用来设置元素的属性值
+						arguments[0].style[arguments[1]]=arguments[2];
+					}
+				}	
+				//console.log(css(box,'height'));						//100px
+				console.log(css(box,'width','200px'));						//100px
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>		
+	</body>
+</html>

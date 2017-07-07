@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *运动的原理
+			 * 		在定时器里不断的去修改元素的属性，膝盖完成以后再把结果重新赋给元素
+			 * 
+			 * 运动的问题
+			 * 		1、如果每次的步长如果与目标值不成背书的话，就到达不了目标值。
+			 * 			解决：把判断条件改成大雨等于就可以
+			 * 		2、如果用户连续点击开始按钮的话，速度救护越来越快。
+			 * 			原因：用户不断去点击按钮的话会重复卡其多个定时器，造成速度累加。
+			 * 			解决：在点击的时候，先把上一个定时器清除掉。在前面清定时器clearInterval
+			 * */
+			window.onload=function(){
+				var begin=document.getElementById('begin');
+				var box=document.getElementById('box');
+				var t;
+				begin.onclick=function(){
+					clearInterval(t);				//首先清除定时器，解决加速问题。清除一个不存在的定时器是不会有问题的
+					t=setInterval(function(){
+						var l=parseInt(getComputedStyle(box).left);
+						l+=7;
+						box.style.left=l+'px';
+						if(l>=300){					//==不行，就用>=,但是值仍然不正确，靠近后，直接赋值到目标值，即l=300;
+							clearInterval(t);		
+							l=300;
+						};
+						console.log(l);
+					},16);
+				}
+			};
+			
+		</script>
+		<input type="button" name="begin" id="begin" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 函数类型
+			 * 		1、函数声明
+			 * 			语法
+			 * 				function 函数名(参数) {
+			 * 					执行代码
+			 * 				}
+			 * 			调用
+			 * 				1、函数名（参数）
+			 * 				2、把函数声明变成函数表达式，在后加一个小括号
+			 * 		2、函数表达式
+			 * 			语法
+			 * 				var 变量=function（参数） {
+			 * 						要执行的代码
+			 * 				}
+			 * 			调用
+			 * 				1、变量(参数)
+			 * 				2、函数表达式可以直接在后面加上一对小括号，就被调用。
+			 * 			注意：
+			 * 				1、函数表达式里面的function后面如果有名字的话，在调用的时候是不能拿这个名字去调用
+			 * 				2、匿名函数就是函数表达式
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			var fn2 = function fn3(name) {
+				console.log(name);
+			}
+			//fn3('这是一个函数表达式test');		//报错，因为不能直接调用这里的fn3
+			fn2('这是一个函数表达式');
+			
+			document.onclick=function(){
+				console.log('document点击了');				
+			};
+			document.onclick();
+			
+			//函数表达式的另一种调用方式
+			var fn4=function(){
+				console.log('这是第二个函数表达式');
+			}();			//后面加括号
+			
+			var fn4=function(){
+				console.log('这是第三个函数表达式');
+			}();
+			
+//			//把函数声明变成函数表达式
+//			!function fn5() {								//加上一个！变成了一个表达式，通过给表达式加括号，放到后面调用
+//				console.log('这是第二个函数声明');
+//			}();
+
+//			~function fn5(){
+//				console.log('这是第二个函数声明')
+//			}();
+			
+			//把函数声明变成函数表达式的符号包括，！ ~ + - 或者给函数加上一对小括号（闭包）
+			
+			(function fn5(){
+				console.log('这是第二个函数声明')
+			})();
+		</script>
+	</body>
+</html>

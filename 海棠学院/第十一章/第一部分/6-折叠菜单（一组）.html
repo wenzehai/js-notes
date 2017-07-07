@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>折叠菜单</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<style type="text/css">
+			.row {
+				padding-top: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+		注意：
+		1、面板组主要是为了联动，即点击其中一个，组里面的另外两个也有反应。通过面板组的id来联系。
+		2、如果想让面板组一开始显示内容，给面板内容添加一个class in，in与collapse的位置不区分前后
+		3、如果不想显示内容，则添加一个class collapse
+		4、想给那个添加点击，就给那个元素添加  data-toggle="collapse" data-parent="#accordion" data-target="#con"
+		
+		
+	-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<!--把所有的面板都放到一个父级里，并且给父级添加一个panel-group类,还有一个id-->
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#con">
+								<h3 class="panel-title">
+								<!--给要点击的元素添加一个data-parent属性，并让他的值与父级的id一样-->
+								<a href="#">海棠学院</a>
+								</h3>
+							</div>
+							<div id="con" class="in">
+								<!--给class="in",含义是先隐藏显示的那一步-->
+								<div class="panel-body">
+									专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+								<!--给要点击的元素添加一个data-parent属性，并让他的值与父级的id一样-->
+								<a href="#" data-toggle="collapse" data-parent="#accordion" data-target="#con1">海棠学院</a>
+								</h3>
+							</div>
+							<!--需要给内容区域添加一个collapse-->
+							<div id="con1" class="in collapse">
+								<!--给class="in",含义是先隐藏显示的那一步-->
+								<div class="panel-body">
+									专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">
+								<!--给要点击的元素添加一个data-parent属性，并让他的值与父级的id一样-->
+								<a href="#" data-toggle="collapse" data-parent="#accordion" data-target="#con2">海棠学院</a>
+								</h3>
+							</div>
+							<div id="con2" class="collapse">
+								<!--给class="in",含义是先隐藏显示的那一步-->
+								<div class="panel-body">
+									专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+		</script>
+	</body>
+
+</html>

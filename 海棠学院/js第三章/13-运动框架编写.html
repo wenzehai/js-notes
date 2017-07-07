@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid gray;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+		</style>
+		<script src="js/tween.js"></script>
+		<script>
+			/*
+			 * obj			运动的对象
+			 * attr			要运动的属性
+			 * target		要运动到的目标
+			 * duration 	要运动的时间
+			 * fn			运动的形式
+			 * callback		运动完成以后调用的函数
+			 * 
+			 * 把偷懒发挥到极致
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			function move(obj,attr,target,duration,fx,callback){
+				var d=duration;
+				var b=parseFloat(getComputedStyle(obj)[attr]);
+				var c=target-b;
+				var startTime=new Date().getTime();
+				clearInterval(obj.timer);
+				obj.timer=setInterval(function(){
+					var t=new Date().getTime()-startTime;
+					
+					//运动停止
+					if(t>=d){
+						t=d;
+						clearInterval(obj.timer);
+					}
+					var value = Tween[fx](t,b,c,d);
+					obj.style[attr]=value+'px';
+					//当运动停止时，判断是否执行回调函数，先要判断有没有回调函数
+					if(t==d){
+						/*if(callBack){
+							callback;
+						}*/
+						callback && callBack();
+					}
+				});
+			}
+				
+			window.onload=function(){
+				var btn=document.getElementById('btn');
+				var box=document.getElementById('box');
+				btn.onclick=function(){
+					move(box,'left',400,1000,'backOut',function(){
+						alert('运动完成了');
+					})
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" name="begin" id="btn" value="开始" />
+		<div id="box"></div>
+	</body>
+</html>

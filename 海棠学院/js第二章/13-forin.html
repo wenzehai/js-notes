@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *for in语句
+			 * 		也是用来循环的，只不过多了一个作用：
+			 * 		用来便利对象当中的数据
+			 * 语法
+			 * 		for(var 变量名 in 对象){
+			 * 			变量名		对象里的属性名（key）
+			 * 			对象[属性名]		属性名对应的值
+			 * }
+			 * 
+			 * 要取到一个对象里面所有数据，只能用for in方法
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			for(var i=0; i<5; i++){
+				console.log('wenzehai');
+			};
+			
+			var color=['red','blue','green','pink','yellow',];
+			for(var i=0; i<color.length; i++) {
+				console.log(color[i]);
+			};
+			
+			var person={
+				name:'wenzehai',
+				age:30,
+				height:'180cm',
+				weight: 'kg'
+			};
+			for(var b in person){
+				//console.log(attr);			//得到对象的属性名
+				console.log(b,person[b]);			//得到对象的属性名，得到对象的属性值
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *在外面访问里面的a和fn2
+			 * 闭包的作用
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 *
+			 */
+			var innerFn=null;				//全局变量，用来存储内部函数
+				function fn1(){
+					var n=10;			
+					function fn2(){
+						n++;
+						console.log(n);
+					}
+					fn2();
+					innerFn=fn2;
+				}
+				fn1();
+				
+				innerFn();		//12		把fn2整个函数赋给了innerFn，而它本身就是一个全局变量，有了值以后
+				//在其他的地方就可以访问到它了。
+				
+		</script>
+	</body>
+</html>
