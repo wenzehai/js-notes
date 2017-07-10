@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * split方法
+			 *		作用
+			 * 		用指定的分割符把字符串分隔成数组
+			 * 
+			 * 语法
+			 * 		字符串.split(separator,limit)
+			 * 		separator:分割符
+			 * 		limit：分割成数组数据的个数；
+			 * 
+			 * 返回值
+			 * 		返回一个数组，原字符串不变化
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			var str = 'wenzehai';
+			var s1 = str.split();
+			console.log(s1);			//一个参数都没有的话，会把整个字符串作为数组中的一个数据
+			
+			
+			var str = 'wenzehai';
+			var s2 = str.split('');
+			console.log(s2);			//有一个空作为分割符，将字符串一个字符一个字符的分开来作为数组中的数据
+			
+			var str = 'wenzehai';
+			var s3 = str.split(' ');
+			console.log(s3);			//有一个空格作为分割符，把整个字符串作为数组中的一个数据
+			
+			var str = 'wenzehai';
+			var s4 = str.split('a');
+			console.log(s4);			//a前面一个数据，后面一个数据，数组不包含a
+			
+			
+			var str = 'wenzehai';
+			var s5 = str.split('z',1);
+			console.log(s5);			//z前面一个数据的数组，因为1限制了数量
+			
+			
+		</script>
+	</body>
+</html>

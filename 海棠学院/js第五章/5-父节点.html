@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * parentNode
+			 * 		
+			 * 元素节点有父节点
+			 * 
+			 * 属性节点是没有父节点的
+			 * 	
+			 * 
+			 */
+			window.onload = function() {
+				var box = document.getElementById('box');		
+				var p = box.querySelector('p');
+				
+				console.log(p.parentNode);		//div
+			
+				var attr = p.attributes;
+				console.log(attr[0].parentNode);		//null
+				
+				var child = box.childNodes;
+				console.log(child[3].parentNode);		//div
+			
+			}
+		</script>
+		<div id="box">
+			<p style="width: 100px;"></p>
+			<!--这是注释-->
+		</div>
+	</body>	
+</html>

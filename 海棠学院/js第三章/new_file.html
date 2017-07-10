@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*#box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+				font-size: 24px;
+				position: absolute;
+				top: 50px;
+				left: 0;
+			}*/
+			/*{
+				margin: 0;
+				padding: 0;
+			}
+			#ad{
+				background: url(img/xiala.jpg) no-repeat center top;
+				/*height: 100px;
+			}
+			*/
+			
+			/*#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}*/
+			
+			/*#box1,#box2{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+			#box2{
+				top: 200px;
+			}
+			*/
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+			}
+			
+			
+		</style>
+		<script src="js/move.js"></script>
+		<script type="text/javascript">
+			/*
+			 *
+			 * 
+			 * 定时器的分类
+			 * 		1、重复执行定时器
+			 * 			setInterval()
+			 * 				作用
+			 * 				每个一段时间就去执行指定的函数，重复的执行
+			 * 				语法
+			 * 				setInterval(function(),时间){
+			 * 					每个隔一段时间就会执行这里的代码
+			 *				 }
+			 * 				参数
+			 * 					1、要执行的函数：当时间到了就会执行；
+			 * 					2、时间：间隔的时间，单位是毫秒
+			 * 				什么时候用
+			 * 					当需要每隔一段时间就去做同一件事的时候，就用setInterval
+			 * 		2、延迟执行定时器
+			 * 				setTimeout()
+			 * 				作用：
+			 * 				当延迟时间到达后，会执行指定的代码，这个函数只执行一次
+			 * 				语法
+			 * 				setTimeout(function(){
+			 * 					当时间到达后，会执行这里的代码
+			 * 				},时间)；
+			 * 				参数
+			 * 					1、要执行的函数：当时间到达后会执行这个函数
+			 * 					2、时间：延迟时间，单位也是毫秒
+			 * 				什么时候用
+			 * 					当需要延迟一段时间去做一件事的时候，就用setTimeout
+			 * 
+			 * 定时器里面的this指向
+			 * 		定时器里面的this指向window，因为定时器是window身上的一个方法，所以this指向window
+			 * 
+			 *  
+			 * 清除定时器
+			 * 		定时器的一个返回值，返回一个数字，代表当前定时器的编号，我们可根据这个来清除定时器	
+			 * 定时器的返回值在每个不同的浏览器都不一样，所以没有办法直接拿编号去清掉定时器
+			 * 可以声明一个变量，把定时器的返回值都存到变量里，拿这个变量来清除定时器。
+			 * 清除定时器的方法
+			 * 		1、清除重复执行定时器
+			 * 			clearInterval(定时器的返回值)
+			 * 		2、清除延迟定时器
+			 * 			clearTimeout(定时器的返回值)
+			 * 		定时器返回一个数字，定时器的编号。清除定时器的方法其实清掉的是编号。所以可以用
+			 * 任何一种方法清除定时器，即使他们不对应，也没有关系。
+			 * 
+			 * 1、直接把定时器调用放在了一个变量赋值的后面，定时器还会走吗？ 可以
+			 * 2、这个timer是在下声明的，而用他的时候在上面，能调到吗？可以
+			 * 
+			 * 运动的原理
+			 * 		在定时器里不断的去修改元素的属性，修改完成以后再把结果重新赋给元素
+			 * 
+			 * 运动的问题
+			 * 		1、如果每次的步长如果与目标值不成背书的话，就到达不了目标值。
+			 * 			解决：把判断条件改成大于等于就可以
+			 * 		2、如果用户连续点击开始按钮的话，速度就会越来越快。
+			 * 			原因：用户不断去点击按钮的话会重复开其多个定时器，造成速度累加。
+			 * 			解决：在点击的时候，先把上一个定时器清除掉。在前面清定时器clearInterval
+			 *		3、 多个物体运动,那前面的运动会没有效果
+			 * 				原因：是因为每次运动刚开始都会清除上一个定时器，所以导致后面的运动会把后面的运动的定时器清掉
+			 *
+			 * 运动的原理
+			 * 		时间版的运动，根据时间去控制速度，已知时间与距离，用它俩算出来速度
+			 * 
+			 * 匀速运动
+			 * 		特点：在任何一个点的速度都是一样的
+			 * 		
+			 * 
+			 * 某个点的位置
+			 * 
+			 * t 已过的时间
+			 * b 开始的位置
+			 * c 总距离
+			 * d 总时间
+			 * 
+			 * var value=c/d*t+b	//某个点的距离
+			 * 
+			 * 
+			 */
+
+			window.onload = function() {
+				//				var box = document.getElementById('box');
+				//				var i = 0;
+				//				box.onclick = function() {
+				//				//	setInterval(change,1000);
+				//					setTimeout(change,3000);
+				//				};
+				//				function change() {
+				//					i++;
+				//					box.innerHTML = i;
+				//				}
+				//				var i = 0;
+				//				function add() {
+				//					i++;
+				//					console.log(i);
+				//					if(i == 8) {
+				//						clearInterval(timer);
+				//					};
+				//				}
+				//				var timer = setInterval(add,1000);
+
+//				var begin = document.getElementById('begin');
+//				var stop = document.getElementById('stop');
+//				var box = document.getElementById('box');
+//				var timer;
+//
+//				begin.onclick = function() {
+//					var l = parseInt(getComputedStyle(box).left);
+//					var t = parseInt(getComputedStyle(box).top);
+//					var w = parseInt(getComputedStyle(box).width);
+//					var h = parseInt(getComputedStyle(box).height);
+//					timer = setInterval(
+//						function() {
+//							l++;
+//							t++;
+//							w++;
+//							h++;
+//							box.style.left = l + 'px';
+//							box.style.top = t + 'px';
+//							box.style.width = w + 'px';
+//							box.style.height = h + 'px';
+//						}, 16
+//					);
+//				};
+//				stop.onclick = function() {
+//					clearInterval(timer);
+//				};
+
+//				下拉广告
+//				var ad = document.getElementById('ad');
+//				var t1;
+//				var t2;
+//				var h = parseInt(getComputedStyle(ad).height);
+//				t1 = setInterval(function(){
+//					h++;
+//					ad.style.height = h +'px';
+//					if(h == 250) {
+//						clearInterval(t1);
+//						t2 = setTimeout(function(){
+//							t1 = setInterval(function(){
+//								clearTimeout(t2);
+//								h--;
+//								ad.style.height = h + 'px';
+//								if(h == 100){
+//									clearInterval(t1);
+//								}
+//							},16)
+//						},3000);
+//					}
+//				},16);
+				
+//				var begin=document.getElementById('begin');
+//				var box=document.getElementById('box');
+//				var t;
+//				
+//				begin.onclick = function() {
+//					clearInterval(t);
+//					t = setInterval(function(){
+//						var l=parseInt(getComputedStyle(box).left);
+//						l += 7;
+//						box.style.left = l + 'px';
+//						if(l>=300) {
+//							clearInterval(t);
+//							l = 300;
+//						};						
+//					},16);
+//				}
+				
+//				var begin=document.getElementById('begin');
+//				var box1=document.getElementById('box1');
+//				var box2=document.getElementById('box2');
+//				var t;
+//				
+//				function move(obj,attr,target) {
+//					clearInterval(obj.t);
+//					obj.t = setInterval(function() {
+//						var value = parseInt(getComputedStyle(obj)[attr]);
+//						value += 7;
+//						if(value >= target){
+//							clearInterval(obj.t);
+//							value = target;
+//						};
+//						obj.style[attr] = value + 'px';
+//					},16);
+//				}
+//				begin.onclick = function(){
+//					move(box1,'left',300);			//注意attr要加引号
+//					move(box2,'left',500);
+//				};
+
+				var btn=document.getElementById('btn');
+				var box=document.getElementById('box');
+				btn.onclick = function() {
+					move(box,{left:300,top:400},1000,'linear',function(){
+						move(box,{top:300},1000,'linear');
+					});
+				};
+
+
+			};
+		</script>
+	</head>
+
+	<body>
+		<!--<input type="button" name="begin" id="begin" value="开始" />
+		<input type="button" name="stop" id="stop" value="停止" />
+		<div id="box"></div>-->
+		
+		<!--<div id="ad"></div>-->
+		
+		<!--<input type="button" name="begin" id="begin" value="开始" />
+		<div id="box"></div>-->
+		
+		<!--<input type="button" name="begin" id="begin" value="开始" />
+		<div id="box1"></div>
+		<div id="box2"></div>-->
+		
+		
+		<input type="button" name="begin" id="btn" value="开始" />
+		<div id="box"></div>
+	</body>
+
+</html>

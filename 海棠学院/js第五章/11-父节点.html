@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #FF0000;
+				margin: 70px 0 0 70px;
+			}
+			#box2 {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 * offsetParent
+			 * 		作用
+			 * 		获取离元素最近的有定位的父元素
+			 *		它会一层一层网上找，知道找到最近的有定位的父级就把找到的父级返回出来
+			 * 		如果父级都没有定位，那返回body（IE8以及IE8以上才会返回）
+			 * 		body的offsetParent为null
+			 * 语法
+			 * 		元素.offsetParent
+			 * 
+			 * 注意
+			 * 		遵循一个原则，父级一定要给一个定位
+			 * 
+			 * */
+			window.onload = function() {
+				var box1 = document.getElementById('box1');
+				var box3 = document.getElementById('box3');
+				
+				console.log(box1.offsetParent);
+				box1.offsetParent.style.background = 'red';
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box4">
+			<div id="box3">
+				<div id="box2">
+					<div id="box1">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

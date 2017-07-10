@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *firstElementChild
+			 * 	父级.firstElementChild
+			 * 找到第1个子节点
+			 * 
+			 * 
+			 * lastElementChild
+			 * 	父级.lastElementChild
+			 * 	找到最后一个子节点
+			 * 
+			 */
+			
+			window.onload = function() {
+				var lis = document.querySelectorAll('li');
+				var ul = document.querySelector('ul');
+				
+				ul.firstElementChild.style.background = 'red';
+				ul.lastElementChild.style.background = 'red';
+				
+			};
+		</script>
+		<div>
+			<ul>
+				<li><span>隐藏1</span></li>
+				<li><span>隐藏2</span></li>
+				<li><span>隐藏3</span></li>
+				<li><span>隐藏4</span></li>
+				<li><span>隐藏5</span></li>
+				<!--这里是注释-->
+			</ul>
+		</div>
+	</body>
+</html>

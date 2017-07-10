@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * JSON.stringify(对象)
+			 * 	作用
+			 * 		把一个对象转化成JSON格式的字符串。
+			 * 
+			 * 对象key名不一定要加引号,转换成字符串之后，会自动
+			 * 加上引号
+			 * 
+			 */
+			var obj1 = [1,2,3]; 
+			var obj2 = {name:"老王",age:25}
+			
+			var s1 = JSON.stringify(obj1);
+			var s2 = JSON.stringify(obj2);
+			
+			console.log(s1);
+			console.log(obj1);
+			
+			console.log(s2);
+			console.log(obj2);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * JSON.parse(json字符串)
+			 * 	作用
+			 * 		把一个JSON格式的字符串转成对象，返回转过后的对象
+			 * 
+			 * JSON格式的key要加双引号
+			 * 
+			 * 
+			 */
+			var j1 ="[1,2,3]";
+			var j2 ='{"name":"老王","age":"25"}'
+			
+			var obj1 = JSON.parse(j1);
+			var obj2 = JSON.parse(j2);
+			
+			console.log(obj1,typeof obj1);
+			console.log(obj2);
+			
+		</script>
+	</body>
+</html>

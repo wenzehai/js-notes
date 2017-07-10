@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *nextElementSibling
+			 * 	找到下一个兄弟节点
+			 * 
+			 * 
+			 */
+			
+			window.onload = function() {
+				var lis = document.querySelectorAll('li');
+				
+				lis[0].nextElementSibling.style.background = 'red';
+				
+				//找不到的话就返回一个null
+				//lis[4].nextElementSibling.style.background = 'red';			//报错
+				console.log(lis[4].nextElementSibling);
+				
+			};
+		</script>
+		<div>
+			<ul>
+				<li><span>隐藏1</span></li>
+				<li><span>隐藏2</span></li>
+				<li><span>隐藏3</span></li>
+				<li><span>隐藏4</span></li>
+				<li><span>隐藏5</span></li>
+				<!--这里是注释-->
+			</ul>
+		</div>
+	</body>
+</html>
