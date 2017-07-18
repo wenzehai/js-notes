@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *window.close()
+			 * 关闭页面
+			 * 		不同 的浏览器表现形式不一样
+			 * 		在ff/o,只允许关闭由window.open方法所打开的窗口
+			 *
+			 *
+			 */
+			window.onload = function() {
+				var btn = document.getElementById('btn');
+				var close = document.getElementById('btn1');
+				btn.onclick = function(){
+					window.open('http://www.baidu.com/','_blank','width=200','height=200','left=200','top=200');
+				};
+				close.onclick = function(){
+					window.close();				//chrome关闭了自己的页面
+				}
+				
+			};
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="button"/>
+		<input type="button" id="btn1" value="close"/>
+	</body>
+</html>

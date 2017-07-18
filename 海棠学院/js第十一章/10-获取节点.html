@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 * 获取节点
+			 * .first()			获取第一个子节点,从自己身上去找。就是说已经有子节点集了，然后找集合里的第一个
+			 * .last()			获取最后一个子节点。就是说已经有子节点集了，然后找集合里的第一个
+			 * .slice(start,end)截取部分子节点。就是说已经有子节点集了，然后找集合里的第一个
+			 * 		start			起始位置
+			 * 		end				结束位置
+			 * 
+			 * .children()		获取到元素里的第一层子节点
+			 * 		没参数，获取到第一层子节点
+			 * 		有参数，找到对应选择器的节点
+			 * 
+			 * 
+			 * .find()			获取元素里的所有节点，必须传参
+			 * 		
+			 * 
+			 */
+			$(function(){
+				console.log($("li").first());
+				$("li").first().css('background','red');
+				$("li").last().css('background','pink');			//最后一个
+				$("li").slice(1,3).css('background','pink');		//截取从数组1到3
+			})
+			
+			$(function(){
+				$("ul").children().css('fontSize',25);
+				$("ul").children(".blue").css('color','gold');
+				$("ul").find("span").css('background','gold');
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li class="blue">blue</li>
+			<li>yellow</li>
+			<li>pink<span>black</span></span></li>
+		</ul>
+	</body>
+</html>

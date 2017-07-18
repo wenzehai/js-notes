@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *appendChild
+			 * 	用来往父节点里添加一个元素
+			 * 	注意：
+			 * 		添加到父节点的最后面
+			 * 语法
+			 * 		父节点.appendChild（childNode)
+			 * 参数
+			 * 		子元素，一般为用createElement创建后的节点
+			 * 返回值
+			 * 		返回创建的那个标签元素
+			 * 注意
+			 * 		只能添加标签节点，不能添加其他节点
+			 * 
+			 */
+			window.onload = function() {
+				var btn = document.getElementById('btn');
+				var body = document.querySelector('body');
+				btn.onclick = function(){
+					var div = document.createElement('div');		//创建了一个div标签
+					div.style.background = 'red';
+					div.style.height = '100px';
+					div.style.width = '100px';
+					div.style.display = 'block';
+					console.log(div);
+					body.appendChild(div);
+					
+					var p = document.createElement('p');
+					p.innerHTML = '这里是文字';
+					
+					var  a =document.body.appendChild(p);
+					console.log(a);							//返回值，返回你创建的元素
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="创建元素" />
+	</body>
+</html>

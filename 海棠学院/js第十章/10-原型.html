@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *原型 	prototype
+			 * 	概念
+			 * 		函数身上的属性，每一个函数都有这个属性，它的值是一个对象
+			 * 	用途
+			 * 		它身上可以放属性与方法，如果与构造函数相结合的话，那可以通过构造函数创建的对象就会具有它身上的属性与方法
+			 * 		
+			 * 		一个对象是通过构造函数创建的，那prototype就是这个对象的原型对象
+			 * 		建议把一些公用的属性或者方法都放到构造函数的原型身上
+			 * 
+			 * 
+			 */
+			
+			function fn(){
+				console.log(1);
+			};
+			console.log(fn.prototype);			//一个对象
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			};
+			//通过prototype来创建一个属性
+			Person.prototype.sex = '男'		
+			//通过prototype来创建一个属性
+			Person.prototype.say = function(){
+				console.log('我叫' + this.name);			//这里的this指向构造函数
+			}
+			var p1 = new Person('张三',18);			//一个实例
+			var p2 = new Person('李四',20);			//一个实例
+			
+			//console.log(p1.sex);
+			//console.log(p2.sex);
+			console.log(p1.say());
+			console.log(p2.say());
+			p1.say()
+			p2.say()
+			console.log(p1.say == p2.say);			//true
+			
+			console.log(Array.prototype);			//系统对象的方法和属性都在构造函数里面
+			Array.prototype.wenzehai = function(){
+				console.log('wenzehai');
+			}
+			var arr = [1,2];
+			arr.wenzehai();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="padding: 20px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 *索引
+			 * 	index()	
+			 * 		没有参数
+			 * 			第一个元素(获取到的这个元素，因为jQuery获取到的是一组数据)，在兄弟元素中的排行
+			 * 		有参数
+			 * 			代表前面的元素在参数的标签里排行第几
+			 */	
+			$(function(){
+				console.log($("#div3").index());			//3
+				console.log($("#div1").index());			//0
+				console.log($("div").index());				//1,找到
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<p>p</p>
+		<div>div</div>
+		<div>div</div>
+		<div id="div3">
+			<div id="div1">
+				div1
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

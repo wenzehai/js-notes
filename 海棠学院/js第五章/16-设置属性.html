@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * setAttribute
+			 * 		设置属性
+			 * 		元素.setAttribute（attr,value)
+			 * 		两个参数必须同时出现
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				
+				box.setAttribute('id','box2');
+				console.log(box);
+				
+				box.setAttribute('n','hello world');	//上面这行代码不会改变box.setAttribute
+				console.log(box);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" n="wenzehai" data-v="zidingyi" class="color">
+			<img src="img/1.jpg" alt="1" id="pic" />
+		</div>	
+		
+	</body>
+</html>

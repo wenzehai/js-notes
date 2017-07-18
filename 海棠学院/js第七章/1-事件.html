@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				float: left;
+				margin-right: 10px;
+			}
+			div:nth-of-type(1) {
+				background: green;
+			}
+			div:nth-of-type(2) {
+				background: pink;
+			}
+			div:nth-of-type(3) {
+				background: yellow;
+			}
+			div:nth-of-type(4) {
+				background: blue;
+			}
+			div:nth-of-type(5) {
+				background: orange;
+			}
+			div:nth-of-type(6) {
+				background: red;
+			}
+			div:nth-of-type(7) {
+				background: lightgreen;
+			}
+		</style>
+		<script>
+			/*
+			 *事件
+			 * 		当发生某一个动作的时候，会触发一个函数
+			 *
+			 *表单事件
+			 *
+			 * 调用事件前面加on
+			 * 
+			 * mousemove鼠标移动事件，将来用来做拖拽
+			 */
+			window.onload = function(){
+				var div = document.querySelectorAll('div');
+				//
+				div[4].onmouseover = function(){
+					console.log('mouseover');
+				};
+				//
+				div[4].onmouseout = function(){
+					console.log('mouseout');
+				};
+				//前面这两会把事件传递给子集元素
+				
+				//
+				div[5].onmouseenter = function(){
+					console.log('onmouseenter');
+				};
+				//
+				div[5].onmouseleave = function(){
+					console.log('onmouseleave');
+				};
+				//上面这两个不会传递事件给子集元素
+			};
+		</script>
+	</head>
+	<body>
+		<div>click</div>
+		<div>dbclick</div>
+		<div>mousedown</div>
+		<div>mouseup</div>
+		<div><span>mouseover</span><br /><span>mouseout</span></div>
+		<div><span>mouseenter</span><br /><span>mouseleave</span></div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			/*
+			 *鼠标坐标
+			 * 		event.clientX/event.clientY				事件发生的时候，鼠标的位置信息
+			 *		坐标的值是根据可视区的左上角来计算的
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				document.onmousemove = function(ev) {
+					//console.log(ev.clientX);
+					//console.log(ev.clientY);
+					box.style.left = ev.clientX + 'px';
+					box.style.top = ev.clientY+ 'px';					
+				};
+			};
+			
+			
+		</script>	
+		<div id="box">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *new关键字
+			 * 		它是一个一元运算符，后面只能跟函数，用来调用函数
+			 * 
+			 * 调用函数的方式
+			 * 		1、new 函数名字
+			 * 			没有参数的情况下用这种方法
+			 * 		2、new 函数名()
+			 * 			有参数的情况
+			 * 		
+			 * 用new调用函数后的执行过程
+			 * 		1、会自动创建一个空对象
+			 * 		2、把函数内部的this指向创建的空对象
+			 *		3、在函数执行完成以后，会自动返回创建的那个对象，即使函数里面没有return
+			 * 			函数里有return
+			 * 				1、return的是对象
+			 *					返回这个对象
+			 * 				2、return的是非对象
+			 *					返回自动创建的那个对象
+			 * 
+			 * 注意：
+			 * 		1、用new调用的函数，得到的永远是一个对象，不管函数有没有返回值
+			 * 		2、使用new调用函数，这个函数就是一个用来创建对象的函数（构造函数）
+			 */
+			
+			//封装函数创建对象(工厂方式)
+			function fn(a) {
+				if(a){
+					console.log(1,a);
+				} else {
+					console.log(1);
+				}
+			}
+			fn();		//以前调用函数的方法
+			new fn;		//用new调用函数，不带括号
+			new fn();	//new调用函数  带括号（参数）
+			
+			function fn2(){
+				console.log(this);
+			};
+			fn2();			//window 前面没有主语，fn2（）属于window身上的一个方法
+			new fn2;		//{},一个空对象，this指向这个空对象
+			
+			var re1 = fn2();
+			var re2 = new fn2;
+			console.log('re1',re1);			//undefined
+			console.log(re2);				//{},new有自己的一套，自动返回创建的那一套
+			
+			function fn3(){
+				//return [1,2,3];
+				return 1;
+			};
+			var re3 = fn3();
+			var re4 = new fn3;
+			console.log(re3);		//[1,2,3]		//1
+			console.log(re4);       //[1,2,3]		//{}
+		</script>
+	</body>
+</html>

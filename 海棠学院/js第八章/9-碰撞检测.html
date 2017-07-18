@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#box1 {
+				background: red;
+			}
+			#box2 {
+				background: green;
+				left: 500px;
+				top: 200px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box1 = document.getElementById('box1');
+				var box2 = document.getElementById('box2');
+				
+				drag(box1);
+				function drag(obj){
+					obj.onmousedown = function(ev){
+						var disX = ev.clientX - obj.offsetLeft;
+						var disY = ev.clientY - obj.offsetTop;
+						
+						document.onmousemove = function(ev) {
+							var l = ev.clientX - disX;
+							var t = ev.clientY - disY;
+							obj.style.left = l + 'px';
+							obj.style.top = t + 'px';
+							
+							//碰撞检测
+							if(getPos(obj).right<getPos(box2).left || getPos(obj).left>getPos(box2).right || getPos(obj).top>getPos(box2).bottom || getPos(obj).bottom < getPos(box2).top){
+								//条件成立，没有碰到
+								console.log('没有碰到');
+								box2.style.background = 'yellow';
+							} else {
+								//说明碰到了
+								console.log('碰到了');
+								box2.style.background ='blue';
+							}
+						};
+						document.onmouseup = function(){
+							document.onmousemove = null;
+						};
+						return false;
+					};
+				};
+				
+				
+				
+				function getPos(obj){
+					return obj.getBoundingClientRect();
+				};
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

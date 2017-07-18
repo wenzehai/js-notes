@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *构造函数
+			 * 		创建并初始化对象的函数，并且需要用new来调用函数，不用new调用的话
+			 * 		与普通的函数就没有区别了。
+			 * 
+			 * 通过构造函数new出来的对象叫实例，创造过程叫实例化
+			 * 
+			 * 调用构造函数就叫做创建实例，实例身上有方法，有属性
+			 * 		
+			 * 构造函数的问题
+			 * 		性能问题会造成资源浪费，创建了两个say的方法
+			 * 
+			 */
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.say = function(){
+					console.log('我叫' + this.name);
+				};
+			};
+			var p1 = new Person('张三',18);			//一个实例
+			var p2 = new Person('李四',20);			//一个实例
+			console.log(p1.say == p2.say);			//false
+			
+			var arr1 = new Array(1,2,3);
+			var arr2 = new Array(4,5,6);
+			console.log(arr1.push == arr2.push);		//true
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

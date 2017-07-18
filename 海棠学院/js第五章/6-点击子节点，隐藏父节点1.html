@@ -13,7 +13,12 @@
 						this.parentNode.style.display = 'none';
 					}
 				}
-			}
+				for(var i=0; i<spans.length; i++){
+					spans[i].onclick = function(){
+						this.parentNode.style.display = 'none';
+					};
+				};
+			};
 		</script>
 	</head>
 	<body>

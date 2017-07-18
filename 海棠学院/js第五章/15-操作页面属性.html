@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 *属性操作的方法
+			 * 		1、.属性名
+			 * 		2、[属性名]
+			 *
+			 *getAttribute
+			 * 		用来获取元素的属性的
+			 * 
+			 * 语法
+			 * 		元素.getAttribute(属性名)
+			 * 
+			 * .和[]是取不到js的自定义属性的
+			 * getAttribute可以取到html标签的自定义属性
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				var pic = document.getElementById('pic');
+				
+				console.log(box);
+				console.log(pic.src);			//绝对路径
+				console.log(box.getAttribute('class'));
+				console.log(pic.getAttribute('src'));		//相对路径
+				
+				box.index = 1;
+				console.log(box.getAttribute('index'));		//null
+				
+				console.log(box.n);							//undefined
+				console.log(box['n']);						//undefined
+				console.log(box.getAttribute('n'))			//wenzehai
+				
+				console.log(box['data-v']);					//undefined
+				console.log(box.dataset.v);					//h5的一种方法，可以取到自定义属性
+				console.log(box.getAttribute('data-v'));	//zidingyi
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" n="wenzehai" data-v="zidingyi" class="color">
+			<img src="img/1.jpg" alt="1" id="pic" />
+		</div>	
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        #box {
+	        	width: 100px;
+	        	height: 100px;
+	        	background: #f00;
+	        	position: absolute;
+	        	left: 300px;
+	        	top: 200px;
+	        	border: 1px solid ;
+	        }
+	    </style>
+	    <script>
+	    	/*
+	    	 *getBoundingClientRect
+	    	 *	作用
+	    	 * 		获取到元素盒模型的一些信息,得到的结果是没有单位，不包含滚动条的距离
+	    	 * 	width  		宽度(包含边框)
+	    	 * 	height		高度(包含边框)
+	    	 * 	left		从元素的最左边到可视区的最左边距离
+	    	 * 	right		从元素的最右边到可视区的最左边的距离
+	    	 *  bottom		从元素的最底边到可视区的最上边的距离
+	    	 * 	top			从元素的最上边到可视区的最上边的距离
+	    	 *	
+	    	 */
+	    	window.onload = function(){
+	    		var box = document.getElementById('box');
+	    		var message = box.getBoundingClientRect();
+	    		
+	    		console.log(message);			//clientRect对象
+	    		console.log(message.width);
+	    		
+	    	};
+	    </script>
+	    
+	</head>
+	<body style="height: 1000px;">
+		<div id="box">
+			
+		</div>
+	</body>
+</html>

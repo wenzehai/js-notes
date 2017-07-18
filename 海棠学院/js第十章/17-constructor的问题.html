@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *constructor的问题
+			 * 		概念
+			 * 			每个对象都会有这个属性，默认指向该对象对应的构造函数
+			 * 			这个属性不是放在对象身上，放在对应的原型对象身上
+			 * 		作用
+			 * 			查看对象的构造函数
+			 * 		语法
+			 * 			对象.constructor
+			 * 		返回值
+			 * 			对象的构造函数
+			 * 
+			 * 		注意：
+			 * 			这个属性是可以被修改的
+			 * 
+			 *
+			 *
+			 */
+			function Person(name){
+				this.name = name;
+			}
+			var p1 = new Person('wenzehai');
+			console.log(p1.constructor == Person);		//true
+			
+			//不经意间就被修改，平时要细心一点。
+			p1.constructor = Array;
+			console.log(p1.constructor == Array);
+			
+			
+			function Coder(name){
+				this.name = name;
+			}
+			//这种方法可以
+			//Coder.prototype.age = 18;
+			//Coder.prototype.sex = '男';
+			
+			//下面这种方法也可以
+			Coder.prototype = {
+				//修正过来
+				constructor: Coder,		//c1.constructor返回来的就是Coder
+				age:18,
+				sex:'男'
+			}
+			var c1 = new Coder('张三');
+			console.log(c1);
+			console.log(c1.age);		//18
+			console.log(c1.constructor);		//返回Object顶层对象
+			
+		</script>
+	</body>
+</html>

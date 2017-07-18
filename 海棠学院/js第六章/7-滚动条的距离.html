@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *滚动条的距离
+			 * 
+			 * DOM方法
+			 * 非标准浏览器
+			 * 		chrome			document.body.scrollTop	//滚动条纵向的距离
+			 * 		其他浏览器		document.documentElement.scrollTop
+			 * 
+			 * BOM方法
+			 *	window.pageXOffset			//横向的滚动条的距离
+			 * window.pageYOffset			//纵向的滚动条距离
+			 *
+			 * 设置滚动条的距离
+			 * 		window.scrollTo(x,y)		
+			 * 		全兼容，两个参数必须同时出现
+			 */
+			window.onload = function() {
+				document.onclick = function(){
+					console.log(document.body.scrollTop);		//滚动条距离上面的距离，默认为0
+					console.log(window.pageYOffset);
+					
+					window.scrollTo(0,100);
+					var t = window.pageYOffset;
+					var time = setInterval(function(){
+						t-=100;
+						if(t == 0){
+							clearInterval(time);				
+						}
+						window.scrollTo(0,t);					//缓缓运动
+					},16);
+				};
+			};
+		</script>
+	</head>
+	<body style="height: 3000px;">
+	</body>
+</html>

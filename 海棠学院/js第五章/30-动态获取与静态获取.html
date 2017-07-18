@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *getElementsByTagName
+			 * 		只要你的结构有变化，就会监听到，下标就会变化，这时候原来的下标就变化了，变成新的下标了
+			 * 
+			 * 
+			 * querySelectoAll
+			 * 		静态获取元素，只获取一次，会把下标存下来，即使原来的结构有变化，它也不会去重新获取
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function() {
+				var color = document.getElementById('color');
+				//var lis = document.querySelectorAll('li');			//静态获取
+				var lis = document.getElementsByTagName('li');  		//动态获取元素
+				
+				for(var i=0; i<lis.length; i++){
+					color.appendChild(lis[i]);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="color">
+			<li>1green</li>
+			<li>2red</li>
+			<li>3blue</li>
+			<li>4yellow</li>
+			<li>5white</li>
+		</ul>
+		
+	</body>
+</html>

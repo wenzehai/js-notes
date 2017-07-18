@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 300px;
+				height: 200px;
+				border: 10px solid #000000;
+				padding: 10px;
+			}
+		</style>
+		<script>
+			/*
+			 * 可视区的宽度
+			 * 	宽：
+			 * 		document.documentElement.clientWidth
+			 * 	高：
+			 * 		document.documentElement.clientHeight
+			 * 
+			 * 可视区是动态的变化的
+			 * 
+			 */
+			window.onload = function(){
+				document.onclick = function() {
+					console.log(document.documentElement.clientWidth);
+					console.log(document.documentElement.clientHeight);
+				};
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>	
+		
+	</body>
+</html>

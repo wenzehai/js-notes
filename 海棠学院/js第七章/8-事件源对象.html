@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			div {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			div p {
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+			div p span {
+				width: 50px;
+				height: 50px;
+				background: blue;
+			}
+			#list {
+				border: 1px solid red;
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 *	事件源对象
+			 * 		event.target
+			 * 		它会一层一层往里面去找，直到找到最里面的那个元素。
+			 */
+			window.onload = function() {
+				var box = document.getElementById('box');
+				box.onclick = function(ev){
+					console.log(ev.target);
+				};
+				
+				var list = document.getElementById('list');
+				var lis = document.querySelectorAll('li');
+//				for(var i=0; i<lis.length; i++){
+//					lis[i].onclick = function(){
+//						console.log(this.innerHTML);
+//					};
+//				};
+//				//添加给父级
+//				//事件委托（代理）想让li返回参数出来，反过来给父级添加事件，然后事件里面找到源对象，然后通过源对象添加事件
+				list.onclick = function(ev){
+					//console.log(ev.target);			//源对象指的是<li>**</li>的标签
+					//console.log(ev.target.tagName);
+					if(ev.target.tagName == 'LI'){
+						console.log(ev.target.innerHTML);
+					};
+				}
+				
+				//下面的代码会把原来li里面的东西清空掉，然后原来li里面的点击事件就没有了
+				list.innerHTML += '<li>yellow</li>';
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>
+				<span></span>
+			</p>
+		</div>
+		<ul id="list">
+			<li>red</li>
+			<li>green</li>
+			<li>pink</li>
+			<li>blue</li>
+			<li>black</li>
+		</ul>
+	</body>
+</html>

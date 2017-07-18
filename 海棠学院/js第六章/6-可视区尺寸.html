@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *可视区尺寸
+			 * 
+			 * 元素的宽
+			 * 		offsetWidth  		带边框
+			 * 		clientWidth			不带边框
+			 * 
+			 * 元素的高
+			 * 		offsetHeight		带边框
+			 * 		clientHeight		不带边框
+			 * 
+			 * 可视区的宽/高
+			 * document.documentElement.clientWidth
+			 * document.documentElement.clientHeight
+			 * 
+			 * 可视区的宽/高（BOM)
+			 * window.innerWidth
+			 * window.innerHeight
+			 * 不兼容低版本的浏览器
+			 * 
+			 *
+			 */
+			window.onload = function() {
+				console.log(window.innerWidth);
+				console.log(window.innerHeight);
+				
+				console.log(document.documentElement.clientWidth);
+				console.log(document.documentElement.clientHeight);
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

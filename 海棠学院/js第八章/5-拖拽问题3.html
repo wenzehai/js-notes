@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background: green;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 *
+			 *拖拽、吸附
+			 *鼠标拖拽的原理
+			 * 	1、鼠标在元素身上按下
+			 * 		1、这里需要算出鼠标点击的地方离元素边界的距离
+			 * 		离元素左边的距离 = 鼠标的clientX-元素的offsetLeft
+			 * 		离元素上边的距离 = 鼠标的clientY-元素的offsetTop
+			 * 	2、鼠标移动
+			 * 		这里需要算出元素的真正left与top值
+			 * 		元素的left = 鼠标的clientX-离元素左边的距离
+			 * 		元素的top = 鼠标的clientY-离元素上边的距离
+			 * 	3、鼠标抬起
+			 * 		清除掉鼠标身上的事件
+			 *
+			 *拖拽问题
+			 * 1、只能拖拽一次
+			 * 		解决方法1：声明一个变量，用来判断用户有没有点击方块
+			 * 		解决方法2：把mousemove和mouseup移动到mousedown里面了，父级不一样了
+			 * 				第一次mousemove和mouseup放在了外面，box身上有三个函数，但是第三个函数把第二个函数去掉了
+			 * 				放到里面的话，每激活一次mousedown，box身上又赋值了三个函数，最终是两个函数;
+			 * 
+			 * 2、鼠标拖动的速度非常快的时候就会脱离box
+			 * 		原因是因为mousemove事件的发生时根据浏览器的频率决定的，如果鼠标移动的非常快，那mousemove事件有可能
+			 * 		没有发生，所以就会断了
+			 * 		把mousemove和onmouseup事件加给document
+			 * 
+			 * 3、拖拽问题3
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				var img = document.getElementById('img');
+				//鼠标按下
+				box.onmousedown = function(ev){
+					var disX = ev.clientX - box.offsetLeft;
+					var disY = ev.clientY - box.offsetTop;
+				
+					//鼠标移动
+					document.onmousemove = function(ev){
+						box.style.left =  ev.clientX -disX +'px';
+						box.style.top =  ev.clientY -disY +'px';
+					}
+					
+					//鼠标抬起
+					document.onmouseup = function(){
+						document.onmousemove = null;
+					};
+					
+					//阻止默认文字选中
+					return false;
+					
+				};
+				
+				img.onmousedown = function(ev) {
+					var disX = ev.clientX - img.offsetLeft;
+					var disY = ev.clientY - img.offsetTop; 
+					
+					//鼠标移动
+					document.onmousemove = function(ev) {
+						img.style.left = ev.clientX - disX + 'px';
+						img.style.top = ev.clientY - disY + 'px';
+					}
+					//鼠标抬起
+					document.onmouseup = function(){
+						document.onmousemove = null;
+					};
+					
+					//阻止浏览器默认行为,图片拖动的时候会有一个副本出来
+					return false;
+				};
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<p>wenzehai</p>
+		<div id="box"></div>
+		<img src="img/3.jpg" id="img"/>
+	</body>
+</html>

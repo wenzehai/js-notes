@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				color: #FFFF00;
+				text-align: center;
+				position: fixed;
+				right: 0;
+				bottom: 0;
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var div = document.getElementById('box1');
+				window.onscroll = function() {
+					var t = window.pageYOffset;
+					if(t>200){
+						div.style.display = 'block';
+						
+					} else {
+						div.style.display = 'none';
+					}
+				};
+				div.onclick = function(){
+					window.scrollTo(0,0);
+				}
+			};
+		</script>
+	</head>
+	<body style="height: 3000px;">
+		<div id="box1">回到顶部</div>
+		
+	</body>
+</html>

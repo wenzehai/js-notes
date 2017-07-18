@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background: green;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 *
+			 *拖拽、吸附
+			 *鼠标拖拽的原理
+			 * 	1、鼠标在元素身上按下
+			 * 		1、这里需要算出鼠标点击的地方离元素边界的距离
+			 * 		离元素左边的距离 = 鼠标的clientX-元素的offsetLeft
+			 * 		离元素上边的距离 = 鼠标的clientY-元素的offsetTop
+			 * 	2、鼠标移动
+			 * 		这里需要算出元素的真正left与top值
+			 * 		元素的left = 鼠标的clientX-离元素左边的距离
+			 * 		元素的top = 鼠标的clientY-离元素上边的距离
+			 * 	3、鼠标抬起
+			 * 		清除掉鼠标身上的事件
+			 *
+			 *
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				var disX;
+				var disY;
+				//鼠标按下
+				box.onmousedown = function(ev){
+					disX = ev.clientX - box.offsetLeft;
+					disY = ev.clientY - box.offsetTop;
+					console.log(disX);
+					console.log(disY);
+				}
+				
+				//鼠标移动
+				box.onmousemove = function(ev){
+					box.style.left =  ev.clientX -disX +'px';
+					box.style.top =  ev.clientY -disY +'px';
+				}
+				
+				//鼠标抬起
+				box.onmouseup = function(){
+					box.onmousemove = null;
+				};
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

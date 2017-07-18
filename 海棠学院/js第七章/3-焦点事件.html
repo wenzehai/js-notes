@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script>
+			/*
+			 *焦点事件
+			 * 		不是所有元素都有焦点事件
+			 * 
+			 * onfocus		有焦点事件的元素获取到焦点后就会触发
+			 * onblur		有焦点事件的元素失去焦点后就会触发
+			 * 
+			 * 更改tab键跳转顺序
+			 * tabindex	给不同的值
+			 * 
+			 * 设置焦点的方法
+			 * 		focus()			让元素获取到焦点
+			 * 		blur()			让元素失去焦点
+			 * 
+			 * 选中方法
+			 * select()		在表单元素离，选中用户输入的内容
+			 * 
+			 * 
+			 */
+			window.onload = function(){
+				var div = document.querySelector('div');
+				var input = document.querySelector('input');
+				var text = document.querySelector('textarea');
+				var btn = document.querySelector('button');
+				var textarea = document.querySelector('textarea');
+				
+				input.focus();			//在页面一加载就获取到焦点
+				//input.blur();			//在页面一加载就失去焦点
+				
+//				input.onfocus = function(){
+//					this.blur();			//获取到焦点后就让它失去焦点了，就是输入框不能用
+//				}
+				input.onblur = function(){
+					this.focus();			//鼠标离不开
+				}
+				
+				//选中输入的文字
+				btn.onclick = function(){
+					input.select();
+					textarea.select();		//两个方法，后面会把前面的覆盖了
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<!--下面这些表单都有焦点事件，键盘事件、鼠标事件也可以触发-->
+		<input type="text" />
+		<textarea name="" rows="" cols=""></textarea>
+		<button tabindex="1"></button>
+		<select name="">
+			<option value=""></option>
+		</select>
+		<input tabindex="2" type="checkbox" />
+		<input type="radio" />
+		
+	</body>
+</html>

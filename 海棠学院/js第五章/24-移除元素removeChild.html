@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *removeChild
+			 * 	移除元素，从父级里移除指定的元素
+			 * 语法
+			 * 		父级.removeChild(childNode)
+			 * 参数
+			 * 		要删除的子元素
+			 * 返回值
+			 * 		返回要删除的元素
+			 * 
+			 */
+			window.onload = function() {
+				var ul = document.querySelector('ul');
+				var lis = document.querySelectorAll('li');
+				//ul.removeChild(lis[2]);
+				
+				var result = ul.removeChild(lis[2]);		//<li>blue</li>
+				console.log(result);
+				
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+	<ul>
+		<li>red</li>
+		<li>green</li>
+		<li>blue</li>
+		<li>yellow</li>
+		<li>pink</li>
+	</ul>
+	</body>
+</html>

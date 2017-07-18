@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *用户按了哪个键
+			 * 	
+			 * 	键盘事件里的常用属性
+			 * 		event.keyCode			//按下的哪个键，返回这个键对应的Unicode码值
+			 *		注意：以下三个不只是键盘事件才会有，其他的事件也会有这些属性
+			 *		event.ctrlKey			//事件发生的时候ctrl是否被按下去了,按了就是true，否则就是false
+			 *		event.shiftKey			//事件发生的时候shift是否被按下去了,按了就是true，否则就是false
+			 *		event.altKey			//事件发生的时候alt是否被按下去了,按了就是true，否则就是false
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			document.onkeydown = function(ev){
+				console.log(ev);
+				//里面有一个keycode
+				console.log(ev.keyCode);			//通过返回值来判定用的哪个键
+				console.log(ev.ctrlKey);
+			};
+			
+			
+		</script>
+	</body>
+</html>

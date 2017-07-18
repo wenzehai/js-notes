@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 *jquery中的事件
+			 * 		语法
+			 * 			$(元素).事件(callBack);
+			 * 
+			 * 
+			 * */
+			$(function(){
+				$("#btn").click(
+					function(){
+						//console.log(1);
+						//console.log(this);			//原生的this一样是指向触发事件的对象
+						//this						//直接用会有问题，因为这个this是原生的，不能直接用
+						console.log($(this));
+					}
+				);
+				$("#box").mouseover(function(){
+					//$("#box").css('background','green');
+					$(this).css('background','green');
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+		<div id="box"></div>
+	</body>
+</html>

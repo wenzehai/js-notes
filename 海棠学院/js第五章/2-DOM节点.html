@@ -12,25 +12,255 @@
 			 * 
 			 * attributes
 			 * 		属性节点
-			 * console.log(box.attributes);
-			 * 返回元素身上的所有属性节点，每个属性都会有一个自己对应的下标
-			 * 它有一个length属性，代表元素身上有多少个属性节点
+			 * 		console.log(box.attributes);
+			 * 		返回元素身上的所有属性节点，每个属性都会有一个自己对应的下标
+			 * 		它有一个length属性，代表元素身上有多少个属性节点
 			 * 
 			 * childNodes
-			 * 元素身上的第一层子节点，返回元素身上所有子节点的集合（第一层）
-			 * 
-			 * 节点包括文本、回车换行、标签、注释
-			 * 文本包括回车换行符，统称为文本节点
+			 * 		元素身上的第一层子节点，返回元素身上所有子节点的集合（第一层）
+			 * 		节点包括文本、回车换行、标签、注释
+			 * 		文本包括回车换行符，统称为文本节点
 			 * 
 			 * nodeName
-			 * 		节点名称
+			 * 		节点名称，任何一个节点都有这个属性
 			 * 
-			 * 
+			 *	tagName
+			 * 		标签名称
+			 * 		只有元素节点才有这个属性，文本节点、文档节点都没有这个属性
+			 * 		tagName返回值一律都是大写，没有小写
+			 *  
 			 * nodeType
 			 * 		节点的类型
 			 * 
-			 * 
+			 * 首先获取box
+			 * 通过父级找子级：
+			 * 获取box的第一层节点box.childNodes,集合
+			 * 获取box的属性节点集合box.attributes,集合
+			 * 查看节点名称nodeName，除了元素节点名称大写外，其他的返回值都是小写，可以用来做判断条件，注意IE下获得元素的nodeName也是小写。
+			 * 查看节点类型nodeType.
+			 * 1、元素节点		<div id='box';><span>text</span></div>
+			 * 2、属性节点		id = 'box';
+			 * 3、文本节点		text下拉之后能找到一个nodeValue，里面有文本的内容
+			 * 8、注释节点		同样有nodeValue
+			 * 9、文档节点		
 			 * 	
+			 * 通过子级找父级
+			 * 		var child = box.childNodes;
+			 * 		console.log(child.parentNode);		//返回整个div
+			 * 
+			 * 点击子节点，隐藏父节点，省去了原来的下标找父节点的步骤
+			 * for(var i=0; i<spans.length; i++){
+					spans[i].onclick = function(){
+						this.parentNode.style.display = 'none';
+					};
+				};
+				
+				
+			* previousElementSibling
+			 * 	 	找到上一个兄弟节点，找不到的话就返回一个null
+			 * 
+			 *nextElementSibling
+			 * 		找到下一个兄弟节点，找不到的话就返回一个null
+			 * 
+			 * firstElementChild
+			 * 	父级.firstElementChild
+			 * 找到第1个子节点
+			 * 
+			 * lastElementChild
+			 * 	父级.lastElementChild
+			 * 	找到最后一个子节点
+			 * 
+			 * 找距离自己最近的有定位的父级元素
+			 * offsetParent
+			 * 		作用
+			 * 		获取离元素最近的有定位的父元素
+			 *		它会一层一层往上找，直到找到最近的有定位的父级就把找到的父级返回出来
+			 * 		如果父级都没有定位，那返回body（IE8以及IE8以上才会返回）
+			 * 		body的offsetParent为null
+			 * 语法
+			 * 		元素.offsetParent
+			 * 
+			 * 注意：
+			 * 		遵循一个原则，父级一定要给一个定位 
+			 * 
+			 * offsetLeft
+			 * 		作用
+			 * 			找到元素离最左边的有定位的父级之间的距离，不带单位，并且不带边框
+			 * 		语法
+			 * 			元素.offsetLeft
+			 * 		
+			 *offsetTop
+			 * 		作用
+			 * 			找到元素最上边离最近的有定位父级之间的距离，不带单位，并且不带边框
+			 * 		注意
+			 * 			如果没有定位的父级，那默认是到html的距离
+			 * 			遵循一个原则：1、给父级定位；2、一上来把默认样式清掉
+			 * 
+			 * 上面的offsetleft和offsetTop可以用来做文字提示层
+			 * 
+			 *getBoundingClientRect方法
+	    	 *	作用
+	    	 * 		获取到元素盒模型的一些信息,得到的结果是没有单位，不包含滚动条的距离
+	    	 * 	width  		宽度(包含边框)
+	    	 * 	height		高度(包含边框)
+	    	 * 	left		从元素的最左边到可视区的最左边距离
+	    	 * 	right		从元素的最右边到可视区的最左边的距离
+	    	 *  bottom		从元素的最底边到可视区的最上边的距离
+	    	 * 	top			从元素的最上边到可视区的最上边的距离
+		     *		var message = box.getBoundingClientRect();
+		    		console.log(message);
+		    		console.log(message.width);
+			 * 
+			 * 获取属性
+			 * 属性操作的方法
+			 * 		1、.属性名
+			 * 		2、[属性名]
+			 *
+			 *getAttribute
+			 * 		用来获取元素的属性的
+			 * 
+			 * 语法
+			 * 		元素.getAttribute(属性名)
+			 * 
+			 * .和[]是取不到js的自定义属性的
+			 * getAttribute可以取到html标签的自定义属性
+			 * 
+			 * 
+			 * 设置属性
+			 *  setAttribute
+			 * 		设置属性
+			 * 		元素.setAttribute（attr,value)
+			 * 		两个参数必须同时出现
+			 * 
+			 * * removeAttribute
+			 * 		移除属性
+			 * 		元素.remove(attr)
+			 * 
+			 * 
+			 * 		console.log(this.offsetTop);				//离最近有定位父元素上边的距离
+					console.log(this.offsetLeft);				//离最近有定位父元素左边的距离
+					console.log(this.offsetWidth);				//340包含边框	
+					console.log(this.clientWidth);				//320少了一个边框
+					console.log(this.offsetHeight);				//240包含边框	
+					console.log(this.clientHeight);				//220	
+			 * 
+			 * 获取可视区的宽高
+			 * 	宽：
+			 * 		document.documentElement.clientWidth
+			 * 	高：
+			 * 		document.documentElement.clientHeight
+			 * 
+			 * 可视区是动态的变化的，展现出来的是document对象
+			 * 
+			 * 元素居中
+			 * 元素的left值=（可视区宽度-元素宽度）/2
+			 * 元素的top值=（可视区高度-元素高度）/2
+			 * 
+			 * 创建元素，先创建，再添加
+			 *、createElement
+			 *	创建元素：通过标签名的形式创建一个元素
+			 * 
+			 * 	document.createElement(tagName)
+			 * 	createElement前面的主语只能是document，其他的元素都没有这个方法
+			 * 
+			 * 参数
+			 * 	标签名
+			 * 
+			 * 返回值
+			 * 		返回创建的标签元素
+			 * 注意
+			 * 		只能用来创建元素节点，不能创建文本、注释节点
+			 * 		创建后的标签可以对它进行操作
+			 * 		创建完之后还要往页面中添加才能显示
+			 * var div = document.createElement('div');
+			 * 
+			 * *appendChild
+			 * 	用来往父节点里添加一个元素
+			 * 	注意：
+			 * 		添加到父节点的最后面
+			 * 语法
+			 * 		父节点.appendChild（childNode)
+			 * 参数
+			 * 		子元素，一般为用createElement创建后的节点
+			 * 返回值
+			 * 		返回创建的那个标签元素
+			 * 注意
+			 * 		只能添加标签节点，不能添加其他节点
+			 *body.appendChild(div);
+			 * 
+			 * insertBefore
+			 * 	用来插入元素
+			 * 语法
+			 * 		父级.insertBefore(childNode1,childNode2)
+			 * 参数
+			 * 		childNode1						要插入的元素
+			 * 		childNode2						决定childNode1插入的位置
+			 * 		两个参数必须同时存在，否则就会报错
+			 * 		第二个参数如果为null或者undefined的时候，insertBefore的作用相当于appendChild
+			 * 返回值
+			 * 		返回插入的那个元素，包含创建和操作后的内容
+			 * ul.insertBefore(newLi,lis[2]);
+			 * 
+			 * removeChild
+			 * 	移除元素，从父级里移除指定的元素
+			 * 语法
+			 * 		父级.removeChild(childNode)
+			 * 参数
+			 * 		要删除的子元素
+			 * 返回值
+			 * 		返回要删除的元素
+			 * 
+			 * 
+			 * replaceChild
+			 * 	替换元素
+			 * 语法
+			 * 		父级.removeChild(node,childNode)
+			 * 参数
+			 * 		node		要替换的元素
+			 * 		childNode	被替换的元素
+			 * 		两个参数必须同时出现，不然会报错
+			 * 返回值
+			 * 		返回被替换的那个元素，第二个参数
+			 * 注意
+			 * 		如果用父级里的元素去替换另一个元素
+			 * 		替换的那个元素会跑到被替换元素的位置
+			 * 		被替换的那个元素会被删掉
+			 * 
+			 *  *cloneNode
+			 * 	克隆节点
+			 * 语法
+			 * 		要克隆的节点.cloneNode(boolean)
+			 * 参数
+			 * 		true			克隆元素和元素包含的子孙节点
+			 * 		false			只克隆元素，不克隆子孙节点
+			 * 		如果不写参数的话，默认为false
+			 * 		克隆只克隆html/css，js不克隆，如果克隆元素身上有js功能，那克隆元素是不具备功能的
+			 * 		如果克隆的元素本身有id，那克隆后的元素也会有id，两个元素就会重名，这样的话是不符合标准的，需要手动去改一下id
+			 * 
+			 * 返回值
+			 * 		返回被克隆的节点
+			 * 
+			 * DOM操作方法的特性
+			 * 		appendChild/insertBefore/replaceChild在操作一个已有的元素时，是将已有的元素移动，
+			 * 		而不是复制一份进行操作（剪切）
+			 * 
+			 * *innerHTML与DOM的区别
+			 * 		innerHTML
+			 * 			先清空原来的内容，然后再复制一份原来的+新添加的内容，两个内容重新赋给color.innerHTML
+			 * 			
+			 * 		DOM方法
+			 * 			会把新的内容追加到原来的内容里面，原来内容所具有的事件，依然会在
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function() {
+				var ul = document.querySelector('ul');
+				var lis = document.querySelectorAll('li');
+				var newLi = document.createElement('li');
+				newLi.innerHTML = 'white';
+				
+				ul.insertBefore(newLi,lis[2]);
 			 * 
 			 */
 			window.onload = function() {

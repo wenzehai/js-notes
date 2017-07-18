@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="padding: 20px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 * 最近的节点
+			 * 	.closet()					从自身开始找，一层一层往外找，找到最近满足条件的元素
+			 * 		里面必须有参数
+			 * 
+			 * 
+			 * 
+			 */
+			$(function(){
+				$("#div2").closest("#div1").css('border',"1px solid red");			
+				
+				
+				
+				
+				
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<div id="div1">div1
+			<div id="div2">
+				div2
+			</div>
+		</div>
+	</body>
+</html>

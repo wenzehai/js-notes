@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 继承
+			 * 	 让一个对象拥有另一个对象的属性和方法，并且自己添加的属性和方法都不会影响到原来的对象
+			 * 属性继承
+			 * 		通过call的方法调用构造函数继承属性
+			 * 方法继承
+			 * 		通过for in的方法继承原型身上的方法
+			 * 注意：
+			 * 		1、继承其他对象的属性的时候，一定要用call去修正一下this的指向
+			 * 		2、继承其他对象的方法的时候，不能直接赋值，要用for in的方法去赋值，不然会出现对象引用的关系
+			 * 
+			 */
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.say = function(){
+				console.log('我叫' + this.name);
+			}
+			var p1 = new Person('wenzehai');
+			console.log(p1);
+			p1.say()
+			
+			//创建一个对象
+			function Coder(name,age,job){
+				/*this.name = name;
+				this.age = age;*/
+				//Person(name,age);			//直接调用函数的话，this指向了window，就会有问题
+				//console.log(this);
+				Person.call(this,name,age);
+				console.log(this);
+				this.job = job;
+				console.log(this);
+			}
+			/*Coder.prototype.say = function(){
+				console.log('我叫' + this.name);
+			}*/
+			
+			
+			//这样写不行，因为会改一个的话，两个都会变
+			//他们两个的构造函数，都会指向同一个构造函数
+			/*Coder.prototype.say = Person.prototype;
+			
+			Coder.prototype.say = function(){
+				console.log(10);
+			}*/
+			
+			for(var attr in Person.prototype){
+				Coder.prototype[attr] = Person.prototype[attr];
+				
+				if(Person.prototype.hasOwnProperty(attr)){
+					Coder.prototype[attr] = Person.prototype[attr];
+				}
+			}
+			
+			
+			Coder.prototype.coding = function(){
+				console.log('我的工作是' + this.job + '，我正在加班');
+			}
+			var c1 = new Coder('wenzehai',18,'前端');
+			console.log(c1);
+			c1.say();
+			c1.coding();
+		</script>
+	</body>
+</html>

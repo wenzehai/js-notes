@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *cloneNode
+			 * 	克隆节点
+			 * 语法
+			 * 		要克隆的节点.cloneNode(boolean)
+			 * 参数
+			 * 		true			克隆元素和元素包含的子孙节点
+			 * 		false			只克隆元素，不克隆子孙节点
+			 * 		如果不写参数的话，默认为false
+			 * 		克隆只克隆html/css，js不克隆，如果克隆元素身上有js功能，那克隆元素是不具备功能的
+			 * 		如果克隆的元素本身有id，那克隆后的元素也会有id，两个元素就会重名，这样的话是不符合标准的，需要手动去改一下id
+			 * 
+			 * 返回值
+			 * 		返回被克隆的节点
+			 * 注意
+			 * 		如果用父级里的元素去替换另一个元素
+			 * 		替换的那个元素会跑到被替换元素的位置
+			 * 		被替换的那个元素会被删掉
+			 */
+			window.onload = function() {
+				var box = document.getElementById('box');
+				var spans = document.querySelectorAll('span');
+				var divs = document.querySelectorAll('#box div');
+				
+				//给每一个span标签添加一个点击事件
+				for(var i = 0; i<spans.length; i++) {
+					spans[i].onclick = function(){
+						alert(this.innerHTML);
+					};
+				};
+				var newDiv = divs[0].cloneNode(true);		//克隆完毕
+				console.log(newDiv);
+				box.appendChild(newDiv);					//添加元素到末尾
+				
+				var newDiv = divs[0].cloneNode(false);		//克隆完毕，只出现一个空标签
+				console.log(newDiv);
+				box.appendChild(newDiv);					//添加元素到末尾
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div><span>red</span><span>green</span></div>
+			<div>yellow</div>
+			<div>blue</div>
+			<div>pink</div>
+			
+		</div>
+		
+	</body>
+</html>
