@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.parent{
+				border: 1px solid #f00;
+			}
+			.box{
+				width: 100px;
+				height: 200px;
+				background: green;
+				color: #fff;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			浮动			float
+			定义			使元素脱离文档流，按照指定的方向发生移动，遇到父级的边界或者相邻的浮动元素就会停下来
+			值			left、right、none
+			特征
+						1、块元素可以在一行显示
+						2、按照一个指定的方向移动，遇到父级的边界或者相邻的浮动元素就会停下来
+						3、行内元素支持宽高
+						4、脱离文档流
+							浮动后跟的元素（没有浮动）的位置是从前面浮动元素的位置开始的
+							注意：非浮动元素里的内容会留出前面浮动元素的位置(盒模型的位置)
+						5、块元素默认宽度会被改变（包裹性）
+							块元素不设置宽度，那宽度会自动变成内容所撑开的宽度
+						6、父级高度塌陷（破坏性）
+							子元素有浮云后，那父级元素的高度不会自动撑开了
+						7、换行不会被解析成空格
+							浮动后的元素就会脱离文档流了，那它就不属于文档流里的结构了，所以换行、空格都跟父级没关系了
+		-->
+		<div class="parent">
+			<div class="box">box</div>
+			<div class="box">box</div>
+			<div class="box">box</div>
+		</div>
+	</body>
+</html>

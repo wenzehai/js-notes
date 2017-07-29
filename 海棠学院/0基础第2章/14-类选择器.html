@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 100px;
+				height: 100px;
+				background: green;
+				margin-top: 50px;
+			}
+			.border{
+				border: 10px solid #000;
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			类选择器				通过class选择元素（选择到的是一组元素）
+				语法				.class名称{要添加的样式}
+				注意：页面中的class是可以重名的
+					一个元素的class可以有多个，每个class之间用空格隔开，如果后面class里的样式与前面的有重复的，那后面的会把前面的覆盖了
+		-->
+		<div class="box"></div>
+		<p class="box border"></p>
+		<section class="box border"></section>
+	</body>
+</html>

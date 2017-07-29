@@ -36,16 +36,17 @@
 		 * 
 		 * 
 		 * 
-		 * */
+		 * */	
+		//console.log(this);			//window
 		function fn() {
 				//这个this是在函数里面
 				alert(this);
 		}
-		//fn();				//window
-		//document.onclick = fn;			//document
+//		fn();				//window
+		document.onclick = fn();			//document
 		
-		var btn = document.getElementById('btn');
-		btn.onclick = fn;					//input element
+//		var btn = document.getElementById('btn');
+//		btn.onclick = fn;					//input element
 		
 	</script>
 	<body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			BFC				标准浏览器所具有的
+			Layout			IE浏览器所具有的
+			
+			Layout			
+				它决定了块级元素如何对它的内容进行布局，以及与其它元素的关系和相互作用
+				hasLayout		true
+								false
+				
+			触发Layout的方式
+				1、默认触发
+					table、tr、th、td、img、input、button、select、textarea、iframe
+				2、css
+					display: inline-block			/*ALL*/
+					height: (除 auto 外任何值)		/*仅适用IE6 7*/
+					width: (除 auto 外任何值)			/*仅适用IE6 7*/
+					float: (left 或 right)			/*ALL*/
+					position: absolute				/*ALL*/
+					writing-mode: tb-rl				/*ALL*/
+					zoom: (除 normal 外任意值)		/*仅适用IE6 7*/
+					
+					
+					/*以下适用IE7+*/
+					min-height: (任意值)
+					min-width: (任意值)
+					max-height: (除 none 外任意值)
+					max-width: (除 none 外任意值)
+					overflow: (除 visible 外任意值，仅用于块级元素)
+					overflow-x: (除 visible 外任意值，仅用于块级元素)
+					overflow-y: (除 visible 外任意值，仅用于块级元素)
+					position: fixed
+					
+					
+		-->
+	</body>
+</html>

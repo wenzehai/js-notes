@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#green{
+				height: 800px;
+				background: green;
+			}
+			#blue{
+				height: 800px;
+				background: blue;
+			}
+			#pink{
+				height: 800px;
+				background: pink;
+			}
+			#yellow{
+				height: 800px;
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			a			超连接标签
+				特点
+					1、默认有一个下划线
+					2、不会继承父级的颜色样式
+				功能
+					1、跳转页面
+						href			要跳转页面的地址（没地址的情况下可以写一个#）
+									即可以给网络的地址也可以给本地的地址
+						target		目标点
+									_blank		在新页面打开
+									_self		在本页面打开（默认的）
+									
+					2、锚点
+						在href的值里写上#name,name对应id的值
+					3、下载
+		-->
+		<a href="#green">绿色</a>
+		<a href="#blue">蓝色</a>
+		<a href="#pink">粉色</a>
+		<a href="#yellow">黄色</a>
+		<p id="green">绿色</p>
+		<p id="blue">蓝色</p>
+		<p id="pink">粉色</p>
+		<p id="yellow">黄色</p>
+	</body>
+</html>

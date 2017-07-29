@@ -57,8 +57,8 @@
 			 */
 				function Pic(obj){
 					this.box = obj;
-					this.ul=document.querySelector('ul');
-					this.div=document.querySelector('#box div');
+					this.ul=this.box.querySelector('ul');
+					this.div=this.box.querySelector('#box div');
 					this.n=0;	//用来存储图片走的个数
 					this.timer = null;
 					
@@ -93,9 +93,12 @@
 				
 				Pic.prototype.show = function(){
 					this.n++; 		//调一次函数表示图片已经走了一张了，就让它的值加个1
+					//console.log(this);
 					var This = this;
+					//console.log(This);
 					//让文字先运动到下面
 					move(This.div,{bottom:-70},1000,'linear',function(){
+						
 						//当文字已经消失了，这时该运动ul了
 						move(This.ul,{left:-730*This.n},1000,'linear',function(){
 							//当图片停止了，需要去判断这张图是不是赋值那个的第一张，如果是，就把它拉回来

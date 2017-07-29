@@ -23,6 +23,50 @@
 			 * 			注意：编码通过git log去找，秩序输入几个字符就可以，只要不予其他的编码重复
 			 * 		2、git reset --hard 编码						恢复整个版本的文件
 			 * 		3、git reflog 								查找历史版本记录，方便回滚
+			 * 
+			 * 发布到github上
+			 * 		git remote			查看远程仓库的名称
+			 * 		git remote -v		查看远程仓库地址
+			 * 		git push origin master		把版本库中的文件提交到远程仓库
+			 * 
+			 * 设置多人开发权限
+			 * 		1、一个项目可以设置多个开发人员一起开发
+			 * 		2、在项目中点击右上角加好，点击new collaborator，在弹出的页面里找到输入框输入用户名点击后面的add按钮
+			 * 		3、其他的开发都必须先clone一下项目，下载到本地
+			 * 
+			 * 多人开发出现冲突（如果多人同时在操作一个代码，那提交的时候会有冲突）
+			 * 		1、git fetch			把线上的代码先下载下来
+			 * 		2、git diff master origin/master		查看冲突，会很清晰的打出来哪一些代码不一样
+			 * 		3、git merge origin/master			将不同的代码显示到页面中，人为判断用谁的代码
+			 * 		4、解决完后，再push上去
+			 * 
+			 * <<<<<<<HEAD
+			 * 冲突的内容代码
+			 * 
+			 * >>>>>>>
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 分支
+			 * 		git branch					查找分支
+			 * 		git branch 新分支名			新建分支
+			 * 		git checkout 分支名			切换分支
+			 * 		git checkout -b	新分支名		快速新建并切换分支
+			 * 		git merge 分支名				合并分支
+			 * 		git branch -d 分支名			删除分支
+			 * 
+			 * 创建博客
+			 * 		1、点击右上角的加号
+			 * 		2、在输入框里输入地址，这个地址一定要与你的github的地址一样		//wenzehai.github.io
+			 * 		3、确定后再新的页面点击create new file
+			 * 		4、在新的页面输入框里输入index.html(一定要这样写)，然后再下面的大框里输入内容，然后点击commit new file 按钮
+			 * 		
+			 * http://git.oschina.net/progit/			github中文文档
+			 * 
+			 * 
+			 * 
 			 */
 		</script>
 	</head>

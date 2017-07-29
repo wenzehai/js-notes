@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * jsonp的回调函数
+			 * 		1、通过jsonp的方式的数据一般都会放在一个回调函数里
+			 * 		2、请求道的结果是这样的getData({'color':['red','green','blue']})
+			 * 			1、数据放在函数的参数里，可以是任何数据形式(对象、数组)
+			 * 			2、回调函数的名字要么是后端定死的，要么是我们再请求地址跟动态加上的
+			 * 	
+			 * 		注意：
+			 * 			1、如果是直接在页面里用script标签引入数据的话，那定义回调函数一定要放在引入数据的前面
+			 * 			2、如果是通过动态创建script标签的话定义回调函数一定要是全局的，或者挂在到window身上
+			 * 		原因：
+			 * 				1、创建的script标签是在全局下，如果函数没在全局下肯定找不到
+			 * 				2、数据中返回的数据已加载到页面里是调用函数，那调用函数前必须定义函数
+			 * 
+			 */
+			
+			//解决报错的第一种方式,会调函数放在window.onload外面,就是一个全局函数
+			//function getData(data){
+			//			alert(data);
+			//}
+			
+			window.onload = function(){
+				var btn = document.querySelector("button");
+				btn.onclick = function(){
+					var script = document.createElement('script');
+					script.src = 'http://localhost/ajax/php/jsonp.php';
+					/*
+					 *onload要放在加载前面，如果有缓存，有可能触发不了onload事件
+					 */
+					
+					document.body.appendChild(script);
+				}
+				//把回调函数作为window下的一个属性去定义，那它就是一个全局函数
+				window.getData = function(data){
+					alert(data);
+				}
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<!--点击才创建script标签加载数据-->
+		<button>点击</button>
+		
+		
+		
+		<!--第一种方式开始-->
+		<!--<script type="text/javascript">
+			//这个函数要先执行，才能被后面script引入数据调用
+			function getData(data){
+				alert(data);
+			}
+		</script>
+		<script src="http://localhost/ajax/php/jsonp.php"></script>-->
+		<!--第一种方式结束-->
+	</body>
+</html>
