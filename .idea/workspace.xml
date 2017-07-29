@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="12bfcb90-cfce-42e3-bc87-e4e109b3c6ab" name="!changes.default.changelist.name!" comment="">
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Useful_Js/02Forms/00027可输入下拉框效果/00027可输入下拉框效果.html" afterPath="$PROJECT_DIR$/Useful_Js/02Forms/00027可输入下拉框效果/00027可输入下拉框效果.html" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+=======
     <list default="true" id="12bfcb90-cfce-42e3-bc87-e4e109b3c6ab" name="!changes.default.changelist.name!" comment="" />
+>>>>>>> 8af630183bf22d2d5313cb37261a7d8f67a0952f
     <ignored path="js-notes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +32,32 @@
     <favorites_list name="js-notes" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf>
+      <file leaf-file-name="JavaScript 搜索框自动提示.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/JavaScript 搜索框自动提示.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1200">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="601">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+=======
     <leaf />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -35,6 +70,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/runjs实例/04 JavaScript Lightbox/JavaScript Lightbox.html" />
+=======
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
         <option value="$PROJECT_DIR$/runoob_javascript实例/42 JavaScript 对象 01创建对象/JavaScript 对象.html" />
         <option value="$PROJECT_DIR$/runoob_javascript实例/43 JavaScript Number 对象/JavaScript Number 对象.html" />
         <option value="$PROJECT_DIR$/Useful_Js/06Application/0001加减乘除简单计算器/加减乘除简单计算器.html" />
@@ -83,17 +122,27 @@
         <option value="$PROJECT_DIR$/new javascript/97JavaScript Window对象 close属性/97JavaScript Window对象 close属性.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00025动态删除下拉选项/00025动态删除下拉选项.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00026下拉框联动效果/00026下拉框联动效果.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/demo.js" />
+=======
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00027可输入下拉框效果/00027可输入下拉框效果.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00027简单的数字及字符操作/00027简单的数字及字符操作.html" />
         <option value="$PROJECT_DIR$/Useful_Js/02Forms/00029设置表单中所有文本型的成员的值为空/设置表单中所有文本型的成员的值为空.html" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="683" />
+    <option name="width" value="683" />
+    <option name="height" value="738" />
+=======
     <option name="x" value="20" />
     <option name="y" value="885" />
     <option name="width" value="1116" />
     <option name="height" value="954" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,6 +245,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+=======
               <option name="myItemId" value="00029设置表单中所有文本型的成员的值为空" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -416,6 +467,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
               <option name="myItemId" value="03 JavaScript 搜索框自动提示" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -432,6 +484,22 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="48" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="52" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="51" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="486" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="48" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="52" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="51" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="486" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -502,19 +570,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="683" y="0" width="683" height="738" extended-state="0" />
+    <editor active="true" />
+=======
     <frame x="20" y="885" width="1116" height="954" extended-state="0" />
     <editor active="false" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3388306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -545,6 +618,53 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/JavaScript 搜索框自动提示.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="550">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00026下拉框联动效果/00026下拉框联动效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4175">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/06Application/0002升级版计算器/升级版计算器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1242">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/06Application/0002升级版计算器/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/06Application/0002升级版计算器/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="648">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
     <entry file="file://$PROJECT_DIR$/Useful_Js/06Application/0001加减乘除简单计算器/加减乘除简单计算器.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2457">
@@ -629,6 +749,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/runoob_javascript实例/80JavaScript String对象 slice() 方法/80JavaScript String对象 slice() 方法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38220423" vertical-offset="0" max-vertical-offset="989">
@@ -839,6 +961,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
     <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/0003如何去除字符串两边的空格(重要）.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="837">
@@ -846,24 +969,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00025动态删除下拉选项/00025动态删除下拉选项.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.25" vertical-offset="0" max-vertical-offset="1458">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/JavaScript 搜索框自动提示.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1296">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/0004跑马灯效果/跑马灯效果.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="967">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+=======
+        <state vertical-scroll-proportion="-14.25" vertical-offset="0" max-vertical-offset="1458">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
         </state>
       </provider>
     </entry>
@@ -876,6 +990,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/00026下拉框联动效果/00026下拉框联动效果.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.13537906" vertical-offset="2000" max-vertical-offset="4175">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="967">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/JavaScript 搜索框自动提示.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1200">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="981">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Useful_Js/02Forms/03 JavaScript 搜索框自动提示/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="601">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+=======
         <state vertical-scroll-proportion="0.7019064" vertical-offset="0" max-vertical-offset="4509">
           <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
         </state>
@@ -899,6 +1042,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.049543675" vertical-offset="556" max-vertical-offset="1350">
           <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="23" selection-end-column="18" />
+<<<<<<< HEAD
+>>>>>>> 3edcbe5a51b43f78e2ca473901188f31dbc96b39
+          <folding />
+=======
+>>>>>>> 8af630183bf22d2d5313cb37261a7d8f67a0952f
         </state>
       </provider>
     </entry>
