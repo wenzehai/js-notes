@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 继承
+			 * 	一个对象可以继承另外一个对象身上的属性和方法
+			 * 
+			 * 
+			 * 
+			 */
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.say = function(){
+				console.log('我叫' + this.name);
+			}
+			var p1 = new Person('wenzehai');
+			p1.say()
+			
+			//创建一个对象
+			function Coder(name,age,job){
+				this.name = name;
+				this.age = age;
+				this.job = job;
+			}
+			Coder.prototype.say = function(){
+				console.log('我叫' + this.name);
+			}
+			Coder.prototype.coding = function(){
+				console.log('我的工作室' + this.job + '，我正在加班');
+			}
+			var c1 = new Coder('wenzehai',18,'前端');
+			c1.say();
+			c1.coding();
+		</script>
+	</body>
+</html>

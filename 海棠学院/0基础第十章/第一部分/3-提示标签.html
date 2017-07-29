@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>提示标签</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <style type="text/css">
+	    	p {
+	    		margin: 200px 0;
+	    	}
+	    </style>
+	</head>
+	<body>
+	<!--
+		注意：
+		1、tooltip比较特殊，需要添加js方法才能出现。
+		2、格式：class="tool" data-toggle="tooltip" data-placement="right" title="显示内容"
+		3、tool只要给谁添加了，就会有提示功能。
+		4、btnShow，要写两行代码$('.tool').tooltip();
+			$('.btnShow').tooltip('show');
+	-->
+		<div class="container">
+			<div class="row">
+				<p><a href="#" class="tool" data-toggle="tooltip" data-placement="left" title="海棠学院">海棠学院</a>hello worldhello worldhello <a href="#" class="tool" data-toggle="tooltip" data-placement="bottom" title="海棠学院">world</a>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world</p>
+				<p>你好你好你好你好你好你好<a href="#" class="tool" title="世界你好" data-toggle="tooltip" data-placement="right">你好</a>你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+				<button class="btn btn-primary tool btnShow" title="文泽海" data-toggle="tooltip" data-placement="right">名字</button>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+			$('.tool').tooltip();
+			$('.btnShow').tooltip('show');
+		</script>
+	</body>
+
+</html>

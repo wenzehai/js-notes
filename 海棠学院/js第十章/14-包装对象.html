@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *包装对象
+			 *	 在js内部，当我们去调用字符串、数字、布尔值这些基本数据类型身上的属性或者方法的时候，js会在
+			 * 	内部，把这些基本数据类型转成一个对应的对象类型（包装对象），然后再去调用包装对象身上的属性或者方法
+			 *
+			 * 包装对象
+			 * 		String
+			 * 		Number
+			 * 		Boolean
+			 * 
+			 * 注意：
+			 * 		null与undefined没有对应的包装对象
+			 * 		基本数据类型只能使用对应的包装对象身上的属性或者方法，不能添加
+			 * 		因为使用后，包装对象就小时了，所以只能用，不能添加
+			 */
+			var str = "wenzehai";
+			console.log(str.charAt(0));
+			console.log(str.length);
+			console.log(str.substring(1));
+			
+			//内部执行的过程
+			//var str = new String('wenzehai');
+			//console.log(str.length);
+			
+			var  num = 12.456;
+			console.log(num.toFixed(2));		//截取两位小数，现在已经不是数字了，而是字符串了
+			//内部过程
+			//var num = new Number(12.456);
+			//console.log(num.toFixed(2));
+			
+			var b = true;
+			console.log(b.toString());			//把布尔值转化成字符串
+			//内部过程略
+			
+			
+			//只能使用，不能添加
+			var str1 = 'wenzehai';
+			str1.a =12;
+			console.log(str1.a);			//undefined
+		</script>
+	</body>
+</html>

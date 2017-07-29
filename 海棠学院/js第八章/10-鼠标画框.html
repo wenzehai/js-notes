@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				border: 1px solid red;
+				position: absolute;
+				cursor: default;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.onmousedown = function(ev){
+					var div = document.createElement('div');
+					var disX = ev.clientX;
+					var disY = ev.clientY;
+					//设置div的起点与鼠标按下的点一样
+					div.style.left = disX +'px';
+					div.style.top = disY +'px';
+					document.body.appendChild(div);
+					
+					
+					document.onmousemove = function(ev){
+						//左上角
+						if(ev.clientX < disX && ev.clientY < disY){
+							div.style.width = disX - ev.clientX + 'px';
+							div.style.height = disY- ev.clientY + 'px';
+							div.style.left = ev.clientX + 'px';
+							div.style.top = ev.clientY + 'px';
+						};
+						//左下角
+						if(ev.clientX < disX && ev.clientY > disY){
+							div.style.width = disX - ev.clientX + 'px';
+							div.style.height = ev.clientY - disY + 'px';
+							div.style.left = ev.clientX + 'px';
+							div.style.top = disY + 'px';
+						};
+						//右下角
+						if(ev.clientX > disX && ev.clientY > disY){
+							div.style.width = ev.clientX- disX + 'px';
+							div.style.height = ev.clientY - disY + 'px';
+							div.style.left = disX + 'px';
+							div.style.top = disY + 'px';
+						};
+						//右上角
+						if(ev.clientX > disX && ev.clientY < disY){
+							div.style.width = ev.clientX- disX + 'px';
+							div.style.height = disY- ev.clientY + 'px';
+							div.style.left = disX + 'px';
+							div.style.top = ev.clientY + 'px';
+						};
+						
+//						上面四段代码可以用数学方法优化
+					}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+					}
+				}
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

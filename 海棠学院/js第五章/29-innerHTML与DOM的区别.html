@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *innerHTML与DOM的区别
+			 * 		innerHTML
+			 * 			先清空原来的内容，然后再复制一份原来的+新添加的内容，两个内容重新赋给color.innerHTML
+			 * 			
+			 * 		DOM方法
+			 * 			会把新的内容追加到原来的内容里面，原来内容所具有的事件，依然会在
+			 * 
+			 */
+			window.onload = function() {
+				var color = document.getElementById('color');
+				var lis = document.querySelectorAll('li');
+				
+				for(var i=0; i<lis.length; i++){
+					lis[i].onclick = function(){
+						alert(this.innerHTML);
+					}
+				}
+				
+				//innerHTML方法给color添加元素
+				color.innerHTML += '<li>green</li>'		//弹窗效果没有了
+				
+				//DOM操作方法
+				var newLi = document.createElement('li');
+				newLi.innerHTML = 'white';
+				
+				color.appendChild(newLi);
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="color">
+			<li>green</li>
+			<li>red</li>
+			<li>blue</li>
+			<li>yellow</li>
+		</ul>
+		
+	</body>
+</html>

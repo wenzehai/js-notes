@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *splice方法
+			 * 		作用
+			 * 			用新元素替换旧元素，以此修改数组的内容（替换数组）
+			 * 		语法
+			 * 			数组.splice(start,deleteCount,item)
+			 * 		参数
+			 * 			start 			开始的位置
+			 * 			deleteCount		要删除的个数
+			 * 			item			替换的内容
+			 * 			
+			 * 一个参数都没有的话，那直接返回一个空数组
+			 * 如果参数为一个数字，代表截取数组，从传的那个数字开始，一直截到最后一位数据
+			 * 如果参数为两个数字，代表截取数组，从第一个参数开始，截取的个数为第二个参数的值
+			 * 如果参数为三个，代表替换数组，从的哥参数开始，找到第二个参数值的个数，把找到的内容替换成第三个参数
+			 * 
+			 * 		返回值
+			 * 			返回截完的数组，原数组不会变
+			 * 			原数组变化了，变成删除后剩下的内容
+			 * 			三个参数，先找，找几个，替换原来的内容
+			 */
+			
+			var color = ['red','green','blue','yellow']
+			
+			var newcolor = color.splice();			//一个参数的没有的话，直接返回一个空数组，原数组不会变化
+			console.log(newcolor);		
+			
+			var newcolor1 = color.splice(2);			//相当于截取到最后
+			console.log(newcolor1);		
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#text {
+				width: 500px;
+				height: 498px;
+				position: relative;
+				border: 1px solid black;
+				overflow: hidden;
+				float: left;
+				margin-right: 10px;
+			}
+			#text #con {
+				position: absolute;
+				padding: 10px;
+				top: 0;
+				
+			}
+			#div1 {
+				width: 20px;
+				height: 500px;
+				background: #333333;
+				position: relative;
+				float: left;
+			}
+			#div2 {
+				width: 100%;
+				height: 20px;
+				background: yellowgreen;
+				position: absolute;
+				top:0;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			/*
+			 *滚动条原理
+			 *	集合了拖拽与放大镜的原理
+			 *
+			 * 
+			 * 一个限制范围的拖拽
+			 */
+			window.onload = function(){
+				var div1 = document.getElementById('div1');
+				var div2 = document.getElementById('div2');
+				var con = document.getElementById('con');
+				var text = document.getElementById('text');
+				div2.onmousedown = function(ev) {
+					var disY = ev.clientY -div2.offsetTop;
+					document.onmousemove = function(ev){
+						var t = ev.clientY -disY;
+						if(t<0){
+							t = 0;
+						} else if(t>div1.clientHeight - div2.clientHeight) {
+							t=div1.clientHeight - div2.clientHeight;
+						}
+						
+						var scale = t/(div1.clientHeight - div2.clientHeight);
+						con.style.top = scale*(text.clientHeight-con.clientHeight) + 'px';
+						div2.style.top = t + 'px';
+					}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+					};
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="text">
+			<div id="con">
+				屡败蒙军
+宋嘉熙年间，王坚率军在杏山一带屯田练兵，守备御敌，当时的蒙古军队在顺阳丹江沿岸，聚集大批船只，堆积大量造船木材，准备大造船只，南下汉水，长江，加速南侵，王坚侦知敌情，于宋嘉熙三年（1239年）一月，挑选精壮兵将，准备大量的引火材料，于夜晚凭借熟悉地形越峭壁，尽焚敌军船只与造船木材，获得重大胜利。这个时候的王坚多次击败蒙古军队，收复失地，以战功升任郡团练，守合州，淳祐十一年(1251年)击败蒙古军，参与收复兴元(今陕西汉中)的作战。宝祜二年(1254年)任兴元都统兼知合州。
+坚守合州
+中国南宋宝祐六年至开庆元年(蒙古蒙哥汗八至九年，1258～1259)，王坚率兵在合州(今四川合川东)抗击蒙古军进攻的著名江河山岳地要塞防御战。宋朝在抗金、抗蒙的长期战争中，逐步形成固守长江上游以屏蔽下游的方略。在丧失蜀道天险之后，南宋守蜀将帅利用四川多山川的条件，择要隘，建山城，构成了以重庆为中心，以点控面，扼守夔门(在今四川奉节境)，阻止蒙古军东下的防御体系。
+蒙古军统帅蒙哥鉴于以前对中国宋朝全面多路进攻的失败，和水军不足的弱点，采取了迂回长江上游的战略，在大举南下攻宋以前，进军云南。经过数年准备，于宋宝祐六年二月，蒙古军分兵四路攻宋。蒙哥汗亲率主力4万，号称10万，于四月沿嘉陵江向重庆进发，企图占领重庆，东出夔门，会师荆湖，直取临安(今杭州)。十二月，蒙古军进至合州境内。合州治所在钓鱼山上，称钓鱼城，峭壁悬崖，三面环江。宋军凭险设防，依山势筑有周长十二三里、高两三丈的石城，南北山脚下各有一延至江中的城墙，名一字城。钓鱼城上可控制三江(嘉陵、渠、涪)，下可屏障重庆。城内兵精粮足，水源丰富。10万多军民在主将王坚率领下，团结一心，坚决抗蒙。次年二月，蒙哥汗率军渡过渠江，驻军于钓鱼城东五里的石子山一带，强攻钓鱼城。经过几天战斗，攻破一字城，遂连续攻东新门、奇胜门(城西)、镇西门等。守城军民依坚据守，木石兼投，大炮遥击，使蒙古军进攻均遭失败。四月大雨20天，蒙古军利用一无雨深夜，偷袭宋军，杀伤多人。王坚率兵反击，打退蒙古军。五月酷热，蒙古军疫病流行，王坚乘隙多次率兵夜袭其营地。蒙古军日夜不安，战斗力大为减弱。
+重伤蒙哥
+王坚在合州，调集属县十七万人，增筑钓鱼城，设防坚守。秦、巩、利、阆等州陷于蒙古后，各地人民陆续来这里集结，钓鱼城成为十数万人聚居的重镇。开庆元年（一二五九年）正月，蒙哥派降人晋国宝到钓鱼城劝降。王坚把晋国宝押到阅武场（练兵场），斩首示众，军声大振。
+六月，汪德臣复选兵夜登外城马军寨，杀寨主及守城者，王坚率兵来战。迟明，遇雨梯折，后军不克进而止。
+七月，蒙哥汗以马军寨之马鞍山为桥头堡，向钓鱼城内城发起进攻。在此场激烈的战斗中，在王坚的指挥下，蒙哥汗被飞丸击中，崩于钓鱼山。蒙哥汗战死之后，进军鄂州(今湖北武昌)的蒙哥之弟忽必烈和进攻漳州(今湖南长沙)的塔察儿，以及占领了大马士革，正在与古埃及马木路克王朝军队作战的旭烈兀，为争夺汗位而匆忙回师，蒙古贵族集团即开始了长期的内部争战。钓鱼城由此在世界中古史上，赫然竖立了“延续宋祚、缓解欧亚战祸、阻止蒙古向非洲扩张”的不朽丰碑！当时，钓鱼城就以“东方的麦迦城”、“上帝折鞭处”的威名震惊了中外。
+南宋著名诗人刘克庄《蜀捷》诗云：“吠南初谓予堪晦，折北俄闻彼不支。挞览果歼强弩下，男章有入槛车时。钟捷捷表前无古，班固铭诗继者谁…。
+			</div>
+			
+		</div>
+		<div id="div1">
+			<div id="div2"></div>
+		</div>
+	</body>
+</html>

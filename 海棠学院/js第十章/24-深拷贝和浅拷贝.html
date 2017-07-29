@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 
+			 * 
+			 * 
+			 */
+			var obj1 = {a:10,b:20};
+			var obj2 = obj1;				//这样复制是复制了引用地址，不可以
+			var obj0 = {
+				a:10,
+				b:{
+					c:22
+				},
+				d:[1,2,3],
+				e:function(){
+					console.log(2);
+				}
+			}
+			
+			//浅拷贝（如果对象数据里某个数据的类型也为对象的话，这种方法就不适用了）
+			function copy(obj) {
+				var newObj = {};
+				
+				for(var attr in obj){
+					newObj[attr] = obj0[attr];
+				}
+				
+				return newObj;
+			}
+			var obj3 = copy(obj1);
+			obj3.a = 13;
+			//console.log(obj3);			//{a: 13, b: 20}	
+			//console.log(obj1);			//{a: 10, b: 20}
+			
+			/*var obj4 = copy(obj0);
+			obj4.b.c = 30;
+			console.log(obj4);				//{a:10,b:{c:30}}
+			console.log(obj0);				//{a:10,b:{c:30}}
+			*/
+			
+			//深拷贝(递归)推荐使用
+			//递归要给一个跳出条件
+			function deepCopy(obj){
+				//给一个跳出去的条件，这个条件表示当传进来的参数不是对象的时候，就不需要递归了
+				if(typeof obj != 'object'){
+					return obj;
+				}
+				//如果复制的对象里有个属性的值是数组，那复制的结果就必须还是数组 
+				if(obj instanceof Array){
+					var newObj = [];
+				} else {
+					var newObj = {};
+				}
+				for(var attr in obj){
+					newObj[attr] = deepCopy(obj[attr]);
+				}
+				return newObj;
+			}
+			var obj5 = deepCopy(obj0);
+			obj5.b.c = 30;
+			obj5.d.push(66);					//只有数组才有push方法
+			obj5.e = function(){
+				console.log(1);
+			}
+			console.log(obj5);					//{a:10,b:{c:30}}
+			console.log(obj0)					//{a:10,b:{c:22}}
+			obj5.e();							//1
+			obj0.e();							//2
+			
+			
+			
+		</script>
+	</body>
+</html>

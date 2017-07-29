@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="" value="选项1" style="background: yellow;"/>
+		<input type="button" id="" value="选项2" />
+		<input type="button" id="" value="选项3" />
+		<div style="display: block;">内容一</div>
+		<div>内容二</div>
+		<div>内容三</div>
+	
+	
+	<script>
+		
+		window.onload=function(){
+			var inputs = document.querySelectorAll('input');
+			var divs = document.querySelectorAll('div');
+			var last = inputs[0];		//一上来就让上一个为默认的第0个
+			/*
+			 *每一个按钮都对应一个div，他们的下标值都是相同的
+			 *如果取到一个下标值，通过下标值就能找到对应的按钮与div
+			 */
+			//console.dir(inputs);
+			//console.dir(divs);
+			
+			//给每个按钮添加点击事件
+			for(var i=0; i<inputs.length; i++) {
+				//i的值 0 1 2
+				inputs[i].index = i;				//自定义一个index属性,存放的位置要在onclick之前
+				/*
+				 *inputs[0].index = 0;
+				 *inputs[1].index = 1;
+				 *inputs[1].index = 1;
+				 *
+				 */
+				inputs[i].onclick=function(){
+					last.style.background="";		//把上一次点击对象的背景色去掉
+													
+					//如果在这里能找到点击按钮的下标值，就能找到它对应的div
+					
+					//点击的那个对象是this
+					//点击的那个对象的索引值是this.index
+					
+					//把上一次对应的div的内容隐藏掉
+					divs[last.index].style.display='none';
+					//把点击的按钮背景色设置成黄色
+					this.style.background='yellow';
+					//把对应的div改为隐藏
+					divs[this.index].style.display='block';
+					
+					//更新last
+					last=this;		//点击下一个按钮的时候，那个按钮相对的的前一个对象就是当前对象。
+				};
+			}
+		};
+	</script>
+		
+	</body>
+</html>

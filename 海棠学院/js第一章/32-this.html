@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<input type="button" value="button" id="btn"/>
+	
+	
+	<script type="text/javascript">
+		/*
+		 * 	需求：
+		 * 		点击哪一个li，哪一个li背景变红色
+		 * 		
+		 * 	步骤:
+		 * 		1、获取li
+		 * 		2、给每一个li都添加点击事件
+		 * 	
+		 * 	循环里添加的点击事件，点击事件里的i的值是循环结束后那个值，而不是对应的循环的值
+		 * 
+		 * this
+		 * 		指的是当前的对象
+		 * 		不能当做变量名
+		 * 		只能读，不能写。它的值只能用，不能修改。
+		 * 
+		 * 1、在函数外用
+		 * 		this是指向window
+		 * 
+		 * 2、在函数内使用
+		 * 		1、函数是直接被调用的。
+		 * 			this指向window
+		 * 		2、被事件所调用，并且是以赋值的形式出现
+		 * 		this指向是，谁调用了函数，那this就指向谁
+		 * 
+		 * 谁调用了函数，那this就指向谁
+		 * 
+		 * 
+		 * 
+		 * */
+		function fn() {
+				//这个this是在函数里面
+				alert(this);
+		}
+		//fn();				//window
+		//document.onclick = fn;			//document
+		
+		var btn = document.getElementById('btn');
+		btn.onclick = fn;					//input element
+		
+	</script>
+	<body>
+	</body>
+</html>

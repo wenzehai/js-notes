@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#list {
+				width: 200px;
+				height: 200px;
+				border: 1px solid #f00;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var text = document.getElementById('text');
+				var btn = document.getElementById('btn');
+				var list = document.getElementById('list');
+				btn.onclick = function() {
+					var val = text.value;
+					//list.innerHTML += '<li>'+ val +'</li>';
+					
+					var li = document.createElement('li');
+					li.innerHTML = val;
+					
+					//添加到后面
+					//list.appendChild(li);
+					
+					//添加到前面
+					//list.insertBefore(li,list.children[0]);		//方法一
+					
+					list.insertBefore(li,list.firstElementChild);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text" value="" />
+		<input type="button" id="btn" value="提交" />
+		<ul id="list">
+			
+		</ul>
+	</body>
+</html>

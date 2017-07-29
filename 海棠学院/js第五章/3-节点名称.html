@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * nodeName
+			 * 	节点名称，任何一个节点都有这个属性
+			 * 
+			 *tagName
+			 * 标签名称
+			 * 		只有元素节点才有这个属性，文本节点、文档节点都没有这个属性
+			 * 
+			 * 		
+			 * 
+			 * 
+			 * 	
+			 * 
+			 */
+			window.onload = function() {
+				var box = document.getElementById('box');		//
+				var p = document.querySelector('p');
+				
+				console.log(p.tagName);
+				console.log(p.nodeName);
+				console.log(p.nodeType);
+				console.log(box.nodeName);		//DIV
+				console.log(box.tagName);		//DIV
+				
+				console.log(document.nodeName);		//#document
+				console.log(document.tagName);		//undefined
+			
+			
+			
+			}
+		</script>
+		<div id="box" class="color" style="width: 100px;">
+			<p><span></span></p>
+			wenzehai
+			<!--这是注释-->
+		</div>
+	</body>	
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var b=undefined;
+//			function fn(){
+//				console.log(b);		//undefined
+//				var b=20;
+//			}
+			/*
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			var b=12;
+			function fn(){
+				//var 没有c，就往外找
+				console.log(b);		//undefined
+				var b=20;
+			}
+			fn1();
+			console.log(c);
+			
+			
+			var d=12;
+			function fn2(d){
+				console.log(d);
+				d=24;
+			}
+			fn2();
+			console.log(d);
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

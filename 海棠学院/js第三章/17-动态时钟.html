@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 动态时钟
+			 * 		用定时器
+			 * 
+			 */
+			
+			window.onload=function(){
+				var datebox = document.getElementById('datebox');
+				
+				var timer
+				//把获取时间放到一个函数中，然后用定时器每隔一秒获取一次
+				function time() {
+					var d = new Date();
+					datebox.innerHTML = ''+d.getFullYear()+'年'
+											+format(d.getMonth()+1)+'月'
+											+format(d.getDate())+'号'
+											+'星期'+formatWeek(d.getDay())
+											+format(d.getHours())+'点'
+											+d.getMinutes()+'分'
+											+d.getSeconds()+'秒'
+				}
+				//如果参数的值小于10，就要在他前面加上一个0
+				function format(v) {
+//					if(v<10) {
+//						v = '0' +v;
+//					}
+					return v<10?'0'+v:''+v;			这种方法更好
+//					return v;
+				}
+				function formatWeek(v) {
+					return ['日','一','二','三','四','五','六'][v]		//getDate()返回0-6
+				}
+				//定时器
+				timer = setInterval(time,1000);
+			};
+			
+			
+		</script>
+		<div id="datebox"></div>
+		
+		
+	</body>
+</html>

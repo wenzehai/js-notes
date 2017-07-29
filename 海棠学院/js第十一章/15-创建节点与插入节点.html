@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="padding: 20px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 * 创建节点与插入节点
+			 * 	要添加的元素.appendTo(父级)				把要添加的元素添加到父级的最后面
+			 * 	要添加的元素.prependTo(父级)			把要添加的元素添加到父级的最前面
+			 * 	要添加的元素.insertBefore(元素)			把要添加的元素添加到一个指定元素的前面
+			 * 	要添加的元素.insertAfter(元素)			把要添加的元素添加到一个指定元素的后面
+			 * 
+			 * 
+			 * 
+			 */
+			$(function(){
+				var li1 = $("<li>red</li>");
+				var li2 = $("<li>gold</li>");
+				var div3 = $("<div>div3</div>");
+				var div4 = $("<div>div4</div>");
+				
+				li1.appendTo($("#list"));			
+				li2.prependTo($("#list"));
+				div3.insertBefore($("#list"));
+				div4.insertAfter($("#list"));
+				
+				
+				
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<ul id="list">
+			<li>green</li>
+		</ul>
+	</body>
+</html>

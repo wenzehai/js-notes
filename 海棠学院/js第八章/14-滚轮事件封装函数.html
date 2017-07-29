@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 2000px;">
+		<!--需要兼顾兼容性-->
+		<script type="text/javascript">
+			
+			
+			window.onload = function(){
+				function myScroll(obj,upFn,downFn){
+				obj.onmousewheel = fn;
+				obj.addEventListener('DOMMouseScroll',fn);
+				
+				function fn(ev) {
+						if(ev.wheelDelta>0 || ev.detail<0){
+							//这个条件成立，说明现在都是往上边滚动
+							//upFn()
+							upFn.call(obj,ev);		//可以传一些参数
+						} else {
+							//走这里说明都是往下滚动
+							//downFn();
+							downFn.call(obj,ev);		//可以传一些参数
+						}
+						ev.preventDefault();
+						return false;
+					};
+				}
+					
+				
+				
+				
+				var input = document.querySelector('input');
+				var n = 0;
+				myScroll(input,function(e){
+					console.log(e);
+					input.value = n--;
+				},function(){
+					input.value = n++;
+				});
+			};
+		</script>
+		<input type="text" value="0" />
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>折叠菜单</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<style type="text/css">
+			.row {
+				padding-top: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+		注意：
+		1、给要点击的那个元素加一个data-toggle="collapse" ,并且加一个data-target="id or class" 
+		ID or class需要与折叠的内容相对应
+		2、给要折叠的内容加id or class，与上面对应
+		
+		注意：
+		1、内容区域不能有padding值，如果要有，放到里面的div，用里面的内容撑开来。
+	-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<a href="#" data-toggle="collapse" data-target="#con">海棠学院</a>
+							</h3>
+						</div>
+						
+						<div id="con" class="in">
+							<!--给class="in",含义是先隐藏显示的那一步-->
+							<div class="panel-body">
+								专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+							</div>
+						</div>
+						<div class="panel-heading">
+							<h3 class="panel-title">
+							<a href="#" data-toggle="collapse" data-target="#con1">海棠学院</a>
+						</h3>
+						</div>
+						<div id="con1" class="in">
+							<!--给class="in",含义是先隐藏显示的那一步-->
+							<div class="panel-body">
+								专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+							</div>
+						</div>
+						<div class="panel-heading">
+							<h3 class="panel-title">
+							<a href="#" data-toggle="collapse" data-target="#con2">海棠学院</a>
+						</h3>
+						</div>
+						<div id="con2" class="in">
+							<!--给class="in",含义是先隐藏显示的那一步-->
+							<div class="panel-body">
+								专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训专注前端培训
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 300px;
+				height: 200px;
+				border: 10px solid #000000;
+				padding: 10px;
+			}
+		</style>
+		<script>
+			/*
+			 * 元素的宽度
+			 * 		元素.offsetWidth
+			 * 
+			 * 注意
+			 * 		包含边框，包含padding
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				
+				box.onclick = function() {
+					console.log(this.offsetTop);				//离最近有定位父元素上边的距离
+					console.log(this.offsetLeft);				//离最近有定位父元素左边的距离
+					console.log(this.offsetWidth);				//340包含边框	
+					console.log(this.clientWidth);				//320少了一个边框
+					console.log(this.offsetHeight);				//240包含边框	
+					console.log(this.clientHeight);				//220	
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>	
+		
+	</body>
+</html>

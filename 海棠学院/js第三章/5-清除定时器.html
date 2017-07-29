@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+				font-size: 50px;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 *
+			 * 
+			 * 清除定时器
+			 * 		定时器的一个返回值，返回一个数字，代表当前定时器的编号，我们可根据这个来清除定时器	
+			 * 定时器的返回值在每个不同的浏览器都不一样，所以没有办法直接拿编号去清掉定时器
+			 * 可以声明一个变量，把定时器的返回值都存到变量里，拿这个变量来清除定时器。
+			 * 清除定时器的方法
+			 * 		1、清除重复执行定时器
+			 * 			clearInterval(定时器的返回值)
+			 * 		2、清除延迟定时器
+			 * 			clearTimeout(定时器的返回值)
+			 * 		定时器返回一个数字，定时器的编号。清除定时器的方法其实清掉的是编号。所以可以用
+			 * 任何一种方法清除定时器，即使他们不对应，也没有关系。
+			 * 
+			 * 1、直接把定时器调用放在了一个变量赋值的后面，定时器还会走吗？ 可以
+			 * 2、这个timer是在下声明的，而用他的时候在上面，能调到吗？可以
+			 */
+			var i=0;
+			function add(){
+				i++;
+				console.log(i);
+				//清除定时器的条件，一般会放在定时器执行的行数里
+				if(i==8) {
+					clearInterval(timer);			//
+				}
+			}
+			
+			var timer= setInterval(add,1000);		//变量存的结果不一样，但是变量相同			
+			
+			
+			//setInterval(add,1000);			//它是一个函数,是有返回值的，返回值为1
+			//console.log(setInterval(add,1000));			//1  定时器编号，就是定时器的返回值
+			//setInterval(add,1000);
+			
+			//如果运行到8，则清除定时器，在外面无法判断定时器里面的内容
+			
+			
+			
+			//alert(1);		//定时器在走的过程中，下面的代码也会走，叫异步；上面的代码没走完，下面的不会走，叫同步。
+			
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

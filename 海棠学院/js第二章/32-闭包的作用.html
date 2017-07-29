@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *函数自执行
+			 * 		函数表达式后面加括号
+			 *
+			 *闭包的作用
+			 * 		在循环当中找到对应的i的值
+			 *
+			 *
+			 *
+			 */
+			window.onload=function(){
+				var lis=document.querySelectorAll('li');
+				
+//				for(var i=0; i<lis.length; i++){
+//					//lis[i].index=i;
+//					lis[i].onclick=function(){
+//						
+//						console.log(i);				//5
+//						//console.log(this.index);				
+//					}
+//				}
+
+//				for(var i=0; i<lis.length; i++){
+//					lis[i].onclick=function(){
+//						console.log(i);			//一直都是5	
+//					}
+//				}
+//				
+				for(var i=0; i<lis.length; i++){
+					//先搞一个自执行，然后往里面传参，传的参数为for循环里的变量i
+					function fn1(i) {
+						lis[i].onclick=function(){
+							console.log(i);				
+						}
+					}
+					fn1(i);
+				}
+				
+				//下面是缩减版
+//				for(var i=0; i<lis.length; i++){
+//					//先搞一个自执行，然后往里面传参，传的参数为for循环里的变量i
+//					(function(i){			//形参
+//						//这个是从外面挪进来的，挪进来是因为外面这个函数有var i=i;
+//						//var i=i;
+//						lis[i].onclick=function(){
+//							console.log(i);				
+//						}
+//					})(i);			//实参
+//				}
+//				
+//				for(var i=0; i<lis.length; i++){
+//					lis[i].onclick=(function(i){
+//						return function(){
+//							console.log(i);
+//						}
+//					})(i);
+//				}
+				
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li>green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

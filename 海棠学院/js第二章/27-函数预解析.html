@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *函数
+			 * 		1、函数声明
+			 * 			函数声明可以被预解析，所以可以先调用，在声明
+			 * 		2、函数表达式
+			 *			不会被预解析，所以只能先声明，再调用，不能把顺序弄反了，不然报错。
+			 *
+			 *
+			 *
+			 *
+			 */
+				fn1();			//可以被调用
+				function fn1(){
+					console.log('fn1');
+				}
+				fn2();
+				var fn2=function(){
+					console.log('fn2');
+				}
+				//fn2();		//fn2
+		</script>
+	</body>
+</html>

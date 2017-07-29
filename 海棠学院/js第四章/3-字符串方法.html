@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *charCodeAt
+			 * 	作用
+			 * 		通过索引找字符，找到后转为Unicode编码
+			 * 
+			 * indexOf
+			 * 	作用，通过字符找下标
+			 * 	字符串.indexOf(searchValue,fromIndex);
+			 * 
+			 * 如果没找到的话，返回-1
+			 * 
+			 * 
+			 * lastIndexOf(searchValue,formIndex)
+			 * 
+			 * 
+			 * slice方法
+			 * 		作用：截取字符串
+			 * 		语法：字符串.slice（beginSlice,endSlice）
+			 * 
+			 * 		如果参数为空，则返回整个字符串
+			 * 		如果只有一个参数，则返回从参数开始位置直到末尾
+			 * 		
+			 * 
+			 */
+			var str = 'wenzehai';
+			var s1 = str.slice(3,5);
+			console.log(s1);	
+			
+			var str = 'wenzehai';
+			var s2 = str.slice(10);
+			console.log(s2);			//空
+			
+			var str = 'wenzehai';
+			var s3 = str.slice(-3);
+			console.log(s3);			//从后面开始一直到最后
+			
+		</script>
+	</body>
+</html>

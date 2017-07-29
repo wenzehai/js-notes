@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 
+			 * 
+			 * 
+			 * 
+			 *
+			 */
+				function fn1(){
+					var n=10;			
+					function fn2(){
+						n++;
+						console.log(n);
+					}
+					fn2();
+					return fn2;
+				}
+				console.log(fn1());
+				
+				var newFn=fn1();
+				newFn();	//11
+				newFn();	//12
+				
+				function fn3(){
+					var newFn=fn1();
+					newFn();
+				}
+				fn3();
+				
+				
+		</script>
+	</body>
+</html>

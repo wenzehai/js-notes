@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 730px;
+				height: 454px;
+				margin: 30px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#box ul{
+				position: absolute;
+				left: 0;
+			}
+			#box li{
+				list-style: none;
+				float: left;
+			}
+			#box div{
+				height: 70px;
+				width: 100%;
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				bottom: 0px;
+				font-family: "微软雅黑";
+				color: #fff;
+				text-indent: 20px;
+			}
+			#box div h3{
+				line-height: 40px;
+			}
+		</style>
+		<script src="js/move.js"></script>
+		<script type="text/javascript">
+			/*
+			 *function 构造函数(){
+				this.属性= ??;
+				}
+				构造函数.prototype.方法 = function(){}
+				var 实例对象= new 构造函数();
+				实例对象.方法();
+			 *
+			 *书写面向对象的原则
+			 * 		1、所有的变量都作为属性
+			 *			属性需要写在构造函数里
+			 * 		2、所有的函数都要作为方法
+			 * 			方法添加到构造函数的原型
+			 * 		3、this指向，在事件或者定时器里是访问不到真正的this，需要在外面存一下this
+			 *
+			 */
+				function Pic(obj){
+					this.box = obj;
+					this.ul=document.querySelector('ul');
+					this.div=document.querySelector('#box div');
+					this.n=0;	//用来存储图片走的个数
+					this.timer = null;
+					
+					this.textArr=[
+						{"title":'盛惠而来',"content":'京东携手天天果园百万车厘子，29元包邮畅想'},
+						{"title":'荣耀7',"content":'有点不同，0元预约，免费抽奖1999元'},
+						{"title":'老板购物节',"content":'2015我要更省，老板XX购物节精彩来袭'},
+						{"title":'送钱送美酒',"content":'大盘让我心碎，我在京东买醉送钱送美酒'},
+						{"title":'玩转暑假',"content":'追风少年，联想拯救者全国独家抢购'},
+						{"title":'游园门票',"content":'奔跑吧周末游游园门票一元秒杀'}
+					];	//数组，数组中放对象——对象数据
+				}
+				
+				Pic.prototype.init = function(){
+					this.ul.innerHTML+=this.ul.innerHTML;
+				
+					//把所有的li都排在一行，ul要足够宽
+					this.lis=document.querySelectorAll('li');
+					//一个li的宽度？
+					this.w=parseInt(getComputedStyle(this.lis[0]).width)		//其中一个li的宽度
+					this.ul.style.width=this.w*this.lis.length+'px';	
+					
+					//文字添加到h3和p上
+					this.div.innerHTML='<h3>'+this.textArr[this.n].title+'</h3><p>'+this.textArr[this.n].content+'</p>';
+					
+					//开启一个定时器，让图片不断的走
+					var This = this;
+					this.timer=setInterval(function(){
+						This.show();
+					},3000);
+				};
+				
+				Pic.prototype.show = function(){
+					this.n++; 		//调一次函数表示图片已经走了一张了，就让它的值加个1
+					var This = this;
+					//让文字先运动到下面
+					move(This.div,{bottom:-70},1000,'linear',function(){
+						//当文字已经消失了，这时该运动ul了
+						move(This.ul,{left:-730*This.n},1000,'linear',function(){
+							//当图片停止了，需要去判断这张图是不是赋值那个的第一张，如果是，就把它拉回来
+							//alert(n);
+							if(This.n==This.lis.length/2){
+								This.ul.style.left=0;
+								This.n=0;		//需要让n的值不再累加了，让它与图片对上号，回到初始值，跟0对上
+								//alert(1);
+							}
+							//在文字上去之前应该吧内容改了
+							This.div.innerHTML='<h3>'+This.textArr[This.n].title+'</h3><p>'+This.textArr[This.n].content+'</p>';
+							
+							//当ul走完了一个，这个时候要让文字块移动上去
+							move(This.div,{bottom:0},1000,'linear');
+						});
+					});
+				}
+				
+				Pic.prototype.over = function(){
+					clearInterval(this.timer);
+				}
+
+				Pic.prototype.out = function(){
+					this.timer = setInterval(this.show,2000);
+				}
+				
+				
+				window.onload = function(){
+					var box = document.getElementById('box');
+					var pic1 = new Pic(box);
+					pic1.init();							//一般new碗之后都初始化一下
+					
+					box.onmouseover = function(){
+						pic1.over();
+					}
+					box.onmouseout = function(){
+						pic1.out();
+					}
+				}	
+
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="img/1.jpg" alt="" /></li>
+				<li><img src="img/2.jpg" alt="" /></li>
+				<li><img src="img/3.jpg" alt="" /></li>
+				<!--<li><img src="img/4.jpg" alt="" /></li>
+				<li><img src="img/5.jpg" alt="" /></li>
+				<li><img src="img/6.jpg" alt="" /></li>-->
+			</ul>
+			<div>
+				<h3></h3>
+				<p></p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		<ul id="color">
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+		
+		
+	<script type="text/javascript">
+		/*
+		 * 	需求：
+		 * 		点击哪一个li，哪一个li背景变红色
+		 * 		
+		 * 	步骤:
+		 * 		1、获取li
+		 * 		2、给每一个li都添加点击事件
+		 * 	
+		 * 	循环里添加的点击事件，点击事件里的i的值是循环结束后那个值，而不是对应的循环的值
+		 * 
+		 * this
+		 * 		指的是当前的对象
+		 * 		不能当做变量名
+		 * 		只能读，不能写。它的值只能用，不能修改。
+		 * 
+		 * 1、在函数外用
+		 * 		this是指向window
+		 * 
+		 * 2、在函数内使用
+		 * 		1、函数是直接被调用的。
+		 * 			this指向window
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		window.onload = function() {
+			//获取到所有的li
+			var lis1 = document.getElementsByTagName('li');			//动态获取
+				var lis2 = document.querySelectorAll('li');			//静态获取，结构定了之后，就只能取到定了后的结果。
+				
+			//把所有的li的背景色全部变成红色，当操作相同的代码时，用for循环
+							
+			for(var i = 0; i<lis1.length; i++) {
+				
+					lis1[i].onclick = function() {
+						//找点击的那个对象
+						
+						//谁点击，this就代表谁，其执行相应的代码
+						this.style.background = "red";
+				}
+			}
+		}
+			
+	</script>	
+	</body>
+</html>

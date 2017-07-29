@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *event对象（事件对象）
+			 * 		记录了事件发生时的一些关于事件详细的信息
+			 * 		当一个事件发生的时候，和当前这个事件有关系的细节信息都会保存在一个对象当中，这个对象我们称他为事件对象
+			 * 
+			 *event对象是事件处理函数的第一个参数,不同的事件，有不同的事件对象，事件处理函数不同，事件对象也不同
+			 *
+			 *chrome/ie			event不用写参数的，直接调用console.log(event);
+			 *firefox			event必须是第一个参数document.onclick = function(ev){
+			 *chrome			写不写参数都一样
+			 * 
+			 * 
+			 * 如果函数不是事件处理函数，那么调用的时候，会出undefined
+			 * 
+			 */
+			window.onload = function(){
+				document.onclick = function(ev){
+					console.log(ev);
+				};
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script>
+			/*
+			 *数据类型转换
+			 * 
+			 * js支持把任意一种数据类型转换成一下类型
+			 * 		数字
+			 * 		字符串
+			 * 		布尔值
+			 * 		
+			 * 对象转成这三种数据是没有意义，因为对象里面可以放任意一种数据类型。
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			var u = undefined;
+			console.log(Number(u));			//NaN
+			
+			var n = null
+			console.log(Number(n));			//0
+			
+			var b = true;
+			var b1 = false;
+			console.log(Number(b),Number(b1));		//1 0
+			
+			var s1 = '';
+			var s2 = ' ';
+			var s3 = 'wenzehai';
+			var s4 = '012';
+			var s5 = '12a';
+			var s6 = '12*12';
+			console.log(Number(s1));			//0
+			console.log(Number(s2));			//0
+			console.log(Number(s3));			//NaN
+			console.log(Number(s4));			//12
+			console.log(Number(s5));			//NaN
+			console.log(Number(s6));			//NaN
+			
+			//下面的代码没必要，没必要把对象或者数组转换为数字
+			var o1 = [];
+			var o2 = {};
+			console.log(Number(o1));         	//0
+			console.log(Number(o2));         	//NaN
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 原型链
+			 *		对象与原型之间的关系（链接）
+			 *
+			 *原型链查找规则
+			 * 		当我们调用一个对象身上的属性或者方法的时候，他就会有一个查找规则
+			 * 		1、首先会在自己身上找，如果有的话就用自己的
+			 * 		2、如果没有的话，他就在该对象的__proto__下查找，因为__proto__这个属性是指向对应的构造函数身上的
+			 * prototype，把它查找的时候找的就是构造函数的原型
+			 * 		3、如果原型身上也没有的话，那它会继续往外面找，直到找到最顶层的Object身上的prototype
+			 *
+			 */
+			function Person(){
+				this.name = 'wenzehai';
+				//this.age = 20;						//自身有了就用自己的
+			}
+			//Person.prototype.age = 18;
+			Object.prototype.age = 22;
+			var p1 = new Person();
+			console.log(p1.age);			//18 20 22
+			console.log(p1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

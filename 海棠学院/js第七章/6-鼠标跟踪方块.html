@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 10px;
+				height: 10px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var str = '';
+				for(var i=0; i<50; i++){
+					str += '<div style = "opactity:0;"></div>';			//搞50个div出来
+				};
+				document.body.innerHTML = str;
+				
+				var divs = document.querySelectorAll('div');
+				document.onmousemove = function(ev) {
+					for(var i=divs.length-1;i>0;i--){					//倒着循环
+						divs[i].style.left = divs[i-1].style.left;
+						divs[i].style.top = divs[i-1].style.top;
+						divs[i].style.opacity = divs[i-1].style.opacity;
+					};
+					
+					//领头人
+					divs[0].style.left = ev.clientX + 'px';
+					divs[0].style.top = ev.clientY + 'px';
+					divs[i].style.opacity =1;
+				};
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

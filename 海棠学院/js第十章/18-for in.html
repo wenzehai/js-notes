@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {
+				left: 100,
+				top: 200
+			}
+			for(var attr in obj){
+				console.log(attr,obj[attr]);
+			}
+			//直接给数组对象添属性
+			//var arr = [1,2,3];
+			//arr.name = 'wenzehai';
+			//console.log(arr);
+			
+			//用原型的方式给数组对象添属性
+			var arr1 = [1,2,3];
+			Array.prototype.name = 20;				//通过原型的方式添加的属性用for in也可以遍历出来
+			//Array.prototype.constructor = Object;		//constructor属性是不能被for in遍历出来的
+			
+			/*for(var attr in arr1){
+				console.log(attr,arr1[attr]);			
+			}*/
+			
+			//如果只想遍历自己身上的属性,用下面的代码
+			for(var attr in arr1) {
+				if(arr1.hasOwnProperty(attr)){
+					console.log(attr,arr1[attr]);
+				}
+			}
+		</script>
+	</body>
+</html>

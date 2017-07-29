@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script>
+			/*
+			 * 任意类型转布尔值
+			 * Boolean(要转的值)
+			 * 		1、Undefined转布尔值
+			 * 			false
+			 * 		2、Null
+			 * 			false
+			 * 		3、Number
+			 * 			0、NaN转布尔值的结果为false，其他的转布尔值的结果为true
+			 * 		4、String
+			 * 			空字符串转布尔值的结果为false,其他的转布尔值的结果为true
+			 * */
+			var u = undefined;
+			var n = null;
+			
+			var n1 = 0;
+			var n3 = NaN;
+			var n2 = Infinity;
+			var n4 = 12;
+			
+			var s1 = 'wenzehai';
+			var s2 = '';
+			var s3 = ' ';
+			
+			
+			console.log(Boolean(u));			//false布尔值在控制台显示紫色
+			console.log(Boolean(n));			//false
+			console.log(Boolean(n1));			//false
+			console.log(Boolean(n3));			//false
+			console.log(Boolean(n2));			//true
+			console.log(Boolean(n4));			//true
+			
+			
+			console.log(Boolean(s1));			//true
+			console.log(Boolean(s2));			//false
+			console.log(Boolean(s3));			//true
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

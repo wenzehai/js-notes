@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="padding: 20px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 * 创建节点与插入节点
+			 * 	父级.append(参数)					把要添加的元素添加到父级的最后面
+			 * 		参数：要添加的元素
+			 * 	父级.prepend（参数）
+			 * 
+			 * 
+			 * 	元素.before(arg)					添加到元素前面
+			 * 
+			 * 	元素.after(arg)					添加到元素后面
+			 */
+			$(function(){
+				//$("#list").html("<li>red</li>");			//以html的形式添加，不是很好，如果原来有内容，它会把原来的内容替换掉		
+				var li1 = $("<li>red</li>")
+				$("#list").append(li1);
+				
+				var li2 = $("<li>gold</li>")
+				$("#list").prepend(li2);					//添加到最前面
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<ul id="list">
+			<li>green</li>
+		</ul>
+	</body>
+</html>

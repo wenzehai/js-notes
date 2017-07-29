@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *concat方法
+			 * 		作用
+			 * 			连接数组，组成一个新数组
+			 * 		语法
+			 * 			数组.concat(value1,value2,value3...)
+			 * 		参数
+			 * 			需要与原数组进行合并的数据
+			 * 			参数可以是数组，也可以是非数组
+			 * 		返回值
+			 * 			合并后的数组
+			 * 
+			 * reverse方法
+			 * 		作用
+			 * 			颠倒数组
+			 * 		返回值
+			 * 			返回颠倒后的数组，原数组变化了，变成了颠倒后的数组
+			 * 
+			 * 
+			 * 
+			 */
+			
+			var color = ['red','green','blue','yellow']
+			
+			var newcolor = color.concat('pink');
+			var newcolor1 = color.concat(['lightblue','gray','gold',])
+			console.log(newcolor);		
+			console.log(color);			//原数组没有变化
+			console.log(newcolor1);			//原数组没有变化
+			console.log(color.reverse());
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+		</style>
+		
+	</head>
+	<body>
+		<ul id="color">
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+		
+		<ul>
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+		
+		
+		
+	<script type="text/javascript">
+		/*
+		 *getElementsByClassName
+		 * 通过class去获取一组元素
+		 * 	
+		 * 	主语
+		 * 		document   
+		 * 		父级				从父级下获取class元素
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 	
+		 * 
+		 * */
+		window.onload = function() {
+			var color = document.getElementById('color');
+			var greens = color.getElementsByClassName('green');
+			console.dir(greens);
+			greens[0].style.backgroundColor='green';
+		
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>	
+	</body>
+</html>

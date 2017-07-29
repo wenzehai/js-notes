@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * removeAttribute
+			 * 		移除属性
+			 * 		元素.remove(attr)
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function(){
+				var box = document.getElementById('box');
+				
+				//box.removeAttribute('id');
+				console.log(box);
+				
+				box.removeAttribute('n');	//上面这行代码不会改变box.setAttribute
+				console.log(box);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" n="wenzehai" data-v="zidingyi" class="color">
+			<img src="img/1.jpg" alt="1" id="pic" />
+		</div>	
+		
+	</body>
+</html>

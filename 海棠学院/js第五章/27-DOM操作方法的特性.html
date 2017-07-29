@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *DOM操作方法的特性
+			 * 		appendChild/insertBefore/replaceChild在操作一个已有的元素时，是将已有的元素移动，
+			 * 		而不是复制一份进行操作（剪切）
+			 * 
+			 * 
+			 * 
+			 */
+			window.onload = function() {
+				var box = document.getElementById('box');
+				var spans = document.querySelectorAll('span');
+				var divs = document.querySelectorAll('#box div');
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="color1">
+			<li>green</li>
+			<li>red</li>
+			<li>blue</li>
+			<li>yellow</li>
+		</ul>
+		<ul id="color2">
+			<li>white</li>
+			<li>black</li>
+			<li>pink</li>
+			<li>orange</li>
+		</ul>
+		
+	</body>
+</html>

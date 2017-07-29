@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="padding: 20px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 *上移下移例子
+			 * 	.pre()			获取上一个兄弟节点
+			 * 	.next()			获取下一个兄弟节点
+			 * 
+			 */
+			$(function(){
+				//上移功能
+				$("input[value='上移']").click(function(){
+					var curLi = $(this).parent();
+					var preLi = $(this).parent().prev()					//上一个节点
+					
+					if(preLi.length){
+						preLi.before(curLi);					//上一个节点之前插入当前节点
+					};
+				})
+				//下移功能
+				$("input[value='下移']").click(function(){
+					var curLi = $(this).parent();
+					var nexLi = $(this).parent().next()					//上一个节点
+					
+					if(nexLi.length){
+						nexLi.after(curLi);					//上一个节点之前插入当前节点
+					};
+				})
+
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body style="padding: 10px;">
+		<ul id="list">
+			<li>1、<input type="button" value="上移"><input type="button" value="下移"></li>
+			<li>2、<input type="button" value="上移"><input type="button" value="下移"></li>
+			<li>3、<input type="button" value="上移"><input type="button" value="下移"></li>
+			<li>4、<input type="button" value="上移"><input type="button" value="下移"></li>
+			<li>5、<input type="button" value="上移"><input type="button" value="下移"></li>
+		</ul>
+	</body>
+</html>

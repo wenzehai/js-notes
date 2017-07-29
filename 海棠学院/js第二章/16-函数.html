@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 * 函数
+			 * 		重复利用代码，把要利用的重复代码放到一个函数当中，在其他需要用到的地方，调用一下就可以
+			 *
+			 * 语法
+			 * 		function 函数名(参数，参数,...,参数) {
+			 * 			//在这里可以使用这个参数
+			 * 			//这里放要重复利用的代码
+			 * }
+			 * 
+			 * 调用
+			 *		函数名(参数，参数,...,参数);		//这样就调用了 
+			 *
+			 * 
+			 * 
+			 * */
+			function fn() {
+				console.log('这是一个函数');
+			}
+			fn();
+			
+			function fn1(name) {
+				console.log(name);
+			}
+			fn1('dog');                     //在这里传什么，函数就执行出什么
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

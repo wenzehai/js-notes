@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/*
+			 *css方法
+			 * 	不光可以去设置css属性，还可以获取样式
+			 * 
+			 * 一个参数，代表获取属性的值
+			 * 		参数为一个对象时，表示设置舒心个，可以同时设置多个属性的值
+			 * 两个参数，代表设置属性的值
+			 * 		第一个参数属性名，第二个参数为属性名为对应的值（不带单位也是可以的）
+			 */
+			$(function(){
+				$('#btn').click(function(){
+					console.log($('#box').css('background'));
+					console.log($('#box').css('width'));	//获取属性值
+					//$('#box').css({'width':'150px','height':'250px'});	//设置两个属性的值
+					//console.log($('#box').css({'width','height'}));	//不能一次获取多个属性值，否则会报错
+					$('#box').css('width','200px');			//设置属性
+					console.log($('#btn').val());			//获取表达的value值
+					$('#btn').val('button');			//设置value值
+				})
+			})
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+		<div id="box"></div>
+	</body>
+</html>

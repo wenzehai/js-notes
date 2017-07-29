@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 50px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 *1、点击的时候，需要获取到这些属性，getComputedStyle去获取到元素属性值
+			 * 2、点击开始按钮后，需要开启一个重复执行定时器
+			 * 3、在定时器里不断的修改元素的属性
+			 * 
+			 *
+			 *
+			 *
+			 *
+			 *
+			 */
+			window.onload=function(){
+				var begin=document.getElementById('begin');
+				var stop=document.getElementById('stop');
+				var box=document.getElementById('box');
+				var timer;
+				
+				//给开始按钮添加点击事件
+				begin.onclick=function(){
+					var l=parseInt(getComputedStyle(box).left);
+					var t=parseInt(getComputedStyle(box).top);
+					var w=parseInt(getComputedStyle(box).width);
+					var h=parseInt(getComputedStyle(box).height);
+					timer=setInterval(
+						function(){
+							l++;
+							t++;
+							w++;
+							h++;
+							box.style.left=l+'px';
+							box.style.top=t+'px';
+							box.style.width=w+'px';
+							box.style.height=h+'px';
+							
+						},16);
+				}
+				stop.onclick=function(){
+					clearInterval(timer);
+				}
+			};
+		</script>
+		<input type="button" name="begin" id="begin" value="开始" />
+		<input type="button" name="stop" id="stop" value="停止" />
+		<div id="box"></div>
+		
+	</body>
+</html>

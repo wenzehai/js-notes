@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<title>提示框</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <style type="text/css">
+	    	.row {
+	    		padding-top: 100px;
+	    	}
+	    </style>
+	</head>
+	<body>
+	<!--
+		注意：
+		1、同样需要js调用
+		
+	-->
+		<div class="container">
+			<div class="row">
+				<button class="btn btn-danger" data-toggle="popover" data-placement="top" title="这是弹窗的标题" data-content="这是弹框的内容">名字</button>
+				<button class="btn btn-danger" data-toggle="popover" data-placement="right" title="这是弹窗的标题" data-content="这是弹框的内容">名字</button>
+				<button class="btn btn-danger" data-toggle="popover" data-placement="bottom" title="这是弹窗的标题" data-content="这是弹框的内容">名字</button>
+				<button class="btn btn-danger btnShow" data-toggle="popover" data-placement="left" title="这是弹窗的标题" data-content="这是弹框的内容">名字</button>
+			</div>
+		</div>
+		
+		
+		
+		<script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/bootstrap.js"></script>
+		<script>
+			$('.btn').popover();
+			 $('.btnShow').popover('show');			//让弹框一加载出来就显示
+		</script>
+	</body>
+
+</html>

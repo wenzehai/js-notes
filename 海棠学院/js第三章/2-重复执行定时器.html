@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid #f00;
+				font-size: 50px;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			/*
+			 *
+			 * 
+			 * 定时器的分类
+			 * 		1、重复执行定时器
+			 * 			setInterval()
+			 * 				作用
+			 * 				每个一段时间就去执行指定的函数，重复的执行
+			 * 				语法
+			 * 				setInterval(function(),时间){
+			 * 					每个隔一段时间就会执行这里的代码
+			 *				 }
+			 * 				参数
+			 * 					1、要执行的函数：当时间到了就会执行；
+			 * 					2、时间：间隔的时间，单位是毫秒
+			 * 		2、延迟执行定时器
+			 * 
+			 * 
+			 */
+			
+			window.onload=function(){
+				var box=document.getElementById('box');
+				var i=0;
+				
+				box.onclick=function(){
+					/*setInterval(
+						function(){
+							box.innerHTML=i;
+							i++;
+						},1000);*/
+						
+					setInterval(change,1000);		//前面的函数是函数的名字，不带括号
+					};
+					//如果函数是在外面调用的，setInterval里面的函数只能写函数的名字
+					function change(){
+						i++;
+						box.innerHTML=i;
+					}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

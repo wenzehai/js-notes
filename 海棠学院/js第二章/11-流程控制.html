@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			 *流程控制语句
+			 * 
+			 * switch
+			 * 		根据一个变量的值，做不同的事情。
+			 * 
+			 * 
+			 * 语法
+			 * 		switch(变量){
+			 * 			case 值：
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;		停止一下代码继续执行
+			 * 			case 值：
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;		停止一下代码继续执行
+			 * 			case 值：
+			 * 				当这个值与变量的值相同的时候，才会走这里的代码
+			 * 				break;		停止一下代码继续执行
+			 * 			default:
+			 * 				当以上变量都不满足的时候，会执行这里的代码
+			 * }
+			 * 
+			 * 用户注册信息
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			var n = 8;
+			switch(n) {
+				case 1:
+					console.log('今天是星期一');
+					break;
+				case 2:
+					console.log('今天是星期二');
+					break;
+				case 3:
+					console.log('今天是星期三');
+					//break;						//如果不放break的话，走完这一步还会走一步，下一步的代码也会执行，直到出现break
+				case 4:
+					console.log('今天是星期四');
+					break;
+				case 5:
+					console.log('今天是星期五');
+					break;
+				case 6:
+					console.log('今天是星期六');
+					break;
+				case 7:
+					console.log('今天是星期日');
+					break;
+				case 8:
+					console.log('are you a fool');
+					break;
+			}
+			
+			
+		</script>
+	</body>
+</html>

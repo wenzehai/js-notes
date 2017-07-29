@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script>
+			/*
+			 *键盘事件
+			 * 		做游戏和注册表单验证
+			 *		不是所有的元素都有键盘事件，只有有焦点的元素才有键盘事件
+			 * onkeydown		键按下,如果按下不弹起，这个事件会一直触发
+			 * onkeyup			键弹起
+			 * onkeypress		当按下功能键，事件不会触发这个事件,ctrl/alt/shift/backspace
+			 * 
+			 */
+			window.onload = function(){
+				var div = document.querySelector('div');
+				var input = document.querySelector('input');
+				var text = document.querySelector('textarea');
+				div.onkeydown = function(){
+					console.log('divkeydown')
+				};
+				input.onkeyup = function(){
+					console.log('inputkeydown')
+				};
+				
+				text.onkeypress = function(){
+					console.log('onkeypress')
+				};
+				
+				
+				
+				
+			};
+		</script>
+	</head>
+	<body>
+		<div>click</div>
+		<input type="text" />
+		<textarea name="" rows="" cols=""></textarea>
+	</body>
+</html>
