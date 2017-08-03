@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<style>
+			.box{
+				width: 800px;
+				display: flex;	/*父级设置这个属性以后，子元素的float,clear,verticle-algin就会失效*/
+				border: 1px solid #f00;
+				
+				align-items: flex-start;			/*上边对齐*/
+				align-items: flex-end;			/*下边对齐*/
+				align-items: center;				/*中心对齐*/
+			}
+			.box div{
+				width: 100px;
+				height: 200px;
+				color: #fff;
+				font-size: 20px;
+			}
+			.box div:nth-of-type(1){
+				background: red;
+				height: 100px;
+			}
+			.box div:nth-of-type(2){
+				background: green;
+				height: 150px;
+			}
+			.box div:nth-of-type(3){
+				background: blue;
+				height: 80px;
+			}
+			.box div:nth-of-type(4){
+				background: yellow;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</body>
+</html>

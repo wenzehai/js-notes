@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+				color: #fff;
+			}
+			.div1{
+				position: relative;
+			}
+			.div2{
+				width: 150px;
+				background: green;
+				margin-top: -50px;
+			}
+			/*span{
+				background: blue;
+				color: #fff;
+				width: 100px;
+				height: 100px;
+				display: block;
+				margin-top: -50px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!--
+			在正常情况下，层级的大小由顺序决定，后面的元素要比前面的元素的层级要高
+			有定位元素的层级要比没有定位元素层级要高
+		-->
+		<div class="div1">kaivon1</div>
+		<div class="div2">kaivon2</div>
+		<!--<span>span</span>-->
+	</body>
+</html>

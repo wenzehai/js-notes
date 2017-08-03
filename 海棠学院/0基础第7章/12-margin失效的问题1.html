@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.parent{
+				border: 1px solid #f00;
+				/*zoom: 1;*/
+			}
+			.parent div{
+				width: 100px;
+				height: 100px;
+				margin: 100px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			在IE67下，父级有边框，子级有margin，那子级的margin会不起作用
+			解决办法
+				触发父级的layout
+		-->
+		<div class="parent">
+			<div></div>
+		</div>
+	</body>
+</html>

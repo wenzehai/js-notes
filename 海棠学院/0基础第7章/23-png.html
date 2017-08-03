@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/DD_belatedPNG_0.0.8a.js"></script>
+		<script>
+			DD_belatedPNG.fix('body');
+			/*
+			 * 这个插件不支持body的背景
+			 */
+		</script>
+		<style>
+		/*
+		 * 用滤镜的话就必需给body高度
+		 */
+			body{
+				height: 500px;
+				background: #ccc url(img/1.png) no-repeat;
+				_background-image:none;
+				filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/1.png", sizingMethod="crop");
+			}
+			
+		</style>
+	</head>
+	<body>
+	</body>
+</html>

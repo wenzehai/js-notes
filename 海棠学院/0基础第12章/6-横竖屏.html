@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+			
+			@media all and (orientation:landscape){
+				div{
+					width: 800px;
+					height: 600px;
+				}
+			}
+			
+			
+			@media all and (orientation:portrait){
+				div{
+					width: 600px;
+					height: 800px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			模屏				orientation:landscape
+			竖屏				orientation:portrait
+			
+			宽度大于高度的时候就是横屏
+			宽度小于高度的时候就是竖屏
+		-->
+		<div></div>
+	</body>
+</html>

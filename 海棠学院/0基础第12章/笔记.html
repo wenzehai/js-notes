@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			调出控制台F12，再按esc，调出console控制台，菜单调出sensor
+			
+		iphone6
+			375 × 667		物理像素，最终显示给用户的分辨率（points），你眼镜锁能看到的
+			750 × 1334		独立像素，手机厂家在出厂的时候设置的屏幕分辨率（pixel），宣传的尺寸
+			2				DPR，像素比，缩放的比例	
+		
+		网络环境
+		
+		用户代理
+			不同浏览器
+		
+		sensors传感器
+		
+			alpha		Y轴的旋转
+			beta		X轴的旋转
+			gamma		Z轴的旋转	
+		默认情况下，手机不是立着的，而是平躺着的	
+			
+			
+		meta标签里的content
+			viewport				视口
+			
+			width				屏幕的宽度
+				device-width		设备的实际宽度
+				数值				不建议设置数字
+			height				屏幕的高度
+				device-heigh		设备的实际高度
+				数值	
+			user-scalable		能否缩放
+				yes				允许缩放
+				no				不允许缩放
+			minimum-scale		最小能够缩放的倍数
+			maxmun-scale			最大能够缩放的倍数	
+		
+		<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,minimum-scale=1.0,maxmum-scale=1.0,target-densitydpi=device-dpi" />
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+			
+		媒体查询
+				media				媒体类型，设备
+					all				所有设备
+					braille			盲文触觉设备
+					embossed			盲文打印机
+					print			手持设备
+					projection		打印预览
+					screen			彩屏设备
+					speech			‘听觉’类似的媒体类型
+					tty				不适用像素的设备
+					tv				电视
+					
+		关键字	用来做条件判断的，针对所有类型，再做细致的筛选
+					and				并且的意思
+					not				排除设备
+					only				指定的设备			
+					
+			@media all and (min-width:400px){
+				div{
+					width: 300px;
+					height: 300px;
+					background: red;
+				}
+			}
+			
+			@media not print{
+				div{
+					width: 300px;
+					height: 300px;
+					background: blue;
+				}
+			}			
+					
+		媒体特性			
+					min-width:400px		最小宽度，宽度只能在这个值以上
+					max-width:400px		最大宽度，宽度只能在这个值以下
+					
+			/*220以下的屏幕*/
+			@media (max-width:220px){
+				div{
+					width: 200px;
+					height: 200px;
+					background: blue;
+				}
+			}
+			
+			/*220-420之间*/
+			@media (min-width:220px) and (max-width:420px){
+				div{
+					width: 200px;
+					height: 200px;
+					background: yellow;
+				}
+			}
+			
+			/*420以上的宽*/
+			@media (min-width:420px){
+				div{
+					width: 300px;
+					height: 300px;
+					background: pink;
+				}
+			}	
+			
+			模屏				orientation:landscape
+			竖屏				orientation:portrait
+			
+			宽度大于高度的时候就是横屏
+			宽度小于高度的时候就是竖屏
+			@media all and (orientation:landscape){
+				div{
+					width: 800px;
+					height: 600px;
+				}
+			}
+			
+			
+			@media all and (orientation:portrait){
+				div{
+					width: 600px;
+					height: 800px;
+				}
+			}
+			
+			
+			1、media
+			2、百分比布局
+			3、弹性布局（flex）
+			4、rem
+			
+			1、media
+			<link rel="stylesheet" href="css/1.css" media="(max-width:220px)" />
+			<link rel="stylesheet" href="css/2.css" media="(min-width:220px) and (max-width:420px)" />
+			<link rel="stylesheet" href="css/3.css" media="(min-width:420px)" />
+			
+			2、百分比布局
+			注意：一行中所有的数值加起来不能超过100，超过的话就会换行，也包括margin
+			.box div:nth-of-type(1){
+				background: red;
+				width: 30%;
+			}
+			.box div:nth-of-type(2){
+				background: green;
+				width: 20%;
+			}
+			.box div:nth-of-type(3){
+				background: blue;
+				width: 35%;
+			}
+			.box div:nth-of-type(4){
+				background: yellow;
+				width: 10%;
+				margin-left: 5%;
+			}
+			
+			
+			2.flex布局
+				给父元素加如下样式：
+				width: 300px;
+				display: flex;	/*父级设置这个属性以后，子元素的float,clear,verticle-algin就会失效*/
+				border: 1px solid #f00;
+				
+				/*flex-wrap: nowrap;*/	/*不换行（默认），即使子元素的宽度和超过了父级的宽度，它们也不会换行，并且会自动的把宽度缩小，能够在一行中显示*/
+				/*flex-wrap: wrap;*/		/*正常换行*/
+				flex-wrap: wrap-reverse;		/*会把换行后的子元素调换一下位置*/
+			
+				flex-flow: row nowrap;	/*默认*/
+				flex-flow: row-reverse nowrap; 
+				flex-flow: row-reverse wrap; 
+				flex-flow: row-reverse wrap-reverse; 
+			
+				flex-direction: row;					/*从左到右排序（默认值）*/
+				flex-direction: row-reverse;			/*从右到左排序，并且是右对齐*/
+				flex-direction: column;				/*从上到下排序*/
+				flex-direction: column-reverse;		/*从下到上排序*/
+				
+				justify-content: flex-start;			/*子元素居左对齐（默认）*/
+				justify-content: flex-end;			/*子元素居右对齐*/
+				justify-content: center;				/*子元素居中对齐*/
+				justify-content: space-between;		/*子元素分散居中对齐（两边对齐）*/
+				justify-content: space-around;		/*子元素分散居中对齐*/
+			
+				align-items: flex-start;			/*上边对齐*/
+				align-items: flex-end;			/*下边对齐*/
+				align-items: center;				/*中心对齐*/
+				
+				align-content: flex-start;			/*顶部对齐*/
+				align-content: flex-end;				/*底部对齐*/
+				align-content: center;				/*垂直对齐*/
+				align-content: space-between;		/*垂直两端对齐*/
+				align-content: space-around;			/*垂直分散对齐*/
+				align-content: stretch;				/*默认对齐*/
+				
+				
+			
+			子元素设置flex值，按比例分配
+			.box div:nth-of-type(1){
+				background: red;
+				flex: 10;
+			}
+			.box div:nth-of-type(2){
+				background: green;
+				flex: 5;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		-->
+	</body>
+</html>

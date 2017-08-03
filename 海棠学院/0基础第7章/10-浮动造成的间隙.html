@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			span{
+				background: red;
+				/*float: left;*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE6下前面元素浮动，后面元素不浮动后他们之间会有间隙
+			解决办法
+				给后面元素也添加浮动
+		-->
+		<div>kaivon1</div>
+		<span>kaivon2</span>
+	</body>
+</html>

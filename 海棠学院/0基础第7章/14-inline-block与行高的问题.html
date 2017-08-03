@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				height: 300px;
+				line-height: 200px;
+				border: 1px solid #f00;
+			}
+			span{
+				height: 100px;
+				background: red;
+				display: inline-block;
+				line-height: 100px;
+			}
+			/*.span1{
+				line-height: 100px;
+				display: inline-block;
+				background: red;
+			}
+			.span2{
+				line-height: 200px;
+				display: inline-block;
+				background: green;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!--
+			在IE6下，元素中除了文字之外，还有inline-block类型元素，那元素的行高会失效
+			解决办法： 分别包起来，分别设置行高
+		-->
+		<div>
+			<span>inlin-block</span>
+			这是一段文字
+		</div>
+		<!--<div>
+			<span class="span1">inlin-block</span>
+			<span class="span2">这是一段文字</span>
+		</div>-->
+	</body>
+</html>

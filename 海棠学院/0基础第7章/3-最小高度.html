@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				height: 1px;
+				background: red;
+				/*overflow: hidden;*/		
+				font-size: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE6下块元素高度小于19px，会被当做19px来处理
+			解决办法
+				1、overflow:hidden			推荐
+				2、font-size: 0;	
+		-->
+		<div></div>
+	</body>
+</html>

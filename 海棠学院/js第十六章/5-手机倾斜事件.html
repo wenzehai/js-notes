@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<style>
+			#box {
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			 *手机倾斜事件
+			 * 		deviceorientation		手机倾斜事件
+			 * 		ev.beta		x轴的倾斜
+			 * 		ev.gamma	y轴的倾斜
+			 * 		ev.alpha	z轴的倾斜
+			 * 
+			 * 			
+			 * 注意：这个事件只能放在window上
+			 *
+			 *
+			 *
+			 */
+			//阻止浏览器默认行为
+			
+			var box = document.getElementById("box");
+//			相当于mousedown
+			window.addEventListener("deviceorientation",function(ev){
+				this.innerHTML = `x轴倾斜:${ev.beta}</br>y轴倾斜:${ev.gama}</br>z轴倾斜:${ev.alhpa}`;
+			});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

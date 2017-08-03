@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<style>
+			.box{
+				width: 400px;
+				height: 800px;
+				display: flex;	/*父级设置这个属性以后，子元素的float,clear,verticle-algin就会失效*/
+				border: 1px solid #f00;
+				flex-wrap: wrap;
+				
+				align-content: flex-start;			/*顶部对齐*/
+				align-content: flex-end;				/*底部对齐*/
+				align-content: center;				/*垂直对齐*/
+				align-content: space-between;		/*垂直两端对齐*/
+				align-content: space-around;			/*垂直分散对齐*/
+				align-content: stretch;				/*默认对齐*/
+			}
+			.box div{
+				width: 100px;
+				height: 50px;
+				color: #fff;
+				font-size: 20px;
+			}
+			.box div:nth-of-type(1){
+				background: red;
+			}
+			.box div:nth-of-type(2){
+				background: green;
+			}
+			.box div:nth-of-type(3){
+				background: blue;
+			}
+			.box div:nth-of-type(4){
+				background: yellow;
+			}
+			.box div:nth-of-type(5){
+				background: pink;
+			}
+			.box div:nth-of-type(6){
+				background: red;
+			}
+			.box div:nth-of-type(7){
+				background: green;
+			}
+			.box div:nth-of-type(8){
+				background: blue;
+			}
+			.box div:nth-of-type(9){
+				background: yellow;
+			}
+			.box div:nth-of-type(10){
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+		</div>
+	</body>
+</html>

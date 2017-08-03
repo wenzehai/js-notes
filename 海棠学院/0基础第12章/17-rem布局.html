@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<script>
+			//alert(document.documentElement.clientWidth);
+			document.querySelector("html").style.fontSize=document.documentElement.clientWidth/3+'px';
+		</script>
+		<style>
+			html{
+				font-size: 20px;
+			}
+			body{
+				margin: 0;
+				font-size: 0.3rem;
+			}
+			div{
+				width: 20rem;
+				width: 1rem;
+				height: 100px;
+				background: green;
+				float: left;
+				border: 1px solid #f00;
+				box-sizing: border-box;		/*怪异盒模型，盒子的宽度包含边框以及padding*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			rem				相对于根节点字体大小的值	font-size:20px;		1rem=20px;
+			em				相对于字体大小的值		font-size:12px;		1em=12px;
+		-->
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+</html>

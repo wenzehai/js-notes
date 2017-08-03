@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+			}
+			span,div{
+				width: 100px;
+				height: 200px;
+				background: red;
+				/*margin-left: 50px;
+				float: left;*/
+				margin-right: 5px;
+				float: right;
+				/*display: inline;*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE6下块元素有浮动，并且有横向margin(左右)，那最终的距离是原来的两倍
+			解决方法
+				给元素添加display:inline;
+		-->
+		<div></div>
+		<span></span>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				background: green\9;	/*ie10以及ie10以前的浏览器认识*/
+				/**background: blue;*/		/*ie7以及ie7以下的*/
+				+background: blue;		/*ie7以及ie7以下的*/
+				_background: pink;		/*ie6以及ie6以下的*/
+			}
+			/*
+			 * 注意顺序
+			 * 	后面的会把前面的覆盖了
+			 */
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

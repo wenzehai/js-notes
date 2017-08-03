@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			disabled			禁止用户输入，并且这个表单不会被提交
+			readonly			让表单变成只读状态，这个表单会被提交
+		-->
+		<form action="http://www.apeclass.com/">
+			<p>
+				<label for="userName">用户名：</label>
+				<input type="text" name="userName" value="kaivon" disabled="disabled" />
+			</p>
+			<p>
+				<label for="pw" >密码：</label>
+				<input type="password" name="pw" value="123" readonly="readonly" />
+			</p>
+			<p>
+				<label for="number">手机号：</label>
+				<input type="text" name="number" />
+			</p>
+			<input type="submit" />
+		</form>
+	</body>
+</html>

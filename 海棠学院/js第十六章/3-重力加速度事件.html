@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<style>
+			#box {
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			 *重力加速度事件
+			 * 		devicemotion
+			 * 		ev.accelerationIncludingGravity		重力加速度对象；
+			 * 			它身上有三个轴
+			 * 				x:	手机的宽
+			 * 				y:	手机的长
+			 * 				z:	手机的厚
+			 * 注意：这个事件只能放在window上
+			 *
+			 *
+			 *
+			 */
+			//阻止浏览器默认行为
+			
+			var box = document.getElementById("box");
+//			相当于mousedown
+			window.addEventListener("devicemotion",function(ev){
+				var motion = ev.accelerationIncludingGravity;
+				box.innerHTML = `x:${motion.x}</br>y:${motion.y}</br>z:${motion.z}`;
+			});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

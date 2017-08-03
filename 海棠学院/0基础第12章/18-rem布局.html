@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<script src="js/viewport.js"></script>
+		<script>
+//			alert(document.documentElement.clientWidth);
+//			alert(window.devicePixelRatio);		//获取到像素比
+			document.querySelector("html").style.fontSize=document.documentElement.clientWidth/3+'px';
+			
+			
+			//torem(210);
+		</script>
+		<link rel="stylesheet" href="css/18rem.css" />
+		<style>
+			html{
+				font-size: 40px;
+			}
+			body{
+				margin: 0;
+			}
+			div{
+				width: 2.8rem;
+				height: 2.8rem;
+				background: green;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			1、需要找一个手机作为基准，目前是以iphone6为基准
+			2、设计的图需要按iphone6的物理像素的两倍（750*1334）来设计，在写代码的时候，要把量到的尺寸除以2
+		-->
+		<div>1我是字体</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+</html>

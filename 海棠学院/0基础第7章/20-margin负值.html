@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #f00;
+				/*position: relative;*/
+				/*overflow: hidden;*/
+			}
+			.box div{
+				width: 100px;
+				height: 100px;
+				background: green;
+				margin: -10px 0 0 -10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE6下通过margin负值，使元素移出父级的位置，那出去的部分会被截掉
+			解决方法
+				给元素添加相对定位，或者给父级overflow:hidden;
+		-->
+		<div class="box">
+			<div></div>
+		</div>
+	</body>
+</html>

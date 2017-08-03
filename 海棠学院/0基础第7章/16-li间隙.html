@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 200px;
+			}
+			li{
+				width: 200px;
+				height: 30px;
+				border: 1px solid #f00;
+				/*vertical-align: middle;*/
+				float: left;
+			}
+			li span{
+				float: left;
+			}
+			li a{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE67下，li里有左右浮动的元素，会造成每个li下边有间隙的问题
+			解决办法
+				1、给li加vertical-align: middle;
+				2、给li浮动
+		-->
+		<ul>
+			<li><span>标题</span><a href="#">更多</a></li>
+			<li><span>标题</span><a href="#">更多</a></li>
+			<li><span>标题</span><a href="#">更多</a></li>
+			<li><span>标题</span><a href="#">更多</a></li>
+		</ul>
+	</body>
+</html>

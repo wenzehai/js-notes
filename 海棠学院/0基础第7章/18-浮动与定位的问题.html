@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 5px solid #f00;
+				position: relative;
+			}
+			.box div{
+				width: 150px;
+				height: 150px;
+				background: green;
+				float: left;
+				display: inline;
+				margin-left: 50px;
+			}
+			span{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			IE6下同一层级的浮动元素会盖住绝对定位元素
+			解决办法
+				给定位元素外面嵌套一个层
+		-->
+		<div class="box">
+			<div></div>
+			<!--<span>kaivon</span>-->
+			<p><span>kaivon</span></p>
+		</div>
+	</body>
+</html>

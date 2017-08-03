@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title></title>
+		<style>
+			.box{
+				display: flex;	/*父级设置这个属性以后，子元素的float,clear,verticle-algin就会失效*/
+				border: 1px solid #f00;
+			}
+			.box div{
+				height: 50px;
+				color: #fff;
+				font-size: 20px;
+			}
+			.box div:nth-of-type(1){
+				background: red;
+				flex: 10;
+			}
+			.box div:nth-of-type(2){
+				background: green;
+				flex: 5;
+			}
+			.box div:nth-of-type(3){
+				background: blue;
+				flex: 3;
+			}
+			.box div:nth-of-type(4){
+				background: yellow;
+				flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+		</div>
+	</body>
+</html>

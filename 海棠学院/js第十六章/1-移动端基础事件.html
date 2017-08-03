@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<style>
+			#box {
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			 * 不能通过on添加，要通过addeventlistener
+			 *touchstart		手指按下
+			 * 
+			 *
+			 *注意：
+			 * 		1、这些事件只能用事件监听函数来添加，不能用on来添加
+			 * 		2、移动端当中就不要在用鼠标的事件了
+			 * 		3、这些事件出发了，会触发浏览器的默认行为，所以在调用的事件的时候，要把这些默认行为给阻止了
+			 * 
+			 *
+			 *
+			 *
+			 */
+			//阻止浏览器默认行为
+			document.addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+			
+			
+			
+			
+			var box1=document.getElementById("box");
+//			console.log(box1);
+//			相当于mousedown
+			box.addEventListener("touchstart",function(){
+				this.innerHTML = "手指按下了";
+			});
+			//相当于mousemove
+			box1.addEventListener("touchmove",function(){
+				this.innerHTML = "手指移动了";
+			})
+			//相当于mouseout
+			box1.addEventListener("touchend",function(){
+				this.innerHTML = "手指离开了";
+			})
+		</script>
+	</body>
+</html>

@@ -34,23 +34,25 @@
 				4、两个相邻的元素上下margin不会重叠（给其中一个元素添加一个单独的父级，然后让他的父级触发了BFC）
 		-->
 		
-		<div style="border: 1px solid #f00; display: inline-block;">
-			<div style="width: 100px; height: 100px; background: green; float: left;"></div>
-		</div>
+		<!--<div style="border: 1px solid #f00; display: inline-block; padding-bottom: 10px; background: red; width: 100px;">
+			<div style="width: 100px; height: 100px; background: green; float: left; margin-top: 20px; margin-bottom: 10px;"></div>
+			<div style="width: 100px; height: 100px; background: blue; float: left; margin-top: 20px;"></div>
+			<p>很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字</p>
+		</div>-->
 		
-		<div style="border: 1px solid #f00; margin-top: 100px;">
-			<div style="width: 100px; height: 100px; background: green; float: left;">kaivon1</div>
-			<div style="width: 100px; height: 100px; background: red; overflow: hidden;">kaivon2</div>
-		</div>
+		<!--<div style="border: 1px solid #f00; margin-top: 100px;">
+			<div style="width: 50px; height: 50px; background: green; float: left;">kaivon1</div>
+			<div style="width: 100px; height: 100px; background: red; overflow: hidden; ">kaivon2</div>
+		</div>-->
 		
-		<div style="background: blue; margin-top: 100px; overflow: hidden;">
+		<!--<div style="background: blue; margin-top: 100px; overflow: hidden;">
 			<div style="width: 100px; height: 100px; background: green; margin-top: 100px;">kaivon1</div>
 			<div style="width: 100px; height: 100px; background: red;">kaivon2</div>
-		</div>
+		</div>-->
 		
 		<div style="margin-top: 100px;">
 			<div style="width: 100px; height: 100px; background: green; margin: 100px 0;">kaivon1</div>
-			<div style="overflow: hidden;">
+			<div style="overflow: hidden; background: gray;">
 				<div style="width: 100px; height: 100px; background: red; margin: 100px 0;">kaivon2</div>
 			</div>
 		</div>

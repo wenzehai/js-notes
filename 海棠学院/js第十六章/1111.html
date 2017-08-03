@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<style>
+			#box {
+				width: 200px;
+				height: 200px;
+				background: green;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			 *多指操作
+			 *
+			 * 
+			 * gestureend
+			 * 
+			 * 
+			 * ev.rotation 			这个值是start与move的旋转度数的差值；
+			 * 
+			 */
+			
+			
+			var box = document.getElementById("box");
+			//两个或两个手指以上按下
+			document.addEventListener("gesturestart",function(){
+				alert(1);
+				box.style.background ='blue';
+			});
+			
+			document.addEventListener("gesturechange",function(){
+				box.style.background ='red';
+			});
+			
+			document.addEventListener("gestureend",function(){
+				box.style.background ='red';
+			});
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

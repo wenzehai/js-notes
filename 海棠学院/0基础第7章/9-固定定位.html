@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				height: 3000px;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				/*position: fixed;
+				right: 0;
+				bottom: 0;*/
+				
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div1=document.getElementById("div1");
+				
+				window.onscroll=function(){
+					var top=document.documentElement.scrollTop||document.body.scrollTop;
+					var bottomPos=document.documentElement.clientHeight-div1.offsetHeight;
+					
+					div1.style.top=top+bottomPos+'px';
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<!--
+			IE6不支持固定定位，可以用js来解决
+		-->
+		<div id="div1">kaivon</div>
+	</body>
+</html>
