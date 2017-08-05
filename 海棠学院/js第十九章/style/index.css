@@ -12,14 +12,14 @@
 	left: 50%;
 	margin-left: -960px;
 }
-.bannerPic .carouselImgCon img {
+/*.bannerPic .carouselImgCon img {
 	opacity: 0;
-}
+}*/
 .prev,.next {
 	width: 50px;
 	height: 50px;
 	text-align: center;
-	background: #b4a078;
+	background: #d0c4af;
 	color: #FFFFFF;
 	font-size: 40px;
 	border-radius: 50%;
@@ -31,15 +31,19 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
+.prev:hover,.next:hover {
+	background: #B19E7A;
+}
 #banner .prev {
 	left: 20%;
+	
 }
 #banner .next {
 	right: 20%;
 }
-#banner .prev:hover,#banner .next:hover {
+/*#banner .prev:hover,#banner .next:hover {
 	background: #b19e7a;
-}
+}*/
 #banner .circle {
 	height: 30px;
 	text-align: center;
@@ -179,7 +183,7 @@
 	overflow: hidden;
 }
 #new ul {
-	width: 1100px;
+	/*width: 1100px;*/
 	position: absolute;
 	left: 0;
 }
@@ -238,11 +242,14 @@
 }
 #new .prev {
 	left: -70px;
+	background: #e7e2d7;
 }
 #new .next {
 	right: -70px;
 }
-
+#new .prev:hover,#new .next:hover {
+	background: #B19E7A;
+}
 /*人气推荐*/
 #hot {
 	background: #f4f0ea;

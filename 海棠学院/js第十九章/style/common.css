@@ -265,7 +265,7 @@ th,td {
 .mainNav .navBar li a {
 	font-weight: bold;
 }
-.mainNav .navBar li a.active,
+.mainNav .navBar li.active a,
 .mainNav .navBar li a:hover {
 	border-bottom: 3px solid #b4a078;
 	padding-bottom: 4px;
@@ -440,10 +440,17 @@ th,td {
 /*弹出导航样式*/
 .mainNav .subNav {
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	padding-bottom: 20px;
-	display: none;
+	/*padding-bottom: 20px;*/
+	opacity: 0;
+	position: absolute;
+	top: 50px;
+	background: #FFFFFF;
+	z-index: 2;
+	width: 100%;
+	transition: 0.2s opacity ; 
 }
 .mainNav .subNav ul {
+	padding: 10px 0 20px 0;
 	display: none;
 }
 .mainNav .subNav img {
@@ -464,6 +471,15 @@ th,td {
 	width: 100%;		
 	z-index: 3;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	animation: navMove 0.3s;
+}
+@keyframes navMove {
+	0% {
+		top: -60px;
+	}
+	100% {
+		top: 0;
+	}
 }
 #navFix .logo {
 	display: block;
@@ -482,6 +498,7 @@ th,td {
 	height: 60px;
 	line-height: 60px;
 	padding: 0 20px;
+	height: 60px;
 }
 #navFix .login {
 	display: block;
@@ -500,7 +517,7 @@ th,td {
 }
 #navFix .subNav {
 	/*display: block;*/
-	padding-top: 10px;
+	/*padding-top: 10px;*/
 }
 
 /*面包屑*/
@@ -652,6 +669,103 @@ section.footLink .footLink_bd span.sep {
 
 /*footLink结束*/
 
+/*浮动条*/
+aside div.asideBox {
+	position: fixed;
+	right: 0;
+	top: 360px;
+}
+aside div.asideBox ul {
+	width: 72px;
+	position: relative;
+	background: #FFFFFF;
+}
+aside div.asideBox ul li {
+	text-align: center;
+}
+
+aside div.asideBox ul li a {
+	text-decoration: none;
+	color: #666666;
+}
+aside div.asideBox ul li a:hover {
+	color: #b4a078;
+}
+aside div.asideBox ul li a p.gifts span.icon {
+	margin-top: 17px;
+	position: relative;
+	left: 50%;
+	margin-left: -15px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/new_jingling.png) no-repeat 0 -296px;
+}
+aside div.asideBox ul li a:hover p.gifts span.icon {
+	background: url(../img/new_jingling.png) no-repeat 0 -257px;
+}
+aside div.asideBox ul li a p {
+	font: 12px/38px "微软雅黑";
+	border-bottom: 1px solid #eaeaea;
+	margin: 0 6px;
+}
+aside div.asideBox ul li:first-child a p,
+aside div.asideBox ul li:last-child a p {
+	border: none;
+}
+aside div.asideBox ul li a p.downloadApp span.icon {
+	margin-top: 17px;
+	position: relative;
+	left: 50%;
+	margin-left: -10px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/new_jingling.png) no-repeat 0 -168px;
+}
+aside div.asideBox ul li a:hover p.downloadApp span.icon {
+	background: url(../img/new_jingling.png) no-repeat 0 -128px;
+}
+aside div.asideBox ul li a p.rss span.icon {
+	margin-top: 17px;
+	position: relative;
+	left: 50%;
+	margin-left: -10px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/new_jingling.png) no-repeat 0 -425px;
+}
+aside div.asideBox ul li a:hover p.rss span.icon {
+	background: url(../img/new_jingling.png) no-repeat 0 -389px;
+}
+
+aside div.asideBox ul li a p.customerService span.icon {
+	margin-top: 17px;
+	position: relative;
+	left: 50%;
+	margin-left: -16px;
+	display: block;
+	width: 32px;
+	height: 30px;
+	background: url(../img/new_jingling.png) no-repeat 0 -87px;
+}
+aside div.asideBox ul li a:hover p.customerService span.icon {
+	background: url(../img/new_jingling.png) no-repeat 0 -46px;
+}
+aside div.asideBox ul li a p.backTop span.icon {
+	margin-top: 17px;
+	position: relative;
+	left: 50%;
+	margin-left: -11px;
+	display: block;
+	width: 23px;
+	height: 15px;
+	background: url(../img/new_jingling.png) no-repeat 0 -234px;
+}
+aside div.asideBox ul li a:hover p.backTop span.icon {
+	background: url(../img/new_jingling.png) no-repeat 0 -208px;
+}
 
 
 
