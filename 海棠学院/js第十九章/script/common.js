@@ -28,6 +28,20 @@ window.yx = {
 		}
 		return top;
 	},
+	cutTime: function(target){		//倒计时函数
+		var currentDate = new Date();
+		var v = Math.abs(target-currentDate);
+		
+		return {
+			d:parseInt(v/(24*3600000)),
+			h:parseInt(v%(24*3600000)/3600000),		//除不尽,用模
+			m:parseInt((v%(24*3600000)%3600000)/60000),
+			s:parseInt(((v%(24*3600000)%3600000)%60000)/1000)
+		};
+	},
+	format: function(v) {		//给事件补0
+		return v<10 ? "0" + v : v;
+	},
 	public:{
 		navFn:function(){
 			var mainNav = yx.g('.mainNav');
@@ -74,7 +88,8 @@ window.yx = {
 					//如果图片离html的上边的距离小于滚动条的距离与可视区的距离之和的话，就表示图片已经进入到可视区了
 					if(yx.getTopValue(originals[i]) < scrollTop) {
 						originals[i].src = originals[i].getAttribute("data-original");
-						originals[i].removeAttribute("class");		//如果这个图片的地址已经换成真实的地址了，那就把它身上的class去掉，为了再次获取不到这张图片
+						originals[i].removeAttribute("class");	//如果这个图片的地址已经换成真实的地址了，那就把它身上的class去掉，为了再次获取不到这张图片
+						//alert(1);
 					}
 				}
 				
@@ -84,6 +99,8 @@ window.yx = {
 					yx.removeEvent(window,"scroll",delayImg);
 				}
 			}
+			
+			//注意，这个地方还有些小bug，直接在页面中部刷新，出不来图片
 		},
 		//回到顶部功能
 		backUpFn: function(){

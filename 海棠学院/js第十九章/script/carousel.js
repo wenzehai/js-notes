@@ -65,7 +65,8 @@
 				var span = document.createElement("span");
 				span.index = i;
 				span.onclick = function(){
-					
+					This.cn = this.index;
+					This[This.settings.moveWay + 'Fn']();	//调用函数
 				};
 				this.circleWrap.appendChild(span);
 				this.circles.push(span);
@@ -114,6 +115,11 @@
 					this.positionItemWrap.style.width = this.singleWidth*this.positionItem.length + "px";
 					break;
 			}
+			
+			//调用自动播放,用户有传参数才调
+			if(this.settings.autoplay){
+				this.autoPlayFn();
+			}
 		},
 		opacityFn: function() {			//透明度运动方式，选项卡的道理
 			//判断循环与非循环两种状态
@@ -150,7 +156,7 @@
 			var This = this;
 			var en = 0;
 			this.opacityItem[this.cn].addEventListener("transitionend",function(){
-				console.log(1);
+				//console.log(1);
 				en++;
 				if(en == 1){
 					This.canClick = true;
@@ -242,6 +248,24 @@
 			
 			this.cn++;
 			this[this.settings.moveWay + 'Fn']();			//拼函数名，调用函数要用中括号
+		},
+		autoPlayFn: function(){
+			//轮播图自动播放
+			var This = this;
+			this.timer = setInterval(function(){
+				This.next();
+			},this.settings.intervalTime)
+			
+			//鼠标放上去的时候停止
+			this.box.onmouseenter = function(){				//选择onmouseenter和onmouseleave是因为没有事件冒泡
+				clearInterval(This.timer);
+				This.timer = null;
+			};
+			
+			//鼠标离开的时候继续播放
+			this.box.onmouseleave = function(){
+				This.autoPlayFn();
+			}
 		},
 		//自定义事件，
 		//添加自定义事件
