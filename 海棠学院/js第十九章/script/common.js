@@ -42,6 +42,17 @@ window.yx = {
 	format: function(v) {		//给事件补0
 		return v<10 ? "0" + v : v;
 	},
+	//正则匹配地址栏
+	parseUrl: function(url){
+		//id=1143021
+		var reg = /(\w+)=(\w+)/ig;
+		var result = {};
+		
+		url.replace(reg,function(a,b,c){
+			result[b] = c;
+		});
+		return result;
+	},
 	public:{
 		navFn:function(){
 			var mainNav = yx.g('.mainNav');

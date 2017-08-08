@@ -30,7 +30,7 @@
 }
 #productImg .smallImg img.active,
 #productImg .smallImg img:hover {
-	border: 2px solid #B4A078;
+	border: 1px solid #B4A078;
 }
 
 #productImg .info {
