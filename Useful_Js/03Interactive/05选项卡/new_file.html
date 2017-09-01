@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>面向对象的选项卡---振之博文</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+body{ color:#000;}
+h1{ text-align:center; line-height:80px; text-shadow:1px 1px 1px #ccc; color:#666;}
+.tab{ width:606px; margin:0 auto 50px; color:#555;}
+.tab h2{ overflow:hidden; width:100%; font-size:14px;}
+.tab h2 a{ float:left; width:200px; line-height:24px; text-align:center; border:1px solid #d5d5d5; cursor:pointer;}
+.tab h2 a.current{ border:1px solid #d5d5d5; border-width:1px 1px 0; color:#FF3300;}
+.tab ul{ display:none; border:1px solid #d5d5d5; border-top:0; padding:8px 0;line-height:24px; }
+.tab ul li{ list-style:inside decimal; margin-left:10px;}
+#copyright{ width:606px; margin:0 auto;}
+</style>
+<script type="text/javascript">
+/**
+ * 构造函数
+ * @class Tab   
+ */
+function Tab(){
+	this.init.apply(this,arguments);
+}
+Tab.prototype = {
+	 /**
+      * 初始化
+      * @param id{string} tab容器的id
+      * @param config{object} 配置项
+      * @配置说明:eventType{string} 触发事件类型   
+      *           navTag{string} tab导航的标签名
+	              navCell{string} tab导航内的标签名称
+				  content{string} tab切换内容容器的标签名称
+				  navActiveClass{string} tab切换时导航的高亮样式
+				  onSwitch{fn} tab切换的回调,fn所带参数为object，有index、navcell、content三个属性 
+      * @return void
+      */
+	init: function(id,config){
+		var that = this;
+		config = that.config = that.checkInterface(config);
+		that.bindEvent(id,config);
+	},
+	/**
+	 * 简写byid方法
+	 */
+	$: function(id){
+		return document.getElementById(id);
+	},
+	/**
+      * 验证接口,构建正确的参数形式
+      * @param obj{object} 配置项
+      * @return object   
+      */
+	checkInterface: function(obj){
+		return {
+			eventType: obj.type || 'click',
+			navTag: obj.navTag || 'h2',
+			navCell: obj.navCell || 'a',
+			content: obj.content || 'ul',
+			navActiveClass: obj.navActiveClass || 'current',
+			onSwitch: obj.onSwitch || new Function
+		};
+	},
+	/**
+	 * 增加事件监听
+	 * @param id{string} tab容器的id
+	 * @param config{object} 见上
+	 * @return 实例对象本身
+	 */
+	bindEvent: function(id,config){
+		var that = this;
+		var obj = that.obj = that.$(id),
+			navcell = that.navcell = obj.getElementsByTagName(config.navTag)[0].getElementsByTagName(config.navCell),
+			content = that.content =  obj.getElementsByTagName(config.content),
+			eventType = 'on' + config.eventType;
+		that.switchTo(0);
+		for(var i=navcell.length;i--;){
+			navcell[i][eventType] = that.makeCallback(i);
+		}
+		return that;
+	},
+	/**
+	 * 闭包存储当前索引
+	 * @param index{number} 索引
+	 * @return fn
+	 */
+	makeCallback: function(index){
+		var that = this;
+		return function(){
+			that.switchTo(index);
+		}
+	},
+	/**
+	 * tab切换调用的方法
+	 * @param index{number} 索引
+	 * @return 实例对象本身
+	 */
+	switchTo: function(index){
+		var that = this;
+		for(var i=that.navcell.length;i--;){
+			that.navcell[i].className = '';
+			that.content[i].style.display = '';
+		}
+		that.navcell[index].className = 'current';
+		that.content[index].style.display = 'block';
+		var o = {
+			navcell: that.navcell[index],
+			content: that.content[index],
+			index: index
+		};
+		that.config.onSwitch.call(that,o);
+		return that;
+	}
+};
+</script>
+</head>
+
+<body>
+<h1>封装的选项卡</h1>
+<div class="tab" id="tab1">
+	<h2><a>选项1</a><a>选项2</a><a>选项3</a></h2>
+	<ul>
+		<li>选项1内容</li>
+		<li>选项1内容</li>
+		<li>选项1内容</li>
+		<li>选项1内容</li>	
+	</ul>
+	<ul>
+		<li>选项2内容</li>
+		<li>选项2内容</li>
+		<li>选项2内容</li>
+		<li>选项2内容</li>	
+	</ul>
+	<ul>
+		<li>选项3内容</li>
+		<li>选项3内容</li>
+		<li>选项3内容</li>
+		<li>选项3内容</li>	
+	</ul>
+</div>
+<div id="copyright"><a href="http://www.cnblogs.com/zhenn/">振之博文</a> 版权所有 转载请说明出处</div>
+<script type="text/javascript">
+var tab1 = new Tab('tab1',{
+	eventType: 'click',
+	navTag: 'h2',
+	navCell: 'a',
+	content: 'ul',
+	navActiveClass: 'current',
+	onSwitch: function(o){
+		alert(o.content.tagName)
+	}
+}).switchTo(1);
+</script>
+</body>
+</html>
