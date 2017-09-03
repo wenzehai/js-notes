@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#{
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style: none;
+			}
+			.box {
+				margin: 100px auto auto 100px;
+			}
+			.menu {
+				border: 1px solid #a5a5a5;
+				width: 150px;
+				padding-left: 0;
+				background: #f5f5f5;
+			}
+			.level1 {
+				border-bottom: 1px solid #a5a5a5;
+				line-height: 40px;
+				/*padding-left: 15px;*/
+			}
+			.level1 a {
+				padding-left: 15px;
+				width: 100%;
+				display: inline-block;
+			}
+			.level1:last-child {
+				border-bottom: none;
+			}
+			.level2 {
+				padding-left: 0;
+				display: none;
+				background: #FFFFFF;
+			}
+			.level2 li {
+				line-height: 30px;
+				padding-left: 20px;
+				font-size: 16px;
+				border-bottom: 1px dotted #D5D5D5;
+			}
+			a {
+				text-decoration: none;
+				text-align: left;
+				font-size: 18px;
+				color: #222222;
+			}
+			.current {
+				color: red;
+			}
+		</style>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".level1>a").click(function(){
+					$(this).addClass("current").next().show().parent().siblings().children("a").removeClass("current").next().hide();
+					return false;
+					}
+				)
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="menu">
+				<li class="level1">
+					<a href="#">衬衫</a>
+					<ul class="level2">
+						<li><a href="#">短袖衬衫</a></li>
+						<li><a href="#">长袖衬衫</a></li>
+						<li><a href="#">短袖T恤</a></li>
+						<li><a href="#">长袖T恤</a></li>
+					</ul>
+					
+				</li>
+				<li class="level1">
+					<a href="#">卫衣</a>
+					<ul class="level2">
+						<li><a href="#">开襟卫衣</a></li>
+						<li><a href="#">套头卫衣</a></li>
+						<li><a href="#">运动卫衣</a></li>
+						<li><a href="#">童装卫衣</a></li>
+					</ul>
+				</li>
+				<li class="level1">
+					<a href="#">裤子</a>
+					<ul class="level2">
+						<li><a href="#">短裤</a></li>
+						<li><a href="#">休闲裤</a></li>
+						<li><a href="#">牛仔裤</a></li>
+						<li><a href="#">卡其裤</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

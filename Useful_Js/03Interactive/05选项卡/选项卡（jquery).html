@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡(jquery)</title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.tab {
+				width: 240px;
+				margin: 50px;
+			}
+			.tab_menu {
+				clear: both;
+			}
+			.tab_menu li {
+				float: left;
+				text-align: center;
+				list-style: none;
+				background: #EAEAEA;
+				border: 1px solid #898989;
+				margin-right: 4px;
+				cursor: pointer;
+				padding: 1px 6px;
+				border-bottom: none;
+			}
+			.tab_menu li.hover {
+				background: #dfdfdf;
+			}
+			.tab_menu li.selected {
+				color: #ffffff;
+				background: #6D84B4;
+			}
+			.tab_box {
+				clear: both;
+				height: 100px;
+				border: 1px solid #898989;
+			}
+			.hide {
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+				//1.点击时改变css属性，移除之前的selected选项，添加新的selected选项
+				//2.隐藏之前的div层，显示对应的div层
+				
+				var $div_li = $(".tab_menu ul li");
+				$div_li.click(function(){
+					$(this)
+						.addClass("selected")						//点击项添加class
+						.siblings().removeClass("selected");		//兄弟项移除class
+					var index = $div_li.index(this);
+					$("div.tab_box > div")
+						.eq(index).show()					//遍历div，找到对应的div
+						.siblings().hide();					//
+					
+				}).hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="tab">
+			<div class="tab_menu">
+				<ul>
+					<li class="selected">时事</li>
+					<li>体育</li>
+					<li>娱乐</li>
+				</ul>
+			</div>
+			<div class="tab_box">
+				<div>时事内容</div>
+				<div class="hide">体育内容</div>
+				<div class="hide">娱乐内容</div>
+			</div>
+		</div>
+	</body>
+</html>

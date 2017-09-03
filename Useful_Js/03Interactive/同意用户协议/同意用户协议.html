@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				//dom操作方法
+				/*
+				$("#submit").click(function(){
+					var $cr = $("#cr");
+					var cr = $cr[0];
+					if(cr.checked) {
+						alert("用户协议已经被选中，可以继续注册。");
+					} else {
+						alert("请勾选用户协议");
+					}
+				});
+				*/
+				
+				
+				
+				//jquery操作方法
+				$("#submit").click(function(){
+					var $cr = $("#cr");
+					var cr = $cr[0];
+					if($cr.is(":checked")) {
+						alert("用户协议已经被选中，可以继续注册。");
+					} else {
+						alert("请勾选用户协议");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" id="cr" /><label for="cr">我已经阅读了上面制度.</label>
+		<input type="submit" value="提交" id="submit" />
+	</body>
+	
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script>
+			//新建一个空数组
+			//获取所有name为check的多选框
+			//循环判断多选框是否被选中，如果被选中则添加到数组里。
+			//获取输出按钮，然后为按钮添加onclcik时间，输出数组的长度即可。
+			
+			//dom操作方法
+			/*
+			window.onload = function(){
+				var btn = document.getElementById("btn");
+				btn.onclick = function(){
+					var arr = [];
+					var inputs = document.getElementsByName("check");
+					
+					for(var i=0; i<inputs.length; i++){
+						if(inputs[i].checked){
+							arr.push(inputs[i].value);
+						}
+					}
+					
+					alert("勾选的复选框的个数是"+arr.length);
+				};
+				
+			};
+			*/
+			
+			//jquery操作方法
+			$(function(){
+				$("#btn").click(function(){
+					var $checked = $("input[name='check']:checked");
+					console.log($checked)
+					alert("勾选的复选框的个数是"+$checked.length);
+					
+				});
+			});
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" value="1" name="check" checked="checked" />
+		<input type="checkbox" value="2" name="check" />
+		<input type="checkbox" value="3" name="check" checked="checked" />
+		<input type="button" value="你选中的个数" id="btn" />
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script type="text/javascript">
+			//根据表格id获取表格
+			//在表格捏获取tbody元素
+			//在tbody内获取tr元素
+			//循环输出获取的tr元素
+			//对tr元素的索引值除以2并取模，然后根据奇偶设置不同的背景色
+			
+			//dom操作方法
+			/*
+			window.onload = function(){
+				var item = document.getElementById("tb");
+				var tbody = item.getElementsByTagName("tbody")[0];
+				var trs = tbody.getElementsByTagName("tr");
+				for(var i=0; i<trs.length; i++){
+					if(i%2 == 0){
+						trs[i].style.background = "lightblue";
+					}
+				}
+			}
+			*/
+			
+			//jquery操作方法
+			$(function(){
+				$("#tb tbody tr:even").css("background","lightblue");
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<table id="tb">
+			<tbody>
+				<tr>
+					<td>第1行</td>
+					<td>第1行</td>
+				</tr>
+				<tr>
+					<td>第2行</td>
+					<td>第2行</td>
+				</tr>
+				<tr>
+					<td>第3行</td>
+					<td>第3行</td>
+				</tr>
+				<tr>
+					<td>第4行</td>
+					<td>第4行</td>
+				</tr>
+				<tr>
+					<td>第5行</td>
+					<td>第5行</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
