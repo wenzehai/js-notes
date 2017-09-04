@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<style>
+			#tooltip {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$("a.tooltip").mouseover(function(e){
+					//创建div元素
+					var tooltip = "<div id='tooltip'>"+this.title+"</div>";
+					$("body").append(tooltip);		//将它追加到文档中
+					$("#tooltip")
+						.css({
+							"top":e.pageY + "px",
+							"left":e.pageX + "px"
+						}).show("100");
+				}).mouseout(function(){
+					$("#tooltip").remove();
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<p><a href="#" title="这是我的超链接提示1." class="tooltip">提示1</a></p>
+		<p><a href="#" title="这是我的超链接提示2." class="tooltip">提示2</a></p>
+		<p><a href="#" title="这是我的超链接提示2.">自带提示1</a></p>
+		<p><a href="#" title="这是我的超链接提示2.">自带提示2</a></p>
+		
+		
+	</body>
+</html>
