@@ -22,14 +22,13 @@
 				for(var i=0; i<btns.length; i++){
 					btns[i].index = i;
 				
-					btns[i].onclick = function(){
+					btns[i].onmouseenter = function(){
 						for(var i=0; i<btns.length; i++){
 							btns[i].style.background = "";
 							contents[i].style.display = "none";
 						};
 						this.style.background = "yellow";
 						contents[this.index].style.display = "block";
-					
 					}
 				}
 				
@@ -40,7 +39,7 @@
 		<button class="btn" style="background: yellow;">按钮一</button>
 		<button class="btn">按钮二</button>
 		<button class="btn">按钮三</button>
-		<div class="content" style="display: block;">很多很多内容1</div>
+		<div class="content">很多很多内容1</div>
 		<div class="content">很多很多内容2</div>
 		<div class="content">很多很多内容3</div>
 		
