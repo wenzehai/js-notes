@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>127-vue起步列表渲染v-for2</title>
+</head>
+<body>
+<ul id="app">
+    <p>v-for可以添加第二个参数为当前项的索引</p>
+    <li v-for="(item,index) in items">
+        {{parentMessage}} - {{index}} - {{item.text}}
+    </li>
+</ul>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            parentMessage: 'Parent',
+            items: [
+                {text: 'paragraph1'},
+                {text: 'paragraph2'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

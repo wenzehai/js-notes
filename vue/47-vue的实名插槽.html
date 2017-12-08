@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>47-vue的实名插槽</title>
+</head>
+<body>
+<div id="app">
+    <my-computer>
+        //始终根据名称来插入
+        <div slot="cpu">英特尔</div>
+        <img slot="memory" src="img/timg2.jpg" alt="">
+        <input slot="memory" type="color">
+    </my-computer>
+</div>
+
+<template id="my_computer">
+    <div id="main">
+        <slot name="cpu">
+            这里是插cpu的
+        </slot>
+        <slot name="memory">
+            这里是插内存的
+        </slot>
+        <slot name="harddrive">
+            这里是插硬盘的
+        </slot>
+        <slot name="softdrive">
+            这里是插光驱的
+        </slot>
+    </div>
+
+</template>
+
+
+<script src="js/vue.js"></script>
+
+<script>
+    Vue.component('my-computer', {
+        template: '#my_computer'
+    });
+
+    new Vue({
+        el: '#app',
+        data: {}
+    });
+
+
+</script>
+</body>
+
+</html>

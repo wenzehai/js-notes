@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>101-vue起步</title>
+
+</head>
+<body>
+
+<div id="app">
+    <!--采用v-bind方法绑定数据-->
+    <!--双引号中可以是单个表达式-->
+    <span v-bind:title="message">采用v-bind方法绑定数据</span>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: '页面加载于' + new Date().toLocaleString()
+        }
+    });
+</script>
+</body>
+</html>

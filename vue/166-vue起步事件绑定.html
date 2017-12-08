@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>166-vue起步事件绑定</title>
+</head>
+<body>
+<div id="app">
+    <p>{{total}}</p>
+    //给button用v-on绑定子组件传回来的事件，用于触发自身的计算总数函数
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('button-counter',{
+        template:'<button v-on:click="incrementCounter">{{counter}}</button>',
+        data: function(){
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            incrementCounter: function(){
+                this.counter += 1;
+                //子组件向父组件传递自己的内部事件，至于父组件需要不需要就不管
+                this.$emit('increment');
+            }
+        }
+    })
+    new Vue({
+        el:'#app',
+        data: {
+            total: 0
+        },
+        methods: {
+            incrementTotal: function(){
+                this.total += 1;
+            }
+        }
+    });
+</script>
+</body>
+</html>

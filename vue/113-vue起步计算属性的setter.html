@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>113-vue起步计算属性的setter</title>
+</head>
+<body>
+<div id="app">
+    <p>{{fullName}}</p>
+    <!--<button @click="">改变</button>-->
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            firstName: 'Foo',
+            lastName: 'Bar',
+            fullName: 'Foo Bar'
+        },
+        computed: {
+            //getter
+            get: function(){
+                return this.firstName + '' + this.lastName;
+            },
+            set: function(newValue){
+                let names = newValue.split(' ');
+                this.firstName = names[0];
+                this.lastName = names[names.length -1];
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>41-vue的script标签</title>
+</head>
+<body>
+<div id="app">
+    <my-div></my-div>
+</div>
+<!--当用script标签时，需要规定script的类型type="text/template"-->
+<script type="text/template" id="my_div">
+    <div>
+        <div>我是工业设计</div>
+        <img src="img/timg2.jpg" alt="">
+    </div>
+</script>
+
+<script src="js/vue.js"></script>
+<script>
+    //实例化组件
+    Vue.component('my-div',{
+        template:`#my_div`
+    })
+
+    new Vue({
+        el: "#app"
+    });
+</script>
+</body>
+</html>

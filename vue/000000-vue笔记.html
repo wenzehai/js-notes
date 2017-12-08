@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35-vue的组件的创建</title>
+</head>
+<body>
+<div id="app">
+    <!--<span v-bind:title="message">-->
+    <!--鼠标悬停几秒钟查看此处动态绑定的提示信息！-->
+    <!--</span>-->
+
+    <!--<p v-if="seen">现在你看到我了</p>-->
+
+    <!--<ol>-->
+    <!--<li v-for="todo in todos">{{todo.text}}</li>-->
+    <!--</ol>-->
+
+    <!--<p>{{message}}</p>-->
+    <!--<button v-on:click="reverseMessage">转换</button>-->
+
+    <!--<p>{{message}}</p>-->
+    <!--<input v-model="message" type="text">-->
+
+    <!--<ol>
+        <todo-item v-for="item in groceryList"
+                   v-bind:todo="item"
+                   v-bind:key="item.id">
+        </todo-item>
+    </ol>-->
+
+    <!--<app-nav></app-nav>-->
+    <!--<app-view>-->
+        <!--<app-sidebar></app-sidebar>-->
+        <!--<app-content></app-content>-->
+    <!--</app-view>-->
+
+    <!--<span>Message:{{message}}</span>
+    <span v-once>Message:{{message}}</span>-->
+
+    <!--<div v-html="rawHtml"></div>-->
+
+    <!--//用于不能直接用双大括号的情况，绑定数据-->
+    <!--<div v-bind:id="dynamicId"></div>-->
+
+    <!--<button v-bind:disabled="isButtonDisabled">Button</button>-->
+
+
+    <!--{{number +1}}
+    {{ok ? 'yes' : 'no'}}
+    {{message.split('').reverse.join('')}}-->
+
+
+    <!--<a v-bind:href="url">...</a>-->
+
+    <!--<a v-on:click="doSomething">...</a>-->
+
+    <!--<form v-on:submit.prevent="onSubmit">...</form>-->
+
+    <!--简写-->
+    <!--<a :href="url"></a>-->
+
+    <!--<a @click="dosomething"></a>-->
+
+    <!--计算属性-->
+    <p>原来的信息：{{message}}</p>
+    <p>翻转的信息：{{reversedMessage}}</p>
+
+</div>
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+
+    /*Vue.component('todo-item', {
+        //todo-item组件现在接受一个“prop”，类似于自定义属性，这个属性名为todo
+        props: ['todo'],
+        template: '<li>{{todo.text}}</li>'
+    });
+
+    new Vue({
+        el: "#app",
+        data: {
+            groceryList: [
+                {id: 0, text: '蔬菜'},
+                {id: 1, text: '奶酪'},
+                {id: 2, text: '水果'}
+            ]
+        },
+        methods: {}
+    });*/
+
+
+
+    /*var data = {a:1}
+
+    var vm = new Vue({
+        data: data
+
+    });
+    console.log(data.a)*/
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'hello'
+        },
+        computed: {
+            //计算属性的getter
+            reversedMessage: function(){
+                //'this'指向vm实例
+                return this.message.split('').reverse().join('');
+            }
+        }
+    });
+
+
+
+</script>
+</body>
+</html>

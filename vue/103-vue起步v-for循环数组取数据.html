@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>103-vue起步v-for循环数组取数据</title>
+</head>
+<body>
+<div id="app">
+    <!--<p v-for="a in todos">-->
+        <!--{{a.text}}-->
+    <!--</p>-->
+    <p v-for="a in todos">  <!--这句话的含义是循环todos这个数组中的元素，a代表循环中的每一个“内容”，这个内容可以是纯数字，文本或者对象等-->
+        {{a}}
+    </p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            todos: [
+                4,3,3,4
+
+//                {text: '学习js'},
+//                {text: '学习vue'},
+//                {text: '学习html'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

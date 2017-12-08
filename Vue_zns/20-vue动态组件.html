@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20-vue动态组件</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" @click="a='aaa'" value="aaa组件">
+    <input type="button" @click="a='bbb'" value="bbb组件">
+    <!--component动态组件的名称是定死的,通过绑定is来绑定对应组件-->
+    <component :is="a"></component>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            a: 'aaa'
+        },
+        components:{
+            'aaa':{
+                template:'<h2>我是aaa组件</h2>'
+            },
+            'bbb': {
+                template: '<h2>我是bbb组件</h2>'
+            },
+
+        }
+    });
+</script>
+</body>
+</html>

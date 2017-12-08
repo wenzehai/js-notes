@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>158-vue起步data必须是函数</title>
+</head>
+<body>
+<div id="example-2">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    let data = { counter: 0 }
+    Vue.component('simple-counter', {
+        template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+        // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+        // 但是我们却给每个组件实例返回了同一个对象的引用
+        data: function () {
+            return {
+                counter: 0
+            }
+        }
+    })
+    new Vue({
+        el: '#example-2'
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>118-vue起步动态绑定class5</title>
+</head>
+<body>
+<div id="app">
+    <p :class="[isActive ? activeClass : '', errorClass]">通过三元运算符的方法来添加class。里面是示例内容，请打开调试器查看html代码的变化</p>
+    <!--始终添加errorClass,是否添加activeClass取决于isActive的真与假，为真时添加activeClass，为假时添加空‘’-->
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+            el: '#app',
+            data: {
+                isActive: false,
+                activeClass: 'Active',
+                errorClass: 'text-danger'
+            }
+
+        })
+    ;
+</script>
+</body>
+</html>

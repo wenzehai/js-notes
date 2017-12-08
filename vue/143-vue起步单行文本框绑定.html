@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>143-vue起步单行文本框绑定</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="message" placeholder="请输入内容">   <!--请输入内容不会出现，而是被message替换掉-->
+    <p>这里是文本输入框中的内容：{{message}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

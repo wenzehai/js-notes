@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>107-vue起步最简单的组件应用模板</title>
+</head>
+<body>
+<div id="app">
+    <app-nav></app-nav>
+    <app-view>
+        <app-sidebar></app-sidebar>
+        <app-content></app-content>
+    </app-view>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            //当你知道你后面会用到一些属性时，你最好设置一下初始值，例如下面的样子
+            newTodoText: '',
+            visitCount: 0,
+            hideCompletedTodos: false,
+            todos: [],
+            error: null
+        }
+    });
+</script>
+</body>
+</html>

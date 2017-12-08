@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>135-vue起步v-for与v-if</title>
+</head>
+<body>
+<div id="app">
+   <!--<ul>-->
+       <!--<li v-for="todo in todos" v-if="!todo.isComplete">-->
+           <!--{{todo}}-->
+       <!--</li>-->
+   <!--</ul>-->
+
+    <ul v-if="todos.length">
+        <li v-for="todo in todos">{{todo}}</li>
+    </ul>
+    <p v-else>没有todo剩下了</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            todos: [
+                "learn js","learn vue"
+            ]
+        }
+    });
+</script>
+</body>
+</html>

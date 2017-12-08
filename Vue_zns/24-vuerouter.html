@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue路由</title>
+    <script src="../vue-cli/node_modules/vue/dist/vue1.0.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li><a v-link="{path:'/home'}">主页</a></li>      <!--对应一个组件-->
+        <li><a v-link="{path:'/news'}">新闻</a></li>      <!--对应一个组件-->
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">视频</a></li>
+    </ul>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+
+<script>
+    //1.准备一个根组件
+    let App = Vue.extend();
+
+    //2.Home News组件都准备
+    let Home = Vue.extend({
+        template:'<h3>我是主页</h3>'
+    });
+
+    let News = Vue.extend({
+        template:'<h3>我是新闻</h3>'
+    });
+
+    //3.准备路由
+    let router = new VueRouter();
+
+    //4.关联
+    router.map({            //类似于一个循环，把所有地址关联起来
+        'home':{
+            component:Home
+        },
+        'news':{
+            component:News
+        }
+    });
+
+    //5.启动路由
+    router.start(App,'#')
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

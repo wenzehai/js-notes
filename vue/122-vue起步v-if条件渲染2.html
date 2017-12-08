@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>122-vue起步v-if条件渲染2</title>
+</head>
+<body>
+<div id="app">
+    <p>通过给template添加v-if来判断一组元素，而不是单一的元素</p>
+    <p>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。</p>
+    <template v-if="yes">
+        <h1>Title</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </template>
+    <template v-else>
+        <h1>Title</h1>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+    </template>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!',
+            yes: false
+        }
+    });
+</script>
+</body>
+</html>

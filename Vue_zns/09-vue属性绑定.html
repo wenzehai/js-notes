@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-vue属性绑定</title>
+</head>
+<body>
+<div id="app">
+    <img :src="url" alt="">                 <!--推荐用这种-->
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            url: 'https://www.baidu.com/img/bd_logo1.png'
+        },
+        methods: {
+            show: function (ev) {
+                alert(ev.keyCode);                          /*返回键盘键值*/
+            },
+            show2: function () {
+                alert(2)
+            }
+        }
+    });
+</script>
+</body>
+</html>

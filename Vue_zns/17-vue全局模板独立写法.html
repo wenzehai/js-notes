@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+<template id="temp">
+    <div>
+        <h3>我是标题3----></h3>
+        <ul>
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+            <li>06</li>
+        </ul>
+    </div>
+
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //全局组件
+    Vue.component( 'my-aaa',{
+        template: '#temp'
+    });
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

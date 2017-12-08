@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35-vue的组件的创建</title>
+</head>
+<body>
+<div id="app">
+    <my-date></my-date>
+    <my-date></my-date>
+</div>
+<div id="app1">
+    <my-date></my-date>
+    <my-date></my-date>
+</div>
+
+
+
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    //1.创建一个组件构造器
+    let Profile = Vue.extend({
+        //1.1模板选项
+        template: `
+            <div>
+                <input type="date">
+                <p>今天已经是冬天了</p>
+            </div>
+        `
+    });
+
+    //2.注册全局组件,两个参数，第一个参数组件的名称，第二个参数为构造器，通过名称和构造器就可以去调用构造器里面的模板。
+    Vue.component('my-date',Profile);
+
+    new Vue({
+        el: "#app",
+        data: {
+
+        },
+        methods: {
+
+        }
+    });
+    new Vue({
+        el: "#app1"
+    });
+</script>
+</body>
+</html>

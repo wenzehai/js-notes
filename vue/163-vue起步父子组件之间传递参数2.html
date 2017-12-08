@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>163-vue起步父子组件之间传递参数2</title>
+</head>
+<body>
+<!--传递参数的流程：-->
+<!--从最里面开始：-->
+<!--1、在构造子组件时，先用props声明想要的参数名称，就是你在模板中需要用到的参数；-->
+<!--2、在构造父组件时，先要在template中绑定子组件需要的参数，也就是子组件等于父组件需要的参数。这个父组件需要的参数由props声明后，想Vue对象的data取。-->
+<!--3、在app中引用父组件时，就需要绑定父组件需要的参数，向data中的值取。-->
+
+
+
+<div id="app">
+    <fuzujian :fmessage="dataMsg"></fuzujian>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //1、创建子组件构造器
+    let zizujian = Vue.extend({
+        props: ['zmessage'],       //子组件我想要的内容
+        template:`
+            <p>{{zmessage}}这是内容</p>
+        `
+    });
+
+
+    //2.创建父组件构造器，需要在父组件定义的时候就传参数给子组件
+    Vue.component('fuzujian',{
+        props: ['fmessage'],
+        template: `
+            <div>
+                <input >
+                <br>
+                <new :zmessage="fmessage"></new>
+            </div>
+        `,
+        components: {
+            //这里的bbbb和hahahah分别代表父组件中template里面包含的两个元素
+            'new':zizujian
+        }
+    });
+
+    new Vue({
+        el:'#app',
+        data: {
+            dataMsg: 'hello wenzehai!'
+        }
+    });
+</script>
+</body>
+</html>

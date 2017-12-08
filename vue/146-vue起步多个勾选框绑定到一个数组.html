@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>146-vue起步多个勾选框绑定到一个数组</title>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" id="jack" value="jack" v-model="checkedNames">
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="tom" value="tom" v-model="checkedNames">
+    <label for="tom">Tom</label>
+    <input type="checkbox" id="mike" value="mike" v-model="checkedNames">
+    <label for="mike">Mike</label>
+    <br>
+    <span>checked names: {{checkedNames}}</span>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            //勾选框一旦自己勾上，就回自动把value传入数组中
+            checkedNames: []
+        }
+    });
+</script>
+</body>
+</html>

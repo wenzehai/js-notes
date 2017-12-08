@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>130-vue起步通过vue.set添加属性</title>
+</head>
+<body>
+<div id="app">
+    <p>{{userProfile.name}}</p>
+    <p>{{userProfile.age}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            userProfile: {
+                name: '张三'
+            }
+        },
+        method: {
+
+        }
+    });
+    //方法一：通过set方法来添加一个动态属性
+//    Vue.set(vm.userProfile,'age',27);
+    //方法二：通过实例方法添加动态属性,这个有问题
+//    this.$set(this.userProfile,'age',27)
+
+
+
+</script>
+</body>
+</html>

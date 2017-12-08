@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+<template id="temp">
+    <div>
+        <h3>我是标题3---->{{msg}}</h3>
+        <ul>
+            <li v-for="(item,index) in arr" @click="change">{{index}}+{{item}}</li>
+        </ul>
+    </div>
+
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //全局组件
+    Vue.component( 'my-aaa',{
+        data:function () {
+            return{
+                msg: '欢迎来到vue世界',
+                arr:['apple','pear','banana']
+            }
+        },
+        methods:{
+            change:function () {
+                this.arr = ['张三','李四','王五']
+            }
+        },
+        template: '#temp'
+    });
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

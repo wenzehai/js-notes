@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>162-vue起步父子组件之间传递参数</title>
+</head>
+<body>
+<div id="app">
+    <fuzujian></fuzujian>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //1、创建子组件构造器
+    let zizujian = Vue.extend({
+        props: ['myMessage'],       //子组件我想要的内容
+        template:`
+            <p>{{myMessage}}这是内容</p>
+        `
+    });
+
+
+    //2.创建父组件构造器，需要在父组件定义的时候就传参数给子组件
+    Vue.component('fuzujian',{
+        template: `
+            <div>
+                <input type="text">
+                <br>
+                <new my-message="5498545"></new>
+            </div>
+        `,
+        components: {
+            //这里的bbbb和hahahah分别代表父组件中template里面包含的两个元素
+            'new':zizujian
+        }
+    });
+
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

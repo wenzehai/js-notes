@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>36-vue的局部组件</title>
+</head>
+<body>
+<div id="app">
+    <!--3.使用组件就是把组件名称变成类似div的结构-->
+    <my-date></my-date>
+    <my-color></my-color>
+</div>
+<div id="app1">
+    <my-date></my-date>
+    <my-color></my-color>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    //1.创建一个组件构造器
+    let Profile1 = Vue.extend({
+        //1.1模板选项
+        template: `
+            <div>
+                <input type="date">
+                <p>今天已经是冬天了</p>
+            </div>
+        `
+    });
+    let Profile2 = Vue.extend({
+        //1.1模板选项
+        template: `
+            <div>
+                <input type="color">
+                <p>我的色板组件</p>
+            </div>
+        `
+    });
+
+    //2.注册一个局部组件，需要在实例中来注册。通过components钩子选项
+
+
+    new Vue({
+        el: "#app",
+        //注册局部组件
+        components: {
+            'my-date': Profile1,
+            'my-color': Profile2
+        }
+    });
+
+    new Vue({
+        el: "#app1",
+    });
+</script>
+</body>
+</html>

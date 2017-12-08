@@ -1,0 +1,52 @@
+.content {
+    background: #f2f3f5;
+    height: 736px;
+}
+.content img {
+    width: 100%;
+}
+.content form {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+.content form .box {
+    background: #FFFFFF;
+    height: 40px;
+}
+.content form .box label {
+    display: inline-block;
+    width: 20%;
+    border-right: 1px solid gray;
+    box-sizing: border-box;
+    line-height:40px;
+}
+.content form .box input {
+    border: none;
+    width: 80%;
+    padding-left: 0.5em;
+    outline: none;
+    box-sizing: border-box;
+    line-height:40px;
+}
+.content input[type=submit] {
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    background: #0b5b97;
+    color: #FFFFff;
+    line-height: 2em;
+}
+
+.link {
+    width: 60%;
+    margin: 20px auto 0 auto;
+    position: relative;
+}
+.link .left {
+    float: left;
+}
+.link .right {
+    float: right;
+}

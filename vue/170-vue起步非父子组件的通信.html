@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>170-vue起步非父子组件的通信</title>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+
+    //触发组件A中的事件
+    bus.$emit('id-selected',1)
+
+    //在组件B创建的钩子中监听事件
+    bug.$on('id-selected',function(id){
+
+    })
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+    let bus = new Vue();
+</script>
+</body>
+</html>

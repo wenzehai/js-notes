@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16-vue模板2</title>
+</head>
+<body>
+<div id="app">
+   <my-aaa></my-aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+
+
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        components:{
+            'my-aaa':{
+                data: function(){
+                    return {
+                        msg: '欢迎来到vue'
+                    }
+                },
+                template:'<h3 @click="change">我是标题3---->{{msg}}</h3>',
+                methods:{
+                    change:function () {
+                        this.msg = '内容已经改变';
+                    }
+                }
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>160-vue起步传递参数</title>
+</head>
+<body>
+
+<div id="app">
+    <!--//往渲染的对象中传递参数，需要通过在模板名称的后面加，参数名="n内容"这样的形式传入，而且传入的是字符串-->
+    <!--需要注意的是，my-message="hahahahahaah"最好不要用驼峰，用连字符-->
+    <child my-message="hahahahahaah"></child>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+
+    Vue.component('child',{
+        props: ['myMessage'],
+        template:'<span>{{myMessage}}这是内容</span>'
+    });
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+
+</body>
+</html>

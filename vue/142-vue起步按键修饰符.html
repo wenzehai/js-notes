@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>142-vue起步按键修饰符</title>
+</head>
+<body>
+<div id="app">
+    <!-- 只有在 `keyCode` 是 13 时调用 `vm.submit()` -->
+    <input @keyup.13="submit">
+
+    <!-- 只有在 `keyCode` 是 enter 时调用 `vm.submit()` -->
+    <input @keyup.enter="submit">
+
+
+    <!--
+    .enter
+    .tab
+    .delete (捕获“删除”和“退格”键)
+    .esc
+    .space
+    .up
+    .down
+    .left
+    .right
+    -->
+
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

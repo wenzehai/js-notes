@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>137-vue起步时间监听</title>
+</head>
+<body>
+<div id="app">
+    <button @click="counter += 1">点击一次加1</button>
+    <p>总共被点击的次数{{counter}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            counter: 0
+        }
+    });
+</script>
+</body>
+</html>

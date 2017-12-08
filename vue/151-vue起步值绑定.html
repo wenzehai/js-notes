@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>151-vue起步值绑定</title>
+</head>
+<body>
+<div id="app">
+    <input type="radio" v-model="picked" value="a">
+<span>{{picked}}</span>
+
+    <input type="checkbox" v-model="toggle"><span>{{toggle}}</span>
+
+    <select v-model="selected">
+        <option value="abc">ABC</option>
+    </select><span>{{selected}}</span>
+
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            picked: '',
+            toggle: '',
+            selected: ''
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>136-vue起步todo应用程序</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="newTodoText" v-on:keyup.enter="addNewTodo" placeholder="请输入待办事项">
+    <ul>
+        //这里有一个隐藏的对象，叫做hideObject，通过is="my-todo"与组件关系起来。后面的 v-bind:key="todo.id" v-bind:title="todo.title"都是给这个隐藏的对象赋值
+        <li is="my-todo" v-for="(todo,index) in todos" v-bind:key="todo.id" v-bind:title="todo.title"
+            v-on:remove="todos.splice(index,1)"
+        ></li>
+    </ul>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    //注册组件
+    Vue.component('my-todo', {
+        props: ['title'],           //这里的title是隐藏对象的内容
+        template: '<li>{{title}}<button @click="$emit(\'remove\')">close</button></li>'
+    });
+
+
+    new Vue({
+        el: '#app',
+        data: {
+            newTodoText: '',
+            todos: [
+                {
+                    id: 1,
+                    title: '做饭'
+                }, {
+                    id: 2,
+                    title: '跑步'
+                }, {
+                    id: 3,
+                    title: '上班'
+                }
+            ],
+            nextTodoId: 4
+        },
+        methods: {
+            addNewTodo: function () {
+                this.todos.push({
+                    id: this.nextTodoId++,
+                    title: this.newTodoText
+                });
+                this.newTodoText = '';
+                alert(0)
+            }
+        }
+    });
+</script>
+</body>
+</html>

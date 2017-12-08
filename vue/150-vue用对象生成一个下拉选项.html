@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>150-vue用对象生成一个下拉选项</title>
+</head>
+<body>
+<div id="app">
+    <select v-model="selected">
+        <option v-for="option in options" :value="option.value">{{option.text}}</option>
+    </select>
+    <span>selected: {{selected}}</span>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            selected: 'a',      //这里的selected，返回的是value
+            options: [
+                {text:'one',value:'a'},
+                {text:'two',value:'b'},
+                {text:'three',value:'c'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

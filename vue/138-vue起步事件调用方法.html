@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>138-vue起步事件调用方法</title>
+</head>
+<body>
+<div id="app">
+    <button @click="greet">greet</button>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            name: 'vue.js'
+        },
+        methods: {
+            greet: function(event){
+                alert('hello ' + this.name + '!')
+                if(event) {
+                    alert(event.target.tagName)     //事件对象的tagname
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

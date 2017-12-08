@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>131-vue起步创建返回过滤或排序数组的计算属性</title>
+</head>
+<body>
+<div id="app">
+    <p>创建返回过滤或排序数组的计算属性</p>
+    <p>{{evenNumbers}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            numbers: [1,2,3,4,6,8,10]
+        },
+        computed: {
+            evenNumbers: function () {
+                return this.numbers.filter(function(number){
+                    return number % 2 === 0;
+                });
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

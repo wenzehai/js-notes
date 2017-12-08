@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-vue模板</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="msg">
+    <br>
+    <p>{{msg}}</p>
+    <br>
+    <p v-once>{{msg}}</p>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            msg: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>109-vue起步使用v-html插入带有html标签的数据</title>
+</head>
+<body>
+<div id="app">
+    <p>直接插入不会解析html标签：{{rawHtml}}</p>
+    <p>采用v-html的插入方式，会解析html标签:<span v-html="rawHtml"></span></p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            rawHtml: '<span style="color: red">如果html标签被解析了，这段文字会是红色。否则就是黑色</span>'
+        }
+    });
+</script>
+</body>
+</html>

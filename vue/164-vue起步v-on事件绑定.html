@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>164-vue起步v-on事件绑定</title>
+</head>
+<body>
+<div id="counter-event-example">
+    <p>{{total}}</p>
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+    <!--父组件可以在使用子组件的地方直接用 v-on 来监听子组件触发的事件-->
+    <button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('button-counter',{
+        template:'<button v-on:click = "incrementCounter">{{counter}}</button>',
+        data: function(){
+            return{
+                counter: 0
+            }
+        },
+        methods: {
+            incrementCounter: function(){
+                this.counter += 1;
+                this.$emit('increment')
+            }
+        }
+    })
+
+    new Vue({
+        el:'#counter-event-example',
+        data: {
+            total: 0
+        },
+        methods: {
+            //计数函数
+            incrementTotal: function() {
+                this.total += 1;
+            }
+        }
+    });
+</script>
+</body>
+</html>

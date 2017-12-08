@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>172-vue起步实名插槽</title>
+</head>
+<body>
+<div id="app">
+    <mycomputer>
+        //始终根据名称来插入
+        <div slot="cpu">英特尔</div>
+    </mycomputer>
+</div>
+
+<template id="aaa">
+    <div id="main">
+        <slot name="cpu">这里是插的</slot>
+        <slot name="memory">这里是插内存的</slot>
+        <slot name="harddrive">这里是插硬盘的</slot>
+        <slot name="softdrive">这里是插光驱的</slot>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('mycomputer',{
+        template: '#aaa'
+    });
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

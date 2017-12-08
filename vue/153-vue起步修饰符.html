@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>153-vue起步修饰符</title>
+</head>
+<body>
+<div id="app">
+    <!--修饰符-->
+    <!--.lazy-->
+    <input v-model.lazy="msg">      <!--通过添加.lazy修饰符，使输入框在回车后才改变msg的内容-->
+    <span>下面是内容绑定{{msg}}</span>
+
+
+
+</div>
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            msg: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

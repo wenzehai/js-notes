@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>154-vue起步修饰符2</title>
+</head>
+<body>
+<div id="app">
+    <!--.number修饰符-->
+    <input v-model.number="age">
+    <br>
+    <span>age:{{age}}</span>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            age: 52
+        }
+    });
+    alert(typeof vm.age);
+</script>
+</body>
+</html>

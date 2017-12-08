@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>169-vue起步自定义组件v-model </title>
+</head>
+<body>
+<div id="app">
+    <my-checkbox v-model="foo" value="some value"></my-checkbox>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('my-checkbox',{
+        model:{
+            prop:'checked',
+            event:'change'
+        },
+        props:{
+            checked:Boolean,
+            //就这样允许拿'value'这个prop做其他事情了
+            value:String
+        }
+    })
+
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

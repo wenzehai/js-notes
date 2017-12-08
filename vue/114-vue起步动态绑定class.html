@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>114-vue起步动态绑定class</title>
+</head>
+<body>
+<div id="app">
+    <p :class="{active: isActive}">这是示例内容</p>
+    <!--这个class的存在与否取决于isActive的真遇与假；-->
+
+    <span :class="{active: isActive, bold: isBold, italic: isItalic}">这里面是内容</span>
+    <!--active/bold/italic分别是属性的名称，后面的是值-->
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            isActive: true,
+            isBold: true,
+            isItalic: false
+        }
+    });
+</script>
+</body>
+</html>

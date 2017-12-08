@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>126-vue起步列表渲染v-for</title>
+</head>
+<body>
+<ul id="app">
+    <p>注意，你要给哪个数组，将结果输出到哪里，你就需要给对应的html标签加v-for，而不是其父元素</p>
+    <li v-for="item in items">{{item.text}}</li>
+</ul>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+   let vm = new Vue({
+        el:'#app',
+        data: {
+            items: [
+                {text: 'paragraph1'},
+                {text: 'paragraph2'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

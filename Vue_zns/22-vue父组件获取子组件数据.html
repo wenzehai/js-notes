@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21-vue父子组件</title>
+</head>
+<body>
+<div id="app">
+   <aaa></aaa>
+</div>
+<template id="temp1">
+    <div>
+        <span>我是父级-》{{msg}}</span>
+        <input type="button" value="按钮">
+        <bbb @child="get"></bbb>            <!--子组件发射过来的数据，需要通过
+        @来绑定，绑定到一个get方法，这个get方法在父组件里面来定义-->
+    </div>
+</template>
+<template id="temp2">
+    <div>
+        <h2>我是zi组件->{{zdata}}</h2>
+        <input type="button" value="发送" @click="send">
+    </div>
+</template>
+
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            a: 'aaa'
+        },
+        components:{
+            'aaa':{
+                data:function () {
+                    return {
+                        myData: 'hello',
+                        msg: '我是aaa的数据'
+                    }
+                },
+                template:'#temp1',
+                methods:{
+                    get(zdata){             //子组件的数据传递到msg参数里面,msg叫什么名字无所谓，如果你想改变父组件里面的数据，你就把msg这个数据存起来，弄成和父数据一样的名称。
+                        this.msg = zdata;         //将子组件的数据赋值给父组件，改变父组件的数据。
+                    }
+                },
+                components:{
+                    'bbb':{
+                        data:function () {
+                            return {
+                                zdata: '我是子组件的数据'
+                            }
+                        },
+                        methods:{
+                            send:function () {
+                                this.$emit('child',this.zdata);
+                            }
+                        },
+                        template:'#temp2'
+                    }
+                }
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

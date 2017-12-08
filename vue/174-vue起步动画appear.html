@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>174-vue起步动画appear</title>
+</head>
+<body>
+<div id="app">
+    //自定义css类名
+    <transition
+                appear
+                appear-class="custom-appear-class"
+                appear-to-class="custom-appear-to-class"
+                appear-active-class="custom-appear-active-class"
+    >
+
+    </transition>
+    //自定义JavaScript钩子
+    <transition
+                appear
+                v-on:before-appear="customBeforeAppearHook"
+                v-on:appear="customAppearHook"
+                v-on:after-appear="customAfterAppearHook"
+                v-on:appear-cancelled="customAppearCancelledHook"
+    >
+
+    </transition>
+    //多个元素的过渡
+    <transition>
+        <table v-if="items.length > 0">
+
+        </table>
+        <p v-else>对不起，没有找到条目</p>
+    </transition>
+
+
+
+
+    //最好给标签设置key，方便vue区分，否则vue只会替换内容
+    <transition>
+        <button v-if="isEditing" key="save">保存</button>
+        <button v-else key="edit">编辑</button>
+    </transition>
+
+    //同上
+    <transition>
+        <button v-bind:key="isEditing">
+            {{isEditing ? 'Save' : 'Edit'}}
+        </button>
+    </transition>
+
+    //代码优化案例
+    <transition>
+        <button v-if="docState === 'saved' key='saved' ">编辑</button>
+        <button v-if="docState === 'edited' key='edited'">保存</button>
+        <button v-if="docState === 'editing' key='editing'">取消</button>
+    </transition>
+    //优化
+    <transition>
+        <button v-bind:key="docState">
+            {{buttonMessage}}
+        </button>
+    </transition>
+
+
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        computed: {
+            buttonMessage:function () {
+                switch(this.docState){
+                    case 'saved': return 'Edit'
+                    case 'edited': return 'Save'
+                    case 'editing': return 'Cancel'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

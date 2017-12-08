@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>141-vue起步事件修饰符</title>
+</head>
+<body>
+<div id="app">
+    <!--//阻止单机事件继续传播-->
+    <a @click.stop="doSomething"></a>
+
+    <!--提交事件不再重载页面-->
+    <form @submit.prevent="onSubmit"></form>
+
+    <!--修饰符可以串联-->
+    <a @click.stop.prevent="doSomething"></a>
+
+    <!--只有修饰符-->
+    <form @submit.prevent></form>
+
+    <!--添加事件监听器时使用事件捕获模式-->
+    <!--即内部元素触发的事件先在此处处理，然后才交由内部元素自身进行处理-->
+    <div @click.capture="doSomething"></div>
+
+    <!--只当在event.target是当前元素自身时触发处理函数-->
+    <!--即事件不是从内部元素触发的-->
+    <div @click.self="doSomething"></div>
+
+    <!--点击事件将只会触发一次-->
+    <a v-on:click.once="doSomething"></a>
+
+</div>
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

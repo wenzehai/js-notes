@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>144-vue起步多行文本框绑定</title>
+</head>
+<body>
+<div id="app">
+    <textarea v-model="message" cols="30" rows="10"></textarea>
+    <p>这里是文本输入框中的内容：{{message}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

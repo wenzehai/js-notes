@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>116-vue起步动态绑定class3</title>
+</head>
+<body>
+<div id="app">
+    <p :class="classObject">里面是示例内容，请打开调试器查看html代码的变化</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            isActive: true,
+            error: null
+        },
+        computed: {
+            //通过计算属性来计算一些复杂的逻辑
+            classObject: function () {
+                return {
+                    //active属性的值取决于后面的表达式真假。
+                    active: this.isActive && !this.error,
+                    'text-danger': !(this.error && (this.error.type === 'fatal'))
+                };
+
+            }
+        }
+
+    })
+    ;
+</script>
+
+
+</body>
+</html>

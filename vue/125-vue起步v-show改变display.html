@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>125-vue起步v-show改变display</title>
+</head>
+<body>
+<div id="app">
+    <p>v-show控制元素的display属性，始终渲染在dom里面，注意，v-show 不支持 template元素，也不支持 v-else。 </p>
+    <p v-show="yes">{{message}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!',
+            yes: false
+        }
+    });
+</script>
+</body>
+</html>

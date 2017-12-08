@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>117-vue起步动态绑定class4</title>
+</head>
+<body>
+<div id="app">
+    <p :class="[activeClass,errorClass]">通过数组方法来添加class。里面是示例内容，请打开调试器查看html代码的变化</p>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+            el: '#app',
+            data: {
+                activeClass: 'Active',
+                errorClass: 'text-danger'
+            }
+
+        })
+    ;
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>106=vue起步创建一个组件</title>
+</head>
+<body>
+<div id="app">
+    <ol>
+    <todo-item v-for="item in todos" v-bind:aaaa = "item" v-bind:key="item.id"></todo-item>
+        <!--先循环todos取数据，把item取出来；通过v-bind:aaaa = "item"将item赋给aaaa对象；通过v-bind:key="item.id"将item的key值赋给aaaa对象-->
+    </ol>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    //创建一个组件
+    Vue.component('todo-item', {
+        props:['aaaa'],         //注意有引号，aaaa是一个用来传数据的对象，它的数据来源于通过v-for循环，将todos数组中的对象赋给了它
+        template: '<li>{{aaaa.text}}</li>'
+
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            todos: [
+                {id: '0',text: 'lear javascript'},
+                {id: '1',text: 'lear java'},
+                {id: '2',text: 'lear php'}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

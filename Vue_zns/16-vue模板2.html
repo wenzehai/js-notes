@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16-vue模板2</title>
+</head>
+<body>
+<div id="app">
+   <aaa></aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+// 全局组件
+    let aaa = Vue.extend({
+        template:'<h3>我是标题3</h3>'
+    });
+
+    Vue.component('aaa',aaa);
+
+
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>128-vue起步对象渲染v-for</title>
+</head>
+<body>
+<div id="app">
+    <p v-for="value in object">{{value}}</p>        <!--没有索引项，只有值-->
+    <p v-for="(value,key,index) in object" >{{index}}- {{key}}-{{value}}</p>      <!--有索引项，把index也弄出来了-->
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            object: {
+                name: 'zhangsan',
+                sex: 'male',
+                age: 25
+            }
+        }
+    });
+</script>
+</body>
+</html>

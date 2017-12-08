@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-vue的雏形</title>
+</head>
+<body>
+<div id="app">
+    <p v-for="(item,index) in message" >{{item}}{{index}}</p>
+    <br>
+    <ul>
+        <Li v-for="(item,key,index) in jason">
+            {{item}}{{index}}{{key}}
+
+        </Li>
+    </ul>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: ['apple','banana','orange','pear'],
+            jason:{a:'apple',b:'banana',c:'orange'}
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>140-vue起步内联语句中传入特殊变量</title>
+</head>
+<body>
+<div id="app">
+    <button @click="warn('通过$event传入特殊变量',$event)">传入特殊变量</button>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        methods: {
+            warn: function(message,event){
+                //现在我们可以访问原生事件对象
+                if(event) event.preventDefault();
+                alert(message);
+            }
+        }
+    });
+</script>
+</body>
+</html>

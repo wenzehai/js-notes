@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>171-vue起步插槽</title>
+</head>
+<body>
+<div id="app">
+    <my-slot>
+        <img src="img/timg2.jpg" alt="">
+    </my-slot>
+</div>
+
+<template id="my-slot">
+    <div>
+        <h2>这里是插槽头</h2>
+        <slot>
+            一个插槽，里面内容可以被替换
+        </slot>
+        <footer>
+            插槽尾部
+        </footer>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('my-slot',{
+        template:'#my-slot'
+    });
+
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

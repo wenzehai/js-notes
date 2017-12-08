@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>173-vue起步JavaScript钩子</title>
+</head>
+<body>
+<div id="app">
+    <transition
+        v-on:before-enter="beforeEnter"
+        v-on:enter="enter"
+        v-on:after-enter="afterEnter"
+        v-on:enter-cancelled="enterCancelled"
+
+        v-on:before-leave="beforeLeave"
+        v-on:leave="leave"
+        v-on:after-leave="afterLeave"
+        v-on:leave-cancelled="leaveCanclled"
+    >
+
+    </transition>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        methods: {
+            beforeEnter: function(el){
+
+             },
+            enter: function(el,done){
+                done()
+            },
+            enterCancelled:function(el){
+
+            },
+            beforeLeave:function (el) {
+
+            },
+            leave:function (el,done) {
+                done();
+            },
+            afterLeave:function (el) {
+
+            },
+            leaveCancelled:function(el){
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

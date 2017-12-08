@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>124-vue起步可以管理可复用元素</title>
+    <style>
+        /*template {*/
+            /*display: none;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <template v-if="loginType === 'username'">
+        <label>用户名：</label>
+        <input placeholder="请输入用户名" key="username-input">
+    </template>
+    <template v-else >
+        <label>邮件地址：</label>
+        <input placeholder="请输入邮件地址" key="email-input">
+    </template>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            loginType: 'email'
+        }
+    });
+</script>
+</body>
+</html>

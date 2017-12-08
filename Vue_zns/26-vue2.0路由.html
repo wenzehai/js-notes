@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-vue2.0路由</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .linkCon {
+            text-align: center;
+        }
+        .link {
+            display: inline-block;
+            width: 100px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: #f5f5f5;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -user-select: none;
+            color: #333333;
+            text-decoration: none;
+        }
+        .link:hover {
+            background: #d4d4d4;
+        }
+        .homeCon {
+            width:  400px;
+            height: 600px;
+            background: pink;
+        }
+        .newsCon {
+            width:  400px;
+            height: 600px;
+            background: lightblue;
+        }
+        .router-link-active {
+            border-bottom: 2px solid #333333;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="linkCon">
+        <router-link class="link" to="/home">主页</router-link>
+        <router-link class="link" to="/news">新闻</router-link>
+    </div>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script>
+    //1.准备模块
+    const Home = {
+        template:`
+            <div class="homeCon">
+                <h3>主页标题</h3>
+                <p>According to the W3C, the "User agent's default style sheet may override this value. For example, user agents typically do not allow selection of the contents of a BUTTON element. [2] As the -moz-user-select was designed to mimic the user-select property, the same applies.</p>
+            </div>
+        `
+    };
+
+    const News = {
+        template:`
+            <div class="newsCon">
+                <h3>新闻标题</h3>
+                <p>《2017年中国移动应用安全服务行业白皮书》主要是主要围绕移动应用安全服务行业所处的发展环境、现阶段的安全防护手段、产业链及市场集中度等方面描述了移动应用安全服务行业的现状及市场特征，并分析了典型企业的业务布局及核心技术，为业内其他玩家的发展规划提供参考</p>
+            </div>
+        `
+    };
+
+
+
+    // 2.配置路由，一个数组，里面装的json路径,一般路由配置好了就不改了。
+    const routes = [
+        {path:'/home',component:Home},
+        {path:'/news',component:News},
+        {path:'*',redirect:'/home'},
+    ];
+
+    //生成路由实例
+    const router = new VueRouter({
+        routes              //相当于路径参数引入路由
+    });
+
+    //3.最后挂到vue上
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        router:router,
+        components: {
+
+        }
+
+    });
+</script>
+</body>
+</html>

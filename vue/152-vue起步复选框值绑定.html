@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>152-vue起步复选框值绑定</title>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" v-model="toggle" v-bind:true-value="n" v-bind:false-value="z">
+    <br>
+    <span>{{toggle}}</span>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            toggle: true,
+            n:'nice',
+            z:'cool'
+        }
+    });
+    console.log(vm.n);
+</script>
+</body>
+</html>

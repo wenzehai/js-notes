@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21-vue父子组件</title>
+</head>
+<body>
+<div id="app">
+    <aaa>
+    </aaa>
+</div>
+<template id="temp1">
+    <div>
+        <!--只要在这模板里面，就能拿到msg这个数据-->
+        <h2>我是aaa组件->{{msg}}</h2>
+        <bbb :m="msg" :my-msg="myData"></bbb>            <!--通过v-bind:m='msg'来绑定数据到子组件里面,相当于给bbb组件定义了一个属性m，这个属性通过v-bind拿到aaa的数据,子组件里面需要定义props属性来声明这个属性-->
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            a: 'aaa'
+        },
+        components:{
+            'aaa':{
+                data:function () {
+                    return {
+                        myData: 'hello',
+                        msg: '我是aaa的数据'
+                    }
+                },
+                template:'#temp1',
+                components:{
+                    'bbb':{
+                        props:['m','my-msg'],
+                        template:'<div><h2>我是bbb组件->{{m}}->{{myMsg}}</h2></div>'        /*注意：里面的myMsg需要用驼峰写法*/
+                    }
+                }
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

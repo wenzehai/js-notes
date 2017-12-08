@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-vue循环重复</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" @click="add" value="添加">
+    <ul v-for="(val,index) in arr" track-by="index">
+        <li>{{val}}</li>
+    </ul>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            arr: ['apple','pear','orange']
+        },
+        methods: {
+            add: function () {
+                this.arr.push('tomato');
+            }
+        }
+    });
+</script>
+</body>
+</html>

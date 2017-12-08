@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>120-vue起步绑定内联样式2</title>
+</head>
+<body>
+<div id="app">
+    <p :style="styleObject">{{message}}</p>
+</div>
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            styleObject: {
+                color: 'blue',
+                fontSize: '60px'        //注意这是一个对象，所以font-size需要写成fontSize或者‘font-size’，而且值还的是字符串，带单位。
+            },
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

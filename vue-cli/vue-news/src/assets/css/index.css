@@ -1,0 +1,86 @@
+
+/*导航部分*/
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #d4d4d4;
+  background: #FFFFFF;
+  z-index: 10;
+}
+.nav ul {
+ width: 100%;
+  text-align: center;
+
+}
+.nav ul li {
+  display: inline-block;
+  width: 20%;
+  line-height:50px;
+}
+.nav ul li.active{
+  border-bottom: 4px solid #0b5b97;
+}
+.nav ul li a {
+  font-size:1.125em;
+  text-decoration: none;
+  color: #333333;
+}
+
+
+/*主体部分*/
+/*轮播部分*/
+.slide {
+  width: 100%;
+  margin-top:55px;
+}
+.slide img {
+  width: 100%;
+}
+/*新闻列表*/
+.newsList {
+  width: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+.newsList li {
+  width: auto;
+  margin: 1.5em;
+}
+.newsList li h2 {
+  font-weight:bold;
+  font-size:1.125em;
+  margin-bottom: 0.5em;
+}
+.newsList li p {
+  font-size:0.875em;
+  text-indent: 2em;
+}
+
+
+
+/*底部标签*/
+.foot-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #d4d4d4;
+  background: #FFFFFF;
+  z-index: 11;
+}
+.foot-btn ul {
+  width: 100%;
+  text-align: center;
+
+}
+.foot-btn ul li {
+  display: inline-block;
+  width: 25%;
+  line-height:60px;
+}
+.foot-btn ul li.active a {
+  font-weight: bold;
+  color: #0b5b97;
+}
