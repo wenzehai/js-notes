@@ -15,6 +15,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  mode:'history',
   template: '<app></app>',
   components: { App }
 })

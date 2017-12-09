@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+<template id="parent">
+    <!--在模板中的任意位置均可调用父组件的数据，但是如果想要子组件也能获取
+    到父组件的数据，需要用到数据绑定-->
+    <div>
+        <h2>我是aaa{{msg}}组件</h2>
+        <child :m="msg" :n="hello"></child>            <!--绑定完之后，child组件里面能取到的就是m
+        如果要传递多个数据，就需要多个绑定-->
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //vue默认情况下，子组件也没法访问父组件数据
+    
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        components:{
+            'my-aaa':{
+                data(){
+                    return {
+                        hello:'hello world',
+                        msg:'我是父组件的一条消息'
+                    }
+                },
+                template:'#parent',
+                components:{
+                    'child':{
+                        //父组件绑定过来的数据，需要通过props来接收
+//                        props:{         //格式是json格式
+//                            'm': String
+//                        },
+                        props:['m','n'],        //第二种格式写法
+                        template:'<h3>我是aaa的子组件，需要放到父级的模板中才能调用{{m}}{{n}}</h3>'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

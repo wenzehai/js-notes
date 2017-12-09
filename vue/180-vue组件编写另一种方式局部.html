@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //局部组件
+
+
+    let vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        },
+        components: {
+            'my-aaa':{
+                data() {
+                    return {
+                        message: 'hello   45465456 vue!'
+                    }
+                },
+                template:'<h2>{{message}}</h2>'
+            }
+        }
+    });
+</script>
+</body>
+</html>

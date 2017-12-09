@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+
+<template id="temp1">
+    <div>
+        <h2>{{message}}</h2>
+        <p>this is a paragraph</p>
+        <p>this is a paragraph</p>
+        <p>this is a paragraph</p>
+        <p>this is a paragraph</p>
+        <p>this is a paragraph</p>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //局部组件
+
+
+    let vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        },
+        components: {
+            'my-aaa':{
+                data() {
+                    return {
+                        message: 'hello   45465456 vue!'
+                    }
+                },
+                template:'#temp1'
+            }
+        }
+    });
+</script>
+</body>
+</html>

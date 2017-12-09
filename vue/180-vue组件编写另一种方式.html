@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //局部组件
+    Vue.component('my-aaa', {
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        },
+        methods: {
+            pop() {
+                //注意：这里面如果要调用data里面的数据，需要加this。如果调用
+                //的是自己定义的数据，则不用
+                let message = 'nihao wenzehai';
+                alert(message);
+            }
+        },
+        template: '<h3 @click="pop">{{message}}</h3>'
+    });
+
+    let vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        }
+    });
+</script>
+</body>
+</html>

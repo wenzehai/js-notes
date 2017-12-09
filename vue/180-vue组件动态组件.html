@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="aaaa组件" @click="changedaaaa">
+    <input type="button" value="bbbb组件" @click="changedbbbb">
+    <!--动态组件的固定标签component-->
+    <component :is="a"></component>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //局部组件
+
+
+    let vm = new Vue({
+        el: '#app',
+        data(){
+            return {
+                a:''
+            }
+        },
+        components:{
+            'aaaa':{
+                template:'<h3>我是aaaa组件标题</h3>'
+            },
+            'bbbb': {
+                template: '<h3>我是bbbb组件标题</h3>'
+            },
+        },
+        methods:{
+            changedaaaa(){
+                this.a = 'aaaa'
+            },
+            changedbbbb() {
+                this.a = 'bbbb'
+            },
+        }
+    });
+</script>
+</body>
+</html>

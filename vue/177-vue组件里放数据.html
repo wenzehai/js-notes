@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <aaa></aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //全局组件
+    //组件里放数据时，data必须是函数，而且返回的必须是一个对象。每个组件里的数据都需要放到他自己的data项里面
+    Vue.component('aaa',{
+        data(){
+            return {
+                message: 'hello vue!'
+            }
+        },
+        template:'<h3>{{message}}</h3>'
+    });
+
+    let vm = new Vue({
+        el:'#app',
+        data(){
+           return {
+               message: 'hello vue!'
+           }
+        }
+    });
+</script>
+</body>
+</html>

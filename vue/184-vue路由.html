@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li><router-link to="/home">主页</router-link></li>
+        <li><router-link to="/news">新闻</router-link></li>
+    </ul>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script>
+    //1.准备一个根组件
+    let App = Vue.extend();
+
+    //2.Home news组件都准备
+    let Home = Vue.component('home',{
+        template:'<h3>我是home组件</h3>'
+    });
+    let News = Vue.component('news', {
+        template: '<h3>我是news组件</h3>'
+    });
+
+    //3、准备路由并配置路径            Home,News,VueRouter都是一个类，都是首字母大写
+    let router = new VueRouter({
+        routes: [
+            {
+                path:'/home',
+                component:Home,
+
+            },
+            {
+                path:'/news',
+                component:News
+            },
+            {
+                path:'/',
+                redirect:'/home'
+            }
+        ]
+    });           //从引入的文件中来的
+
+
+
+    //5、启动路由
+    new Vue({
+        el:'#app',
+        router,
+        data: {
+            message: 'hello vue!'
+        }
+    });
+</script>
+</body>
+</html>

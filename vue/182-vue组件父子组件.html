@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //vue默认情况下，子组件也没法访问父组件数据
+
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        components:{
+            'my-aaa':{
+                data(){
+                    return {
+                        msg:'我是父组件的一条消息'
+                    }
+                },
+                template:'<h2>我是aaa{{msg}}组件<child></child></h2>',
+                components:{
+                    'child':{
+                        template:'<h3>我是aaa的子组件，需要放到父级的模板中才能调用</h3>'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

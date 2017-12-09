@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <my-aaa></my-aaa>
+</div>
+<template id="parent">
+    <!--在模板中的任意位置均可调用父组件的数据，但是如果想要子组件也能获取
+    到父组件的数据，需要用到数据绑定-->
+    <div>
+        <span>我是父级组件{{msg}}</span>
+        <child @submsg="get"></child>            <!--此时的submsg相当于一个自定义函数，绑定后去执行一个方法，方法就是get，get这个方法就需要房子啊父组件的methods里面
+        通过绑定子组件传过来的数据，就会得到一个参数，用于返回给get方法-->
+    </div>
+</template>
+
+<template id="child">
+    <div>
+        <br>
+        <span>子组件</span><input type="button" value="get父组件数据" @click="send">
+    </div>
+
+</template>
+<script src="js/vue.js"></script>
+<script>
+    //需求：当点击按钮后，获取到子组件的数据。
+    //vue默认情况下，子组件也没法访问父组件数据
+    //vm.$emit()发射,
+    //vm.$emit(数据名称，数据),数据名称是自己定义的，数据就是data里面的数据，this.a
+
+//    父级去接收数据的方法是on，简写@
+
+    //
+    new Vue({
+        el:'#app',
+        data: {
+            message: 'hello vue!'
+        },
+        components:{
+            'my-aaa':{
+                data(){
+                    return {
+                        hello:'hello world',
+                        msg:'我是父组件的一条消息'
+                    }
+                },
+                methods:{
+                    get(msg){           //msg这个形参是自己定义，但是里面的数据是子组件emit回来的
+//                        alert(msg);
+                        this.msg=msg            //用传过来的数据改变父组件的数据
+                    }
+                },
+                template:'#parent',
+                components:{
+                    'child':{
+                        //父组件绑定过来的数据，需要通过props来接收
+//                        props:{         //格式是json格式
+//                            'm': String
+//                        },
+                        data(){
+                            return {
+                                childmsg: '我是子组件的数据'
+                            }
+                        },
+                        methods:{
+                            //父组件想要获取子组件的数据，等价于子组件发送自己的数据到父级
+                            send () {
+                                this.$emit('submsg',this.childmsg)
+                            }
+                        },
+                        props:['m','n'],        //第二种格式写法
+                        template:'#child'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <aaa></aaa>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script>
+    //全局组件
+    //组件里放数据时，data必须是函数，而且返回的必须是一个对象。每个组件里的数据都需要放到他自己的data项里面
+    //组件里可以添加事件，事件也必须放在该组件的methods项里
+    Vue.component('aaa', {
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        },
+        methods: {
+            pop() {
+                //注意：这里面如果要调用data里面的数据，需要加this。如果调用
+                //的是自己定义的数据，则不用
+                let message = 'nihao wenzehai';
+                alert(message);
+            }
+        },
+        template: '<h3 @click="pop">{{message}}</h3>'
+    });
+
+    let vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                message: 'hello vue!'
+            }
+        }
+    });
+</script>
+</body>
+</html>
