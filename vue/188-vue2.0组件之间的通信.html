@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>188-vue2.0组件之间的通信</title>
+</head>
+<body>
+<div id="app">
+    父级-》 {{giveData.a}}
+    <br>
+    <child-com :msg="giveData"></child-com>
+</div>
+<template id="child">
+    <div>
+        <span>我是子组件</span>
+        <input type="button" value="按钮" @click="change">
+        <strong>{{msg.a}}</strong>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return {
+                giveData: {
+                    a: '我是父组件的数据，是一个对象'
+                }
+            }
+        },
+        components:{
+            'child-com':{
+                props:['msg'],
+                template:'#child',
+                methods:{
+                    change(){
+                        this.msg.a='被更改了'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

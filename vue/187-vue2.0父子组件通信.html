@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <child-com :a="msg1"></child-com>
+</div>
+<template id="child">
+    <div>
+        <h3>我是子组卷</h3>
+        <p>{{a}}</p>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //子组件拿父组件的数据
+    new Vue({
+        el:'#app',
+        data: {
+            msg1: '我是父组件的数据'
+        },
+        components:{
+            'child-com':{
+                props:['a'],
+                template:'#child'
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>189-vue单一事件中心管理组件通信</title>
+</head>
+<body>
+<!--三个组件之间通信-->
+<div id="app">
+    <com-a></com-a>
+    <com-b></com-b>
+    <com-c></com-c>
+</div>
+<template id="temp1">
+    <div>
+        <span>我是a组件</span>----》{{a}}
+        <input type="button" value="吧A数据给C" @click="send">
+    </div>
+</template>
+<template id="temp2">
+    <div>
+        <span>我是b组件</span>----》{{a}}
+        <input type="button" value="把B数据给C" @click="send">
+    </div>
+</template>
+<template id="temp3">
+    <div>
+        <span>我是c组件</span>
+        <!--<input type="button" value="吧A数据给C">-->
+
+        <p>{{a}}</p>
+        <p>{{b}}</p>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    //准备一个空的实例对象,一定要是全局的
+    var Event = new Vue();
+
+
+
+
+
+    var A = {
+        template: '#temp1',
+        data() {
+            return {
+                a: '我是A的数据'
+            }
+        },
+        methods:{
+            send(){
+                Event.$emit('a-msg',this.a);
+            }
+        }
+    };
+    var B = {
+        template: '#temp2',
+        data() {
+            return {
+                a: '我是B的数据'
+            }
+        },
+        methods:{
+            send(){
+                Event.$emit('b-msg',this.a);
+            }
+        }
+    };
+    var C = {
+        data(){
+            return{
+                a:'11111',
+                b:'22222'
+            }
+        },
+        template: '#temp3',
+        mounted(){
+        //这是第一种改变this的方法
+            //alert('c组件加载完毕')
+            //通过event来拿数据
+            /*var that = this;
+            Event.$on('a-msg',function(a){
+                //alert(a);           //此时的a就是A组件emit传出来的数据
+                that.a =a ;
+            });*/
+
+        //第二种绑定函数的方法，通过bind（this）绑定给函数
+            Event.$on('a-msg',function(a){
+                //alert(a);           //此时的a就是A组件emit传出来的数据
+                this.a =a ;
+            }.bind(this));
+            Event.$on('b-msg',function(a){
+                //alert(a);           //此时的a就是A组件emit传出来的数据
+                this.b =a ;
+            }.bind(this));
+        }
+    };
+
+
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'hello vue!'
+        },
+        components: {
+            'com-a': A,
+            'com-b': B,
+            'com-c': C
+        }
+    });
+</script>
+
+</body>
+</html>

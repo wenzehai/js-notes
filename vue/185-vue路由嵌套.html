@@ -41,16 +41,16 @@
     let App = Vue.extend();
 
     //2.Home news组件都准备
-    let Home = Vue.component('home',{
+    let Home = Vue.extend({
         template:'#home'
     });
-    let News = Vue.component('news', {
+    let News = Vue.extend( {
         template: '#news'
     });
-    let Login = Vue.component('login',{
+    let Login = Vue.extend({
         template:'#login'
     });
-    let Reg = Vue.component('reg', {
+    let Reg = Vue.extend({
         template: '#reg'
     });
 

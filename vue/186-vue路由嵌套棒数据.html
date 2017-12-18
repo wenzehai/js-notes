@@ -20,13 +20,19 @@
     <!--只要在模板里面显示组件，就需要router-view-->
     <div>
         <h3>我是home组件</h3>
-        <router-link to="/login">登录</router-link>
-        <router-link to="/reg">注册</router-link>
+        <router-link to="/home/login">登录</router-link>
+        <router-link to="/home/reg">注册</router-link>
         <router-view></router-view>
     </div>
 </template>
 <template id="news">
-    <h3>我是news组件</h3>
+    <div>
+        <h3>我是news组件</h3>
+        <router-link to="/news/detail/001">新闻001</router-link>
+        <router-link to="/news/detail/002">新闻002</router-link>
+        <router-view></router-view>
+    </div>
+
 </template>
 <template id="login">
     <h5>我是login</h5>
@@ -34,24 +40,57 @@
 <template id="reg">
     <h5>我是reg</h5>
 </template>
+<template id="detail">
+    <div>
+        <h5>我是detail模板</h5>
+        <!--//$route里面有参数，可以调用路径里数据-->
+        <!--比方说有一个路径/detail/:id/age/:age,通过$route.params可以读取路径中的信息，也可通过赋值id找到生成对应的地址
+        找到对应的数据-->
+        <p>路径信息{{$route.params}}</p>            <!--当前所有参数-->
+        <!--<p>哪个路由{{$route.name}}</p>                  &lt;!&ndash;路由名称&ndash;&gt;-->
+        <p>路径信息{{$route.path}}</p>                      <!--当前路径-->
+        <p>路径参数{{$route.query}}</p>                      <!--路径参数。通过咋地址栏中输入?a=1&b=2可以得到{ "a": "1", "b": "2" }-->
+    </div>
+
+</template>
 <script src="js/vue.js"></script>
 <script src="js/vue-router.js"></script>
 <script>
+
+    //需求：需要拿到路由的一些信息
+
     //1.准备一个根组件
     let App = Vue.extend();
 
     //2.Home news组件都准备
-    let Home = Vue.component('home',{
+    let Home = Vue.extend({
         template:'#home'
     });
-    let News = Vue.component('news', {
+    let News = Vue.extend({
         template: '#news'
     });
-    let Login = Vue.component('login',{
+    let Login = Vue.extend({
         template:'#login'
     });
-    let Reg = Vue.component('reg', {
+    let Reg = Vue.extend({
         template: '#reg'
+    });
+    let Detail = Vue.extend({
+        data(){
+            return {
+                path:'a'
+            }
+        },
+        mounted() {
+            this.change()
+        },
+        methods:{
+          change(){
+              var that = this;
+              this.a = that.$route.params.id
+          }
+        },
+        template: '#detail'
     });
 
 
@@ -64,22 +103,24 @@
                 component:Home,
                 children:[
                     {
-                        path:'/login',
+                        path:'/home/login',
                         component:Login
                     },
                     {
-                        path:'/reg',
+                        path:'/home/reg',
                         component:Reg
                     }
                 ]
             },
             {
                 path:'/news',
-                component:News
-            },
-            {
-                path:'/',
-                redirect:'/home'
+                component:News,
+                children:[
+                    {
+                        path:'/news/detail/:id',
+                        component: Detail
+                    }
+                ]
             }
         ]
     });           //从引入的文件中来的
