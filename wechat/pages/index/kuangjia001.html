@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<view>hello {{name}}</view>
+<button bindtap="changeName">click me</button>
+
+
+<script>
+var helloDate = {
+    name:'wechat'
+}
+//生成一个页面
+    Page({
+        data:helloDate,
+        changeName:function(e){
+         //sent data change to view
+            this.setData({
+                name:'Mina'
+            });
+        }
+    });
+</script>
+</body>
+</html>

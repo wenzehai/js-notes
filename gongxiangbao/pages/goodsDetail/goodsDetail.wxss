@@ -1,0 +1,78 @@
+button {
+  margin: 20rpx 0;
+}
+
+
+.swiper {
+  height: 750rpx;
+}
+
+.goodsTitle {
+  display: block;
+  font-size: 16px;
+  padding-top: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 30rpx;
+}
+
+.goodsDetail {
+  display: block;
+  font-size: 16px;
+  line-height: 92rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 0 30rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.colorLabel {
+  margin: 0 0 0 30rpx;
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.goodsColor {
+  /* display: block; */
+  font-size: 14px;
+  line-height: 92rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 0 30rpx;
+  /* background: red; */
+}
+.goodsDetails {
+  margin-top: 20rpx;
+}
+.detail_hd {
+  text-align: center;
+  font-size: 14px;
+  color: #09bb07;
+  border-top: 20rpx solid #efeff4;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 80rpx;
+}
+.bottom {
+  background: #fff;
+  height: 128rpx;
+  border-top: 1px solid #eeeeee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+}
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+

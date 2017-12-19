@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 轮播部分 -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{url}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item ">
+            <image src="{{item}}" style="width: 750rpx; height: 750rpx;"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 商品标题名称 -->
+  <view class="titleCon">
+    <text class="goodsTitle">{{title}}</text>
+    <text class="goodsDetail">￥{{price}}</text>
+    <text class="colorLabel">颜色</text>
+    <text class="goodsColor">{{color}}</text>
+  </view>
+
+  <!-- 商品详情部分 -->
+  <view class="goodsDetails">
+    <view class="detail_hd">
+      商品详情
+    </view>
+    <view class="detail_bd" wx:for="{{url}}">
+      <image src="{{item}}" style="width: 750rpx; height: 750rpx;"></image>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom">
+    <button type="default" style="width: 320rpx;"> 加入购物车 </button>
+    <button type="primary" style="width: 320rpx;"> 立即购买 </button>
+  </view>
+
+</view>

@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="addressBox">
+    <text class="title">{{addressInfo.name}}{{addressInfo.tel}}</text>
+    <text class="address">{{addressInfo.address}}</text>
+    <button class="arrowBtn"></button>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="list">
+    <view class="list-box">
+        <image class="list-box-img" src="../../image/goods.png" style="width: 200rpx;height: 200rpx;"></image>
+        <view class="list-box-ctn">
+          <view class="list-box-title">{{title}}</view>
+          <view class="list-box-desc">{{color}}</view>
+            <view class="list-box-subCtn">
+                 <view class="list-box-price">￥{{price}}</view>
+                 <view class="list-box-num">X{{num}}</view>
+             </view>
+        </view>
+      </view>
+  </view>
+  <!-- 订单其他 -->
+   <view class="otherList">
+      <view class="oneList">
+        <view class="listLabel">全场包邮</view>
+        <view class="listCon">￥0.00</view>
+      </view>
+   </view>
+
+</view>

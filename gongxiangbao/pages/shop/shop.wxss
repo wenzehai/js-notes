@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listCon {
+  width: 374rpx;
+  text-align: center;
+  padding: 20px 0;
+  background: #fafafa;
+  margin-top: 2px;
+}
+
+.goodsPic {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.goodsTitle {
+  margin: 0 10rpx;
+  font-size: 14px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goodsPrice {
+  font-size: 14px;
+}

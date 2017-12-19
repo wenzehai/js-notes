@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<view>hello {{name}}</view>
+<button bindtap="changeName">click me</button>
+
+
+<script>
+App({
+    onLaunch:function(options){
+        //初始化代码
+    },
+    onShow: function (options) {
+        //页面出现时需要执行的代码
+    },
+    onHide: function () {
+        //页面隐藏时需要执行的代码
+    },
+    onError: function (msg) {
+        console.log(msg);
+    },
+    globalData: 'I am global data'
+
+
+
+
+
+});
+//getApp()
+var appInstance = getApp()
+console.log(appInstance.globalData)
+
+
+    //注册页面
+    Page({
+        data:{
+            text: 'this is page data'
+        },
+        onLoad: function(options){
+            //页面加载时执行函数
+        },
+        onReady: function(){
+            //页面加载完毕时执行的函数
+        },
+        onShow: function () {
+            //页面出现时执行函数
+        },
+        onHide: function () {
+            //页面隐藏时执行函数
+        },
+        onUnload: function () {
+            //页面关闭时执行函数
+        },
+        onPullDownRefresh: function () {
+            //页面下拉时执行
+        },
+        onReachBottom: function () {
+            //页面到达底部是执行函数
+        },
+        onShareAppMessage: function () {
+            //用户分享时执行函数
+            return {
+                title: '自定义转发标题',
+                path: '/page/user?id=123'
+            }
+        },
+        onPageScroll: function () {
+            //页面滚动时执行函数
+        },
+        //事件调用
+        viewTap: function(){
+            this.setData({
+                text: 'Set some data for updating view.'
+            },function () {
+                //this.setData的回调函数
+            })
+        },
+        customData: {
+            hi: 'MINA'
+        }
+    })
+
+</script>
+</body>
+</html>
