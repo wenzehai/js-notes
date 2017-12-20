@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h3>例子</h3>
+		<p title="选择你最喜欢的水果">你最喜欢的水果是?</p>
+		<ul>
+			<li>苹果</li>
+			<li>橘子</li>
+			<li>菠萝</li>
+		</ul>
+		
+		
+		<script>
+			//jquery与DOM对象的相互转化
+			var $h3 = $("h3");				//jquery对象
+			var h3 = $h3[0];				//通过index来转化
+			var h3 = $h3.get(0);			//通过jquery中自带的get(index)方法来转化；
+			
+		</script>
+	</body>
+</html>

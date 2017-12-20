@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--检测是否勾选了用户协议-->
+		<input type="checkbox" id="cr"><label for="cr">我已阅读了上面制度</label></input>
+		<input type="button" value="提交" id="btn" />
+		<script type="text/javascript">
+			//通过DOM的操作方式来检测是否选中
+			/*
+			$(function(){
+				var $cr = $("#cr");
+				var cr = $cr[0];
+				var $btn = $("#btn");
+				
+				$btn.click(function(){
+					if(cr.checked){										//条件判断是否选中
+						alert("感谢你的支持，你可以继续下面的步骤！");
+					} else {
+						alert("请先勾选复选框！");
+						
+					}
+				});
+			});
+			*/
+			
+			//通过jquery的方式来检测是否选中
+			$(function(){
+				var $cr = $("#cr");
+				var $btn = $("#btn");
+				$btn.click(function(){
+					if($cr.is(":checked")) {							//jquery中的is方法。is() 根据选择器、元素或 jQuery 对象来检测匹配元素集合，如果这些元素中至少有一个元素匹配给定的参数，则返回 true。
+																		//语法：.is(selector)。参数selector,字符串值，包含匹配元素的选择器表达式，引号引起来。
+						alert("感谢你的支持，你可以继续下面的步骤！");
+					} else {
+						alert("请先勾选复选框！");
+					}
+				});
+			
+			});
+			
+		</script>
+	</body>
+</html>

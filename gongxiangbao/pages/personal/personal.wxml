@@ -11,11 +11,14 @@
     哈利油
   </view>
   <view class="menuCon">
-    <view class="menu">
-      <image class="menuIcon" src="../../image/icon_wallet.png" />
-      <text>我的钱包</text>
-      <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
-    </view>
+    <navigator url="/pages/wallet/wallet">
+      <view class="menu">
+        <image class="menuIcon" src="../../image/icon_wallet.png" />
+        <text>我的钱包</text>
+        <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
+      </view>
+    </navigator>
+
     <view class="menu">
       <image class="menuIcon" src="../../image/icon_bills.png" />
       <text>我的订单</text>

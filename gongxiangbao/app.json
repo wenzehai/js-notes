@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/personal/personal",
     "pages/editAddress/editAddress",
     "pages/addressList/addressList",
     "pages/tradingDetails/tradingDetails",
     "pages/charge/charge",
     "pages/wallet/wallet",
-    "pages/personal/personal",
+    
     "pages/shoppingcart/shoppingcart",
     "pages/order/order",
     "pages/goodsDetail/goodsDetail",

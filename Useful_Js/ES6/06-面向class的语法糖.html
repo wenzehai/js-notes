@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>06-class的基本运用0</title>
+</head>
+<body>
+<script>
+    //1、构造函数
+   /* function Person(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype = {
+        constructor: Person,
+        print(){
+        console.log('my name is' + this.name + ',I am ' + this.age + 'years old.');
+        }
+    };*/
+
+
+
+
+
+    //2.通过class面向对象
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        print(){
+            console.log('my name is' + this.name + ',I am ' + this.age + 'years old.');
+        }
+
+    }
+
+    let person = new Person('zhangsan',19);
+    console.log(person);
+
+    person.print();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<!--jquery与其他js库冲突的解决办法-->
+		
+		<p id="pp">test-prototype(将被隐藏)</p>
+		<p>test-jquery(将被绑定单击事件)</p>
+		<!--引入prototype-->
+		<script src="https://cdn.bootcss.com/prototype/1.7.3/prototype.min.js"></script>
+		
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script>
+			/*jQuery.noConflict();			//将变量$的控制权移交给prototype.js
+			jQuery(function(){
+				//使用jquery
+				jQuery("p").click(function(){
+					alert(jQuery(this).text());
+				})
+			});
+			$("pp").style.background = "red";			//使用prototype隐藏元素
+			*/
+			
+			
+			//自定义一个快捷方式来使用jquery
+			/*var $j = jQuery.noConflict();			//将变量$的控制权移交给prototype.js
+			
+			$j(function(){
+				//使用jquery
+				$j("p").click(function(){
+					alert($j(this).text());
+				})
+			});
+			$("pp").style.background = "red";			//使用prototype隐藏元素
+			*/
+			
+			
+			//在其他库之前引入jquery，也可以直接使用“jquery”，而把$移交给其他库，不需要引入noconflict();
+			
+			
+			
+			//不把$移交出去的方法
+			//方法一
+			jQuery.noConflict();				//将变量的$控制权移交给prototype
+			jQuery(function($){					//使用jquery设定页面加载时执行的函数。注意是function($)
+				$("p").click(function(){
+					alert($(this).text());		//内部函数任然可以直接用$调用jquery
+				})
+				
+			});
+			$("pp").style.background = "red";			//使用prototype隐藏元素
+			
+			//方法二
+			jQuery.noConflict();
+			(function($){								//定义匿名函数，并设置形参为$
+				$(function(){							//匿名函数内部的$均为jquery
+					$("p").click(function(){
+					alert($(this).text());				//内部函数任然可以直接用$调用jquery
+				})
+				});
+			});
+			
+			
+		</script>
+	</body>
+</html>
