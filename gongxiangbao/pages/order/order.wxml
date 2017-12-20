@@ -16,6 +16,7 @@
                  <view class="list-box-price">￥{{price}}</view>
                  <view class="list-box-num">X{{num}}</view>
              </view>
+                      
         </view>
       </view>
   </view>
@@ -25,6 +26,30 @@
         <view class="listLabel">全场包邮</view>
         <view class="listCon">￥0.00</view>
       </view>
+      <view class="twoList">
+        <view class="listLabel">快递方式</view>
+        <view class="expressCon">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="twoList">
+        <view class="listLabel">买家留言</view>
+        <view class="messageCon">
+          <input class="message" placeholder="选填：留言40字以内"/>
+        </view>
+      </view>
+      <view class="lastList">
+        <view class="totalPriceCon">￥{{price*num}}</view>
+      </view>
    </view>
+
+   <!-- 底部按钮 -->
+  <view class="bottom">
+      <button class="submitBtn" type="warn" style="width: 690rpx;"> 加入购物车 </button>
+  </view>
 
 </view>

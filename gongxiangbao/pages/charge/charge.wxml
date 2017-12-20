@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="title">
+    请选择充值金额
+  </view>
+  <view class="moneyOptions">
+      <radio-group class="radio-group">
+          <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </radio-group>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class="bottom">
+  <button class="submitBtn" type="primary" style="width: 690rpx;"> 充值 </button>
+</view>

@@ -12,9 +12,15 @@ Page({
       title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
       price: 39.00,
       color:'晴空蓝',
-      num:1
+      num:2,
+      items: [
+        {name: 'USA', value: '美国', checked: 'true'},
+        {name: 'CHN', value: '中国'}
+      ]
   },
-
+  radioChange: function(e) {
+    console.log('radio发生change事件，携带value值为：', e.detail.value)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

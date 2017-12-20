@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="person">
+    <view class="title">收货人信息</view>
+    <label class="radio">收货人
+        <input placeholder="填写姓名"/>
+    </label>
+  </view>
+  <view class="address">
+
+  </view>
+</view>

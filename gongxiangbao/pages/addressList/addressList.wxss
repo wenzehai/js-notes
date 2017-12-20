@@ -1,0 +1,37 @@
+.container {
+}
+
+.list {
+  position: relative;
+  height: 112rpx;
+  /* border-bottom: 1px solid #d4d4d4; */
+}
+.optionBox {
+  float: left;
+  margin: 30rpx ;
+
+
+}
+.name {
+  font-size: 16px;
+  line-height:  60rpx;
+}
+.address {
+  font-size: 14px;
+}
+
+.right {
+  float: right;
+  margin-right: 30rpx;
+  color: #ffbe00;
+  font-size: 16px;
+  line-height: 112rpx;
+}
+
+
+
+
+
+
+
+

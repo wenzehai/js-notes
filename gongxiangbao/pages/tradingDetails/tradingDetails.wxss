@@ -1,0 +1,37 @@
+.container {
+}
+
+.list {
+  position: relative;
+  height: 112rpx;
+  /* border-bottom: 1px solid #d4d4d4; */
+}
+.left {
+  float: left;
+  margin-left: 30rpx;
+
+}
+.title {
+  font-size: 16px;
+  line-height:  60rpx;
+}
+.des {
+  font-size: 12px;
+  color: #d4d4d4;
+}
+
+.right {
+  float: right;
+  margin-right: 30rpx;
+  color: #ffbe00;
+  font-size: 16px;
+  line-height: 112rpx;
+}
+
+
+
+
+
+
+
+

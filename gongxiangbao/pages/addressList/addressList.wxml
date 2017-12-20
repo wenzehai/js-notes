@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="list">
+    <view class="optionBox">
+        <radio checked="true" />
+    </view>
+    <view class="msgCon">
+      <view class="name">哈利油 15080755770</view>
+      <view class="address">麓谷新长海中心B1栋501室</view>
+    </view>
+  </view>
+</view>

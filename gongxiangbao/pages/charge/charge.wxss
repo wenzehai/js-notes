@@ -1,0 +1,56 @@
+.container {
+  padding-bottom: 200rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+}
+.title {
+  font-size: 12px;
+  margin: 30rpx 0;
+}
+.moneyOptions {
+  width: 650rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+.radio {
+  width: 200rpx;
+  /* display: block; */
+}
+.bottom {
+  background: #fff;
+  height: 128rpx;
+  border-top: 1px solid #eeeeee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+}
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+.submitBtn {
+  margin: 20rpx 20rpx;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

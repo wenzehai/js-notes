@@ -1,9 +1,8 @@
 <template>
-<div id="ap">
-    
-    
-    
-
+<div>
+    <datagrid>
+        d
+    </datagrid>
 </div>
 </template>
 
