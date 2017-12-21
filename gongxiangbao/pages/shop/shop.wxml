@@ -1,9 +1,11 @@
 <view class="container">
   <view class="listCon" wx:for="{{goodsArray}}">
-    <view class="iamgeCon">
-      <image src="{{item.url}}" mode="scaleToFill" class="goodsPic" style="width:372rpx; height:372rpx;"></image>
-    </view>
-     <text class="goodsTitle">{{item.title}}</text>
-    <text class="goodsPrice">￥{{item.price}}</text> 
+    <navigator url="/pages/goodsDetail/goodsDetail">
+      <view class="iamgeCon">
+        <image src="{{item.url}}" mode="scaleToFill" class="goodsPic" style="width:372rpx; height:372rpx;"></image>
+      </view>
+      <text class="goodsTitle">{{item.title}}</text>
+      <text class="goodsPrice">￥{{item.price}}</text>
+    </navigator>
   </view>
 </view>

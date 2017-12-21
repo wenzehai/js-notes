@@ -4,18 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addressInfo: {
-      name: '哈利油',
-      tel: 15080755770,
-      address: "岳麓区麓谷新长海中心B1栋501室"
-    },
-    items: [
-      {name: 'USA', value: '5元'},
-      {name: 'CHN', value: '10元', checked: 'true'},
-      {name: 'BRA', value: '15元'},
-      {name: 'JPN', value: '20元'},
-      {name: 'ENG', value: '50元'},
-      {name: 'TUR', value: '100元'},
-    ]
+    region: ['北京市', '北京市', '海淀区'],
+    customItem: '不限',
+    focus: false
+  },  
+  bindRegionChange: function (e) {
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  bindTextAreaBlur: function(e) {
+    // console.log(e.detail.value)
   }
 })

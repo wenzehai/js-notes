@@ -30,10 +30,13 @@
     </view>
   </view>
 
-  <!-- 底部按钮 -->
+  <!-- 底部按钮 -->           
   <view class="bottom">
+    
     <button type="default" style="width: 320rpx;"> 加入购物车 </button>
+    <navigator url="/pages/order/order">
     <button type="primary" style="width: 320rpx;"> 立即购买 </button>
+  </navigator>
   </view>
 
 </view>

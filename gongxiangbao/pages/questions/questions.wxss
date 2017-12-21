@@ -1,0 +1,19 @@
+.container {
+}
+
+.list {
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 0 0 30rpx;
+    padding-bottom: 20rpx;
+}
+.title {
+    font-size: 17px;
+    margin: 30rpx 0 20rpx 0;
+}
+.answer {
+    font-size: 13px;
+    color: #a9a9a9;
+    line-height: 16px;
+}
+
+

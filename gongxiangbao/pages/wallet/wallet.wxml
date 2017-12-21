@@ -14,8 +14,10 @@
     <button class="btn">充值</button>
   </view>
   <view class="tradingList">
-    <view class="tradingText">交易明细</view>
-    <image class="arrowIcon" style="display:block; width: 36rpx; height: 36rpx;" src="../../image/icon_arrowRight.png"></image>
+    <navigator url="/pages/addressList/addressList">
+      <view class="tradingText">交易明细</view>
+      <image class="arrowIcon" style="display:block; width: 36rpx; height: 36rpx;" src="../../image/icon_arrowRight.png"></image>
+    </navigator>
   </view>
 </view>
 <!-- 底部按钮 -->

@@ -2,7 +2,10 @@
 <view class="container">
   <view class="locationInfo">
     <button class="locationBtn">麓谷新长海中心</button>
-    <button class="listBtn"></button>
+    <navigator url="/pages/nearbyShops/nearbyShops">
+        <button class="listBtn"></button>
+    </navigator>
+    
   </view>
   <view class="service">
     <button class="serviceBtn"></button>

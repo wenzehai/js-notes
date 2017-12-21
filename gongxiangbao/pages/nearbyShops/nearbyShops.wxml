@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="list">
+    <image src="../../image/goods.png" style="width: 200rpx; height: 200rpx; "></image>
+    <view class="textBox">
+      <view class="shopName">汉府饭店</view>
+      <view class="time">9:00-22:00</view>
+      <view class="location">长沙市岳麓区麓谷大道624号</view>
+      <view class="rateBox">
+        <view class="hot">人气：24</view>
+        <view class="rate">评分：5星</view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <image src="../../image/goods.png" style="width: 200rpx; height: 200rpx; "></image>
+    <view class="textBox">
+      <view class="shopName">汉府饭店</view>
+      <view class="time">9:00-22:00</view>
+      <view class="location">长沙市岳麓区麓谷大道624号</view>
+      <view class="rateBox">
+        <view class="hot">人气：24</view>
+        <view class="rate">评分：5星</view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <image src="../../image/goods.png" style="width: 200rpx; height: 200rpx; "></image>
+    <view class="textBox">
+      <view class="shopName">汉府饭店</view>
+      <view class="time">9:00-22:00</view>
+      <view class="location">长沙市岳麓区麓谷大道624号</view>
+      <view class="rateBox">
+        <view class="hot">人气：24</view>
+        <view class="rate">评分：5星</view>
+      </view>
+    </view>
+  </view>
+</view>

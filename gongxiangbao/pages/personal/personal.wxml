@@ -18,27 +18,34 @@
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
     </navigator>
-
-    <view class="menu">
-      <image class="menuIcon" src="../../image/icon_bills.png" />
-      <text>我的订单</text>
-      <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
-    </view>
-    <view class="menu">
-      <image class="menuIcon" src="../../image/icon_location.png" />
-      <text>收货地址管理</text>
-      <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
-    </view>
-    <view class="menu">
-      <image class="menuIcon" src="../../image/icon_question.png" />
-      <text>常见问题</text>
-      <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
-    </view>
-    <view class="menu">
-      <image class="menuIcon" src="../../image/icon_about.png" />
-      <text>关于我们</text>
-      <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
-    </view>
+    <navigator url="/pages/bills/bills">
+      <view class="menu">
+        <image class="menuIcon" src="../../image/icon_bills.png" />
+        <text>我的订单</text>
+        <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
+      </view>
+    </navigator>
+    <navigator url="/pages/addressList/addressList">
+      <view class="menu">
+        <image class="menuIcon" src="../../image/icon_location.png" />
+        <text>收货地址管理</text>
+        <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
+      </view>
+    </navigator>
+    <navigator url="/pages/questions/questions">
+      <view class="menu">
+        <image class="menuIcon" src="../../image/icon_question.png" />
+        <text>常见问题</text>
+        <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
+      </view>
+    </navigator>
+    <navigator url="/pages/questions/questions">
+      <view class="menu">
+        <image class="menuIcon" src="../../image/icon_about.png" />
+        <text>关于我们</text>
+        <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
+      </view>
+    </navigator>
   </view>
 
 
