@@ -1,9 +1,14 @@
-Page({
+var app = getApp();
 
-  /**
-   * 页面的初始数据
-   */
+
+Page({
   data: {
-    
+    name:"wenzehai",
+    pass:""
+  },
+  onLoad:function(options){
+    this.setData({
+      pass: app.globalData.pass
+    })
   }
 })

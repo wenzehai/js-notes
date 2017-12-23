@@ -1,6 +1,7 @@
 <view class="container">
   <view class="list">
-
+    {{name}}
+    密码是{{pass}}
     
   </view>
 </view>

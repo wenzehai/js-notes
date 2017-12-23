@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/shopDetail/shopDetail",
     "pages/index/index",
     "pages/nearbyShops/nearbyShops",
     "pages/questions/questions",
-    "pages/shopDetail/shopDetail",
+    
     "pages/billsBuy/billsBuy",
     "pages/bills/bills",
     "pages/editAddress/editAddress",
