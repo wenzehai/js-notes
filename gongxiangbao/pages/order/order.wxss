@@ -1,133 +1,138 @@
-
-
+.container {
+  background: #efeff4;
+}
 .addressBox {
   position: relative;
   background: #fff3d1;
-  padding: 0 30rpx;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAAAFCAIAAACVY/71AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOEQ2MzRENkUzOTcxMUU3QTlFNkRGM0Q2QTZEMzY0QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOEQ2MzREN0UzOTcxMUU3QTlFNkRGM0Q2QTZEMzY0QSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM4RDYzNEQ0RTM5NzExRTdBOUU2REYzRDZBNkQzNjRBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM4RDYzNEQ1RTM5NzExRTdBOUU2REYzRDZBNkQzNjRBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+xDGGiAAAAIdJREFUeNrs1sENgkAURdHPMHHt0i4kVEEjWJSZGtjahaEMaiAw2IJLI+eWMD/nZfJ1OuK/Gm619PslRWxbLc9jnkO/XXPv0viInNca47t9LcmbUCbKKKPsy5Lby8KKMspEma+M28vCWlhRJsp8ZdzewooyUUYZZSf8yri9hRVlooyyc/YRYACnU9O2LgT84QAAAABJRU5ErkJggg==);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  height: 147rpx;
+  margin-bottom: 20rpx;
+  height: 150rpx;
 }
 
-.title {
-  display: block;
+.name {
   font-size: 16px;
   line-height: 78rpx;
+  margin: 0 30rpx;
+}
+
+.name  text {
+  margin-right: 20rpx;
 }
 
 .address {
-  display: block;
   font-size: 12px;
+  margin: 0 30rpx;
 }
 
 .arrowBtn {
   position: absolute;
   right: 30rpx;
-  top: 40rpx;
-  width: 40rpx;
-  height: 40rpx;
-  border: none;
-  outline: none;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABDElEQVQ4T63U0VHDMAwGYDleoCNkBHzSO2GDMgFlA0aADcIGGSEbwAD2KaOwgCxOd+WuD62tHPVrks+yrD8B7rzCnT24CTLzQUReiOhzz6bNCkspGwCsiPjuRZsgM48isoUQ3hBx8aDdHjLzg4h8xxinlJJV3Fxd0L4upZxUdY4xjimln5boAs/orKqPMcanFuoGDc05rwCgRPR8q8pdoI1SrdX6OCPifA3dBeacjwCwtC7IDdpt11q/VPWViOzoV5cLPB+VAeCjN48u0BKjqhsRnf49hznnJYQwIuLUw+x5L8uW4eMwDJaS5kD/bdb620wisnoj5wEPAGBR6+b3shWuS/H0rlvhHuTy3V/hgW4VNOE0SgAAAABJRU5ErkJggg==) center center;
-  
+  top: 44rpx;
+  width: 44rpx;
+  height: 44rpx;
 }
 
-.arrowBtn::after {
-  border: none;
+.mailLine {
+  width: 750rpx;
+  height: 4rpx;
 }
-.list-box{
+
+.goodslist {
+  background: #fff;
+}
+
+.listBox {
   padding: 30rpx;
   display: flex;
-  align-items:  flex-start;
-  border-top: 20rpx solid #e4e4e4;
+  flex-flow: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f5f5f5;
+}
 
+.listBox image {
+  width: 200rpx;
+  height: 200rpx;
 }
-.list-box-img{
-  margin-right: 46rpx;
 
+.textCon {
+  width: 460rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
 }
-.list-box-ctn{
-  flex-shrink: 100;
 
+.title {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.list-box-title{
-    font-size: 14px;
-    height: 70rpx;
-    width: 450rpx;
-    overflow: hidden;
-    line-height: 36rpx;
-}
-.list-box-desc{
-  margin-top: 12rpx;
-  font-size: 26rpx;
+
+.property {
+  margin-top: 10rpx;
+  font-size: 12px;
   color: #888;
 }
 
-.list-box-subCtn {
-    display: flex;
-    font-size: 12px;
-    margin-top: 30rpx;
-    justify-content: space-between;
+.subCon {
+  margin-top: 90rpx;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
 }
 
-.otherList {
-  margin-left: 30rpx;
-  border-top: 1rpx solid #f5f5f5;
-}
-.oneList {
-    border-bottom: 1px solid #f5f5f5;
-    line-height: 86rpx;
-    display: flex;
-    font-size: 14px;
-    padding: 0 30rpx;
-    justify-content: space-between;
+.other {
+  background: #fff;
+  padding: 0 0 0 30rpx;
 }
 
-.expressCon {
-  margin-left: 30rpx;
-}
-.twoList {
+.listItem {
   border-bottom: 1px solid #f5f5f5;
   line-height: 86rpx;
   display: flex;
   font-size: 14px;
-  padding: 0 30rpx;
+  padding: 0 30rpx 0 0;
+  justify-content: space-between;
+}
+
+.alignLeft {
   justify-content: flex-start;
 }
+
+.listLabel {
+  margin-right: 40rpx;
+}
+
+.radio {
+  margin-right: 30rpx;
+}
+
 .message {
-  line-height: 86rpx;
-  /* background: red; */
-  margin-left: 20rpx;
   width: 500rpx;
   height: 86rpx;
 }
-.lastList {
-  /* border-bottom: 1px solid #f5f5f5; */
-  line-height: 86rpx;
+
+.last {
+  border-bottom: none;
   display: flex;
-  font-size: 14px;
-  padding: 0 30rpx;
   justify-content: flex-end;
 }
 
-.bottom {
-  background: #fff;
+.fixFt {
+background: #fff;
   height: 128rpx;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 750rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
-.button-hover {
-  background-color: red;
-}
-/** 添加自定义button点击态样式类**/
-.other-button-hover {
-  background-color: blue;
-}
-.submitBtn {
-  margin: 20rpx 20rpx;
-  display: block;
+
+.fixFt button {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
 }

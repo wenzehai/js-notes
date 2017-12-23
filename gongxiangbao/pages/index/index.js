@@ -7,15 +7,66 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
     
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  linkLocation:function(){
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
     })
   },
+  linkShoplist: function () {
+    wx.navigateTo({
+      url: '/pages/nearbyShops/nearbyShops',
+    })
+  },
+  linkModal:function(){
+    wx.showActionSheet({
+      itemList: ['常见问题', '联系客服'],
+      success: function (res) {
+        // console.log(res.tapIndex),       
+        // console.log(res),
+        //根据点击的序号来判断所点击的菜单项，并作出相应操作
+        if(res.tapIndex == 0 ){
+          wx.navigateTo({
+            url: '/pages/questions/questions'
+          })
+        } else {
+          wx.makePhoneCall({
+            phoneNumber: '15080755770' //电话号码需要修改
+          })
+        }
+        
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    });
+  },
+  //扫码
+  scanFn: function () {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        // console.log(res)
+      }
+    })
+  },
+  // bindViewTap: function() {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   // onLoad: function () {
   //   if (app.globalData.userInfo) {
   //     this.setData({
@@ -44,12 +95,12 @@ Page({
   //     })
   //   }
   // },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+  // getUserInfo: function(e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
+  // }
 })

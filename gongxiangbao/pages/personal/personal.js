@@ -10,6 +10,31 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     
   },
+  linkWallet:function(){
+    wx.navigateTo({
+      url: '/pages/wallet/wallet'
+    })
+  },
+  linkBills: function () {
+    wx.navigateTo({
+      url: '/pages/bills/bills'
+    })
+  },
+  linkAddress: function () {
+    wx.navigateTo({
+      url: '/pages/addressList/addressList'
+    })
+  },
+  linkQuestions: function () {
+    wx.navigateTo({
+      url: '/pages/questions/questions'
+    })
+  },
+  linkAbout: function () {
+    wx.navigateTo({
+      url: '/pages/about/about'
+    })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

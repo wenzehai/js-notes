@@ -1,16 +1,14 @@
 <view class="container">
   <view class="top-bar box">
     <view class="top-bar-item" bindtap="toTapbar" data-url="index">
-      <navigator url="/pages/bills/bills" open-type="redirect">
         <view class="item-text active">租赁订单</view>
-      </navigator>
     </view>
     <view class="top-bar-item" bindtap="toTapbar" data-url="public">
-      <navigator url="/pages/billsBuy/billsBuy" open-type="redirect">
         <view class="item-text">购物订单</view>
-      </navigator>
     </view>
   </view>
+
+
   <view class="billBox">
     <view class="boxTitle">已结束</view>
     <view class="billCon">

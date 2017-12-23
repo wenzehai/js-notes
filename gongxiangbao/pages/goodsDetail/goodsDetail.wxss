@@ -1,78 +1,88 @@
-button {
-  margin: 20rpx 0;
+.container {
+  background: #efeff4;
 }
 
+.titleCon {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
 
 .swiper {
   height: 750rpx;
 }
 
 .goodsTitle {
-  display: block;
   font-size: 16px;
-  padding-top: 30rpx;
+  padding-top: 20rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 30rpx;
 }
 
-.goodsDetail {
-  display: block;
-  font-size: 16px;
-  line-height: 92rpx;
+.goodsPrice {
+  font-size: 14px;
+  line-height: 80rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 0 0 30rpx;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
-.colorLabel {
+
+.property {
   margin: 0 0 0 30rpx;
   font-size: 14px;
   color: #c4c4c4;
 }
 
+.goodsDetails {
+  background: #fff;
+}
+
+button {
+  margin: 20rpx 0;
+}
+
 .goodsColor {
-  /* display: block; */
   font-size: 14px;
   line-height: 92rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 0 0 30rpx;
-  /* background: red; */
 }
-.goodsDetails {
-  margin-top: 20rpx;
-}
+
 .detail_hd {
   text-align: center;
   font-size: 14px;
   color: #09bb07;
-  border-top: 20rpx solid #efeff4;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
   line-height: 80rpx;
 }
-.bottom {
+.detail_bd {
+  font-size: 0;
+}
+.detail_bd p {
+  font-size: 12px;
+}
+
+/* 底部按钮横条 */
+.fixFt {
   background: #fff;
   height: 128rpx;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 750rpx;
-}
-.button-hover {
-  background-color: red;
-}
-/** 添加自定义button点击态样式类**/
-.other-button-hover {
-  background-color: blue;
-}
-.bottom {
+  z-index: 10;
   display: flex;
+  flex-flow: row;
   justify-content: space-around;
-  flex-direction: row;
 }
-
+.btn {
+  width: 322rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}

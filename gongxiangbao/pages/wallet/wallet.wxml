@@ -1,26 +1,27 @@
 <view class="container">
   <view class="cash">
+    <image src="../../image/cash_bg.png" mode="widthFix" class="bg"></image>
     <view class="textBox">
       <view class="title">余额</view>
       <view class="title">￥42</view>
     </view>
-    <button class="btn">充值</button>
+    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn"></image>
   </view>
-  <view class="wallet">
+  <view class="cash">
+    <image src="../../image/money_bg.png" mode="widthFix" class="bg"></image>
     <view class="textBox">
       <view class="title">余额</view>
-      <view class="title">￥42</view>
+      <view class="title">￥0</view>
     </view>
-    <button class="btn">充值</button>
+    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn"></image>
   </view>
-  <view class="tradingList">
-    <navigator url="/pages/addressList/addressList">
-      <view class="tradingText">交易明细</view>
-      <image class="arrowIcon" style="display:block; width: 36rpx; height: 36rpx;" src="../../image/icon_arrowRight.png"></image>
-    </navigator>
+  <view class="tradingList" bindtap="tradLinkFn">
+    <view class="tradingText">交易明细</view>
+    <image class="arrowIcon" src="../../image/icon_arrowRight.png" mode="widthFix"></image>
   </view>
-</view>
-<!-- 底部按钮 -->
-<view class="bottom">
-  <button class="submitBtn" type="primary" style="width: 690rpx;"> 提现 </button>
+
+  <!-- 底部按钮 -->
+  <view class="fixFt">
+    <button class="submitBtn" type="primary" bindtap="modalFn"> 提现 </button>
+  </view>
 </view>

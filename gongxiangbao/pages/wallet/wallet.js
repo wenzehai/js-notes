@@ -1,103 +1,23 @@
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    addressInfo: {
-      name: '哈利油',
-      tel: 15080755770,
-      address: "岳麓区麓谷新长海中心B1栋501室"
-    },
-    goodsList: [
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '粉红色',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-      {
-        id:'1',
-        title: 'OPPO时尚单品自拍杆 晴空蓝哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-        price: 39.00,
-        color: '晴空蓝',
-        url:'../../image/goods.png',
-        checkValue: 'true',
-        checked:'false'        
-      },
-    ],
-    items: [
-      { name: 'USA', value: '美国', checked: 'true' },
-      { name: 'CHN', value: '中国' }
-    ]
+    
   },
-  checkboxChange: function(e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+  tradLinkFn:function(){
+    wx.navigateTo({
+      url: '/pages/tradingDetails/tradingDetails'
+    })
+  },
+  modalFn:function(){
+    wx.showModal({
+      title: '余额提现',
+      content: '确认要将押金和余额提现吗？提现后需0~1个工作日到账，请耐心等候',
+      success: function (res) {
+        if (res.confirm) {
+          // console.log('用户点击确定')
+        } else if (res.cancel) {
+          // console.log('用户点击取消')
+        }
+      }
+    })
   }
 })

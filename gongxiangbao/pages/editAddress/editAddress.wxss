@@ -1,3 +1,7 @@
+.container {
+  background: #fff;
+  height: 100%;
+}
 .list {
   position: relative;
   height: 112rpx;
@@ -69,6 +73,25 @@
   line-height: 112rpx;
 }
 
+.fixFt {
+  background: #fff;
+  height: 128rpx;
+  border-top: 1px solid #eee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixFt button {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
 
 
 

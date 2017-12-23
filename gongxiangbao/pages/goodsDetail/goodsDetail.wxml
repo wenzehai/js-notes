@@ -14,10 +14,12 @@
 
   <!-- 商品标题名称 -->
   <view class="titleCon">
-    <text class="goodsTitle">{{title}}</text>
-    <text class="goodsDetail">￥{{price}}</text>
-    <text class="colorLabel">颜色</text>
-    <text class="goodsColor">{{color}}</text>
+    <view class="goodsTitle">{{title}}</view>
+    <view class="goodsPrice">￥{{price}}</view>
+    <view>
+      <text class="property">颜色</text>
+      <text class="goodsColor">{{color}}</text>
+    </view>
   </view>
 
   <!-- 商品详情部分 -->
@@ -30,13 +32,11 @@
     </view>
   </view>
 
-  <!-- 底部按钮 -->           
-  <view class="bottom">
-    
-    <button type="default" style="width: 320rpx;"> 加入购物车 </button>
-    <navigator url="/pages/order/order">
-    <button type="primary" style="width: 320rpx;"> 立即购买 </button>
-  </navigator>
+  <!-- 底部按钮 -->
+  <view class="fixFt">
+
+    <button type="primary" class="btn" bindtap="toastFn"> 加入购物车 </button>
+    <button type="warn" class="btn" bindtap="buyNowFn"> 立即购买 </button>
   </view>
 
 </view>

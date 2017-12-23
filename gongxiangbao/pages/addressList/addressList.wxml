@@ -1,13 +1,37 @@
 <view class="container">
   <view class="list">
-    <view class="optionBox">
+    <view class="con">
+      <view class="optionBox">
         <radio checked="true" />
+      </view>
+      <view class="msgCon" bindtap="changeAddFn">
+        <view class="name">
+          <text>哈利油</text>
+          <text>15080755770</text>
+        </view>
+        <view class="address">湖南长沙岳麓区麓谷新长海中心B1栋501室长沙帕吉网络
+        </view>
+      </view>
     </view>
-    <navigator url="/pages/editAddress/editAddress">
-    <view class="msgCon">
-      <view class="name">哈利油 15080755770</view>
-      <view class="address">麓谷新长海中心B1栋501室</view>
+  </view>
+  <view class="list">
+    <view class="con">
+      <view class="optionBox">
+        <radio checked="false" />
+      </view>
+      <view class="msgCon" bindtap="changeAddFn">
+        <view class="name">
+          <text>哈利油</text>
+          <text>15080755770</text>
+        </view>
+        <view class="address">麓谷新长海中心B1栋501室</view>
+      </view>
     </view>
-  </navigator>
+  </view>
+
+
+  <!-- 底部按钮 --> 
+  <view class="fixFt">
+    <button class="submitBtn" type="primary" bindtap="addAddressFn" > 新增地址 </button>
   </view>
 </view>

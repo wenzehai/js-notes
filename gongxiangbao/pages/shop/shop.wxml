@@ -1,11 +1,9 @@
 <view class="container">
-  <view class="listCon" wx:for="{{goodsArray}}">
-    <navigator url="/pages/goodsDetail/goodsDetail">
-      <view class="iamgeCon">
-        <image src="{{item.url}}" mode="scaleToFill" class="goodsPic" style="width:372rpx; height:372rpx;"></image>
-      </view>
+  <view class="goodsCon" wx:for="{{goodsArray}}">
+    <view class="goodsItem" bindtap="goodsLink">
+      <image src="{{item.url}}" mode="widthFix" class="goodsPic"></image>
       <text class="goodsTitle">{{item.title}}</text>
       <text class="goodsPrice">￥{{item.price}}</text>
-    </navigator>
+    </view>
   </view>
 </view>

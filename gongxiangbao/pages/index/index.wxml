@@ -1,17 +1,26 @@
 <!--index.wxml-->
+<!-- 背景图片 -->
+<image class="bgImg" src='../../image/body_bg.png' mode="widthFix"></image>
+
+<!-- 主体内容 -->
 <view class="container">
-  <view class="locationInfo">
-    <button class="locationBtn">麓谷新长海中心</button>
-    <navigator url="/pages/nearbyShops/nearbyShops">
-        <button class="listBtn"></button>
-    </navigator>
-    
+
+  <!-- 地址信息相关按钮 -->
+  <view class="locationInfoBox">
+    <view class="location" bindtap="linkLocation">
+      <!-- 这个地方需要bindtap微信的地址api，还需要优化 -->
+      <image class="locationBg" src="../../image/bg_location.png"></image> 麓谷新长海中心B1栋501室
+    </view>
+    <image src="../../image/icon_shoppingList.png" mode="widthFix" class="smallbtnBg" bindtap="linkShoplist"></image>
   </view>
-  <view class="service">
-    <button class="serviceBtn"></button>
-  </view>
+
+  <!-- 客户服务按钮 -->
+  <image src="../../image/icon_service.png" mode="widthFix" class="smallbtnBg serviceBtn" bindtap="linkModal"></image>
+
+  <!-- 扫描大按钮，需要补充触发扫码api -->
   <view class="userinfo">
-    <button class='scanBtn'></button>   
+    <image src="../../image/scan_btn.png" mode="widthFix" class="scanBtn" bindtap="scanFn"></image>
+    <view class="title">扫码借</view>
   </view>
-  
+
 </view>

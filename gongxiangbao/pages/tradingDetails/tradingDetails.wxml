@@ -1,6 +1,15 @@
 <view class="container">
   <view class="list">
     <view class="left">
+      <view class="title">充值</view>
+      <view class="des"> 微信 | 2017-12-14 15:24:12</view>
+    </view>
+    <view class="right">
+      +￥99.00
+    </view>
+  </view>
+  <view class="list">
+    <view class="left">
       <view class="title"> 充值</view>
       <view class="des"> 微信 | 2017-12-14 15:24:12</view>
     </view>

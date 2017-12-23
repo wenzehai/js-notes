@@ -1,29 +1,27 @@
 .container {
-  width: 100%;
-  height: 100%;
+  width: 750rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  background: #fff;
 }
 
-.listCon {
+.goodsItem {
   width: 374rpx;
   text-align: center;
   padding: 20px 0;
   background: #fafafa;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .goodsPic {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  width: 374rpx;
 }
 
 .goodsTitle {
   margin: 0 10rpx;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -31,5 +29,5 @@
 }
 
 .goodsPrice {
-  font-size: 14px;
+  font-size: 12px;
 }

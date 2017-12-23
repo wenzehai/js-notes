@@ -29,4 +29,10 @@
   <view class="textarea">
     <textarea bindblur="bindTextAreaBlur" style="width: 690rpx;" cursor-spacing="50" maxlength="200" placeholder="街道地址（限200字符）" />
   </view>
+
+
+   <!-- 底部按钮 --> 
+  <view class="fixFt">
+    <button class="submitBtn" type="primary" bindtap="addAddressFn" > 保存 </button>
+  </view>
 </view>

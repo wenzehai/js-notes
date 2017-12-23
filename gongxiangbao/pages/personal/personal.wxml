@@ -1,4 +1,6 @@
-<!--index.wxml-->
+<!-- 背景图片 -->
+<image src="../../image/person_bg.png" mode="widthFix" class="personBg"></image>
+<!-- 内容部分 -->
 <view class="container">
   <view class="portraitBox">
     <view class="portraitOutter">
@@ -10,42 +12,35 @@
   <view class="name">
     哈利油
   </view>
+
+  <!-- 菜单部分 -->
   <view class="menuCon">
-    <navigator url="/pages/wallet/wallet">
-      <view class="menu">
+      <view class="menu" bindtap="linkWallet">
         <image class="menuIcon" src="../../image/icon_wallet.png" />
         <text>我的钱包</text>
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
-    </navigator>
-    <navigator url="/pages/bills/bills">
-      <view class="menu">
+      <view class="menu"  bindtap="linkBills">
         <image class="menuIcon" src="../../image/icon_bills.png" />
         <text>我的订单</text>
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
-    </navigator>
-    <navigator url="/pages/addressList/addressList">
-      <view class="menu">
+      <view class="menu"  bindtap="linkAddress">
         <image class="menuIcon" src="../../image/icon_location.png" />
         <text>收货地址管理</text>
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
-    </navigator>
-    <navigator url="/pages/questions/questions">
-      <view class="menu">
+      <view class="menu" bindtap="linkQuestions">
         <image class="menuIcon" src="../../image/icon_question.png" />
         <text>常见问题</text>
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
-    </navigator>
-    <navigator url="/pages/questions/questions">
-      <view class="menu">
+      <!-- 关于我们页面需要补充 -->
+      <view class="menu">       
         <image class="menuIcon" src="../../image/icon_about.png" />
         <text>关于我们</text>
         <image class="arrowIcon" src="../../image/icon_arrowRight.png" />
       </view>
-    </navigator>
   </view>
 
 

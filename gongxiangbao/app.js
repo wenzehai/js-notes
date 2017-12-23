@@ -1,5 +1,7 @@
 //app.js
 App({
+  // 这段代码为案例自带代码，可以删除掉
+  /*
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -33,9 +35,9 @@ App({
       }
     })
   },
+  */
   globalData: {
-    userInfo: null,
-    pass:"1234567"
+    userInfo: null
   }
   
 })
