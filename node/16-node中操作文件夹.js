@@ -45,5 +45,10 @@ let fs = require('fs');
     console.log(err);
 });*/
 
-let result = fs.mkdirSync('15');
-console.log(result);            //undefined,成功，没有返回值
+/*let result = fs.mkdirSync('15');
+console.log(result);   */         //undefined,成功，没有返回值
+
+//
+fs.rmdir('15',function (err) {
+    console.log(err);
+});
