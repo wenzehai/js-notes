@@ -1,0 +1,16 @@
+<view class="container">
+    <image src="../../image/payImg.jpg" mode="widthFix" class="payImg"></image>
+    <view class="title">选择支付方式</view>
+    <view class="payList">
+      <image src="../../image/wechatPay.png" mode="widthFix" class="payIcon"></image>
+      <view class="text">微信支付</view>
+      <radio value="微信支付" checked="true" name="payMethods"></radio>
+    </view>
+    <view class="yue">
+      <image src="../../image/yuePay.png" mode="widthFix" class="payIcon"></image>
+      <view class="text">余额支付</view>
+      <radio value="余额支付" checked="" name="payMethods"></radio>
+    </view>
+     <!-- 微信支付api未调用  -->
+    <button type="primary" class="payBtn" bindtap="payFn">开始使用</button>
+</view>

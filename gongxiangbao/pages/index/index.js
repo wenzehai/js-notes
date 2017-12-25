@@ -7,11 +7,11 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-    
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    codeNum:null
   },
   //事件处理函数
-  linkLocation:function(){
+  linkLocation: function () {
     wx.getLocation({
       type: 'gcj02', //返回可以用于wx.openLocation的经纬度
       success: function (res) {
@@ -30,14 +30,14 @@ Page({
       url: '/pages/nearbyShops/nearbyShops',
     })
   },
-  linkModal:function(){
+  linkModal: function () {
     wx.showActionSheet({
       itemList: ['常见问题', '联系客服'],
       success: function (res) {
         // console.log(res.tapIndex),       
         // console.log(res),
         //根据点击的序号来判断所点击的菜单项，并作出相应操作
-        if(res.tapIndex == 0 ){
+        if (res.tapIndex == 0) {
           wx.navigateTo({
             url: '/pages/questions/questions'
           })
@@ -46,7 +46,7 @@ Page({
             phoneNumber: '15080755770' //电话号码需要修改
           })
         }
-        
+
       },
       fail: function (res) {
         console.log(res.errMsg)
@@ -58,7 +58,15 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
-        // console.log(res)
+        this.setData({
+          codeNum:res.result
+        });        
+        wx.navigateTo({
+          url: '/pages/scanSuccess/scanSuccess?id=1',
+          success: function () {
+            //console.log(res)        还不知怎样将回调函数中的数据弄出来
+          }
+        })
       }
     })
   },

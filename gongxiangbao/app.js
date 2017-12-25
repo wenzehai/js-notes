@@ -37,7 +37,8 @@ App({
   },
   */
   globalData: {
-    userInfo: null
+    userInfo: null,
+    codeNum:'1213'
   }
   
 })

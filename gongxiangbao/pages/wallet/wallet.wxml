@@ -5,7 +5,7 @@
       <view class="title">余额</view>
       <view class="title">￥42</view>
     </view>
-    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn"></image>
+    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn" bindtap="chargeFn"></image>
   </view>
   <view class="cash">
     <image src="../../image/money_bg.png" mode="widthFix" class="bg"></image>
@@ -13,7 +13,7 @@
       <view class="title">余额</view>
       <view class="title">￥0</view>
     </view>
-    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn"></image>
+    <image src="../../image/button_charge_bg.png" mode="widthFix" class="smallBtn" bindtap="chargeFn"></image>
   </view>
   <view class="tradingList" bindtap="tradLinkFn">
     <view class="tradingText">交易明细</view>

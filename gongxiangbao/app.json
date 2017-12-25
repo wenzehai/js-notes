@@ -1,22 +1,23 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/wallet/wallet",
+    "pages/scanSuccess/scanSuccess",
+    "pages/choosePay/choosePay",
+    "pages/shoppingcart/shoppingcart",
     "pages/questions/questions",
     "pages/editAddress/editAddress",
     "pages/addressList/addressList",
     "pages/bills/bills",
     "pages/tradingDetails/tradingDetails",
-    "pages/wallet/wallet",
     "pages/personal/personal",
-    
     "pages/order/order",
     "pages/goodsDetail/goodsDetail",
     "pages/shop/shop",    
     "pages/nearbyShops/nearbyShops",
     "pages/shopDetail/shopDetail",
     "pages/billsBuy/billsBuy",
-    "pages/charge/charge",    
-    "pages/shoppingcart/shoppingcart"    
+    "pages/charge/charge"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,62 @@
+.container {
+  width: 750rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.payImg {
+  width: 286rpx;
+  height: 286rpx;
+  margin-top: 44rpx;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 30rpx;
+  color: #333;
+}
+
+.payList {
+  margin-top: 60rpx;
+  width: 650rpx;
+  height: 120rpx;
+  padding: 0 50rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;  
+  flex-flow: row;
+  justify-content: flex-start;  
+  text-align: left;
+  align-items: center;
+}
+.yue {  
+  width: 650rpx;
+  height: 120rpx;
+  padding: 0 50rpx; 
+  border-bottom: 1px solid #eee;
+  display: flex;  
+  flex-flow: row;
+  justify-content: flex-start;  
+  text-align: left;
+  align-items: center;
+}
+
+.payIcon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 0;
+}
+.text {
+  margin-left: 20rpx;
+}
+radio {
+  margin-left: 360rpx;
+}
+.payBtn {
+  width: 590rpx;
+  height: 88rpx;
+  margin: 80rpx 0 320rpx 0;
+}

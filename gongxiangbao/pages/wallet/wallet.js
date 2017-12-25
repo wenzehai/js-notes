@@ -19,5 +19,10 @@ Page({
         }
       }
     })
+  },
+  chargeFn:function(){
+    wx.navigateTo({
+      url: '/pages/choosePay/choosePay',
+    })
   }
 })

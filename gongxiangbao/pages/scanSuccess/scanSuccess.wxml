@@ -1,0 +1,10 @@
+<view class="container">
+  <icon type="success" class="icon" size="94"></icon>
+  <view class="title">扫码成功</view>
+  <view class="subTitle">条码内容：{{codeNum}}</view>
+  <button type="primary" class="nextBtn" bindtap="modleFn">开始使用</button>
+  <view class="rules">
+    <view class="rulesTitle">计费规则</view>
+    <view class="rulesContent">使用前需要支付押金，在使用后可根据自身情况提取或保留押金，从扫码开始计算费用，0.5元/小时，不足一小时按照一小时计算。</view>
+  </view>
+</view>

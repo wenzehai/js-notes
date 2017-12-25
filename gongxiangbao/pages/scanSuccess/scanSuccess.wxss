@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.icon {
+  margin-top: 110rpx;
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 30rpx;
+  color: #333;
+}
+
+.subTitle {
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 12px;
+  width: 300rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nextBtn {
+  width: 590rpx;
+  height: 88rpx;
+  margin-top: 80rpx;
+}
+.rules {
+  width: 590rpx;
+  margin-top: 280rpx;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.rulesTitle {
+  font-size:  16px;
+  text-align: center;
+  color: #999;
+}
+.rulesContent {
+  margin-top: 26rpx;
+  font-size:  14px;
+  text-align: left;
+  color: #999;
+  margin-bottom: 136rpx;
+}
