@@ -23,4 +23,26 @@
     <view class="title">扫码借</view>
   </view>
 
+
+  <!-- 底部标签栏 -->
+  <view class="tabCon">
+    <view class="item">
+       <image src="../../image/tab_home_pre.png" mode="widthFix" class="home" bindtap="indexFn"></image>
+       <view class="tabTitle">首页</view>
+    </view>
+    <view class="item">
+       <image src="../../image/tab_shop_pre.png" mode="widthFix" class="home" bindtap="indexFn"></image>
+       <view class="tabTitle">商城</view>
+    </view>
+    <view class="item">
+       <image src="../../image/tab_shoppingcart_pre.png" mode="widthFix" class="home" bindtap="indexFn"></image>
+       <view class="tabTitle">购物车</view>
+    </view>
+    <view class="item">
+       <image src="../../image/tab_personal_pre.png" mode="widthFix" class="home" bindtap="indexFn"></image>
+       <view class="tabTitle">我的</view>
+    </view>
+  </view>
+
+
 </view>

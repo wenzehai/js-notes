@@ -70,6 +70,11 @@ Page({
       }
     })
   },
+  indexFn:function(){
+    wx.navigateTo({
+      url: '../../pages/index/index'
+    })
+  },
   // bindViewTap: function() {
   //   wx.navigateTo({
   //     url: '../logs/logs'

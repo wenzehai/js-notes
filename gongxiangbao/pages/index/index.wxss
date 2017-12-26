@@ -1,7 +1,9 @@
 /**index.wxss**/
+
 .container {
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
 }
+
 .bgImg {
   width: 750rpx;
 }
@@ -87,4 +89,31 @@
   font-weight: bold;
   color: #35d380;
   margin-top: 16rpx;
+}
+
+.tabCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+   border-top: 1px solid #eee;
+  background: #f7f7fa;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+}
+
+.item {
+  margin-top: 8rpx;
+  text-align: center;
+}
+
+.item image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.tabTitle {
+  font-size: 10px;
+  color: #35d380;
 }
