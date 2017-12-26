@@ -25,5 +25,35 @@
     "navigationBarTitleText": "共享宝",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#efeff4"
+  },
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#09bb07",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/tab_home.png",
+        "selectedIconPath": "image/tab_home_pre.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "image/tab_shop.png",
+        "selectedIconPath": "image/tab_shop_pre.png"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "image/tab_shoppingcart.png",
+        "selectedIconPath": "image/tab_shoppingcart_pre.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "image/tab_personal.png",
+        "selectedIconPath": "image/tab_personal_pre.png"
+      }
+    ]
   }
 }
