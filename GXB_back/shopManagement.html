@@ -6,7 +6,7 @@
 <title>共享宝后台-商铺管理</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/ionicons.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 
 <!--[if lt IE 9]>
@@ -17,52 +17,64 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-					<span class="sr-only">隐藏的导航按钮</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><span>共享宝</span><!--数据后台--></a>
-				<ul class="user-menu">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> 用户中心 <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><span class="glyphicon glyphicon-user"></span> 个人资料</a></li>
-							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> 设置</a></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 注销</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div><!-- /.container-fluid -->
-	</nav>
-		
-	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<ul class="nav menu">
-			<li><a href="tables.html"><span class="glyphicon glyphicon-dashboard"></span> 数据报表</a></li>
-			<li class="active"><a href="tables.html"><span class="glyphicon glyphicon-home"></span> 商户管理</a></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-list-alt"></span> 租赁订单</a></li>
-			<li role="presentation" class="divider"></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-export"></span> 销售中商品</a></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-import"></span> 仓库中商品</a></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-floppy-remove"></span> 商品回收站</a></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-list"></span> 购物订单管理</a></li>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#sidebar-collapse">
+				<span class="sr-only">隐藏的导航按钮</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><span class="ion ion-social-dropbox"></span><span
+					class="logo">GXB</span></a>
+			<ul class="user-menu">
 
-		</ul>
-		<div class="attribution">Powered by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Pudge Network</a></div>
-	</div>
-		
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-		<div class="row">
-			<ol class="breadcrumb">
-				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-				<li class="active">商户管理</li>
-			</ol>
+				<li class="dropdown pull-right">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+							class="ion ion-person"></span> <span class="menuText">用户中心</span> <span
+							class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#"><span class="ion ion-person"></span> 个人资料</a></li>
+						<li><a href="#"><span class="ion ion-settings"></span> 设置</a></li>
+						<li><a href="#"><span class="ion ion-log-out"></span> 注销</a></li>
+					</ul>
+				</li>
+				<li class="pull-right ">
+					<button class="btn btn-success addShop">新增店铺</button>
+				</li>
+			</ul>
 		</div>
+	</div>
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+	<ul class="nav menu">
+		<li role="presentation" class="divider"></li>
+		<li><a href="index.html"><span class="ion ion-stats-bars"></span> 数据报表</a></li>
+		<li class="active"><a href="shopManagement.html"><span class="ion ion-home"></span> 商户管理</a></li>
+		<li><a href="leaseBillsManagement.html"><span class="ion ion-document"></span> 租赁订单</a></li>
+		<li><a href="createNewShops.html"><span class="ion ion-android-add"></span> 新增店铺</a></li>
+		<li role="presentation" class="divider"></li>
+		<li><a href="sales.html"><span class="ion ion-flag"></span> 销售中商品</a></li>
+		<li><a href="inStorage.html"><span class="ion ion-cube"></span> 仓库中商品</a></li>
+		<li><a href="recycleBin.html"><span class="ion ion-ios-trash"></span> 商品回收站</a></li>
+		<li><a href="saleBills.html"><span class="ion ion-android-cart"></span> 购物订单管理</a></li>
+		<li><a href="createNewGoods.html"><span class="ion ion-android-add"></span> 新建商品</a></li>
+
+	</ul>
+	<div class="attribution">Powered by <a href="www.epudge.com">Pudge
+		Network</a></div>
+</div>
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="#"><span class="ion ion-android-home"></span></a></li>
+			<li class="active">商户管理</li>
+		</ol>
+	</div>
 		
 		<div class="row">
 			<div class="col-lg-12">
@@ -121,19 +133,8 @@
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/bootstrap-table.js"></script>
 	<script>
-        !function ($) {
-            $(document).on("click","ul.nav li.parent > a > span.icon", function(){
-                $(this).find('em:first').toggleClass("glyphicon-minus");
-            });
-            $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-        }(window.jQuery);
 
         $(window).on('resize', function () {
             if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')

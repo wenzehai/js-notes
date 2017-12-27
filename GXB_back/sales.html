@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>共享宝后台</title>
+    <title>共享宝后台-销售中的商品</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -51,12 +53,12 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
         <li role="presentation" class="divider"></li>
-        <li class="active"><a href="index.html"><span class="ion ion-stats-bars"></span> 数据报表</a></li>
+        <li><a href="index.html"><span class="ion ion-stats-bars"></span> 数据报表</a></li>
         <li><a href="shopManagement.html"><span class="ion ion-home"></span> 商户管理</a></li>
         <li><a href="leaseBillsManagement.html"><span class="ion ion-document"></span> 租赁订单</a></li>
         <li><a href="createNewShops.html"><span class="ion ion-android-add"></span> 新增店铺</a></li>
         <li role="presentation" class="divider"></li>
-        <li><a href="sales.html"><span class="ion ion-flag"></span> 销售中商品</a></li>
+        <li class="active"><a href="sales.html"><span class="ion ion-flag"></span> 销售中商品</a></li>
         <li><a href="inStorage.html"><span class="ion ion-cube"></span> 仓库中商品</a></li>
         <li><a href="recycleBin.html"><span class="ion ion-ios-trash"></span> 商品回收站</a></li>
         <li><a href="saleBills.html"><span class="ion ion-android-cart"></span> 购物订单管理</a></li>
@@ -71,13 +73,13 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><span class="ion ion-android-home"></span></a></li>
-            <li class="active">数据看板</li>
+            <li class="active">销售中商品</li>
         </ol>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">数据看板</h1>
+            <h1 class="page-header">销售中商品</h1>
         </div>
     </div>
     <!--表格部分-->
@@ -87,12 +89,20 @@
                 <div class="panel-body">
                     <form class="form-inline">
                         <div class="form-group">
-                            <label for="shopName">商家名称</label>
-                            <input class="form-control" id="shopName">
+                            <label for="billsId">商品ID</label>
+                            <input type="number" class="form-control" id="billsId">
                         </div>
                         <div class="form-group">
-                            <label for="shopId">商家ID</label>
-                            <input type="number" class="form-control" id="shopId">
+                            <label for="userName">商品名称</label>
+                            <input class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="salePrice">销售价</label>
+                            <input type="number" class="form-control" id="salePrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="originalPrice">原价</label>
+                            <input type="number" class="form-control" id="originalPrice">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary "><span
@@ -110,18 +120,18 @@
                     <table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
                            data-show-toggle="true" data-show-columns="true" data-search="true"
                            data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-                           data-striped="true" 	data-detail-view="true""
-                           data-sort-order="id">
+                           data-sort-order="desc">
                         <thead>
                         <tr>
                             <th data-field="state" data-checkbox="true">复选框</th>
-                            <th data-field="id" data-sortable="true" >商家ID</th>
-                            <th data-field="name" data-sortable="true" data-title-tooltip="商家的全称">商家名称</th>
-                            <th data-field="deviceNum" data-sortable="true">设备数量</th>
-                            <th data-field="uv" data-sortable="true">今日访客数</th>
-                            <th data-field="time" data-sortable="true">总访问时长</th>
-                            <th data-field="price" data-sortable="true">总消费金额</th>
-                            <th data-field="details" data-sortable="true">租赁明细</th>
+                            <th data-field="goodsId" data-sortable="true">商品ID</th>
+                            <th data-field="goodsName" data-sortable="true">商品名称</th>
+                            <th data-field="salePrice" data-sortable="true">销售价</th>
+                            <th data-field="originalPrice" data-sortable="true">原价</th>
+                            <th data-field="storeNum" data-sortable="true">库存数</th>
+                            <th data-field="salesNum" data-sortable="true">已售出</th>
+                            <th data-field="sortNum" data-sortable="true">排序</th>
+                            <th data-field="operate" data-sortable="true">操作</th>
                         </tr>
                         </thead>
                     </table>
@@ -133,15 +143,39 @@
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="js/bootstrap-table.js"></script>
-<script>
+<!--<script src="js/bootstrap-table-zh-CN.min.js"></script>-->
 
+<script>
     $(window).on('resize', function () {
         if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-    })
+    });
     $(window).on('resize', function () {
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-    })
+    });
+
+    /*设置时间搜索起始时间*/
+    $("#startTime").datetimepicker({
+        viewSelect: 'month',
+        startDate: "2017-12-1",
+        format: "yyyy-mm-dd", //选择日期后，文本框显示的日期格式
+        language: 'zh-CN',//汉化
+        autoclose: true, //选择日期后自动关闭,
+        minView: "month", //选择日期后，不会再跳转去选择时分秒
+    });
+    /*设置时间搜索截止时间*/
+    $("#deadLine").datetimepicker({
+        viewSelect: 'month',
+        format: "yyyy-mm-dd", //选择日期后，文本框显示的日期格式
+        language: 'zh-CN',//汉化
+        autoclose: true, //选择日期后自动关闭,
+        minView: "month", //选择日期后，不会再跳转去选择时分秒
+        endDate: new Date()
+    });
+
+//    $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
 </script>
 </body>
 

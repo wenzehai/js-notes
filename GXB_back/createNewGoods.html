@@ -3,11 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>共享宝后台</title>
+    <title>共享宝后台-新建商品</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
     <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet">
+    <link href="css/summernote.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -51,7 +54,7 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
         <li role="presentation" class="divider"></li>
-        <li class="active"><a href="index.html"><span class="ion ion-stats-bars"></span> 数据报表</a></li>
+        <li><a href="index.html"><span class="ion ion-stats-bars"></span> 数据报表</a></li>
         <li><a href="shopManagement.html"><span class="ion ion-home"></span> 商户管理</a></li>
         <li><a href="leaseBillsManagement.html"><span class="ion ion-document"></span> 租赁订单</a></li>
         <li><a href="createNewShops.html"><span class="ion ion-android-add"></span> 新增店铺</a></li>
@@ -60,7 +63,7 @@
         <li><a href="inStorage.html"><span class="ion ion-cube"></span> 仓库中商品</a></li>
         <li><a href="recycleBin.html"><span class="ion ion-ios-trash"></span> 商品回收站</a></li>
         <li><a href="saleBills.html"><span class="ion ion-android-cart"></span> 购物订单管理</a></li>
-        <li><a href="createNewGoods.html"><span class="ion ion-android-add"></span> 新建商品</a></li>
+        <li class="active"><a href="createNewGoods.html"><span class="ion ion-android-add"></span> 新建商品</a></li>
 
     </ul>
     <div class="attribution">Powered by <a href="www.epudge.com">Pudge
@@ -71,60 +74,66 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><span class="ion ion-android-home"></span></a></li>
-            <li class="active">数据看板</li>
+            <li class="active">新建商品</li>
         </ol>
     </div>
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">数据看板</h1>
+            <h1 class="page-header">新建商品</h1>
         </div>
     </div>
     <!--表格部分-->
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <div class="panel panel-default operate">
                 <div class="panel-body">
-                    <form class="form-inline">
+                    <form>
                         <div class="form-group">
-                            <label for="shopName">商家名称</label>
-                            <input class="form-control" id="shopName">
+                            <label for="goodsName"><sup class="sup">*</sup>商品名称</label>
+                            <input class="form-control" id="goodsName">
                         </div>
                         <div class="form-group">
-                            <label for="shopId">商家ID</label>
-                            <input type="number" class="form-control" id="shopId">
+                            <label for="goodsDes"><sup class="sup">*</sup>商品简介</label>
+                            <textarea class="form-control" id="goodsDes"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary "><span
-                                    class="glyphicon glyphicon-search"></span>搜索
+                            <label for="salePrice"><sup class="sup">*</sup>销售价</label>
+                            <input type="number" class="form-control" id="salePrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="originalPrice"><sup class="sup">*</sup>原价</label>
+                            <input type="number" class="form-control" id="originalPrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="storeNum"><sup class="sup">*</sup>库存数</label>
+                            <input type="number" class="form-control" id="storeNum">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success "><span
+                                    class="ion ion-android-checkmark-circle"></span>保存
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <!--<div class="panel-heading"></div>-->
                 <div class="panel-body">
-                    <table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
-                           data-show-toggle="true" data-show-columns="true" data-search="true"
-                           data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-                           data-striped="true" 	data-detail-view="true""
-                           data-sort-order="id">
-                        <thead>
-                        <tr>
-                            <th data-field="state" data-checkbox="true">复选框</th>
-                            <th data-field="id" data-sortable="true" >商家ID</th>
-                            <th data-field="name" data-sortable="true" data-title-tooltip="商家的全称">商家名称</th>
-                            <th data-field="deviceNum" data-sortable="true">设备数量</th>
-                            <th data-field="uv" data-sortable="true">今日访客数</th>
-                            <th data-field="time" data-sortable="true">总访问时长</th>
-                            <th data-field="price" data-sortable="true">总消费金额</th>
-                            <th data-field="details" data-sortable="true">租赁明细</th>
-                        </tr>
-                        </thead>
-                    </table>
+                    <form enctype="multipart/form-data" method="POST">
+                        <div class="form-group">
+                            <label><sup class="sup">*</sup>商品主图</label>
+                            <input id="mianView" type="file" multiple class="file" name="userfile"
+                                   data-overwrite-initial="false" data-min-file-count="2">
+                        </div>
+                        <div class="form-group">
+                            <label>商品详情</label>
+                            <input id="summernote" >
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -133,7 +142,10 @@
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-table.js"></script>
+<script src="js/fileinput.min.js"></script>
+<script src="js/zh.js"></script>
+<script src="js/summernote.min.js"></script>
+
 <script>
 
     $(window).on('resize', function () {
@@ -142,6 +154,27 @@
     $(window).on('resize', function () {
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
     })
+
+    $("#mianView").fileinput({
+        language: 'zh', //设置语言
+        uploadUrl: 'fileupload', // you must set a valid URL here else you will get an error
+        allowedFileExtensions: ['jpg', 'png'],
+        overwriteInitial: false,
+        maxFileSize: 6000,
+        maxFilesNum: 10,
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function (filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+    });
+
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder: '请将商品详情图片放入此处',
+            tabsize: 2,
+            height: 200
+        });
+    });
 </script>
 </body>
 
