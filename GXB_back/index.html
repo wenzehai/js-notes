@@ -107,15 +107,33 @@
             <div class="panel panel-default">
                 <!--<div class="panel-heading"></div>-->
                 <div class="panel-body">
-                    <table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
+                    <table id="dataReport"
+                           data-search="true"
+                           data-show-refresh="true"
+                           data-show-toggle="true"
+                           data-show-columns="true"
+                           data-show-export="true"
+                           data-detail-view="true"
+                           data-detail-formatter="detailFormatter"
+                           data-minimum-count-columns="2"
+                           data-show-pagination-switch="true"
+                           data-pagination="true"
+                           data-id-field="id"
+                           data-page-list="[10, 25, 50, 100]"
+                           data-show-footer="false"
+                           data-response-handler="responseHandler"
+                    >
+                    </table>
+
+                    <!--<table id="dataReport" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
                            data-show-toggle="true" data-show-columns="true" data-search="true"
                            data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-                           data-striped="true" 	data-detail-view="true""
+                           data-striped="true" data-detail-view="true"
                            data-sort-order="id">
                         <thead>
                         <tr>
                             <th data-field="state" data-checkbox="true">复选框</th>
-                            <th data-field="id" data-sortable="true" >商家ID</th>
+                            <th data-field="id" data-sortable="true">商家ID</th>
                             <th data-field="name" data-sortable="true" data-title-tooltip="商家的全称">商家名称</th>
                             <th data-field="deviceNum" data-sortable="true">设备数量</th>
                             <th data-field="uv" data-sortable="true">今日访客数</th>
@@ -124,7 +142,7 @@
                             <th data-field="details" data-sortable="true">租赁明细</th>
                         </tr>
                         </thead>
-                    </table>
+                    </table>-->
                 </div>
             </div>
         </div>
@@ -142,6 +160,43 @@
     $(window).on('resize', function () {
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
     })
+
+    $('#dataReport').bootstrapTable({
+        url: 'tables/data1.json',
+        columns: [
+            {
+                field: 'id',
+                title: '商户ID',
+                checkbox: true
+            }, {
+                field: 'name',
+                title: '商户名称',
+                sortable: true
+            }, {
+                field: 'deviceNum',
+                title: '设备数量',
+                sortable: true
+            }, {
+                field: 'uv',
+                title: '访问用户数',
+                sortable: true
+            }, {
+                field: 'time',
+                title: '总时长',
+                sortable: true
+            }, {
+                field: 'price',
+                title: '今日消费额',
+                sortable: true
+            }, {
+                field: 'detail',
+                title: '明细'
+            },]
+    });
+
+    $('#dataReport').bootstrapTable.columnDefaults({
+
+    });
 </script>
 </body>
 
