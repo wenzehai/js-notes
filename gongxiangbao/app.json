@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shop/shop",    
     "pages/index/index",
     "pages/wallet/wallet",
     "pages/scanSuccess/scanSuccess",
@@ -12,8 +13,7 @@
     "pages/tradingDetails/tradingDetails",
     "pages/personal/personal",
     "pages/order/order",
-    "pages/goodsDetail/goodsDetail",
-    "pages/shop/shop",    
+    "pages/goodsDetail/goodsDetail",     
     "pages/nearbyShops/nearbyShops",
     "pages/shopDetail/shopDetail",
     "pages/billsBuy/billsBuy",
@@ -24,7 +24,8 @@
     "navigationBarBackgroundColor": "#151515",
     "navigationBarTitleText": "共享宝",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#efeff4"
+    "backgroundColor": "#efeff4",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#7f8389",

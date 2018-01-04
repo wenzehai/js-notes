@@ -6,4 +6,5 @@
       <text class="goodsPrice">￥{{item.price}}</text>
     </view>
   </view>
+  
 </view>

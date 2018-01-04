@@ -1,5 +1,14 @@
 //app.js
 App({
+  onLaunch: function (obj) {
+    // console.log(obj);
+    // console.log(obj.path);
+    // console.log(obj.scene);
+    // console.log(obj.query);
+  },
+  onShow: function(obj){
+    // console.log(obj);
+  },
   // 这段代码为案例自带代码，可以删除掉
   /*
   onLaunch: function () {
