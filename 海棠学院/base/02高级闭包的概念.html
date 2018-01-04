@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 闭包
+    * 闭包就是能够读取其他函数内部变量的函数。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。
+所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。
+function f1() {
+        var n = 999;
+
+        function f2() {
+            alert(n);
+        }
+
+        return f2;
+    }
+
+    var result = f1();
+
+    result();
+
+闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。
+
+闭包是个函数，而它「记住了周围发生了什么」。表现为由「一个函数」体中定义了「另个函数」
+function f1() {
+    var n=999;
+    nadd = function () {
+        n+=1;
+    }
+    function f2() {
+        alert(n);
+    }
+    return f2;              //是返回函数名
+}
+var result = f1();
+
+result();       //999
+
+nadd();
+
+result();       //1000
+
+
+    * */
+/*var name = "The window";
+
+var object = {
+    name: "My object",
+    getNameFunc: function () {
+        return function () {
+            return this.name;
+        };
+    }
+};
+alert(object.getNameFunc()());*/
+
+    /*var name = "The window";
+    var object = {
+        name:"My Object",
+        getNameFunc: function () {
+            var that = this;
+            return function () {
+                return that.name;
+            }
+        }
+    }
+    alert(object.getNameFunc()());*/
+
+function Container(param) {
+    var sercert = 3;
+    this.member = param;
+    var that = this;
+    function dec() {
+        return(sercert>0) ? --sercert : false;
+    }
+    this.service = function () {
+        return (dec()) ? that.member : null;
+    }
+}
+
+
+</script>
+</body>
+</html>
