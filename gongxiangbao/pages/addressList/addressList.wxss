@@ -40,6 +40,11 @@
   margin-bottom: 20rpx;
 }
 
+.addressDetail {
+  font-size: 14px;
+  margin-left: 20rpx;
+}
+
 .right {
   float: right;
   margin-right: 30rpx;

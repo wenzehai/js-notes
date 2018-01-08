@@ -1,6 +1,6 @@
 <view class="container">
-  <view class="goodsCon" wx:for="{{goodsArray}}">
-    <view class="goodsItem" bindtap="goodsLink">
+  <view class="goodsCon" wx:for="{{goodsArray}}" >
+    <view class="goodsItem" catchtap="goodsLink" id="{{item.goodsId}}">
       <image src="{{item.url}}" mode="widthFix" class="goodsPic"></image>
       <text class="goodsTitle">{{item.title}}</text>
       <text class="goodsPrice">￥{{item.price}}</text>

@@ -1,37 +1,24 @@
 <view class="container">
-  <view class="list">
+<radio-group class="radio-group" bindchange="changeFirstAdd">
+  <view class="list" wx:for="{{addressInfo}}">
     <view class="con">
       <view class="optionBox">
-        <radio checked="true" />
+          <radio checked="{{item.firstAdd}}" value="{{item.id}}" />
       </view>
-      <view class="msgCon" bindtap="changeAddFn">
+
+      <view class="msgCon" id="{{item.id}}" bindtap="editFn">
         <view class="name">
-          <text>哈利油</text>
-          <text>15080755770</text>
+          <text>{{item.name}}</text>
+          <text>{{item.tel}}</text>
         </view>
-        <view class="address">湖南长沙岳麓区麓谷新长海中心B1栋501室长沙帕吉网络
-        </view>
+        <text class="address"  wx:for="{{item.region}}">{{item}}</text>
+        <text class="addressDetail">{{item.address}}</text>
       </view>
     </view>
   </view>
-  <view class="list">
-    <view class="con">
-      <view class="optionBox">
-        <radio checked="false" />
-      </view>
-      <view class="msgCon" bindtap="changeAddFn">
-        <view class="name">
-          <text>哈利油</text>
-          <text>15080755770</text>
-        </view>
-        <view class="address">麓谷新长海中心B1栋501室</view>
-      </view>
-    </view>
-  </view>
-
-
-  <!-- 底部按钮 --> 
+</radio-group>
+  <!-- 底部按钮 -->
   <view class="fixFt">
-    <button class="submitBtn" type="primary" bindtap="addAddressFn" > 新增地址 </button>
+    <button class="submitBtn" type="primary" bindtap="addAddressFn"> 新增地址 </button>
   </view>
 </view>

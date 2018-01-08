@@ -102,7 +102,7 @@ checkbox .wx-checkbox-input {
   display: flex;
   justify-content: space-between;
   flex-flow: row;
-  margin-bottom: 300rpx;
+  /* margin-bottom: 300rpx; */
 }
 .totalPrice {
   margin-right: 30rpx;

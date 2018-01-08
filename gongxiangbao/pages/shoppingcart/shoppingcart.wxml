@@ -1,6 +1,12 @@
 <view class="container">
   <!-- 商品列表 -->
-
+ <view class="bottom">
+    <view class="check">
+      <checkbox class="checkbtn" value="false" checked="checked" />
+    </view>
+    <view class="totalPrice">总计：￥39.00</view>
+    <button class="btn" type="warn" bindtap="buyNowFn"> 立即购买 </button>
+  </view>
   <view class="list">
     <view class="check">
       <checkbox class="checkbtn" value="false" checked="checked" />
@@ -35,11 +41,5 @@
       </view>
     </view>
   </view>
-  <view class="bottom">
-    <view class="check">
-      <checkbox class="checkbtn" value="false" checked="checked" />
-    </view>
-    <view class="totalPrice">总计：￥39.00</view>
-    <button class="btn" type="warn" bindtap="buyNowFn"> 立即购买 </button>
-  </view>
+ 
 </view>

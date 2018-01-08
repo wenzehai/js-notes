@@ -1,19 +1,25 @@
+var app = getApp();
 Page({
   data: {
-    addressInfo: {
-      name: '哈利油',
-      tel: 15080755770,
-      address: "岳麓区麓谷新长海中心B1栋501室"
-    }
+    addressInfo: []
   },
-  changeAddFn:function(){
+  editFn: function (e) {
+    // console.log(e)
+    wx.navigateTo({
+      url: '/pages/editAddress/editAddress?id='+e.currentTarget.id,
+    })
+  },
+  addAddressFn: function () {
     wx.navigateTo({
       url: '/pages/editAddress/editAddress',
     })
   },
-  addAddressFn:function(){
-    wx.navigateTo({
-      url: '/pages/editAddress/editAddress',
+  changeFirstAdd: function (e) {
+    // console.log('radio发生change事件，携带value值为：', e.detail)
+  },
+  onLoad:function(){
+    this.setData({
+      addressInfo: this.data.addressInfo.concat(app.globalData.addList)
     })
   }
 })
