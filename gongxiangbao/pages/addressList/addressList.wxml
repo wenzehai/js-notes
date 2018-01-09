@@ -1,17 +1,17 @@
 <view class="container">
 <radio-group class="radio-group" bindchange="changeFirstAdd">
-  <view class="list" wx:for="{{addressInfo}}">
+  <view class="list" wx:for="{{addressInfo}}" >
     <view class="con">
       <view class="optionBox">
           <radio checked="{{item.firstAdd}}" value="{{item.id}}" />
       </view>
 
-      <view class="msgCon" id="{{item.id}}" bindtap="editFn">
+      <view class="msgCon" id="{{index+1}}" bindtap="editFn">
         <view class="name">
           <text>{{item.name}}</text>
           <text>{{item.tel}}</text>
         </view>
-        <text class="address"  wx:for="{{item.region}}">{{item}}</text>
+        <text class="address"  wx:for="{{item.region}}" >{{item}}</text>
         <text class="addressDetail">{{item.address}}</text>
       </view>
     </view>
