@@ -1,46 +1,67 @@
 .container {
   width: 100%;
+  position: relative;
 }
-.top-bar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 5rpx 0 0;
-    background: #fff;
-    border-bottom: 1px solid #dadada;
-  }
-  
-  .top-bar-item{
-    width: 375rpx;
-    text-align: center;
-    font-size: 15rpx;
-    line-height: 100rpx;
-  }
-  
-  .active {
-    background: #eaeaea;
-  }
-  
-  .item-text{
-    font-size: 24rpx;
-    color: #7A7E83;
-  }
-  
+
+/* 下面是tobar */
+
+swiper {
+  display: block;
+  height: 100%;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 99rpx;
+  border-bottom: 1rpx solid #dadada;
+  background-color: #fff;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 15;
+}
+
+swiper-item {
+  padding-top: 100rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 45%;
+  color: #353535;
+  border-bottom: 0rpx;
+}
+
+.on {
+  color: #09bb07;
+  border-bottom: 2rpx solid #09bb07;
+}
+
+/*内容部分  */
+
 .boxTitle {
-  margin-top: 100rpx;
   font-size: 12px;
-  color: #999999;
+  color: #999;
   line-height: 60rpx;
   padding: 0 30rpx;
   background: #efeff4;
   height: 60rpx;
 }
+
+.billCon {
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+
 .billList {
   border-top: 1px solid #efeff4;
 }
+
 .list_hd {
   font-size: 12px;
-  color: #999999;
+  color: #999;
   line-height: 70rpx;
   padding: 0 30rpx;
   display: flex;
@@ -48,6 +69,42 @@
   justify-content: space-between;
   border-bottom: 1px solid #efeff4;
 }
+
+image {
+  margin: 20rpx 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+}
+
+.textBox {
+  width: 430rpx;
+  float: right;
+  padding: 20rpx 30rpx;
+}
+
+.textBox .goodsTitle {
+  font-size: 14px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.textBox .type {
+  margin-top: 8rpx;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 清除浮动 */
+
+.emptyForClear {
+  clear: both;
+}
+
 .shop, .cost {
   font-size: 14px;
   color: #333;
@@ -56,36 +113,42 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 70rpx;
 }
 
+.total {
+  font-size: 14px;
+  color: #333;
+  line-height: 66rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70rpx;
+  border-top: 1rpx solid #dadada;
+}
 
+.total .payBtn {
+  width: 140rpx;
+  height: 50rpx;
+  border: 1px solid #09bb07;
+  background: #fff;
+  font-size: 12px;
+  color: #09bb07;
+  line-height: 50rpx;
+  margin-right: 0;
+  margin-top: 10rpx;
+  border-radius: 6rpx;
+  padding: 0;
+  outline: none;
+}
 
+.list_hd .listCon {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-  /*弹性盒模型*/
-  .box {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-  }
-
-
-
-
-
-
-
-
-
+.list_hd .listCon .textBox {
+  width: 300rpx;
+}

@@ -1,11 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/bills/bills",
+    
     "pages/addressList/addressList",
     "pages/test/test",
     
     "pages/order/order",
     "pages/shop/shop",
-    "pages/index/index",
+    
     "pages/goodsDetail/goodsDetail",
     
       
@@ -17,7 +20,7 @@
     "pages/questions/questions",
     "pages/editAddress/editAddress",
     
-    "pages/bills/bills",
+    
     "pages/tradingDetails/tradingDetails",
     "pages/personal/personal",
     
@@ -32,8 +35,7 @@
     "navigationBarBackgroundColor": "#151515",
     "navigationBarTitleText": "共享宝",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#efeff4",
-    "enablePullDownRefresh":true
+    "backgroundColor": "#efeff4"
   },
   "tabBar": {
     "color": "#7f8389",

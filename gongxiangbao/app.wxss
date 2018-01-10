@@ -2,7 +2,9 @@
 
 page {
   background-color: #fff;
+  height: 100%;
 }
 .container {
   background: #efeff4;
+  height: 100%;
 }
