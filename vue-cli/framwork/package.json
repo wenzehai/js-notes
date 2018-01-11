@@ -1,7 +1,7 @@
 {
   "name": "framwork",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "自己用框架",
   "author": "zehai <373952776@qq.com>",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "element-ui": "^2.0.11",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
