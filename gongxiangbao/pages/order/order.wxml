@@ -1,11 +1,17 @@
 <view class="container">
   <!-- 地址选择 -->
   <view class="addressBox" bindtap="chooseFn">
-    <view class="name">
-      <text>{{addressInfo.name}}</text>
-      <text>{{addressInfo.tel}}</text>
+    <view class="none" wx:if="{{noAdd}}">
+      <text>选择地址</text>
     </view>
-    <view class="address">{{addressInfo.address}}</view>
+    <view class="has" wx:if="{{hasAdd}}">
+      <view class="name">
+        <text>{{addressInfo.name}}</text>
+        <text>{{addressInfo.tel}}</text>
+      </view>
+      <view class="address">{{addressInfo.address}}</view>
+    </view>
+
     <image src="../../image/icon_arrowRight.png" mode="widthFix" class="arrowBtn"></image>
     <image src="../../image/mail_line.png" mode="widthFix" class="mailLine"></image>
   </view>
@@ -13,12 +19,12 @@
   <!-- 商品列表 -->
   <view class="goodslist">
     <view class="listBox">
-      <image class="list-box-img" src="../../image/goods.png" mode="widthFix"></image>
+      <image class="list-box-img" src="{{goodsInfo[0].imageUrl}}" mode="widthFix"></image>
       <view class="textCon">
-        <view class="title">{{title}}</view>
-        <view class="property">{{color}}</view>
+        <view class="title">{{goodsInfo[0].title}}</view>
+        <view class="property">{{goodsInfo[0].color}}</view>
         <view class="subCon">
-          <view class="price">￥{{price}}</view>
+          <view class="price">{{goodsInfo[0].price}}</view>
           <view class="num">X{{num}}</view>
         </view>
 
@@ -56,7 +62,7 @@
   <!-- 底部按钮 -->
   <!-- 此处需要绑定提交事件 -->
   <view class="fixFt">
-    <button class="submitBtn" type="warn" > 提交订单 </button>
+    <button class="submitBtn" type="warn"> 提交订单 </button>
   </view>
 
 </view>

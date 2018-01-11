@@ -1,38 +1,42 @@
 <view class="container">
-  <view class="person">
-    <view class="title">
-      <sup class="upper">*</sup>收货人信息</view>
-    <view class="inputBox">
-      <label class="label">收货人
-        <input class="input" placeholder="填写姓名" />
-      </label>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="person">
+      <view class="title">
+        <sup class="upper">*</sup>收货人信息</view>
+      <view class="inputBox">
+        <label class="label">收货人
+          <input name="name" class="input" placeholder="填写姓名" value="{{addressValue.name}}" bindinput="bindKeyInput"/>
+        </label>
+      </view>
+      <view class="inputBox">
+        <label class="label">手机号
+          <input name="phoneNum" class="input" placeholder="填写手机号" value="{{addressValue.tel}}" bindinput="bindNumInput"/>
+        </label>
+      </view>
     </view>
-    <view class="inputBox">
-      <label class="label">手机号
-        <input class="input" placeholder="填写手机号" />
-      </label>
+    <view class="person">
+      <view class="title">
+        <sup class="upper">*</sup>收货人信息</view>
+      <view class="inputBox">
+        <label class="label">省市区
+          <picker name="region" class="pickerBox" mode="region" bindchange="bindRegionChange" value="{{addressValue.region}}" custom-item="{{customItem}}">
+            <view class="picker">
+               {{addressValue.region[0]}}，{{addressValue.region[1]}}，{{addressValue.region[2]}} 
+            </view>
+          </picker>
+        </label>
+      </view>
     </view>
-  </view>
-  <view class="person">
-    <view class="title">
-      <sup class="upper">*</sup>收货人信息</view>
-    <view class="inputBox">
-      <label class="label">省市区
-        <picker class="pickerBox" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-          <view class="picker">
-            {{region[0]}}，{{region[1]}}，{{region[2]}}
-          </view>
-        </picker>
-      </label>
+    <view class="textarea">
+      <textarea name="address" bindblur="bindTextAreaBlur" style="width: 690rpx;" cursor-spacing="50" maxlength="200" placeholder="街道地址（限200字符）" value="{{addressValue.address}}" />
     </view>
-  </view>
-  <view class="textarea">
-    <textarea bindblur="bindTextAreaBlur" style="width: 690rpx;" cursor-spacing="50" maxlength="200" placeholder="街道地址（限200字符）" />
-  </view>
 
 
-   <!-- 底部按钮 --> 
-  <view class="fixFt">
-    <button class="submitBtn" type="primary" bindtap="addAddressFn" > 保存 </button>
-  </view>
+
+    <!-- 底部按钮 -->
+    <view class="fixFt">
+      <button class="submitBtn" type="warn" bindtap="deleteFn"> 删除 </button>
+      <button class="submitBtn" type="primary" formType="submit"> 保存 </button>
+    </view>
+  </form>
 </view>

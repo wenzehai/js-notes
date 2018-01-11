@@ -2,7 +2,7 @@
   <!-- 轮播部分 -->
   <view class="swiper">
     <swiper indicator-dots="{{indicatorDots}}" class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{url}}" wx:key="*this">
+      <block wx:for="{{goodsArr[0].url}}" wx:key="*this">
         <swiper-item>
           <view class="swiper-item ">
             <image src="{{item}}" style="width: 750rpx; height: 750rpx;"></image>
@@ -14,12 +14,12 @@
 
   <!-- 商品标题名称 -->
   <view class="titleCon">
-    <view class="goodsTitle">{{title}}</view>
-    <view class="goodsPrice">￥{{price}}</view>
-    <view>
+    <view class="goodsTitle">{{goodsArr[0].title}}</view>
+    <view class="goodsPrice">{{goodsArr[0].price}}</view>
+    <!-- <view>
       <text class="property">颜色</text>
       <text class="goodsColor">{{color}}</text>
-    </view>
+    </view> -->
   </view>
 
   <!-- 商品详情部分 -->
@@ -27,7 +27,7 @@
     <view class="detail_hd">
       商品详情
     </view>
-    <view class="detail_bd" wx:for="{{url}}">
+    <view class="detail_bd" wx:for="{{goodsArr[0].detailUrl}}">
       <image src="{{item}}" style="width: 750rpx; height: 750rpx;"></image>
     </view>
   </view>
@@ -35,7 +35,7 @@
   <!-- 底部按钮 -->
   <view class="fixFt">
 
-    <button type="primary" class="btn" bindtap="toastFn"> 加入购物车 </button>
+    <button type="primary" class="btn" bindtap="addCartFn"> 加入购物车 </button>
     <button type="warn" class="btn" bindtap="buyNowFn"> 立即购买 </button>
   </view>
 

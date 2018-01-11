@@ -6,7 +6,7 @@ App({
     // console.log(obj.scene);
     // console.log(obj.query);
   },
-  onShow: function(obj){
+  onShow: function (obj) {
     // console.log(obj);
   },
   // 这段代码为案例自带代码，可以删除掉
@@ -47,7 +47,22 @@ App({
   */
   globalData: {
     userInfo: null,
-    codeNum:'1213'
+    codeNum: '1213',
+    cartList: [],
+    addList: [{
+      id: 1,
+      name: '哈利油',
+      tel: 15080755770,
+      region: ["湖南省", "长沙市","岳麓区"],
+      address: "麓谷大道新长海中心B1栋501室"
+    }, {
+      id: 2,
+      name: '李梦晨',
+      tel: 15080755770,
+      region: ["广东省", "佛山市", "顺德区"],
+      address: "凤翔路新长海中心B1栋501室"
+    }
+    ]
   }
-  
+
 })
