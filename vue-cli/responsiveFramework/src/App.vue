@@ -3,7 +3,7 @@
     <div class="page-layout">
       <sidebar-component :active="sidebarOpened" />
       <div class="page-layout-inner">
-        <header-component :openSidebar="openSidebar" :title="title" />
+        <header-component :openSidebar="openSidebar"  /><!--:title="title"-->
         <main>
           <div class="main-content">
             <el-row class="container">
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+  import route from './router/index.js'
   import Header from './components/Header.vue'
   import Sidebar from './components/Sidebar.vue'
   import Dimmer from './components/Dimmer.vue'
@@ -28,17 +29,21 @@ export default {
     ...mapActions(['handleResize', 'openSidebar', 'closeSidebar'])
   },
   computed: {
-    ...mapState({
-    sidebarOpened: state => {
-        return state.ui.sidebarOpened
-      },
-      obfuscatorActive: state => {
-        return state.ui.obfuscatorActive
-      },
-      title: state => {
-        return state.route.meta.title
-      }
-    })
+    ...mapState(
+      {
+//    sidebarOpened: function(state){
+//        return state.ui.sidebarOpened
+//      },
+//    obfuscatorActive: function(state){
+//        return state.ui.obfuscatorActive
+//      }
+//      ,
+//    title: function(state){
+//      console.log(state)
+//      return state.route.options.routes.meta.title
+//      return state.route.meta.title
+//    }
+  })
   },
   components: {
     'header-component': Header,

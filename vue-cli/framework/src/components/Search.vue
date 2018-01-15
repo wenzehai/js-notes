@@ -5,7 +5,7 @@
             <el-row class="panel">
               <el-col class="panel_hd">
                 <!-- <h1 class="panelTitle">搜索选项<i class="iconTips el-icon-warning"></i></h1> -->
-              </el-col>  
+              </el-col>
               <el-col class="panel_bd">
                 <el-form :inline="true" ref="form" :model="sizeForm" label-width="80px" size="mini">
                 <el-form-item label="活动名称">
@@ -45,15 +45,15 @@
                 </el-form-item>
             </el-form>
 
-              </el-col>  
+              </el-col>
             </el-row>
             <el-row class="panel">
               <el-col :col="24">
                 <el-row class="panel_hd">
                     <el-col :col="24">
-                      <h1 class="panelTitle">数据表格<el-tooltip class="item" effect="light" content="这个表格里面是一些地址信息数据" placement="right-end"><i class="iconTips el-icon-warning"></i></el-tooltip></h1>
+                      <h1 class="panelTitle">数据表格<el-tooltip class="item" effect="light" content="这个表格里展示的是销售数据" placement="right-end"><i class="iconTips el-icon-warning"></i></el-tooltip></h1>
                     </el-col>
-                </el-row> 
+                </el-row>
                 <el-row class="panel_bd">
                     <el-col :col="24">
                       <el-table
@@ -95,9 +95,9 @@
                         </el-pagination>
                       </div>
                     </el-col>
-                </el-row> 
+                </el-row>
               </el-col>
-            </el-row>  
+            </el-row>
         </div>
 
 

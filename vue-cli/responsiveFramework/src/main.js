@@ -7,7 +7,7 @@ import store from './store' // Vuex store
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import App from './App'
+import App from './App.vue'
 
 
 Vue.config.productionTip = false
@@ -15,10 +15,12 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 /* eslint-disable no-new */
-new Vue({
+var vm = new Vue({
   el: '#app',
   router,
   store,
-  template: '<App/>',
   components: { App }
 })
+
+//,
+// template: '<App/>'

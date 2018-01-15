@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
+// import HelloWorld from '../components/HelloWorld.vue'
 import Dashboard from '../views/Dashboard'
 import Post from '../views/Post'
 import About from '../views/About'
@@ -52,4 +52,9 @@ export const routes = [
     }
   }
 ]
-export const router = new Router({ mode: 'history', routes })
+
+const router = new Router({ mode: 'history', routes });
+console.log(router)
+export default {
+  router
+}
