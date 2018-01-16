@@ -3,7 +3,8 @@
     <el-menu theme="dark" mode="horizontal">
         <el-menu-item class="header-navicon" index="1">
             <el-button type="text" @click="openSidebar">
-                <i class="md-icon">menu</i>
+                <!--<i class="md-icon">menu</i>-->
+                <img src="../../assets/img/ico_menu.png" class="md-icon">
             </el-button>
         </el-menu-item>
         <span class="header-title">{{title}}</span>
