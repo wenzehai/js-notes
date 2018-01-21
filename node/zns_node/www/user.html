@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.css" />
+		<script src="ajax.js"></script>
+		<script>
+			window.onload = function(){
+				var oTxtUser = document.getElementById('user');
+				var oTxtPass = document.getElementById('pass');
+				var oBtnReg = document.getElementById('reg_btn');
+				var oBtnLogin = document.getElementById('login_btn');
+
+				oBtnReg.onclick = function(){
+					ajax({
+						url:'/user',		//同目录加/  ？号前面那部分
+						data:{act:'reg',user:oTxtUser.value,pass:oTxtPass.value},
+						type:'get',
+						success:function(str){
+							var json = eval('('+str+')');			//解析后台返回的数据
+
+							if(json.ok){
+								alert('注册成功');
+							}else{
+								alert('注册失败'+json.msg);
+							}
+						},
+						error:function(){
+							alert('通信错误');
+						}
+					});
+				}
+				oBtnLogin.onclick = function(){
+					ajax({
+						url:'/user',
+						data:{act:'login',user:oTxtUser.value,pass:oTxtPass.value},
+						type:'get',
+						success:function(str){
+							var json = eval('('+str+')');			//解析后台返回的数据
+
+							if(json.ok){
+								alert('登录成功');
+							}else{
+								alert('登录失败'+json.msg);
+							}
+						},
+						error:function(){
+							alert('通信错误');
+						}
+					});
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>这里是user.html</h1>
+		用户名：<input type="text" id="user" value=""><br>
+		密码：<input type="password" id="pass" value=""><br>
+		<input type="button" value="注册" id = "reg_btn">
+		<input type="button" value="登录" id = "login_btn">
+		
+	</body>
+</html>
