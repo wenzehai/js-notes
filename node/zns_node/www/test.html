@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ajax.js"></script>
+
+</head>
+<body>
+<form>
+    用户名：<input type="text" name="user" id="userInput">
+    密码：<input type="password" name="pass" id="passInput">
+    <button id="login">登录</button>
+    <button id="reg">注册</button>
+</form>
+
+<script>
+    var userInput =  document.getElementById("userInput");
+    var passInput =  document.getElementById("passInput");
+    var loginBtn =  document.getElementById("login");
+    var regBtn =  document.getElementById("reg");
+    console.log(loginBtn)
+    loginBtn.onclick = function() {
+        ajax({
+            url:'/user',
+            data: {act:'reg',user:userInput.value,pass:passInput.value},
+            type:'get',
+            success:function (str) {
+                var json = eval('(' + str + ')');
+
+                if(json.ok){
+                    alert('注册成功');
+                }else{
+                    alert("注册失败")
+                }
+            },
+            error:function() {
+                alert('通信错误');
+            }
+        });
+    };
+
+    regBtn.onclick = function(){
+        ajax({
+            url:'/user',
+            data:{act:'login',user:userInput.value,pass:passInput.value},
+            type:'get',
+            success:function(str) {
+                var json = eval('(' + str + ')');
+
+                if(json.ok){
+                    alert('登录成功');
+                }else{
+                    alert("登录失败")
+                }
+            },
+            error:function() {
+                alert('通信错误');
+            }
+        });
+    }
+</script>
+</body>
+</html>
