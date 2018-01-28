@@ -23,15 +23,16 @@
     loginBtn.onclick = function() {
         ajax({
             url:'/user',
-            data: {act:'reg',user:userInput.value,pass:passInput.value},
+            data: {act:'login',user:userInput.value,pass:passInput.value},
             type:'get',
             success:function (str) {
+                console.log(str);
                 var json = eval('(' + str + ')');
-
+                console.log(json);
                 if(json.ok){
-                    alert('注册成功');
+                    alert('登录成功');
                 }else{
-                    alert("注册失败")
+                    alert(json.msg)
                 }
             },
             error:function() {
@@ -43,15 +44,15 @@
     regBtn.onclick = function(){
         ajax({
             url:'/user',
-            data:{act:'login',user:userInput.value,pass:passInput.value},
+            data:{act:'reg',user:userInput.value,pass:passInput.value},
             type:'get',
             success:function(str) {
                 var json = eval('(' + str + ')');
 
                 if(json.ok){
-                    alert('登录成功');
+                    alert('注册成功');
                 }else{
-                    alert("登录失败")
+                    alert(json.msg)
                 }
             },
             error:function() {

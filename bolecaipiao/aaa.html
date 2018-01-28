@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>购彩大厅 | 所有彩票</title>
+    
+<meta name="keywords" content="keywords">
+<meta name="description" content="description">
+<meta name="author" content="author">
+<meta name="Copyright" content="author">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+    a:hover {color: red;}
+    a:active {color:deepskyblue;}
+</style>
+<link rel="stylesheet" href="./aaa_files/new.css" type="text/css">
+</head>
+<body marginwidth="0" marginheight="0">
+<div id="box" class="qc">
+    <div class="qc" id="Right">
+        <div class="main">
+            <div class="main-box remain-box">
+                <div class="main-nav">
+                    <div class="cplogo" id="lotteryCode" data-code="cqssc" data-type="ssc" data-id="shuju1">
+					<img src="./aaa_files/cqssc.png" alt="重庆时时彩"><span>重庆时时彩</span></div>
+                    <div class="czqh">
+                        <span class="curretSsc">切换彩种</span><span class="xiajian"></span>
+                    </div>
+                    <ul class="btn-navs">
+                        <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
+                        <li data-contentid="shuju2" data-id="shuju2">K线图</li>
+                        <li data-contentid="shuju3" data-id="shuju3">直方图</li>
+                        <li data-id="shuju5">历史开奖数据</li>
+                        <li id="getljtzpage">
+                            <a href="javascript:void(0)">立即投注</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="qhbox">
+                    <div class="qhbox_title"></div>
+                    <div class="qhbox_title2"></div>
+                    <div class="main-li main-li-cq">
+                        <div class="main-ul-box1" id="zssearchDiv">
+                            <ul class="main-ul-box">
+                                <li>
+                                    <ul class="main-ul-1">
+                                        <li>
+                                            <a class="active" href="javascript:void(0)" data-contentid="zhexianData" data-id="hmzs">号码走势</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" data-contentid="dxdshezhi" data-id="smzs">双面走势</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" data-contentid="clzoushi" data-id="clzs">长龙走势</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-li-right" style="visibility: hidden;">
+                            <div>
+                                <a href="javascript:void(0)" onclick="parent.getSscPage(&#39;gcdt/xjssc&#39;)">立即投注</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <ul class="search-left">
+                            <li><label>遗漏数据<input type="checkbox" id="checkboxYlsj" checked="checked"></label></li>
+                            <li><label>遗漏分层<input type="checkbox" id="checkboxYlfc"></label></li>
+                            <li class="zhe"><label>折线<input type="checkbox" id="checkboxZhexian" checked="checked"></label></li>
+                        </ul>
+                        <ul class="search-right">
+                            <li>
+                                <div><b>查询：</b></div>
+                            </li>
+                            <li>
+                                <div class="qi xuan">
+                                    <a href="javascript:void(0)" class="on30qi" data-num="30">近30期</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qi">
+                                    <a href="javascript:void(0)" class="on50qi" data-num="50">近50期</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qi">
+                                    <a href="javascript:void(0)" class="on100qi" data-num="100">近100期</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qi">
+                                    <a href="javascript:void(0)" class="oncurrentqi" data-num="150">近150期</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qi">
+                                    <a href="javascript:void(0)" class="onlatelyqi" data-num="200">近200期</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="shuju1" class="shuju">
+                        <div class="chu-box">
+                            <div class="chu">
+                                <div class="cl-40">
+                                    <div class="cl-30 cl-98">
+                                        <div class="left cl-31">期号</div>
+                                        <div class="left cl-32">奖号</div>
+                                        <div class="left cl-33">
+                                            <div class="cl-35">
+                                                <div class="left cl-34">万位</div>
+                                                <div class="left cl-34">千位</div>
+                                                <div class="left cl-34">百位</div>
+                                                <div class="left cl-34">十位</div>
+                                                <div class="left cl-34">个位</div>
+                                            </div>
+                                            <div class="cl-35 cl-36 clean">
+                                                <script>
+                                                    for(var i = 0; i < 5; ++i) {
+                                                        for(var j = 0; j < 10; ++j) {
+                                                            var s = '';
+                                                            if(i % 2 == 0) {
+                                                                s = 'bg-1';
+                                                            } else {
+                                                                s = 'bg-2'
+                                                            }
+                                                            document.write('<var class="' + s + '"><i>' + j + '</i></var>');
+                                                        }
+                                                    }
+                                                </script>
+												
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="zhexianData" class="zhexianCon"></div>
+                                </div>
+                            </div>
+                            <div class="cl-40 clean">
+                                <div class="cl-30">
+                                    <div class="left cl-32" style="width: 150pt;">遗漏统计</div>
+                                    <div class="left cl-33">
+                                        <div class="cl-35">
+                                            <div class="left cl-34">万位</div>
+                                            <div class="left cl-34">千位</div>
+                                            <div class="left cl-34">百位</div>
+                                            <div class="left cl-34">十位</div>
+                                            <div class="left cl-34">个位</div>
+                                        </div>
+                                        <div class="cl-35 cl-36 clean">
+                                            <script>
+                                                for(var i = 0; i < 5; ++i) {
+                                                    for(var j = 0; j < 10; ++j) {
+                                                        document.write('<var class=""><i>' + j + '</i></var>');
+                                                    }
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="yiLouData">
+                                    <div class="clean bg-gray">
+                                        <div class="left cl-31 cl-51">出现总次数</div>
+                                        <div id="cxzcs"></div>
+                                    </div>
+                                    <div class="clean bg-white">
+                                        <div class="left cl-31 cl-51">平均遗漏值</div>
+                                        <div id="pjylz"> </div>
+                                    </div>
+                                    <div class="clean bg-gray">
+                                        <div class="left cl-31 cl-51">最大遗漏值</div>
+                                        <div id="zdylz"></div>
+                                    </div>
+                                    <div class="clean bg-white">
+                                        <div class="left cl-31 cl-51">最大连出值</div>
+                                        <div id="zdlcz"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<canvas id="canvas" width="900px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
+<canvas id="canvas2" width="900px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
+
+<script src="aaa_files/jquery.min.js"></script>
+<script>
+function zhexian(data) {//折线
+	var _this = this;
+	var str = '';
+	for(var i = 0; i < data.length; i++) {
+		// qihao
+		str += '<div class="cl-30">';
+		str += '<div class="left cl-31 number">' + data[i].expect + '</div>';
+		str += '<div class="left cl-32 openCode">' + data[i].openCode + '</div>';
+		var kjData = data[i].openCode.split(",");
+
+		for(var j = 0; j < kjData.length; ++j) {
+			var haoma = kjData[j];
+			var bc1 = 0;
+			var Left = 0;
+
+			str += '<div class="cl-35 cl-36">';
+			if(i < data.length - 1) {
+				bc1 = (data[i].openCode.split(",")[j]) - (data[i + 1].openCode.split(",")[j]);
+			}
+
+			if(bc1 > 0) {
+				Left = (bc1) * (-20);
+			} else if(bc1 < 0) {
+				bc1 = -bc1;
+			}
+			for(var k = 0; k < 10; ++k) {
+				str += '<var class="' + (j % 2 == 0 ? 'bg-11' : 'bg-12') + ' i_' + j + "_" + k + '">';
+				if(k == haoma) {
+					str += '<i data-num="' + k + '" class="' + (j % 2 == 0 ? 'bg-14' : 'bg-15') + '" style="color:#fff;font-weight:bold; z-index: 15;">';
+					str += k;
+					str += '<canvas class="zhexian" id="canvas' + i + j + '" width="' + (bc1 + 1) * 20 + '" height="32px" style="z-index: -100; left:' + Left + 'px; display: none; border-color:#c42233;"></canvas>';
+					str += '</i>';
+				} else {
+					str += '<i></i>';
+				}
+				str += '</var>';
+			}
+
+			str += '</div>';
+		}
+		str += '</div>';
+	}
+	$("#zhexianData").html(str); //html() 方法返回或设置被选元素的内容  //如果该方法未设置参数，则返回被选元素的当前内容
+
+	for(var i = 0; i < data.length - 1; ++i) {
+		for(var j = 0; j < 5; ++j) {
+			bc1 = parseInt(data[i].openCode.split(',')[j]) - parseInt(data[i + 1].openCode.split(',')[j]);
+			var Left = 0;
+			if(bc1 < 0) {
+				bc1 = -bc1;
+				Left = (bc1) * (-20);
+			}
+			var canvas = document.getElementById("canvas" + i + j);
+			var context = canvas.getContext("2d");
+			var bc1 = (data[i].openCode.split(',')[j]) - data[i + 1].openCode.split(',')[j];
+			if(bc1 < 0) {
+				context.moveTo(17, 13);
+				context.lineTo(canvas.width - 13, canvas.height - 8);
+			} else if(bc1 > 0) {
+				context.moveTo(canvas.width - 13, 13);
+				context.lineTo(8, canvas.height - 5);
+			} else {
+				context.moveTo(10, 12);
+				context.lineTo(10, 30);
+			}
+			if(j % 2 != 0) {
+				context.strokeStyle = "#ffa221";
+			} else {
+                context.strokeStyle = "#c42233";
+            }
+			context.stroke();
+		}
+	}
+	if($("#checkboxZhexian").is(":checked")) {
+		$(".zhexian").show();
+	} else {
+		$(".zhexian").hide();
+	}
+
+	// 遗漏
+	renderYilou(data);
+
+	if($("#checkboxYlsj").is(":checked")) {
+		$(".transparent").addClass("not-transparent");
+	} else {
+		$(".transparent").removeClass("not-transparent");
+	}
+}
+
+function renderYilou(data) {
+	// 遗漏统计
+	var yilou = [];
+	for(var i = 0; i < 5; ++i) {
+		yilou[i] = [];
+		for(var j = 0; j < 10; ++j) {
+			yilou[i][j] = {
+				cxCs: 0, // 出现次数
+				maxLcCs: 0, // 最大连出次数
+				ylArr: [] // 遗漏次数
+			};
+		}
+	}
+	var datalength = data.length-1;
+	for(var i =0; i < 5; ++i) {
+		for(var j = 0; j < 10; ++j) {
+			var obj = yilou[i][j];
+
+			var tmpYlCs = 0; // 连续遗漏次数
+			var tmpLcCs = 0; // 连出次数
+			$.each(data, function(index, value) {
+				var openCodeArr = value.openCode.split(",");
+				var tmpValue = parseInt(openCodeArr[i]);
+
+				if(tmpValue != j) { // 遗漏
+					tmpYlCs++;
+					tmpLcCs = 0;
+					if (index==datalength){
+						obj.ylArr.push(tmpYlCs);
+					}
+				} else { // 中
+					obj.cxCs++;
+					tmpLcCs++;
+					if(tmpYlCs !=0){
+						obj.ylArr.push(tmpYlCs);
+					}
+					tmpYlCs = 0;
+				}
+				if(tmpLcCs > obj.maxLcCs) {
+					obj.maxLcCs = tmpLcCs;
+				}
+			});
+		}
+	}
+	var str1 = '',
+		str2 = '',
+		str3 = '',
+		str4 = '';
+	for(var i = 0; i < 5; ++i) {
+		for(var j = 0; j < 10; ++j) {
+			var obj = yilou[i][j];
+			// 出现次数
+			str1 += '<var><i>' + obj.cxCs + '</i></var>';
+
+			// 平均遗漏值&最大遗漏值
+			var maxYl = 0;
+			if(obj.ylArr.length > 0) {
+				var sumYl = 0;
+				$.each(obj.ylArr, function(index, value) {
+					sumYl += value;
+					maxYl = value > maxYl ? value : maxYl;
+				});
+				str2 += '<var><i>' + Math.floor(sumYl / obj.ylArr.length) + '</i></var>';
+				str3 += '<var><i>' + maxYl + '</i></var>';
+			} else {
+				str2 += '<var><i>0</i></var>';
+				str3 += '<var><i>0</i></var>';
+			}
+
+			// 最大连出值
+			str4 += '<var><i>' + obj.maxLcCs + '</i></var>';
+		}
+	}
+
+	$("#cxzcs").html(str1);
+	$("#pjylz").html(str2);
+	$("#zdylz").html(str3);
+	$("#zdlcz").html(str4);
+
+	var str5 = '';
+	for(var i = 0; i < 5; ++i) {
+		for(var j = 0; j < 10; ++j) {
+			str5 += '<tr>';
+			if(j == 0) {
+				if(i == 0) {
+					str5 += '<td rowspan="10">万位</td>';
+				} else if(i == 1) {
+					str5 += '<td rowspan="10">千位</td>';
+				} else if(i == 2) {
+					str5 += '<td rowspan="10">百位</td>';
+				} else if(i == 3) {
+					str5 += '<td rowspan="10">十位</td>';
+				} else if(i == 4) {
+					str5 += '<td rowspan="10">个位</td>';
+				}
+			}
+
+			str5 += '<td>' + j + '</td>';
+
+			var obj = yilou[i][j];
+			// 出现次数
+			str5 += '<td>' + obj.cxCs + '</td>';
+
+			// 平均遗漏值&最大遗漏值
+			var maxYl = 0;
+			if(obj.ylArr.length > 0) {
+				var sumYl = 0;
+				$.each(obj.ylArr, function(index, value) {
+					sumYl += value;
+					maxYl = value > maxYl ? value : maxYl;
+				});
+				str5 += '<td>' + Math.floor(sumYl / obj.ylArr.length) + '</td>';
+				str5 += '<td>' + maxYl + '</td>';
+			} else {
+				str5 += '<td>0</td>';
+				str5 += '<td>0</td>';
+			}
+
+			// 最大连出值
+			str5 += '<td>' + obj.maxLcCs + '</td>';
+			str5 += '</tr>';
+		}
+	}
+	$("#shuju4 table tbody").html(str5);
+
+	// 遗漏数据
+	for(var i = 0; i < 5; ++i) {
+		for(var j = 0; j < 10; ++j) {
+			var tmpCount = 0;
+			var obj = $(".i_" + i + "_" + j + " i");
+			$(obj).each(function() {
+				if(typeof $(this).data('num') == 'undefined') {
+					tmpCount = tmpCount + 1;
+					$(this).html(tmpCount).addClass("transparent");
+				} else {
+					tmpCount = 0;
+				}
+			});
+		}
+	}
+
+	// 遗漏分层
+	for(var i = 0; i < 5; ++i) {
+		for(var j = 0; j < 10; ++j) {
+			var tmpCount = 0;
+			var obj = $(".i_" + i + "_" + j + " i");
+			for(var k = Number($("ul.search-right div.xuan a").attr("data-num")) - 1; k >= 0; --k) {
+				var tmpObj = $(obj)[k];
+				if(typeof $(tmpObj).data('num') == 'undefined') {
+					$(tmpObj).parent().addClass("ylfc")
+				} else {
+					break;
+				}
+			}
+		}
+	}
+}
+
+
+var data = eval([{"id":1189160,"expect":"20180126089","code":"cqssc","type":"ssc","openCode":"3,6,9,3,0","openTime":1516971000000,"closeTime":1516970940000,"openingTime":1516970340000,"gatherTime":1516971062400,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189159,"expect":"20180126088","code":"cqssc","type":"ssc","openCode":"0,7,0,3,5","openTime":1516970400000,"closeTime":1516970340000,"openingTime":1516969740000,"gatherTime":1516970452211,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189158,"expect":"20180126087","code":"cqssc","type":"ssc","openCode":"9,6,1,6,8","openTime":1516969800000,"closeTime":1516969740000,"openingTime":1516969140000,"gatherTime":1516969852620,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189157,"expect":"20180126086","code":"cqssc","type":"ssc","openCode":"6,1,5,8,2","openTime":1516969200000,"closeTime":1516969140000,"openingTime":1516968540000,"gatherTime":1516969252229,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189156,"expect":"20180126085","code":"cqssc","type":"ssc","openCode":"4,8,7,7,3","openTime":1516968600000,"closeTime":1516968540000,"openingTime":1516967940000,"gatherTime":1516968652170,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189155,"expect":"20180126084","code":"cqssc","type":"ssc","openCode":"6,7,3,3,6","openTime":1516968000000,"closeTime":1516967940000,"openingTime":1516967340000,"gatherTime":1516968052114,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189154,"expect":"20180126083","code":"cqssc","type":"ssc","openCode":"5,4,2,9,8","openTime":1516967400000,"closeTime":1516967340000,"openingTime":1516966740000,"gatherTime":1516967452330,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189153,"expect":"20180126082","code":"cqssc","type":"ssc","openCode":"1,6,9,0,1","openTime":1516966800000,"closeTime":1516966740000,"openingTime":1516966140000,"gatherTime":1516966872665,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189152,"expect":"20180126081","code":"cqssc","type":"ssc","openCode":"8,2,9,0,8","openTime":1516966200000,"closeTime":1516966140000,"openingTime":1516965540000,"gatherTime":1516966252120,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189151,"expect":"20180126080","code":"cqssc","type":"ssc","openCode":"5,5,0,6,9","openTime":1516965600000,"closeTime":1516965540000,"openingTime":1516964940000,"gatherTime":1516965654519,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189150,"expect":"20180126079","code":"cqssc","type":"ssc","openCode":"4,0,6,9,6","openTime":1516965000000,"closeTime":1516964940000,"openingTime":1516964340000,"gatherTime":1516965053202,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189149,"expect":"20180126078","code":"cqssc","type":"ssc","openCode":"3,4,5,3,4","openTime":1516964400000,"closeTime":1516964340000,"openingTime":1516963740000,"gatherTime":1516964457002,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189148,"expect":"20180126077","code":"cqssc","type":"ssc","openCode":"2,7,6,5,9","openTime":1516963800000,"closeTime":1516963740000,"openingTime":1516963140000,"gatherTime":1516963852107,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189147,"expect":"20180126076","code":"cqssc","type":"ssc","openCode":"5,6,1,6,5","openTime":1516963200000,"closeTime":1516963140000,"openingTime":1516962540000,"gatherTime":1516963252631,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189146,"expect":"20180126075","code":"cqssc","type":"ssc","openCode":"3,6,1,7,1","openTime":1516962600000,"closeTime":1516962540000,"openingTime":1516961940000,"gatherTime":1516962652906,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189145,"expect":"20180126074","code":"cqssc","type":"ssc","openCode":"1,4,2,2,8","openTime":1516962000000,"closeTime":1516961940000,"openingTime":1516961340000,"gatherTime":1516962052161,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189144,"expect":"20180126073","code":"cqssc","type":"ssc","openCode":"2,7,1,0,9","openTime":1516961400000,"closeTime":1516961340000,"openingTime":1516960740000,"gatherTime":1516961452276,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189143,"expect":"20180126072","code":"cqssc","type":"ssc","openCode":"1,0,8,6,4","openTime":1516960800000,"closeTime":1516960740000,"openingTime":1516960140000,"gatherTime":1516960852563,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189142,"expect":"20180126071","code":"cqssc","type":"ssc","openCode":"1,3,0,4,3","openTime":1516960200000,"closeTime":1516960140000,"openingTime":1516959540000,"gatherTime":1516960252707,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189141,"expect":"20180126070","code":"cqssc","type":"ssc","openCode":"0,4,0,8,4","openTime":1516959600000,"closeTime":1516959540000,"openingTime":1516958940000,"gatherTime":1516959647089,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189140,"expect":"20180126069","code":"cqssc","type":"ssc","openCode":"1,1,6,7,0","openTime":1516959000000,"closeTime":1516958940000,"openingTime":1516958340000,"gatherTime":1516959052201,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189139,"expect":"20180126068","code":"cqssc","type":"ssc","openCode":"3,0,9,3,2","openTime":1516958400000,"closeTime":1516958340000,"openingTime":1516957740000,"gatherTime":1516958452136,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189138,"expect":"20180126067","code":"cqssc","type":"ssc","openCode":"4,2,4,6,7","openTime":1516957800000,"closeTime":1516957740000,"openingTime":1516957140000,"gatherTime":1516957852798,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189137,"expect":"20180126066","code":"cqssc","type":"ssc","openCode":"8,0,1,7,2","openTime":1516957200000,"closeTime":1516957140000,"openingTime":1516956540000,"gatherTime":1516957273361,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189136,"expect":"20180126065","code":"cqssc","type":"ssc","openCode":"0,3,4,5,2","openTime":1516956600000,"closeTime":1516956540000,"openingTime":1516955940000,"gatherTime":1516956652320,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189135,"expect":"20180126064","code":"cqssc","type":"ssc","openCode":"5,4,5,6,1","openTime":1516956000000,"closeTime":1516955940000,"openingTime":1516955340000,"gatherTime":1516956052176,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189134,"expect":"20180126063","code":"cqssc","type":"ssc","openCode":"5,9,7,8,3","openTime":1516955400000,"closeTime":1516955340000,"openingTime":1516954740000,"gatherTime":1516955452399,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189133,"expect":"20180126062","code":"cqssc","type":"ssc","openCode":"5,2,0,0,7","openTime":1516954800000,"closeTime":1516954740000,"openingTime":1516954140000,"gatherTime":1516954851985,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189132,"expect":"20180126061","code":"cqssc","type":"ssc","openCode":"8,2,1,3,7","openTime":1516954200000,"closeTime":1516954140000,"openingTime":1516953540000,"gatherTime":1516954252228,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0},{"id":1189131,"expect":"20180126060","code":"cqssc","type":"ssc","openCode":"3,2,8,6,6","openTime":1516953600000,"closeTime":1516953540000,"openingTime":1516952940000,"gatherTime":1516953652468,"origin":"1","date":null,"orderNum":null,"fmOpenTime":null,"codeMemo":null,"leftTime":0,"leftOpenTime":0}]);
+zhexian(data)
+</script>
+</body></html>

@@ -20,12 +20,16 @@ var server = http.createServer(function(req,res){
         var url = obj.pathname;
         var GET = obj.query;
 
-        if(url == '/login'){
+
+        if(url == '/user'){
+            console.log(GET.act);
             switch(GET.act) {
+
                 case 'reg':
-                   if(GET.user){
+                   if(users[GET.user]){
                        res.write('{"ok":false,"msg":"此用户已存在"}');
                    } else {
+
                        users[GET.user]=GET.pass;
                        res.write('{"ok":true,"msg":"注册成功"}');
                    }
@@ -33,7 +37,7 @@ var server = http.createServer(function(req,res){
                 case 'login':
                     if(users[GET.user] == null ){
                         res.write('{"ok":false,"msg":"此用户不存在"}');
-                    } else if(uses[GET.user] != GET.pass) {
+                    } else if(users[GET.user] != GET.pass) {
                         res.write('{"ok":false,"msg":"用户名或密码错误"}');
                     } else {
                         res.write('{"ok":true,"msg":"登录成功"}');
@@ -56,7 +60,7 @@ var server = http.createServer(function(req,res){
         }
 
     });
-    res.end();
+
 });
 
-server.listen(8080);
+server.listen(8090);
