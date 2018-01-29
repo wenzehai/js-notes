@@ -17,7 +17,6 @@ let server = express();
 //POST需要借助一个body-parser
 server.use(bodyParser.urlencoded({}));
 
-//GET
 server.use('/',function (req, res) {
     console.log(req.body);
 });
