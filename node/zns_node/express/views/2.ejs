@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script>
+    </script>
+</head>
+<body>
+    <div><%= json.arr[0].pass %></div>
+    <% for(var i = 0; i<json.arr.length; i++){ %>
+    <div><%= json.arr[i].user %><%= json.arr[i].pass %></div>
+    <% } %>
+
+    <div><% include ../a.txt %></div>
+
+
+    <% for(var i=0; i<5; i++) { %>
+        <% include ../a.txt %>
+    <% } %>
+</body>
+</html>
