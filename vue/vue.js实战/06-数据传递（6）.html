@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--子组件向父组件传递数据-->
+<div id="app">
+    <p>总数：{{total}}</p>
+    <!--3.这里通过名称引用接收的数据，并把数据值传入handleGetTotal中，形参就交total-->
+    <my-component
+        @increase="handleGetTotal"
+        @reduce="handleGetTotal"
+    ></my-component>              <!---->
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        //1.先在模板内声明两个事件，触发对应的方法，
+        template:`<div >
+            <button @click="handleIncrease">+1</button>
+            <button @click="handleReduce">-1</button>
+        </div>`,
+        data: function () {
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            handleIncrease: function () {
+                this.counter++;
+                this.$emit('increase',this.counter);            //2.通过两个方法emit传递this.counter数据出去，这个数据的名称叫做increase
+            },
+            handleReduce:function () {
+                this.counter--;
+                this.$emit('reduce',this.counter);              //2.通过两个方法emit传递this.counter数据出去，这个数据的名称叫做reduce
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            total: 0
+        },
+        methods: {
+            //4.通过total形参接收子组件传入的数据，然后将数据赋值到实例本身的数据中。
+            handleGetTotal: function (total) {
+                this.total = total;
+            }
+        }
+
+        });
+
+</script>
+</body>
+</html>

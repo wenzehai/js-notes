@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--传递不带单位的参数，然后到模板内进行修改，可以省掉很多带单位的操作-->
+<div id="app">
+    <my-component :width ="100"></my-component>              <!---->
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        props:['width'],
+        template:'<div :style="style">我是内容我是内容我是内容我是内容我是内容我是内容</div>',
+        computed: {
+            style: function () {
+                return {
+                    width: this.width + 'px'
+                }
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app'
+
+        });
+
+</script>
+</body>
+</html>

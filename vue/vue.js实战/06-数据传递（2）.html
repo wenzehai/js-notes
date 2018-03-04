@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <my-component warning-text="info message"></my-component>               //注意参数名驼峰写法要转化成横杠写法
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        props:['warningText'],
+        template:'<div>{{ warningText }}</div>'
+    });
+    var vm = new Vue({
+        el: '#app'
+        });
+
+</script>
+</body>
+</html>

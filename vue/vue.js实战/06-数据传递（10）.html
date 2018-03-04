@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--bus方式实现非父子组件之间的通信-->
+<div id="app">
+    <p>{{message}}</p>
+    <my-component></my-component>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    var bus = new Vue();
+
+    Vue.component('my-component', {
+        template: '<button @click="handleEvent">传递事件</button>',
+        methods: {
+            handleEvent: function () {
+                bus.$emit('on-message', '来自子组件my-component中的数据');
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 0
+        },
+        mounted: function () {
+            var _this = this;
+            //在实例初始化时，监听来自bus实例的事件
+            bus.$on('on-message', function (msg) {
+                _this.message = msg;
+            })
+        }
+    });
+    //实现一个具有双向绑定的v-model组件要满足下面两个要求：
+    //1.接收一个value属性
+    //2.在有新的value时触发input事件
+</script>
+</body>
+</html>

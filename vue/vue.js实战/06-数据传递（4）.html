@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--单向数据流，子组件引用父组件的数据，然后在自己作用域内修改-->
+<div id="app">
+    <my-component :init-counter ="num"></my-component>              <!--绑定的数据名称一定更要与props里面的名称一致-->
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        props:['initCounter'],
+        template:'<div>{{ counter }}</div>',
+        data:function () {
+            return {
+                counter: this.initCounter + 10
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            num:11
+        }
+        });
+
+</script>
+</body>
+</html>

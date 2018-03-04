@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--v-model在自定义组件上传递数据-->
+<div id="app">
+    <p>总数：{{total}}</p>
+    <!--3.这里通过v-model直接来接收子组件传出来的数据，直接绑定到total上，是一个语法糖，其原理可以间接的用自定义事件来实现，参见下一个例子。-->
+                                                                        <!--4.v-model语法糖绑定数据到total上-->
+    <my-component
+            v-model="total"
+    ></my-component>
+    <button @click="handleReduce">-1</button>                           <!--5.通过单击事件触发handleReduce，更改total值，也就相当于改变了input中的value值-->
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        props:['value'],                                                //1.接收一个value属性
+        template:'<input :value="value" @input="updateValue"/>',        //2.input事件触发一个方法，通过方法emit出去数据
+        methods:{
+            updateValue:function (event) {
+                this.$emit('input',event.target.value);                 //3.通过方法emit出去数据
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            total: 0
+        },
+        methods:{
+            handleReduce:function () {
+                this.total--;
+            }
+        }
+        });
+    //实现一个具有双向绑定的v-model组件要满足下面两个要求：
+    //1.接收一个value属性
+    //2.在有新的value时触发input事件
+</script>
+</body>
+</html>

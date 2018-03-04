@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33-vue的计算属性</title>
+</head>
+<body>
+<div id="app">
+    <p>初始值：{{name}}</p>
+    <p>初始值：{{a}}</p>
+</div>
+
+
+
+
+
+
+<script src="../js/vue.min.js"></script>
+<script>
+    var myData = {a:12};
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            a: 12,
+        },
+        created:function () {
+            console.log(this.a);
+        },
+        mounted:function () {
+            console.log(this.$el);
+        }
+    });
+
+</script>
+</body>
+</html>

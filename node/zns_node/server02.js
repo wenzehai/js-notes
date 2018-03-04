@@ -53,8 +53,8 @@ var server = http.createServer(function(req,res){
 	// }
 
 	//需求：
-	//req.url => '/index.html'
-	//读取=> './www/index.html'
+	//req.url => '/更改滚动条样式.html'
+	//读取=> './www/更改滚动条样式.html'
 	//'./www'+req.url
 
 	//6.开始操作文件

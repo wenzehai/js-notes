@@ -46,8 +46,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
-    // generate dist index.html with correct asset hash for caching.
-    // you can customize output by editing /index.html
+    // generate dist 文字出现在水平线中间.html with correct asset hash for caching.
+    // you can customize output by editing /文字出现在水平线中间.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.index,

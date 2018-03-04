@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--这个例子应该可以做为输入框实时搜索，展现结果的效果-->
+<div id="app">
+    <input type="text" v-model="parentsMessage">
+    <my-component :message="parentsMessage"></my-component>              <!--绑定了父组件动态数据-->
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        props:['message'],
+        template:'<div>{{ message }}</div>'
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            parentsMessage:'hello'
+        }
+        });
+
+</script>
+</body>
+</html>

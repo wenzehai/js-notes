@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--v-model在自定义组件上传递数据-->
+<div id="app">
+    <p>总数：{{total}}</p>
+    <!---->
+    <!--3.这里通过v-model直接来接收子组件传出来的数据，直接绑定到total上，是一个语法糖，其原理可以间接的用自定义事件来实现，参见下一个例子。-->
+    <my-component
+            @input="handleGetTotal"
+    ></my-component>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    Vue.component('my-component',{
+        //1.先在模板内声明1个事件，触发对应的方法，
+        template:'<button @click="handleClick">+1</button>',
+        data:function () {
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            handleClick:function () {               //2.通过两个方法emit传递this.counter数据出去，这个数据的名称叫做input
+                this.counter++;
+                this.$emit('input',this.counter);
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            total: 0
+        },
+        methods:{
+            handleGetTotal:function (total) {
+                this.total = total;
+            }
+        }
+        });
+
+</script>
+</body>
+</html>

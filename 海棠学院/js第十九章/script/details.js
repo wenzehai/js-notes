@@ -14,7 +14,7 @@ if(!pageId || !curData){
 
 //面包屑
 var positionFn = yx.g("#position");
-positionFn.innerHTML = '<a href="index.html">首页</a>' + '>';
+positionFn.innerHTML = '<a href="更改滚动条样式.html">首页</a>' + '>';
 for(var i=0; i<curData.categoryList.length; i++){
 	positionFn.innerHTML +='<a href="#">'+curData.categoryList[i].name+'</a>' + '>';
 }

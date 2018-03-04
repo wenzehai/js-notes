@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    {{number/10}}
+    {{isOk? 'ok': 'cancle'}}
+    {{text.split(',').reverse().join(',')}}
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            number: 100,
+            isOk:true,
+            text:'abcdefg,hijk'
+        }
+    });
+
+</script>
+</body>
+</html>
