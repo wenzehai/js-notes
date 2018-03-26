@@ -14,7 +14,6 @@
 		</style>
 		<script type="text/javascript">
 			/*
-			 *
 			 * 
 			 * 清除定时器
 			 * 		定时器的一个返回值，返回一个数字，代表当前定时器的编号，我们可根据这个来清除定时器	
@@ -29,13 +28,14 @@
 			 * 任何一种方法清除定时器，即使他们不对应，也没有关系。
 			 * 
 			 * 1、直接把定时器调用放在了一个变量赋值的后面，定时器还会走吗？ 可以
-			 * 2、这个timer是在下声明的，而用他的时候在上面，能调到吗？可以
+			 * 2、这个timer是在下面声明的，而用他的时候在上面，能调到吗？可以
 			 */
+			 /* 
 			var i=0;
 			function add(){
 				i++;
 				console.log(i);
-				//清除定时器的条件，一般会放在定时器执行的行数里
+				//清除定时器的条件，一般会放在定时器执行的函数里
 				if(i==8) {
 					clearInterval(timer);			//
 				}
@@ -50,11 +50,30 @@
 			
 			//如果运行到8，则清除定时器，在外面无法判断定时器里面的内容
 			
-			
-			
 			//alert(1);		//定时器在走的过程中，下面的代码也会走，叫异步；上面的代码没走完，下面的不会走，叫同步。
-			
+			 */
 		</script>
+
+		<script>
+		var i = 0;
+
+		function add() {
+			i++;
+			console.log(i);
+
+			if(i == 8) {
+				clearInterval(timer);
+			}
+		}
+
+		var timer = setInterval(add,1000);
+		console.log(timer);
+		var timer1 = setInterval(add,1000);
+		console.log(timer1);
+
+		</script>
+
+
 	</head>
 	<body>
 		<div id="box"></div>

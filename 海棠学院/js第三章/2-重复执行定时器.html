@@ -32,17 +32,17 @@
 			 * 
 			 * 
 			 */
-			
+			/*
 			window.onload=function(){
 				var box=document.getElementById('box');
 				var i=0;
 				
 				box.onclick=function(){
-					/*setInterval(
+					setInterval(
 						function(){
 							box.innerHTML=i;
 							i++;
-						},1000);*/
+						},1000);
 						
 					setInterval(change,1000);		//前面的函数是函数的名字，不带括号
 					};
@@ -50,6 +50,23 @@
 					function change(){
 						i++;
 						box.innerHTML=i;
+					}
+			}
+
+			*/
+
+			window.onload = function() {
+				var box = document.getElementById('box');
+				var i = 0;
+
+				box.onclick = function() {
+
+					setInterval(change,1000);
+
+					function change() {
+							i++;
+							box.innerHTML = i;
+						}
 					}
 			}
 			

@@ -45,19 +45,33 @@
 			 * 					当需要延迟一段时间去做一件事的时候，就用setTimeout
 			 */
 			
-			window.onload=function(){
+				//外面传函数进来，setTimeout里面写名字
+			// window.onload=function(){
+			// 	var box=document.getElementById('box');
+			// 	var i=0;
+				
+			// 	box.onclick=function(){
+			// 		setTimeout(function(){
+			// 			i++;
+			// 			box.innerHTML=i;
+			// 		},3000);
+			// 	};
+				
+			// };
+
+			window.onload=function(){ 
 				var box=document.getElementById('box');
 				var i=0;
-				
-				box.onclick=function(){
-					setTimeout(function(){
-						i++;
-						box.innerHTML=i;
-					},3000);
-				};
-				
-				//外面传函数进来，setTimeout里面写名字
-			};
+
+				box.onclick = function() {
+					setTimeout(change,5000);
+
+					function change() {
+						box.innerHTML = i;
+					}
+				}
+
+			}
 			
 		</script>
 	</head>

@@ -55,6 +55,7 @@
 			 * 
 			 */
 			
+			/*
 			window.onload=function(){
 				var box=document.getElementById('box');
 				var i=0;
@@ -74,7 +75,22 @@
 					,1000);
 				};
 			};
+			*/
 			
+			window.onload = function() {
+				var box = document.getElementById('box');
+				var i = 0;
+
+				var This = this;
+				box.onclick = function() {
+					setInterval(
+						function() {
+							i++;
+							box.innerHTML = i;
+							console.log(this);			//window
+						},1000);
+				}
+			}
 		</script>
 	</head>
 	<body>
